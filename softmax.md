@@ -9,13 +9,9 @@
 * Softmax regression allows us to handle <img src="https://render.githubusercontent.com/render/math?math=y^{(i)} \in\ \{1,..,K\}"> where _**K**_ is the number of classes.
 
 
-* For binary logistic regression we had <img src="http://www.sciweavers.org/upload/Tex2Img_1637585715/render.png" width="408" height="44" />
+* For binary logistic regression we had <img src="http://latex.codecogs.com/svg.image?f(x;w)=\sigma(w^\top&space;x)=\frac{1}{1&plus;e^{-w^\top&space;x}}\&space;\&space;with&space;\&space;y^{(i)}&space;\in\&space;\{0,1\}" title="f(x;w)=\sigma(w^\top x)=\frac{1}{1+e^{-w^\top x}}\ \ with \ y^{(i)} \in\ \{0,1\}" />
 
 * We interpreted the output as _**P(y = 1|x; w), implying P(y=0|x; w) = 1-f(x; w)**_ (if we want class 0 we just need to minus 1 from the class 1) .
-![687474703a2f2f7777772e736369776561766572732e6f72672f75706c6f61642f54657832496d675f313633373538353731352f72656e6465722e706e67](https://user-images.githubusercontent.com/12748752/142930556-4740bde9-3f91-4692-90ee-c063f9f4576f.png)
-
-
-![687474703a2f2f7777772e736369776561766572732e6f72672f75706c6f61642f54657832496d675f313633373538353731352f72656e6465722e706e67](https://user-images.githubusercontent.com/12748752/142930565-7a511466-2d3e-4d6e-b8c5-831f11389177.png)
 
 
 * For the multiclass setting we now have <img src="https://render.githubusercontent.com/render/math?math=y^{(i)} \in\ \{1,..,K\}">.
