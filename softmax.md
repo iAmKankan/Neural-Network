@@ -32,7 +32,7 @@
 
 
 
-* But probabilities need to sum to one. So let's normalise <img src="http://www.sciweavers.org/tex2img.php?eq=P%28y%3Dk%7C%5Cmathbf%7Bx%3BW%7D%29%3D%5Cfrac%7Be%5E%7Bw_%7Bk%7D%5E%7B%5Ctop%7Dx%7D%20%7D%7B%5Csum%5E%7BK%7D_%7Bj%3D1%7De%5E%7Bw_%7Bj%7D%5E%7B%5Ctop%7Dx%7D%7D&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0" align="center" border="0" alt="P(y=k|\mathbf{x;W})=\frac{e^{w_{k}^{\top}x} }{\sum^{K}_{j=1}e^{w_{j}^{\top}x}}" width="218" height="67" />
+
 
 This gives us the softmax regression model
 
