@@ -21,9 +21,11 @@
 
 ## Backpropagation 
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
-*  Backpropagation is simply Gradient Descent using an efficient technique for computing the gradients automatically: 
+*  **Backpropagation is simply Gradient Descent using an efficient technique for computing the gradients automatically**: 
 
 * In just two passes through the network (one **forward**, one **backward**), the backpropagation algorithm is able to compute **the gradient of the network’s error** with regards to every single model parameter. 
 
-> #### In other words, it can find out how each connection weight and each bias term should be tweaked in order to reduce the error. 
+> ### In other words, it can find out how each connection weight and each bias term should be tweaked in order to reduce the error. 
 * Once it has these gradients, it just performs a regular Gradient Descent step, and the whole process is repeated until the network converges to the solution.
+
+> #### Automatically computing gradients is called *automatic differentiation*, or *autodiff*. The autodiff technique used by backpropagation is called *reverse-mode autodiff*. It is fast and precise, and is well suited when the function to differentiate has many variables (e.g., connection weights) and few outputs (e.g., one loss). 
