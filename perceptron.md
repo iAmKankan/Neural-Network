@@ -66,7 +66,7 @@ y_pred = per_clf.predict([[2, 0.5]])
 * The layers close to the input layer are usually called the **lower layers**, and the ones close to the outputs are usually called the **upper layers**. 
 * Every layer except the output layer includes **a bias neuron** and is fully connected to the next layer.
 
-< img src="https://user-images.githubusercontent.com/12748752/143045465-2fe26cb7-48ea-4590-b381-24215f014004.png" width=50% />
+< img src="https://user-images.githubusercontent.com/12748752/143045465-2fe26cb7-48ea-4590-b381-24215f014004.png"/>
 
 
 
