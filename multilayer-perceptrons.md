@@ -63,9 +63,9 @@
 * First, MLPs can be used for regression tasks. 
   * If you want to predict a single value (e.g., the price of a house given many of its features), then you just need a single output neuron: its output is the predicted value.
   * For multivariate regression (i.e., to predict multiple values at once), you need one output neuron per output dimension. 
-  * For example, to locate the center of an object on an image, you need to predict 2D coordinates, so you need two output neurons. 
-  * If you also want to place a bounding box around the object, then you need two more numbers: the width and the height of the object.
-  *  So you end up with 4 output neurons.
+    * For example, to locate the center of an object on an image, you need to predict 2D coordinates, so you need two output neurons. 
+    * If you also want to place a bounding box around the object, then you need two more numbers: the width and the height of the object.
+    *  So you end up with 4 output neurons.
 
 > #### In general, when building an MLP for regression, you do not want to use any activation function for the output neurons, so they are free to output any range of values.
 
