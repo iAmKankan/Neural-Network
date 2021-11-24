@@ -47,6 +47,12 @@
 >   * **Then goes through each layer in reverse to measure the error contribution from each connection (reverse pass),** 
 >   * **Finally slightly tweaks the connection weights to reduce the error (Gradient Descent step).**
 
+
+> #### It is important to initialize all the hidden layers’ connection weights randomly. 
+> * For example, if you initialize all weights and biases to zero, then all neurons in a given layer will be perfectly identical, and thus backpropagation will affect them in exactly the same way, so they will remain identical. 
+> * In other words, despite having hundreds of neurons per layer, your model will act as if it had only one neuron per layer: it won’t be too smart. 
+> * If instead you randomly initialize the weights, you break the symmetry and allow backpropagation to train a diverse team of neurons.
+
 ## Bibliography
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 * **Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow, 2nd Edition by Aurélien Géron**
