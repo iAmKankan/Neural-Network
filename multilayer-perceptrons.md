@@ -68,7 +68,7 @@
     *  So you end up with 4 output neurons.
 
 > #### In general, when building an MLP for regression, you do not want to use any activation function for the output neurons, so they are free to output any range of values.
-
+<img src="https://user-images.githubusercontent.com/12748752/143228831-e4318e6f-25b0-43b9-950d-a865c4df7d1c.png)" width=30% />
 ## Bibliography
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 * **Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow, 2nd Edition by Aurélien Géron**
