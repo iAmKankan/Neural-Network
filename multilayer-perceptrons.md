@@ -23,7 +23,7 @@
 > #### When an ANN contains a deep stack of hidden layers, it is called a Deep Neural Network (DNN).
 
 ## Backpropagation 
-![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
+![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 *  **Backpropagation is simply Gradient Descent using an efficient technique for computing the gradients automatically**: 
 
 * In just two passes through the network (one **forward**, one **backward**), the backpropagation algorithm is able to compute **the gradient of the network’s error** with regards to every single model parameter. 
@@ -55,6 +55,19 @@
 > * For example, if you initialize all weights and biases to zero, then all neurons in a given layer will be perfectly identical, and thus backpropagation will affect them in exactly the same way, so they will remain identical. 
 > * In other words, despite having hundreds of neurons per layer, your model will act as if it had only one neuron per layer: it won’t be too smart. 
 > * If instead you randomly initialize the weights, you break the symmetry and allow backpropagation to train a diverse team of neurons.
+
+
+## Regression MLPs
+![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
+
+* First, MLPs can be used for regression tasks. 
+  * If you want to predict a single value (e.g., the price of a house given many of its features), then you just need a single output neuron: its output is the predicted value.
+  * For multivariate regression (i.e., to predict multiple values at once), you need one output neuron per output dimension. 
+  * For example, to locate the center of an object on an image, you need to predict 2D coordinates, so you need two output neurons. 
+  * If you also want to place a bounding box around the object, then you need two more numbers: the width and the height of the object.
+  *  So you end up with 4 output neurons.
+
+> #### In general, when building an MLP for regression, you do not want to use any activation function for the output neurons, so they are free to output any range of values.
 
 ## Bibliography
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
