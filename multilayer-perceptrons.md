@@ -37,7 +37,7 @@
 * Each mini-batch is passed to the network’s input layer, which just sends it to the first hidden layer. The algorithm then computes the output of all the neurons in this layer (for every instance in the mini-batch). The result is passed on to the next layer, its output is computed and passed to the next layer, and so on until we get the output of the last layer, the output layer. This is the forward pass: it is exactly like making predictions, except all intermediate results are preserved since they are needed for the backward pass. 
 * Next, the algorithm measures the network’s output error (i.e., it uses a loss function that compares the desired output and the actual output of the network, and returns some measure of the error). 
 * Then it computes how much each output connection contributed to the error. This is done analytically by simply applying the [chain rule](https://github.com/iAmKankan/Mathematics/blob/main/D_calculus.md#chain-rule) (perhaps the most fundamental rule in calculus), which makes this step fast and precise. 
-* The algorithm then measures how much of these error contributions came from each connection in the layer below, again using the [chain rule](https://github.com/iAmKankan/Mathematics/blob/main/D_calculus.md#chain-rule—and so on until the algorithm reaches the input layer. As we explained earlier, this reverse pass efficiently measures the error gradient across all the connection weights in the network by propagating the error gradient backward through the network (hence the name of the algorithm).
+* The algorithm then measures how much of these error contributions came from each connection in the layer below, again using the [chain rule](https://github.com/iAmKankan/Mathematics/blob/main/D_calculus.md#chain-rule) —and so on until the algorithm reaches the input layer. As we explained earlier, this reverse pass efficiently measures the error gradient across all the connection weights in the network by propagating the error gradient backward through the network (hence the name of the algorithm).
 * Finally, the algorithm performs a Gradient Descent step to tweak all the connection weights in the network, using the error gradients it just computed.
 
 > ### Summary:
@@ -47,8 +47,8 @@
 >   * **Then goes through each layer in reverse to measure the error contribution from each connection (reverse pass),** 
 >   * **Finally slightly tweaks the connection weights to reduce the error (Gradient Descent step).**
 
-
-> #### It is important to initialize all the hidden layers’ connection weights randomly. 
+---
+> ### It is important to initialize all the hidden layers’ connection weights randomly. 
 > * For example, if you initialize all weights and biases to zero, then all neurons in a given layer will be perfectly identical, and thus backpropagation will affect them in exactly the same way, so they will remain identical. 
 > * In other words, despite having hundreds of neurons per layer, your model will act as if it had only one neuron per layer: it won’t be too smart. 
 > * If instead you randomly initialize the weights, you break the symmetry and allow backpropagation to train a diverse team of neurons.
