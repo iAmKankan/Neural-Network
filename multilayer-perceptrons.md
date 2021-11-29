@@ -90,6 +90,62 @@
 
 <img src="https://user-images.githubusercontent.com/12748752/143228831-e4318e6f-25b0-43b9-950d-a865c4df7d1c.png" width=60% height=30% />
 
+
+## Hyperparameter tuning for Neural Networks
+![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
+
+>  #### Problem:
+*  How do you know what combination of hyperparameters is the best for your task?
+* In a simple MLP you can change the number of 
+   * `layers`,
+   *  `the number of neurons per layer`,
+   *  `the type of activation function to use in each layer`, 
+   *  `the weight initialization logic`, and much more.
+
+> #### Solution 01
+* One option is to simply try many combinations of hyperparameters and see which one works best on the validation set (or use K-fold crossvalidation). 
+* For example, we can use GridSearchCV or RandomizedSearchCV to explore the hyperparameter space.
+* Both are achievable but very slow.
+ 
+
+> #### Solution 02
+* Here are some Python libraries you can use to optimize hyperparameters:
+  * Hyperopt
+  * Hyperas, kopt, or Talos
+  * Keras Tuner
+  * Scikit-Optimize (skopt)
+  * Spearmint
+  * Hyperband
+  * Sklearn-Deap
+  
+### Hyperparameter selection intutive guideline
+![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
+
+### Number of Hidden Layers
+![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
+
+* For many problems you can start with just one or two hidden layers and the neural network will work just fine.
+* For more complex problems, you can ramp up the number of hidden layers until you start overfitting the training set.
+### Number of Neurons per Hidden Layer
+![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
+
+* The number of neurons in the input and output layers is determined by the type of input and output your task requires.
+* For example, the MNIST task requires 28 × 28 = 784 input neurons and 10 output neurons.
+* As for the hidden layers, it used to be common to size them to form a pyramid, with fewer and fewer neurons at each layer
+
+> #### In general you will get more bang for your buck by increasing the number of layers instead of the number of neurons per layer.
+
+#### Learning Rate, Batch Size, and Other Hyperparameters
+![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
+> ### Learning rate
+> ### Optimizer
+> ### Batch size
+> ### Activation function
+> ### Number of iterations
+
+
+> #### The optimal learning rate depends on the other hyperparameters—especially the batch size—so if you modify any hyperparameter, make sure to update the learning rate as well.
+
 ## Bibliography
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 * **Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow, 2nd Edition by Aurélien Géron**
