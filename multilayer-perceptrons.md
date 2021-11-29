@@ -5,8 +5,8 @@
 * [Backpropagation](#backpropagation)
   * [How Backpropagation works](#how-backpropagation-works)
 * [Regression MLPs](https://github.com/iAmKankan/Neural-Network/blob/main/multilayer-perceptrons.md#regression-mlps)
-* [Classification MLPs](https://github.com/iAmKankan/Neural-Network/blob/main/multilayer-perceptrons.md#regression-mlps)
-* [Bibliography]()
+* [Classification MLPs](https://github.com/iAmKankan/Neural-Network/blob/main/multilayer-perceptrons.md#classification-mlps)
+* [Bibliography](https://github.com/iAmKankan/Neural-Network/blob/main/multilayer-perceptrons.md#bibliography)
 ## Multi-Layer Perceptron
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 * An MLP is composed of -
@@ -76,7 +76,6 @@
 <img src="https://latex.codecogs.com/svg.image?\begin{matrix}\\\textbf{Hyperparameter}&space;&&space;\textbf{Typical&space;Value}\\\mathrm{input\&space;neurons}&space;&&space;\mathrm{One\&space;per\&space;input\&space;feature\&space;(e.g.,\&space;28\&space;x\&space;28\&space;=\&space;784\&space;for\&space;MNIST)}\\\mathrm{hidden\&space;layers}&space;&&space;\mathrm{Depends\&space;on\&space;the\&space;problem.\&space;Typically\&space;1\&space;to\&space;5.}\\\mathrm{neurons\&space;per\&space;hidden\&space;layer}&space;&&space;\mathrm{Depends\&space;on\&space;the\&space;problem.\&space;Typically\&space;10\&space;to\&space;100.}\\\mathrm{output\&space;neurons}&space;&&space;\mathrm{1\&space;per\&space;prediction\&space;dimension}\\\mathrm{Hidden\&space;activation}&space;&&space;\mathrm{ReLU\&space;(or\&space;SELU,\&space;see\&space;Chapter\&space;11)}\\\mathrm{Output\&space;activation}&space;&&space;\mathrm{None\&space;or\&space;ReLU/Softplus\&space;(if\&space;positive\&space;outputs)\&space;or\&space;Logistic/Tanh\&space;(if\&space;bounded\&space;outputs)}\\\mathrm{Loss\&space;function}&space;&&space;\mathrm{MSE\&space;or\&space;MAE/Huber\&space;(if\&space;outliers)}\\\end{matrix}" title="\begin{matrix}\\\textbf{Hyperparameter} & \textbf{Typical Value}\\\mathrm{input\ neurons} & \mathrm{One\ per\ input\ feature\ (e.g.,\ 28\ x\ 28\ =\ 784\ for\ MNIST)}\\\mathrm{hidden\ layers} & \mathrm{Depends\ on\ the\ problem.\ Typically\ 1\ to\ 5.}\\\mathrm{neurons\ per\ hidden\ layer} & \mathrm{Depends\ on\ the\ problem.\ Typically\ 10\ to\ 100.}\\\mathrm{output\ neurons} & \mathrm{1\ per\ prediction\ dimension}\\\mathrm{Hidden\ activation} & \mathrm{ReLU\ (or\ SELU,\ see\ Chapter\ 11)}\\\mathrm{Output\ activation} & \mathrm{None\ or\ ReLU/Softplus\ (if\ positive\ outputs)\ or\ Logistic/Tanh\ (if\ bounded\ outputs)}\\\mathrm{Loss\ function} & \mathrm{MSE\ or\ MAE/Huber\ (if\ outliers)}\\\end{matrix}" />
 
 
-<img src="https://user-images.githubusercontent.com/12748752/143228831-e4318e6f-25b0-43b9-950d-a865c4df7d1c.png" width=60% height=30% />
 
 ## Classification MLPs
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
@@ -85,6 +84,8 @@
 
 <img src="https://latex.codecogs.com/svg.image?\begin{matrix}\\\textbf{Hyperparameter}&space;&&space;\textbf{Binary\&space;classification}&&space;\textbf{Multilabel\&space;binary\&space;classification}&&space;\textbf{Multiclass\&space;classification}\\\mathrm{Input\&space;and\&space;hidden\&space;layers}&space;&&space;\mathrm{Same\&space;as\&space;regression}&space;&&space;\mathrm{Same\&space;as\&space;regression}&space;&&space;\mathrm{Same\&space;as\&space;regression}\\\mathrm{output\&space;neurons}&&space;1&space;&&space;\mathrm{1\&space;per\&space;label}&space;&&space;\mathrm{1\&space;per\&space;class}\\&space;\mathrm{Output\&space;layer\&space;activation}&&space;\mathrm{Logistic}&space;&&space;\mathrm{Logistic}&space;&&space;\mathrm{Softmax}\\\mathrm{Loss\&space;function}&space;&&space;\mathrm{Cross-Entropy}&space;&&space;\mathrm{Cross-Entropy}&space;&&space;\mathrm{Cross-Entropy}\end{matrix}" title="\begin{matrix}\\\textbf{Hyperparameter} & \textbf{Binary\ classification}& \textbf{Multilabel\ binary\ classification}& \textbf{Multiclass\ classification}\\\mathrm{Input\ and\ hidden\ layers} & \mathrm{Same\ as\ regression} & \mathrm{Same\ as\ regression} & \mathrm{Same\ as\ regression}\\\mathrm{output\ neurons}& 1 & \mathrm{1\ per\ label} & \mathrm{1\ per\ class}\\ \mathrm{Output\ layer\ activation}& \mathrm{Logistic} & \mathrm{Logistic} & \mathrm{Softmax}\\\mathrm{Loss\ function} & \mathrm{Cross-Entropy} & \mathrm{Cross-Entropy} & \mathrm{Cross-Entropy}\end{matrix}" />
 
+
+<img src="https://user-images.githubusercontent.com/12748752/143228831-e4318e6f-25b0-43b9-950d-a865c4df7d1c.png" width=60% height=30% />
 
 ## Bibliography
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
