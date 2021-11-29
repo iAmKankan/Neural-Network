@@ -149,9 +149,12 @@
 > ### Learning rate
 > ### Optimizer
 > ### Batch size
+* In practice, large batch sizes often lead to training instabilities, especially at the beginning of training, and the resulting model may not generalize as well as a model trained with a small batch size. 
+* In April 2018, Yann LeCun even tweeted "Friends don’t let friends use mini-batches larger than 32"
 > ### Activation function
+* In general, the ReLU activation function will be a good default for all hidden layers. For the output layer, it really depends on your task.
 > ### Number of iterations
-
+* In most cases, the number of training iterations does not actually need to be tweaked: just use early stopping instead
 
 > #### The optimal learning rate depends on the other hyperparameters—especially the batch size—so if you modify any hyperparameter, make sure to update the learning rate as well.
 
