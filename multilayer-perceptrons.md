@@ -8,6 +8,15 @@
 * [Classification MLPs](https://github.com/iAmKankan/Neural-Network/blob/main/multilayer-perceptrons.md#classification-mlps)
   * <a href="https://nbviewer.org/github/iAmKankan/Hands-On-Machine-Learning-with-Scikit-Learn-Keras-and-TensorFlow-All_Codes/blob/main/Chapter%2010/1)%20Sequential%20API%20for%20Image%20Classification.ipynb">Building an Image Classifier Using the Sequential API</a>    
   * <a href="https://nbviewer.org/github/iAmKankan/Hands-On-Machine-Learning-with-Scikit-Learn-Keras-and-TensorFlow-All_Codes/blob/main/Chapter%2010/3)%20Functional%20API%20for%20Complex%20regression%20Model.ipynb">Building Complex Models Using the Functional API</a>
+* [Hyperparameter selection intutive guideline]()
+  * [Number of Hidden Layers]()
+  * [Number of Neurons per Hidden Layer]()
+  * [Learning Rate, Batch Size, and Other Hyperparameters]()
+    * [Learning rate]()
+    * [Optimizer]()
+    * [Batch size]()
+    * [Activation function]()
+    * [Number of iterations]()
 * [Bibliography](https://github.com/iAmKankan/Neural-Network/blob/main/multilayer-perceptrons.md#bibliography)
 ## Multi-Layer Perceptron
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
@@ -135,7 +144,7 @@
 
 > #### In general you will get more bang for your buck by increasing the number of layers instead of the number of neurons per layer.
 
-#### Learning Rate, Batch Size, and Other Hyperparameters
+### Learning Rate, Batch Size, and Other Hyperparameters
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 > ### Learning rate
 > ### Optimizer
