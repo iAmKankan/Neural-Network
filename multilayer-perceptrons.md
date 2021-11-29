@@ -1,6 +1,5 @@
 ## Index
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
-![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 * [Multi-Layer Perceptron](#multi-layer-perceptron)
 * [Backpropagation](#backpropagation)
   * [How Backpropagation works](#how-backpropagation-works)
@@ -87,6 +86,7 @@
 
 <img src="https://latex.codecogs.com/svg.image?\begin{matrix}\\\textbf{Hyperparameter}&space;&&space;\textbf{Binary\&space;classification}&&space;\textbf{Multilabel\&space;binary\&space;classification}&&space;\textbf{Multiclass\&space;classification}\\\mathrm{Input\&space;and\&space;hidden\&space;layers}&space;&&space;\mathrm{Same\&space;as\&space;regression}&space;&&space;\mathrm{Same\&space;as\&space;regression}&space;&&space;\mathrm{Same\&space;as\&space;regression}\\\mathrm{output\&space;neurons}&&space;1&space;&&space;\mathrm{1\&space;per\&space;label}&space;&&space;\mathrm{1\&space;per\&space;class}\\&space;\mathrm{Output\&space;layer\&space;activation}&&space;\mathrm{Logistic}&space;&&space;\mathrm{Logistic}&space;&&space;\mathrm{Softmax}\\\mathrm{Loss\&space;function}&space;&&space;\mathrm{Cross-Entropy}&space;&&space;\mathrm{Cross-Entropy}&space;&&space;\mathrm{Cross-Entropy}\end{matrix}" title="\begin{matrix}\\\textbf{Hyperparameter} & \textbf{Binary\ classification}& \textbf{Multilabel\ binary\ classification}& \textbf{Multiclass\ classification}\\\mathrm{Input\ and\ hidden\ layers} & \mathrm{Same\ as\ regression} & \mathrm{Same\ as\ regression} & \mathrm{Same\ as\ regression}\\\mathrm{output\ neurons}& 1 & \mathrm{1\ per\ label} & \mathrm{1\ per\ class}\\ \mathrm{Output\ layer\ activation}& \mathrm{Logistic} & \mathrm{Logistic} & \mathrm{Softmax}\\\mathrm{Loss\ function} & \mathrm{Cross-Entropy} & \mathrm{Cross-Entropy} & \mathrm{Cross-Entropy}\end{matrix}" />
 
+![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 
 <img src="https://user-images.githubusercontent.com/12748752/143228831-e4318e6f-25b0-43b9-950d-a865c4df7d1c.png" width=60% height=30% />
 
