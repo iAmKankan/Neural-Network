@@ -5,7 +5,10 @@
 * [Backpropagation](#backpropagation)
   * [How Backpropagation works](#how-backpropagation-works)
 * [Regression MLPs](https://github.com/iAmKankan/Neural-Network/blob/main/multilayer-perceptrons.md#regression-mlps)
+  * <a href="https://nbviewer.org/github/iAmKankan/Hands-On-Machine-Learning-with-Scikit-Learn-Keras-and-TensorFlow-All_Codes/blob/main/Chapter%2010/2)%20Sequential%20API%20for%20Regression.ipynb">Building a Regression MLP Using the Sequential API</a>  
 * [Classification MLPs](https://github.com/iAmKankan/Neural-Network/blob/main/multilayer-perceptrons.md#classification-mlps)
+  * <a href="https://nbviewer.org/github/iAmKankan/Hands-On-Machine-Learning-with-Scikit-Learn-Keras-and-TensorFlow-All_Codes/blob/main/Chapter%2010/1)%20Sequential%20API%20for%20Image%20Classification.ipynb">Building an Image Classifier Using the Sequential API</a>    
+  * <a href="https://nbviewer.org/github/iAmKankan/Hands-On-Machine-Learning-with-Scikit-Learn-Keras-and-TensorFlow-All_Codes/blob/main/Chapter%2010/3)%20Functional%20API%20for%20Complex%20regression%20Model.ipynb">Building Complex Models Using the Functional API</a>
 * [Bibliography](https://github.com/iAmKankan/Neural-Network/blob/main/multilayer-perceptrons.md#bibliography)
 ## Multi-Layer Perceptron
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
