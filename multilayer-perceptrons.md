@@ -106,14 +106,14 @@
 >  #### Problem:
 *  How do you know what combination of hyperparameters is the best for your task?
 * In a simple MLP you can change the number of 
-   * `layers`,
-   *  `the number of neurons per layer`,
-   *  `the type of activation function to use in each layer`, 
-   *  `the weight initialization logic`, and much more.
+   * layers,
+   * the number of neurons per layer,
+   * the type of activation function to use in each layer, 
+   * the weight initialization logic, and much more.
 
 > #### Solution 01
 * One option is to simply try many combinations of hyperparameters and see which one works best on the validation set (or use K-fold crossvalidation). 
-* For example, we can use GridSearchCV or RandomizedSearchCV to explore the hyperparameter space.
+* For example, we can use `GridSearchCV` or `RandomizedSearchCV` to explore the hyperparameter space.
 * Both are achievable but very slow.
  
 
