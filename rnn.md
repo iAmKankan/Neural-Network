@@ -36,9 +36,14 @@
 * Let’s call these weight vectors <img src="https://latex.codecogs.com/svg.image?\textbf{w}_x" title="\textbf{w}_x" /> and <img src="https://latex.codecogs.com/svg.image?\textbf{w}_y" title="\textbf{w}_y" />. 
 * If we consider the whole recurrent layer instead of just one recurrent neuron, we can place all the weight vectors in two weight matrices, <img src="https://latex.codecogs.com/svg.image?\textbf{W}_x" title="\textbf{W}_x" /> and <img src="https://latex.codecogs.com/svg.image?\textbf{W}_y" title="\textbf{W}_y" /> .
 
-
-
-
+#### Memory Cells
+![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
+* Since the output of a recurrent neuron at time step `t` is a function of all the inputs from previous time steps, you could say it has a form of `memory`.
+* A part of a neural network that preserves some state across time steps is called a `memory cell` (or simply a `cell`). 
+* A single recurrent neuron, or a layer of recurrent neurons, is a very basic cell, capable of learning only short patterns (typically about 10 steps long, but this varies depending on the task).
+* In general a cell’s state at time step `t`, denoted <img src="https://latex.codecogs.com/svg.image?\textbf{h}_{(t)}" title="\textbf{h}_{(t)}" /> (the “h” stands for “hidden”), is a function of some inputs at that time step and its state at the previous time step:<img src="https://latex.codecogs.com/svg.image?\textbf{h}_{(t)}=&space;f(\textbf{h}_{(t-1)},\textbf{x}_{(t)})" title="\textbf{h}_{(t)}= f(\textbf{h}_{(t-1)},\textbf{x}_{(t)})" />. 
+* Its output at time step `t`, denoted <img src="https://latex.codecogs.com/svg.image?\textbf{y}_{(t)}" title="\textbf{y}_{(t)}" height=50%/> , is also a function of the previous state and the current inputs. 
+* In the case of the basic cells we have discussed so far, the output is simply equal to the state, but in more complex cells this is not always the case
 ## Bibliography
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 * **Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow, 2nd Edition by Aurélien Géron**
