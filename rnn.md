@@ -48,7 +48,14 @@
 
 #### Input and Output Sequences
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
+>#### <ins>Seq-to-seq (top left), seq-to-vector (top right), vector-to-seq (bottom left), and
+Encoder–Decoder (bottom right) networks </ins>
 <img src="https://user-images.githubusercontent.com/12748752/144064476-e96cb279-6ea7-4a07-aad8-d883b0549bc2.png" width=50% />
+
+
+
+
+
 ## Bibliography
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 * **Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow, 2nd Edition by Aurélien Géron**
