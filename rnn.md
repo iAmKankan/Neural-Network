@@ -12,7 +12,11 @@
 
 <img src="https://user-images.githubusercontent.com/12748752/144027506-ea345023-d777-493c-88fd-fae058e70097.png" width=50%/>
 
-> ####  <ins>A recurrent neuron (left) unrolled through time (right)</ins>
+> ####  <ins>A recurrent neuron (left)    |    unrolled through time (right)</ins>
+
+<img src="https://user-images.githubusercontent.com/12748752/144035005-3e1f7cb9-3cd8-4f2f-9d11-98a4bfc61ce0.png" width=50%/>
+
+> ####  <ins>A recurrent neuron (left)    |    unrolled through time (right)</ins>
 
 * Let’s look at the simplest possible RNN, composed of one neuron receiving inputs, producing an output, and sending that output back to itself. 
 * At each time step `t` (also called a frame), this recurrent neuron receives the inputs `x` as well as its own output from the previous time step, y .
@@ -20,7 +24,7 @@
 * We can represent this tiny network against the time axis, as shown above.
 * This is called _**`unrolling the network through time`**_ (it’s the same recurrent neuron represented once per time step).
 
-> #### At each time step `t`, every neuron receives both the `input vector x` and the `output vector from the previous time step y`. 
+> #### At each time step `t`, every neuron receives both the `input vector `<img src="https://latex.codecogs.com/svg.image?\textbf{x}_{(t)}" title="\textbf{x}_{(t)}" /> and the `output vector from the previous time step `<img src="https://latex.codecogs.com/svg.image?\textbf{y}_{(t-1)}" title="\textbf{y}_{(t-1)}" height=50%/>. 
 >> #### Note that both the inputs and outputs are vectors now (when there was just a single neuron, the output was a scalar). 
 
 
