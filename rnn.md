@@ -53,10 +53,30 @@
 
 > #### <ins>Seq-to-seq (top left), seq-to-vector (top right), vector-to-seq (bottom left), and Encoder–Decoder (bottom right) networks </ins>
 
-> ### Sequence-to-Sequence Network
+### Sequence-to-Sequence Network
 * An RNN can simultaneously take a sequence of inputs and produce a sequence of outputs.
 * This type of network is useful for predicting time series such as stock prices: you feed it the prices over the last _N_ days, and it must output the prices shifted by one day into the future (i.e., from _N – 1_ days ago to tomorrow).
 
+### Sequence-to-Vector Network
+* You could feed the network a sequence of inputs and ignore all outputs except for the last one. 
+* For example, you could feed the network a sequence of words corresponding to a movie review, and the network would output a sentiment score (e.g., from –1 [hate] to +1 [love]).
+
+
+###  Vector-to-Sequence Network
+* Conversely, you could feed the network the same input vector over and over again at each time step and let it output a sequence.
+*  For example, the input could be an image (or the output of a CNN), and the output could be a caption for that image.
+
+
+### Encoder-Decoder Network
+* Lastly, you could have a **sequence-to-vector network**, called an **`encoder`**, followed by a **vector-to-sequence network**, called a **`decoder`**. 
+* For example, this could be used for translating a sentence from one language to another. 
+  * You would feed the network a sentence in one language, the encoder would convert this sentence into a single vector representation, and then the decoder would decode this vector into a sentence in another language. 
+  * This two-step model, called an `Encoder–Decoder`, works much better than trying to translate on the fly with a single `sequence-to-sequence RNN` (like the one represented at the top left): the last words of a sentence can affect the first words of the translation, so you need to wait until you have seen the whole sentence before translating it.
+
+### Training RNNs
+![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
+* To train an RNN, the trick is to unroll it through time (like we just did) and then simply use regular backpropagation (see Figure 15-5). 
+* This strategy is called **`backpropagation through time (BPTT)`**.
 
 ## Bibliography
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
