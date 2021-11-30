@@ -14,8 +14,14 @@
 
 > ####  <ins>A recurrent neuron (left) unrolled through time (right)</ins>
 
-* Let’s look at the simplest possible RNN, composed of one neuron receiving inputs, producing an output, and sending that output back to itself, as shown in Figure 15-1 (left). At each time step t (also called a frame), this recurrent neuron receives the inputs x as well as its own output from the previous time step, y . Since there is no previous output at the first time step, it is generally set to 0. We can represent this tiny network against the time axis, as shown in Figure 15-1 (right). This is called unrolling the network through time (it’s the same recurrent neuron represented once per time step).
-* 
+* Let’s look at the simplest possible RNN, composed of one neuron receiving inputs, producing an output, and sending that output back to itself. 
+* At each time step `t` (also called a frame), this recurrent neuron receives the inputs `x` as well as its own output from the previous time step, y .
+* Since there is no previous output at the first time step, it is generally set to 0. 
+* We can represent this tiny network against the time axis, as shown above.
+* This is called _**`unrolling the network through time`**_ (it’s the same recurrent neuron represented once per time step).
+
+> #### At each time step `t`, every neuron receives both the `input vector x` and the `output vector from the previous time step y`. 
+>> #### Note that both the inputs and outputs are vectors now (when there was just a single neuron, the output was a scalar). 
 
 
 
