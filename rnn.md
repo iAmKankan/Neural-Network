@@ -1,9 +1,14 @@
 ## Index
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 * [Recurrent Neural Networks(RNN)](https://github.com/iAmKankan/Neural-Network/blob/main/rnn.md#recurrent-neural-networksrnn)
-  * [Output of a recurrent layer for a single instance]()
-  * [Memory Cells]()
-  * [Different types of RNN based on Input and Output Sequences]()
+  * [Output of a recurrent layer for a single instance](https://github.com/iAmKankan/Neural-Network/blob/main/rnn.md#output-of-a-recurrent-layer-for-a-single-instance)
+  * [Memory Cells](https://github.com/iAmKankan/Neural-Network/blob/main/rnn.md#memory-cells)
+  * [Different types of RNN based on Input and Output Sequences](https://github.com/iAmKankan/Neural-Network/blob/main/rnn.md#different-types-of-rnn-based-on-input-and-output-sequences)
+    * [Sequence-to-Sequence Network](https://github.com/iAmKankan/Neural-Network/blob/main/rnn.md#sequence-to-sequence-network)
+    * [Sequence-to-Vector Network](https://github.com/iAmKankan/Neural-Network/blob/main/rnn.md#sequence-to-vector-network)
+    * [Vector-to-Sequence Network](https://github.com/iAmKankan/Neural-Network/blob/main/rnn.md#vector-to-sequence-network)
+    * [Encoder-Decoder Network](https://github.com/iAmKankan/Neural-Network/blob/main/rnn.md#encoder-decoder-network)
+  * [Training RNNs](https://github.com/iAmKankan/Neural-Network/blob/main/rnn.md#training-rnns)
 ## Recurrent Neural Networks(RNN)
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 > #### Feedforward Neural Networks
