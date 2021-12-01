@@ -85,7 +85,20 @@
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 * To train an RNN, the trick is to unroll it through time (like we just did) and then simply use regular backpropagation. 
 * This strategy is called **`backpropagation through time (BPTT)`**.
+<img src="https://user-images.githubusercontent.com/12748752/144243558-a7cae1ca-96d7-4d80-9be8-bb4e7e960dc4.png" width=50%/>
 
+#### First
+* Like regular backpropagation, there is a `first forward pass through the unrolled network` (represented by the dashed arrows). 
+#### Then 
+* The output sequence is evaluated using a cost function <img src="https://latex.codecogs.com/svg.image?C(\textbf{Y}_{(0)},&space;\textbf{Y}_{(1)},...&space;,&space;\textbf{Y}_{(T)})" title="C(\textbf{Y}_{(0)}, \textbf{Y}_{(1)},... , \textbf{Y}_{(T)})" /> (where _T_ is the max time step). 
+* **Note**: this cost function may `ignore some outputs`(for example, in a sequence-to-vector RNN, all outputs are ignored except for the very last one). 
+#### Then
+* The gradients of that cost function are then `propagated backward through the unrolled network` (represented by the solid arrows). 
+#### Finally 
+* The `model parameters are updated` using the gradients computed during BPTT. 
+* **Note** that the gradients flow backward through all the outputs used by the cost function, not just through the final output (for example, in Figure the cost function is computed using the last three outputs of the network, <img src="https://latex.codecogs.com/svg.image?\textbf{Y}_{(2)},&space;\textbf{Y}_{(3)}\&space;and&space;\&space;\textbf{Y}_{(4)}" title="\textbf{Y}_{(2)}, \textbf{Y}_{(3)}\ and \ \textbf{Y}_{(4)}" />, so gradients flow through these three outputs, but not through **Y_(0)** and **Y_(1)** ). 
+* Moreover, since the same parameters **W** and **b** are used at each time step, backpropagation will do the right thing and sum over all time steps.
+* Fortunately, tf.keras takes care of all of this complexity for you
 ## Bibliography
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 * **Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow, 2nd Edition by Aurélien Géron**
