@@ -1,6 +1,9 @@
 ## Index
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
-
+* [Recurrent Neural Networks(RNN)](https://github.com/iAmKankan/Neural-Network/blob/main/rnn.md#recurrent-neural-networksrnn)
+  * [Output of a recurrent layer for a single instance]()
+  * [Memory Cells]()
+  * [Different types of RNN based on Input and Output Sequences]()
 ## Recurrent Neural Networks(RNN)
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 > #### Feedforward Neural Networks
@@ -26,7 +29,7 @@
 > #### At each time step `t`, every neuron receives both the `input vector `<img src="https://latex.codecogs.com/svg.image?\textbf{x}_{(t)}" title="\textbf{x}_{(t)}" /> and the `output vector from the previous time step `<img src="https://latex.codecogs.com/svg.image?\textbf{y}_{(t-1)}" title="\textbf{y}_{(t-1)}" height=50%/>. 
 >> #### Note that both the inputs and outputs are vectors now (when there was just a single neuron, the output was a scalar). 
 
- #### Output of a recurrent layer for a single instance
+ ### Output of a recurrent layer for a single instance
  ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 
 <img src="https://latex.codecogs.com/svg.image?\textbf{y}_{(t)}&space;=&space;\phi&space;(\textbf{W}_x^\top\textbf{x}_{(t)}&plus;\textbf{W}_y^\top\textbf{y}_{(t-1)}&plus;\textbf{b})" title="\textbf{y}_{(t)} = \phi (\textbf{W}_x^\top\textbf{x}_{(t)}+\textbf{W}_y^\top\textbf{y}_{(t-1)}+\textbf{b})" />
@@ -35,7 +38,7 @@
 * Let’s call these weight vectors <img src="https://latex.codecogs.com/svg.image?\textbf{w}_x" title="\textbf{w}_x" /> and <img src="https://latex.codecogs.com/svg.image?\textbf{w}_y" title="\textbf{w}_y" />. 
 * If we consider the whole recurrent layer instead of just one recurrent neuron, we can place all the weight vectors in two weight matrices, <img src="https://latex.codecogs.com/svg.image?\textbf{W}_x" title="\textbf{W}_x" /> and <img src="https://latex.codecogs.com/svg.image?\textbf{W}_y" title="\textbf{W}_y" /> .
 
-#### Memory Cells
+### Memory Cells
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 * Since the output of a recurrent neuron at time step `t` is a function of all the inputs from previous time steps, you could say it has a form of `memory`.
 * A part of a neural network that preserves some state across time steps is called a `memory cell` (or simply a `cell`). 
@@ -46,7 +49,7 @@
 
 <img src="https://user-images.githubusercontent.com/12748752/144058855-ddbd4576-7fbe-4ed0-89c8-3c9ba29655b2.png" width=40%>
 
-#### Input and Output Sequences
+### Different types of RNN based on Input and Output Sequences
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 
 <img src="https://user-images.githubusercontent.com/12748752/144064476-e96cb279-6ea7-4a07-aad8-d883b0549bc2.png" width=50% />
