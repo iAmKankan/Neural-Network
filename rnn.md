@@ -95,7 +95,7 @@
 #### Then
 * The gradients of that cost function are then `propagated backward through the unrolled network` (represented by the solid arrows). 
 #### Finally 
-* The `model parameters are updated` using the gradients computed during BPTT. 
+* The `model parameters are updated` using the gradients computed during **BPTT**. 
 * **Note** that the gradients flow backward through all the outputs used by the cost function, not just through the final output (for example, in Figure the cost function is computed using the last three outputs of the network, <img src="https://latex.codecogs.com/svg.image?\textbf{Y}_{(2)},&space;\textbf{Y}_{(3)}\&space;and&space;\&space;\textbf{Y}_{(4)}" title="\textbf{Y}_{(2)}, \textbf{Y}_{(3)}\ and \ \textbf{Y}_{(4)}" />, so gradients flow through these three outputs, but not through **Y_(0)** and **Y_(1)** ). 
 * Moreover, since the same parameters **W** and **b** are used at each time step, backpropagation will do the right thing and sum over all time steps.
 * Fortunately, tf.keras takes care of all of this complexity for you
