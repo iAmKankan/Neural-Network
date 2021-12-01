@@ -75,7 +75,7 @@
 
 ### Training RNNs
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
-* To train an RNN, the trick is to unroll it through time (like we just did) and then simply use regular backpropagation (see Figure 15-5). 
+* To train an RNN, the trick is to unroll it through time (like we just did) and then simply use regular backpropagation. 
 * This strategy is called **`backpropagation through time (BPTT)`**.
 
 ## Bibliography
