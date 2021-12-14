@@ -83,6 +83,7 @@
 
 ### Backpropagation or Training RNNs
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
+* [Backpropagation in common ANN or Multi-Layer Perceptron](https://github.com/iAmKankan/Neural-Network/blob/main/multilayer-perceptrons.md#backpropagationhttps://github.com/iAmKankan/Neural-Network/blob/main/multilayer-perceptrons.md#backpropagation)
 * To train an RNN, the trick is to unroll it through time (like we just did) and then simply use regular backpropagation. 
 * This strategy is called ***`backpropagation through time (BPTT)`***.
 <img src="https://user-images.githubusercontent.com/12748752/144243558-a7cae1ca-96d7-4d80-9be8-bb4e7e960dc4.png" width=50%/>
