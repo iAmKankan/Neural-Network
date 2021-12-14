@@ -31,7 +31,7 @@
 * We can represent this tiny network against the time axis, as shown above.
 * This is called _**`unrolling the network through time`**_ (it’s the same recurrent neuron represented once per time step).
 
-> #### At each time step `t`, every neuron receives both the `input vector `<img src="https://latex.codecogs.com/svg.image?\textbf{x}_{(t)}" title="\textbf{x}_{(t)}" /> and the `output vector from the previous time step `<img src="https://latex.codecogs.com/svg.image?\textbf{y}_{(t-1)}" title="\textbf{y}_{(t-1)}" height=50%/>. 
+> #### At each time step `t`, every neuron receives both the `input vector` x<sub>(t)</sub> and the `output vector from the previous time step ` y<sub>(t-1)</sub> 
 >> #### Note that both the inputs and outputs are vectors now (when there was just a single neuron, the output was a scalar). 
 
  ### Output of a recurrent layer for a single instance
@@ -84,7 +84,7 @@
 ### Backpropagation or Training RNNs
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 * To train an RNN, the trick is to unroll it through time (like we just did) and then simply use regular backpropagation. 
-* This strategy is called **`backpropagation through time (BPTT)`**.
+* This strategy is called ***`backpropagation through time (BPTT)`***.
 <img src="https://user-images.githubusercontent.com/12748752/144243558-a7cae1ca-96d7-4d80-9be8-bb4e7e960dc4.png" width=50%/>
 
 #### First
@@ -96,7 +96,7 @@
 * The gradients of that cost function are then `propagated backward through the unrolled network` (represented by the solid arrows). 
 #### Finally 
 * The `model parameters are updated` using the gradients computed during **BPTT**. 
-* **Note** that the gradients flow backward through all the outputs used by the cost function, not just through the final output (for example, in Figure the cost function is computed using the last three outputs of the network, <img src="https://latex.codecogs.com/svg.image?\textbf{Y}_{(2)},&space;\textbf{Y}_{(3)}\&space;and&space;\&space;\textbf{Y}_{(4)}" title="\textbf{Y}_{(2)}, \textbf{Y}_{(3)}\ and \ \textbf{Y}_{(4)}" />, so gradients flow through these three outputs, but not through **Y_(0)** and **Y_(1)** ). 
+* **Note** that the gradients flow backward through all the outputs used by the cost function, not just through the final output (for example, in Figure the cost function is computed using the last three outputs of the network, <img src="https://latex.codecogs.com/svg.image?\textbf{Y}_{(2)},&space;\textbf{Y}_{(3)}\&space;and&space;\&space;\textbf{Y}_{(4)}" title="\textbf{Y}_{(2)}, \textbf{Y}_{(3)}\ and \ \textbf{Y}_{(4)}" />, so gradients flow through these three outputs, but not through **Y<sub>(0)</sub>** and **Y<sub>(1)</sub>** ). 
 * Moreover, since the same parameters **W** and **b** are used at each time step, backpropagation will do the right thing and sum over all time steps.
 * Fortunately, tf.keras takes care of all of this complexity for you
 ## Bibliography
