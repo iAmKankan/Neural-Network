@@ -8,7 +8,7 @@
     * [Sequence-to-Vector Network](https://github.com/iAmKankan/Neural-Network/blob/main/rnn.md#sequence-to-vector-network)
     * [Vector-to-Sequence Network](https://github.com/iAmKankan/Neural-Network/blob/main/rnn.md#vector-to-sequence-network)
     * [Encoder-Decoder Network](https://github.com/iAmKankan/Neural-Network/blob/main/rnn.md#encoder-decoder-network)
-  * [Training RNNs](https://github.com/iAmKankan/Neural-Network/blob/main/rnn.md#training-rnns)
+  * [Backpropagation or Training RNNs](https://github.com/iAmKankan/Neural-Network/blob/main/rnn.md#training-rnns)
 ## Recurrent Neural Networks(RNN)
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 > #### Feedforward Neural Networks
@@ -81,7 +81,7 @@
   * You would feed the network a sentence in one language, the encoder would convert this sentence into a single vector representation, and then the decoder would decode this vector into a sentence in another language. 
   * This two-step model, called an `Encoder–Decoder`, works much better than trying to translate on the fly with a single `sequence-to-sequence RNN` (like the one represented at the top left): the last words of a sentence can affect the first words of the translation, so you need to wait until you have seen the whole sentence before translating it.
 
-### Training RNNs
+### Backpropagation or Training RNNs
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 * To train an RNN, the trick is to unroll it through time (like we just did) and then simply use regular backpropagation. 
 * This strategy is called **`backpropagation through time (BPTT)`**.
