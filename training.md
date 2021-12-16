@@ -1,10 +1,9 @@
 ## Index
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
-![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 
 ## The Vanishing or Exploding Gradients Problems
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
-> #### [Backpropagation:](https://github.com/iAmKankan/Neural-Network/blob/main/multilayer-perceptrons.md#backpropagation)
+### Backpropagation: [_`link for backpropagation in general`_](https://github.com/iAmKankan/Neural-Network/blob/main/multilayer-perceptrons.md#backpropagation)
 * The backpropagation algorithm works by going from the output layer to the input layer, propagating the error gradient along the way. 
 * Once the algorithm has computed the gradient of the cost function with regard to each parameter in the network, it uses these gradients to update each parameter with a Gradient Descent step.
 
@@ -22,6 +21,7 @@
 <img src="https://user-images.githubusercontent.com/12748752/146207390-7b35242a-d980-4a6d-8db5-60faba8a5406.png" width=40% />
 
 ### _Glorot and He Initialization_
+![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 * In their paper, Glorot and Bengio propose a way to significantly alleviate the unstable gradients problem. 
 * They point out that we need the signal to flow properly in both directions: in the forward direction when making predictions, and in the reverse direction.
 * We don’t want the signal to die out, nor do we want it to explode and saturate. 
@@ -41,19 +41,19 @@
 
 
 > #### **_Initialization parameters for each type of activation function_**
+![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 <img src="https://latex.codecogs.com/svg.image?\begin{matrix}\mathbf{Initialization}&space;&&space;\textbf{Activation&space;functions}&space;&\sigma^2\textbf{(Normal)}&space;&space;\\&space;\\&space;Glorot&None,\&space;tanh,\&space;logistic,\&space;softmax&space;&space;&&space;\frac{1}{fan_{avg}}&space;\\&space;\\&space;&space;He&&space;ReLU\&space;and\&space;variants&space;&&space;\frac{2}{fan_{in}}&space;\\&space;\\&space;LeCun&&space;SELU&space;&&space;\frac{1}{fan_{in}}\end{matrix}" title="\begin{matrix}\mathbf{Initialization} & \textbf{Activation functions} &\sigma^2\textbf{(Normal)} \\ \\ Glorot&None,\ tanh,\ logistic,\ softmax & \frac{1}{fan_{avg}} \\ \\ He& ReLU\ and\ variants & \frac{2}{fan_{in}} \\ \\ LeCun& SELU & \frac{1}{fan_{in}}\end{matrix}" />
 
-
-* By default, Keras uses Glorot initialization with a uniform distribution. 
-* When creating a layer, you can change this to He initialization by setting 
+### _Activation function Initialization in Keras_
+![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
+* By default, `Keras uses` **_`Glorot initialization`_** with a `uniform distribution`. 
+### _`He initialization`_ in Keras
    * `kernel_initializer="he_uniform"` 
    * `kernel_initializer="he_normal"` 
-* like this: 
 ```Python 
 keras.layers.Dense(10, activation="relu", kernel_initializer="he_normal") 
 ````
-* If you want He initialization with a uniform distribution but based on fan<sub>avg</sub> rather than fan<sub>in</sub> , 
-* you can use the **_`VarianceScaling`_** initializer like this: 
+* _`uniform distribution`_ but based on `fan<sub>avg</sub>` rather than `fan<sub>in</sub>`, then **_`VarianceScaling`_** initializer like this: 
 ```Python
 he_avg_init = keras.initializers.VarianceScaling(scale=2., mode='fan_avg', distribution='uniform') 
 keras.layers.Dense(10, activation="sigmoid", kernel_initializer=he_avg_init)
