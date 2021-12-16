@@ -47,7 +47,7 @@
 * By default, Keras uses Glorot initialization with a uniform distribution. 
 * When creating a layer, you can change this to He initialization by setting 
    * kernel_initializer="he_uniform" 
-   * or kernel_initializer="he_normal" 
+   * kernel_initializer="he_normal" 
 * like this: 
 ```Python 
 keras.layers.Dense(10, activation="relu", kernel_initializer="he_normal") 
