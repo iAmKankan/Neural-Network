@@ -19,13 +19,13 @@
 * If you chain several linear transformations, all you get is a linear transformation.
 > **For example: Say we have f(x) and g(x) then Then chaining these two linear functions gives you another linear function f(g(x)).**
 >> f(x) = 2 x + 3 
->> 
->> g(x) = 5 x - 1 
->> 
->> f(g(x)) = 2(5 x - 1) + 3 = 10 x + 1.
 >
-> 
-> 
+>> g(x) = 5 x - 1 
+>
+>> f(g(x)) = 2(5 x - 1) + 3 = 10 x + 1.
+
+
 * So, if you don’t have some non-linearity between layers, then even a deep stack of layers is equivalent to a single layer.
 * You cannot solve very complex problems with that.
 
+> ### The botton line is _linear activation function_ cannot be used in _hidden layers_, it has to be at the end if there is a requirment i.e for _regression output layer_ for some special cases
