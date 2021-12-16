@@ -47,9 +47,10 @@
 ### _Activation function Initialization in Keras_
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 * By default, `Keras uses` **_`Glorot initialization`_** with a `uniform distribution`. 
+
 ### _`He initialization`_ in Keras
-   * `kernel_initializer="he_uniform"` 
-   * `kernel_initializer="he_normal"` 
+* `kernel_initializer="he_uniform"` 
+* `kernel_initializer="he_normal"` 
 ```Python 
 keras.layers.Dense(10, activation="relu", kernel_initializer="he_normal") 
 ````
