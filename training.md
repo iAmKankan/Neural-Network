@@ -53,7 +53,7 @@
 ```Python 
 keras.layers.Dense(10, activation="relu", kernel_initializer="he_normal") 
 ````
-* _`uniform distribution`_ but based on `fan<sub>avg</sub>` rather than `fan<sub>in</sub>`, then **_`VarianceScaling`_** initializer like this: 
+* _`uniform distribution`_ but based on fan<sub>avg</sub> rather than fan<sub>in</sub>, then **_`VarianceScaling`_** initializer like this: 
 ```Python
 he_avg_init = keras.initializers.VarianceScaling(scale=2., mode='fan_avg', distribution='uniform') 
 keras.layers.Dense(10, activation="sigmoid", kernel_initializer=he_avg_init)
