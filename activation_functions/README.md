@@ -6,9 +6,6 @@
    * [TanH](#tanh)
 
 
-## Activation Function
-![dark](https://user-images.githubusercontent.com/12748752/136802585-2ef5b7ff-ddbc-417f-b963-ca233db3ded1.png)
-
 ### Why do we need activation functions in the first place
 ![light](https://user-images.githubusercontent.com/12748752/136802581-e8e0607f-3472-44f7-a8b2-8ba82a0f8070.png)
 * If you chain several linear transformations, all you get is a linear transformation.
