@@ -20,7 +20,7 @@
    * [Sigmoid](https://github.com/iAmKankan/Neural-Network/blob/main/activation_functions/sigmoid.md)
    * [Softmax](https://github.com/iAmKankan/Neural-Network/blob/main/activation_functions/softmax.md)
    * [TanH](#tanh)
-
+* [Bibliography](#bibliography)
 ## Activation Function
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 * **_Activation functions_** decide whether a neuron should be activated or not by calculating the **_weighted sum_** and further **_adding bias_** with it. 
@@ -127,7 +127,8 @@ keras.layers.Dense(10, activation="sigmoid", kernel_initializer=he_avg_init)
 * Until then most people had assumed that if Mother Nature had chosen to use roughly sigmoid activation functions in biological neurons, they must be an excellent choice.
 * But it turns out that other activation functions behave much better in deep neural networks—in particular, the ReLU activation function, mostly because it does not saturate for positive values (and because it is fast to compute).
 
-
+## Bibliography
+![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 
 
 
