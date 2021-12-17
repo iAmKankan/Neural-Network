@@ -1,5 +1,22 @@
 ## Index
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
+* [Why do we need activation functions in the first place](#why-do-we-need-activation-functions-in-the-first-place)
+* [Different types of Activation functions and their derivatives](#different-types-of-activation-functions-and-their-derivatives)
+* [How to use Activation functions in Keras](#how-to-use-activation-functions-in-keras)
+* [Usage of activations](#usage-of-activations)
+* [The Vanishing or Exploding Gradients Problems](#the-vanishing-or-exploding-gradients-problems)
+   * [Backpropagation](#backpropagation-link-for-backpropagation-in-general)
+   * [Vanishing Gradients](#vanishing-gradients)
+   * [Exploding Gradients](#exploding-gradients)
+   * [Problem with Logistic or Sigmoid Activation Function](#problem-with-logistic-or-sigmoid-activation-function)
+* [Glorot and He Initialization](#glorot-and-he-initialization)
+   * [Glorot initialization (when using the logistic activation function)](#glorot-initialization-when-using-the-logistic-activation-function)
+   * [ReLU initialization strategy](#relu-initialization-strategy)
+   * [Initialization parameters for each type of activation function](#initialization-parameters-for-each-type-of-activation-function)
+   * [Activation function Initialization in Keras](#activation-function-initialization-in-keras)
+   * [He initialization in Keras](#he-initialization-in-keras)
+
+
 * [Activation Function](#activation-function)
    * [Sigmoid](https://github.com/iAmKankan/Neural-Network/blob/main/activation_functions/sigmoid.md)
    * [Softmax](https://github.com/iAmKankan/Neural-Network/blob/main/activation_functions/softmax.md)
