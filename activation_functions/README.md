@@ -15,8 +15,6 @@
    * [Initialization parameters for each type of activation function](#initialization-parameters-for-each-type-of-activation-function)
    * [Activation function Initialization in Keras](#activation-function-initialization-in-keras)
    * [He initialization in Keras](#he-initialization-in-keras)
-
-
 * [Activation Function](#activation-function)
    * [Sigmoid](https://github.com/iAmKankan/Neural-Network/blob/main/activation_functions/sigmoid.md)
    * [Softmax](https://github.com/iAmKankan/Neural-Network/blob/main/activation_functions/softmax.md)
