@@ -131,8 +131,13 @@ keras.layers.Dense(10, activation="sigmoid", kernel_initializer=he_avg_init)
 * Until then most people had assumed that if Mother Nature had chosen to use roughly sigmoid activation functions in biological neurons, they must be an excellent choice.
 * But it turns out that other activation functions behave much better in deep neural networks—in particular, the ReLU activation function, mostly because it does not saturate for positive values (and because it is fast to compute).
 
+## More Links
+![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
+* [Keras Doc](https://keras.io/api/layers/activations/#selu-function)
+
 ## Bibliography
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 
-
+* [Deep in to Deep Learning]()
+* 
 
