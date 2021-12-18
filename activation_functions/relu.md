@@ -44,24 +44,23 @@ def relu_prime(z):
 * To solve the  _dying ReLUs_ problem, we use leaky ReLU. 
 > #### Function 
 * _**LeakyReLU (z) = max(αz, z)**_
-* The hyperparameter **_α_** defines how much the function “leaks”: it is the slope of the function for z < 0 and is typically set to 0.01. This small slope ensures that leaky ReLUs never die; they can go into a long coma, but they have a chance to eventually wake up. A 2015 paper compared several variants of the ReLU activation function, and one of its conclusions was that the leaky variants always outperformed the strict ReLU activation function. In fact, setting α = 0.2 (a huge leak) seemed to result in better performance than α = 0.01 (a small leak). The paper also evaluated the randomized leaky ReLU (RReLU), where α is picked randomly in a given range during training and is fixed to an average value during testing. RReLU also performed fairly well and seemed to act as a regularizer (reducing the risk of overfitting the training set). Finally, the paper evaluated the parametric leaky ReLU (PReLU), where α is authorized to be learned during training (instead of being a hyperparameter, it becomes a parameter that can be modified by backpropagation like any other parameter). PReLU was reported to strongly outperform ReLU on large image datasets, but on smaller datasets it runs the risk of overfitting the training set.
-
-<div class="row">
-  <div class="column">
 <img src="https://user-images.githubusercontent.com/12748752/146623578-642cb1b9-d04e-4ede-9b4a-86355049dc23.png" width=40% />
 <img src="https://latex.codecogs.com/svg.image?R(z)=\begin{Bmatrix}z&space;&&space;z&space;>&space;0&space;\\\alpha&space;z&space;&&space;z<=0&space;\\\end{Bmatrix}" title="R(z)=\begin{Bmatrix}z & z > 0 \\\alpha z & z<=0 \\\end{Bmatrix}" />
-  </div>
-  <div class="column">
+> #### Derivative
 <img src="https://user-images.githubusercontent.com/12748752/146623581-05a0697b-f8fb-4189-bfd7-59fce72cf7dc.png" width=40% />
 <img src="https://latex.codecogs.com/svg.image?R'(z)=\begin{Bmatrix}1&space;&&space;z&space;>&space;0&space;\\\alpha&space;&&space;z<0&space;\\\end{Bmatrix}" title="R'(z)=\begin{Bmatrix}1 & z > 0 \\\alpha & z<0 \\\end{Bmatrix}" />
-  </div>
-</div>
 
+* The hyperparameter **_α_** defines how much the function “leaks”: it is the slope of the function for _z < 0_ and is typically set to _0.01_. 
+* This small slope ensures that leaky ReLUs never die; they can go into a long coma, but they have a chance to eventually wake up. 
+* A 2015 paper compared several variants of the ReLU activation function, and one of its conclusions was that the leaky variants always outperformed the strict ReLU activation function. 
+* In fact, setting α = 0.2 (a huge leak) seemed to result in better performance than _`α = 0.01`_ (a small leak). 
+#### _**Randomized leaky ReLU (RReLU)**_, 
+* Where _**α**_ is picked randomly in a given range during training and is fixed to an average value during testing. 
+* RReLU also performed fairly well and seemed to act as a regularizer (reducing the risk of overfitting the training set). 
+#### _**Parametric leaky ReLU (PReLU)**_
+* Finally, the paper evaluated the _**parametric leaky ReLU (PReLU)**_, where _**α**_ is authorized to be learned during training (instead of being a hyperparameter, it becomes a parameter that can be modified by backpropagation like any other parameter). 
+* _**PReLU**_ was reported to strongly outperform ReLU on large image datasets, but on smaller datasets it runs the risk of overfitting the training set.
 
-
-
-<img src="https://user-images.githubusercontent.com/12748752/146623578-642cb1b9-d04e-4ede-9b4a-86355049dc23.png" width=40% />
-<img src="https://latex.codecogs.com/svg.image?R(z)=\begin{Bmatrix}z&space;&&space;z&space;>&space;0&space;\\\alpha&space;z&space;&&space;z<=0&space;\\\end{Bmatrix}" title="R(z)=\begin{Bmatrix}z & z > 0 \\\alpha z & z<=0 \\\end{Bmatrix}" />
 
 <img src="https://user-images.githubusercontent.com/12748752/146623581-05a0697b-f8fb-4189-bfd7-59fce72cf7dc.png" width=40% />
 <img src="https://latex.codecogs.com/svg.image?R'(z)=\begin{Bmatrix}1&space;&&space;z&space;>&space;0&space;\\\alpha&space;&&space;z<0&space;\\\end{Bmatrix}" title="R'(z)=\begin{Bmatrix}1 & z > 0 \\\alpha & z<0 \\\end{Bmatrix}" />
