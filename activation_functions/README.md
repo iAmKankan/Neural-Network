@@ -45,6 +45,8 @@
 ![light](https://user-images.githubusercontent.com/12748752/136802581-e8e0607f-3472-44f7-a8b2-8ba82a0f8070.png)
 
 <img src="https://user-images.githubusercontent.com/12748752/146569902-e5b03528-bb1b-4a96-a8c6-cf2e998dd0c6.png"/>
+### Performance of Different types of Activation functions
+> ## in general SELU > ELU > leaky ReLU (and its variants) > ReLU > tanh > logistic
 
 ### How to use Activation functions in _`Keras`_
 ![light](https://user-images.githubusercontent.com/12748752/136802581-e8e0607f-3472-44f7-a8b2-8ba82a0f8070.png)
