@@ -32,4 +32,15 @@ def relu_prime(z):
 * We can get away with this because the input may never actually be zero. 
 <img src="https://user-images.githubusercontent.com/12748752/146598664-52c52230-8f50-49a4-8e27-e4f35f735726.png" width=40% />
 
-* ReLU behave much better in deep neural networks, mostly because it does not saturate for positive values (and because it is fast to compute).
+* _ReLU_ behave much better in deep neural networks, mostly because it does not saturate for positive values (and because it is fast to compute).
+#### _dying ReLUs_ Problem
+* During training, some neurons effectively “die,” meaning they stop outputting anything other than 0. 
+* In some cases, you may find that half of your network’s neurons are dead, especially if you used a large learning rate. 
+* A neuron dies when its weights get tweaked in such a way that the weighted sum of its inputs are negative for all instances in the training set. 
+* When this happens, it just keeps outputting zeros, and Gradient Descent does not affect it anymore because the gradient of the ReLU function is zero when its input is negative.
+
+### _leaky ReLU_
+![light](https://user-images.githubusercontent.com/12748752/136802581-e8e0607f-3472-44f7-a8b2-8ba82a0f8070.png)
+* To solve the  _dying ReLUs_ problem, we use leaky ReLU. 
+> #### Function LeakyReLU (z) = max(αz, z) 
+* The hyperparameter α defines how much the function “leaks”: it is the slope of the function for z < 0 and is typically set to 0.01. This small slope ensures that leaky ReLUs never die; they can go into a long coma, but they have a chance to eventually wake up. A 2015 paper compared several variants of the ReLU activation function, and one of its conclusions was that the leaky variants always outperformed the strict ReLU activation function. In fact, setting α = 0.2 (a huge leak) seemed to result in better performance than α = 0.01 (a small leak). The paper also evaluated the randomized leaky ReLU (RReLU), where α is picked randomly in a given range during training and is fixed to an average value during testing. RReLU also performed fairly well and seemed to act as a regularizer (reducing the risk of overfitting the training set). Finally, the paper evaluated the parametric leaky ReLU (PReLU), where α is authorized to be learned during training (instead of
