@@ -51,5 +51,6 @@ def relu_prime(z):
 <img src="https://user-images.githubusercontent.com/12748752/146623581-05a0697b-f8fb-4189-bfd7-59fce72cf7dc.png" width=40% />
 <img src="https://latex.codecogs.com/svg.image?R'(z)=\begin{Bmatrix}1&space;&&space;z&space;>&space;0&space;\\\alpha&space;&&space;z<0&space;\\\end{Bmatrix}" title="R'(z)=\begin{Bmatrix}1 & z > 0 \\\alpha & z<0 \\\end{Bmatrix}" />
 
+![light](https://user-images.githubusercontent.com/12748752/136802581-e8e0607f-3472-44f7-a8b2-8ba82a0f8070.png)
 
 > ## in general SELU > ELU > leaky ReLU (and its variants) > ReLU > tanh > logistic.
