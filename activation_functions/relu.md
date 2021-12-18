@@ -6,7 +6,7 @@
 * The most popular choice, due to both simplicity of implementation and its good performance on a variety of predictive tasks, is the _`rectified linear unit (ReLU)`_.
 * ReLU provides a very simple _**nonlinear transformation**_.
 > #### Function
-*  _g(x) = max(x,0)_
+*  **_g(x) = max(x,0)_**
 <img src="https://latex.codecogs.com/svg.image?R(z)=\begin{Bmatrix}z&space;&&space;z&space;>&space;0&space;\\0&space;&&space;z<=0&space;\\\end{Bmatrix}" title="R(z)=\begin{Bmatrix}z & z > 0 \\0 & z<=0 \\\end{Bmatrix}" />
 
 ```Python
@@ -42,5 +42,6 @@ def relu_prime(z):
 ### _leaky ReLU_
 ![light](https://user-images.githubusercontent.com/12748752/136802581-e8e0607f-3472-44f7-a8b2-8ba82a0f8070.png)
 * To solve the  _dying ReLUs_ problem, we use leaky ReLU. 
-> #### Function LeakyReLU (z) = max(αz, z) 
-* The hyperparameter α defines how much the function “leaks”: it is the slope of the function for z < 0 and is typically set to 0.01. This small slope ensures that leaky ReLUs never die; they can go into a long coma, but they have a chance to eventually wake up. A 2015 paper compared several variants of the ReLU activation function, and one of its conclusions was that the leaky variants always outperformed the strict ReLU activation function. In fact, setting α = 0.2 (a huge leak) seemed to result in better performance than α = 0.01 (a small leak). The paper also evaluated the randomized leaky ReLU (RReLU), where α is picked randomly in a given range during training and is fixed to an average value during testing. RReLU also performed fairly well and seemed to act as a regularizer (reducing the risk of overfitting the training set). Finally, the paper evaluated the parametric leaky ReLU (PReLU), where α is authorized to be learned during training (instead of
+> #### Function 
+* _**LeakyReLU (z) = max(αz, z)**_
+* The hyperparameter _α_defines how much the function “leaks”: it is the slope of the function for z < 0 and is typically set to 0.01. This small slope ensures that leaky ReLUs never die; they can go into a long coma, but they have a chance to eventually wake up. A 2015 paper compared several variants of the ReLU activation function, and one of its conclusions was that the leaky variants always outperformed the strict ReLU activation function. In fact, setting α = 0.2 (a huge leak) seemed to result in better performance than α = 0.01 (a small leak). The paper also evaluated the randomized leaky ReLU (RReLU), where α is picked randomly in a given range during training and is fixed to an average value during testing. RReLU also performed fairly well and seemed to act as a regularizer (reducing the risk of overfitting the training set). Finally, the paper evaluated the parametric leaky ReLU (PReLU), where α is authorized to be learned during training (instead of being a hyperparameter, it becomes a parameter that can be modified by backpropagation like any other parameter). PReLU was reported to strongly outperform ReLU on large image datasets, but on smaller datasets it runs the risk of overfitting the training set.
