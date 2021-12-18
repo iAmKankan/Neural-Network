@@ -48,7 +48,7 @@
 
 ### Performance of Different types of Activation functions
 ![light](https://user-images.githubusercontent.com/12748752/136802581-e8e0607f-3472-44f7-a8b2-8ba82a0f8070.png)
-<img src="https://user-images.githubusercontent.com/12748752/146654544-c280b30d-234c-4998-8ed4-90bc16b957db.png"/>
+<img src="https://user-images.githubusercontent.com/12748752/146654612-4d383821-c4b0-46b3-b380-bde4172a9264.png" width=110% />
 
 ### How to use Activation functions in _`Keras`_
 ![light](https://user-images.githubusercontent.com/12748752/136802581-e8e0607f-3472-44f7-a8b2-8ba82a0f8070.png)
