@@ -30,8 +30,6 @@ def relu_prime(z):
 * **Note** that the ReLU function is not _differentiable_ when the input takes value precisely equal to 0. 
 * In these cases, we default to the left-hand-side derivative and say that the derivative is 0 when the input is 0.
 * We can get away with this because the input may never actually be zero. 
-* There is an old adage that if subtle boundary conditions matter, we are probably doing (real) mathematics, not engineering. That conventional wisdom may apply here. We plot the derivative of the ReLU function plotted below.
 <img src="https://user-images.githubusercontent.com/12748752/146598664-52c52230-8f50-49a4-8e27-e4f35f735726.png" width=40% />
 
-* The reason for using ReLU is that its derivatives are particularly well behaved: either they vanish or they just let the argument through.
-* This makes optimization better behaved and it mitigated the well-documented problem of vanishing gradients that plagued previous versions of neural networks.
+* ReLU behave much better in deep neural networks, mostly because it does not saturate for positive values (and because it is fast to compute).
