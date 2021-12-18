@@ -7,19 +7,22 @@
 * ReLU provides a very simple _**nonlinear transformation**_.
 > #### Function
 *  **_g(x) = max(x,0)_**
+
+> #### Given an element  x , the function is defined as the maximum of that element and  0 : _`ReLU(x) = max(x,0)`_ .
+* Informally, the ReLU function retains only positive elements and discards all negative elements by setting the corresponding activations to 0. 
+* As you can see, the activation function is piecewise linear.
+
 <img src="https://latex.codecogs.com/svg.image?R(z)=\begin{Bmatrix}z&space;&&space;z&space;>&space;0&space;\\0&space;&&space;z<=0&space;\\\end{Bmatrix}" title="R(z)=\begin{Bmatrix}z & z > 0 \\0 & z<=0 \\\end{Bmatrix}" />
+<img src="https://user-images.githubusercontent.com/12748752/146598670-fcbad072-91b1-4a5e-b6c3-33ccc2db8bc0.png" width=40% />
 
 ```Python
 def relu(z):
   return max(0, z)
 ```
-> #### Given an element  x , the function is defined as the maximum of that element and  0 : _`ReLU(x) = max(x,0)`_ .
-* Informally, the ReLU function retains only positive elements and discards all negative elements by setting the corresponding activations to 0. 
-* As you can see, the activation function is piecewise linear.
-<img src="https://user-images.githubusercontent.com/12748752/146598670-fcbad072-91b1-4a5e-b6c3-33ccc2db8bc0.png" width=40% />
 
 > #### Derivative
 <img src="https://latex.codecogs.com/svg.image?R'(z)=\begin{Bmatrix}1&space;&&space;z&space;>&space;0&space;\\0&space;&&space;z<0&space;\\\end{Bmatrix}" title="R'(z)=\begin{Bmatrix}1 & z > 0 \\0 & z<0 \\\end{Bmatrix}" />
+<img src="https://user-images.githubusercontent.com/12748752/146598664-52c52230-8f50-49a4-8e27-e4f35f735726.png" width=40% />
 
 ```Python
 def relu_prime(z):
@@ -30,8 +33,6 @@ def relu_prime(z):
 * **Note** that the ReLU function is not _differentiable_ when the input takes value precisely equal to 0. 
 * In these cases, we default to the left-hand-side derivative and say that the derivative is 0 when the input is 0.
 * We can get away with this because the input may never actually be zero. 
-<img src="https://user-images.githubusercontent.com/12748752/146598664-52c52230-8f50-49a4-8e27-e4f35f735726.png" width=40% />
-
 * _ReLU_ behave much better in deep neural networks, mostly because it does not saturate for positive values (and because it is fast to compute).
 #### _dying ReLUs_ Problem
 * During training, some neurons effectively “die,” meaning they stop outputting anything other than 0. 
@@ -44,11 +45,23 @@ def relu_prime(z):
 * To solve the  _dying ReLUs_ problem, we use leaky ReLU. 
 > #### Function 
 * _**LeakyReLU (z) = max(αz, z)**_
-<img src="https://user-images.githubusercontent.com/12748752/146623578-642cb1b9-d04e-4ede-9b4a-86355049dc23.png" width=40% />
+
 <img src="https://latex.codecogs.com/svg.image?R(z)=\begin{Bmatrix}z&space;&&space;z&space;>&space;0&space;\\\alpha&space;z&space;&&space;z<=0&space;\\\end{Bmatrix}" title="R(z)=\begin{Bmatrix}z & z > 0 \\\alpha z & z<=0 \\\end{Bmatrix}" />
+<img src="https://user-images.githubusercontent.com/12748752/146623578-642cb1b9-d04e-4ede-9b4a-86355049dc23.png" width=40% />
+
+```Python
+def leakyrelu(z, alpha):
+	return max(alpha * z, z)
+```
+
 > #### Derivative
-<img src="https://user-images.githubusercontent.com/12748752/146623581-05a0697b-f8fb-4189-bfd7-59fce72cf7dc.png" width=40% />
 <img src="https://latex.codecogs.com/svg.image?R'(z)=\begin{Bmatrix}1&space;&&space;z&space;>&space;0&space;\\\alpha&space;&&space;z<0&space;\\\end{Bmatrix}" title="R'(z)=\begin{Bmatrix}1 & z > 0 \\\alpha & z<0 \\\end{Bmatrix}" />
+<img src="https://user-images.githubusercontent.com/12748752/146623581-05a0697b-f8fb-4189-bfd7-59fce72cf7dc.png" width=40% />
+
+```Python
+def leakyrelu_prime(z, alpha):
+	return 1 if z > 0 else alpha
+```
 
 * The hyperparameter **_α_** defines how much the function “leaks”: it is the slope of the function for _z < 0_ and is typically set to _0.01_. 
 * This small slope ensures that leaky ReLUs never die; they can go into a long coma, but they have a chance to eventually wake up. 
@@ -61,10 +74,5 @@ def relu_prime(z):
 * Finally, the paper evaluated the _**parametric leaky ReLU (PReLU)**_, where _**α**_ is authorized to be learned during training (instead of being a hyperparameter, it becomes a parameter that can be modified by backpropagation like any other parameter). 
 * _**PReLU**_ was reported to strongly outperform ReLU on large image datasets, but on smaller datasets it runs the risk of overfitting the training set.
 
-
-<img src="https://user-images.githubusercontent.com/12748752/146623581-05a0697b-f8fb-4189-bfd7-59fce72cf7dc.png" width=40% />
-<img src="https://latex.codecogs.com/svg.image?R'(z)=\begin{Bmatrix}1&space;&&space;z&space;>&space;0&space;\\\alpha&space;&&space;z<0&space;\\\end{Bmatrix}" title="R'(z)=\begin{Bmatrix}1 & z > 0 \\\alpha & z<0 \\\end{Bmatrix}" />
-
 ![light](https://user-images.githubusercontent.com/12748752/136802581-e8e0607f-3472-44f7-a8b2-8ba82a0f8070.png)
 
-> ## in general SELU > ELU > leaky ReLU (and its variants) > ReLU > tanh > logistic
