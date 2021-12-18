@@ -39,7 +39,7 @@ def relu_prime(z):
 * A neuron dies when its weights get tweaked in such a way that the weighted sum of its inputs are negative for all instances in the training set. 
 * When this happens, it just keeps outputting zeros, and Gradient Descent does not affect it anymore because the gradient of the ReLU function is zero when its input is negative.
 
-### _leaky ReLU_
+## _Leaky ReLU_
 ![light](https://user-images.githubusercontent.com/12748752/136802581-e8e0607f-3472-44f7-a8b2-8ba82a0f8070.png)
 * To solve the  _dying ReLUs_ problem, we use leaky ReLU. 
 > #### Function 
