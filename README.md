@@ -3,6 +3,8 @@
 * [The Perceptron](https://github.com/iAmKankan/Neural-Network/blob/main/perceptron.md)
 * [Multi-Layer Perceptron](https://github.com/iAmKankan/Neural-Network/blob/main/multilayer-perceptrons.md)
 * [Training a Neural Network](https://github.com/iAmKankan/Neural-Network/blob/main/training.md)
+   * [Activation Function](https://github.com/iAmKankan/Neural-Network/tree/main/activation_functions#readme)
+   * [Optimizers](https://github.com/iAmKankan/Neural-Network/tree/main/optimizer#readme)
 * [Recurrent Neural Networks](https://github.com/iAmKankan/Neural-Network/blob/main/rnn.md)
 
 
