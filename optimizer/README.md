@@ -8,7 +8,7 @@
    * using a good _`activation function`_, 
    * using _`Batch Normalization`_, 
    * _`Transfer Learning`_ reusing parts of a pretrained network  (possibly built on an auxiliary task or using unsupervised learning).
-*  Another huge speed boost comes from using a **_faster optimizer_** than the regular **_Gradient Descent optimizer_**  
+*  Another huge speed boost comes from using a **_faster optimizer_** than the regular [**_Gradient Descent optimizer_**](https://github.com/iAmKankan/MachineLearning_With_Python/tree/master/training#readme) and its variants.
 *  Most popular algorithms: 
    1. _**Momentum Optimization**_
    2. **_Nesterov Accelerated Gradient_**
