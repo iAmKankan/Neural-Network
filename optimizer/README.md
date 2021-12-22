@@ -1,6 +1,6 @@
 ## Index
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
-* [**_Gradient Descent optimizer_**](https://github.com/iAmKankan/MachineLearning_With_Python/tree/master/training#readme)
+* [**_Gradient Descent**](https://github.com/iAmKankan/MachineLearning_With_Python/tree/master/training#readme)
 ## Optimizer
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 * In order to train a very large deep neural network and reach a better solution as well as speed up training we need so far: 
