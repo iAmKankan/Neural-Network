@@ -9,6 +9,11 @@
     * [Vector-to-Sequence Network](https://github.com/iAmKankan/Neural-Network/blob/main/rnn.md#vector-to-sequence-network)
     * [Encoder-Decoder Network](https://github.com/iAmKankan/Neural-Network/blob/main/rnn.md#encoder-decoder-network)
   * [Backpropagation or Training RNNs](https://github.com/iAmKankan/Neural-Network/blob/main/rnn.md#backpropagation-or-training-rnns)
+## Why RNN?
+![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
+> #### Drawbacks of CNN/ANN
+* No memory element. 
+* The present data doesn't dependent on the pevious data.
 ## Recurrent Neural Networks(RNN)
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 > #### Feedforward Neural Networks
