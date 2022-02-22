@@ -14,4 +14,5 @@
 * Remembering information for long periods of time is practically their default behavior, not something they struggle to learn!
 
 > ### A type of RNN
+* All recurrent neural networks have the form of a chain of repeating modules of neural network. In standard RNNs, this repeating module will have a very simple structure, such as a single **tanh** layer.
 <img src="https://user-images.githubusercontent.com/12748752/154867618-8e3864f4-8885-454e-9b20-13f8de785342.png" width=50% />
