@@ -8,3 +8,7 @@
 * These are deep learning models that have achieved a lot of success in tasks like `machine translation`, `text summarization` and `image captioning`.
 * Google Translate started using such a model in production in late 2016. 
 > #### In neural machine translation a sequence is a series of words, processed one after another. The output is, likewise, a series of words:
+
+
+<img src="http://latex.codecogs.com/svg.latex?\begin{matrix}The,&space;&&space;&space;Man,&space;&space;&&space;&space;Loves,&space;&&space;His,&space;&&space;&space;Family&space;&space;\\\end{matrix}" title="http://latex.codecogs.com/svg.latex?\begin{matrix}The, & Man, & Loves, & His, & Family \\\end{matrix}" />
+
