@@ -3,3 +3,5 @@
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 
 ## Encoder-Decoder Network
+* In this archetecture any number of **RNN**/**LSTM**/**GRU** (place holder) networks can be precent inside both.
+* The number of netwok present in the Encoder never equals to the number of networks present in the Decoder.
