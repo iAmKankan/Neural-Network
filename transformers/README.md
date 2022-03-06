@@ -4,4 +4,6 @@
 ## BERT
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 
-<img src="https://user-images.githubusercontent.com/12748752/156908299-74360b7a-8052-4fd8-8e51-2d85dd5b5cae.png"/>
+<img src="https://user-images.githubusercontent.com/12748752/156908533-291c1992-92ad-440f-b715-78d5608e01d0.png" width=50% />
+
+
