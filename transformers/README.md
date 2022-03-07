@@ -47,18 +47,13 @@
    3.  R -> L and L -> R ( Bidirectional )  BERT
 
 * Mask can be one word or one sentence.
-
-
-
-
-
-
+---
 ---
 
 
 
-
-
+[1]: http://example.com/ "Title"
+[2]: http://example.org/ "Title"
 
 
 
