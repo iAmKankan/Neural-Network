@@ -45,6 +45,13 @@ I hate productY.
 * Negative sampling reduces computation by sampling just **N** negative instances along with the target word instead of sampling the whole vocabulary.
 * Technically, negative sampling ignores most of the ‘0’ in the one-hot label word vector, and only propagates and updates the weights for the target and a few negative classes which were randomly sampled.
 * More concretely, negative sampling samples negative instances(words) along with the target word and minimizes the log-likelihood of the sampled negative instances while maximizing the log-likelihood of the target word.
+> ##### Samples very near to 0 is treated as negative (-ve) and samples are very far from 0 is treated as positive(+ve).
+<img src="https://user-images.githubusercontent.com/12748752/157604235-9119cfe7-eb3f-48dd-bb0c-fcf03283af6a.png" width=50% />
+
+#### Context window
+* The size of the context window determines how many words before and after a given word would be included as context words of the given word. According to the authors’ note, the recommended value is 10 for skip-gram and 5 for CBOW.
+* Here is an example of Skip-Gram with context window of size 2:
+<img src="https://user-images.githubusercontent.com/12748752/157604214-1127794b-9dc7-40cf-8249-f2e453441d05.png" width=50% />
 
 ## Bibliography
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
