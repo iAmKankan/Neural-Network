@@ -35,6 +35,10 @@ ProductX is amazing.
 I hate productY.
 ```
 * Representing these reviews as one co-occurrence matrix will enable you associate products with appreciations.
+#### Negative sampling
+* Negative sampling reduces computation by sampling just **N** negative instances along with the target word instead of sampling the whole vocabulary.
+* Technically, negative sampling ignores most of the ‘0’ in the one-hot label word vector, and only propagates and updates the weights for the target and a few negative classes which were randomly sampled.
+* More concretely, negative sampling samples negative instances(words) along with the target word and minimizes the log-likelihood of the sampled negative instances while maximizing the log-likelihood of the target word.
 
 ## Bibliography
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
