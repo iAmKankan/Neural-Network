@@ -14,10 +14,14 @@
 * Oparetions on RNN
    * [Sentiment Analysis](https://github.com/iAmKankan/Neural-Network/blob/main/sentiment.md)
 
+### Neural-Network _Common Terms_
+  * [Co-occurrence Matrix](#co-occurrence-matrix)
+  * [Negative sampling](#negative-sampling)
+
 ## Neural-Network _Common Terms_
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 
-### _Co-occurrence matrix_
+### _Co-occurrence Matrix_
 * Generally speaking, a co-occurrence matrix will have specific entities in rows (**ER**) and columns (**EC**). 
 * The purpose of this matrix is to present the number of times each **ER** appears in the same context as each **EC**. 
 * As a consequence, in order to use a co-occurrence matrix, you have to define your entites and the context in which they co-occur.
@@ -35,7 +39,7 @@ ProductX is amazing.
 I hate productY.
 ```
 * Representing these reviews as one co-occurrence matrix will enable you associate products with appreciations.
-#### Negative sampling
+### _Negative sampling_
 * Negative sampling reduces computation by sampling just **N** negative instances along with the target word instead of sampling the whole vocabulary.
 * Technically, negative sampling ignores most of the ‘0’ in the one-hot label word vector, and only propagates and updates the weights for the target and a few negative classes which were randomly sampled.
 * More concretely, negative sampling samples negative instances(words) along with the target word and minimizes the log-likelihood of the sampled negative instances while maximizing the log-likelihood of the target word.
