@@ -48,6 +48,9 @@ I hate productY.
 > ##### Samples very near to 0 is treated as negative (-ve) and samples are very far from 0 is treated as positive(+ve).
 <img src="https://user-images.githubusercontent.com/12748752/157604235-9119cfe7-eb3f-48dd-bb0c-fcf03283af6a.png" width=50% />
 
+#### Sub-sampling <img src="https://latex.codecogs.com/svg.image?{\color{Red}&space;\textbf{Depricated}}" align="center">
+Some frequent words often provide little information. Words with frequency above a certain threshold (e.g ‘a’, ‘an’ and ‘that’) may be subsampled to increase training speed and performance. Also, common word pairs or phrases may be treated as single “words” to increase training speed.
+
 #### Context window
 * The size of the context window determines how many words before and after a given word would be included as context words of the given word. According to the authors’ note, the recommended value is 10 for skip-gram and 5 for CBOW.
 * Here is an example of Skip-Gram with context window of size 2:
