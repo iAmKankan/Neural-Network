@@ -1,6 +1,6 @@
 ## Index
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
-### Neural-Network
+### _Neural-Network_
 * [The Perceptron](https://github.com/iAmKankan/Neural-Network/blob/main/perceptron.md)
 * [Multi-Layer Perceptron](https://github.com/iAmKankan/Neural-Network/blob/main/multilayer-perceptrons.md)
 * [Training a Neural Network](https://github.com/iAmKankan/Neural-Network/blob/main/training.md)
@@ -13,6 +13,8 @@
   * GRU
 * Oparetions on RNN
    * [Sentiment Analysis](https://github.com/iAmKankan/Neural-Network/blob/main/sentiment.md)
+### _Natural Language Processing(NLP) with Deep Learning_
+  * [Sequence to sequence models](https://github.com/iAmKankan/Neural-Network/tree/main/NLP#readme)
 
 ### Neural-Network _Common Terms_
   * [Co-occurrence Matrix](#co-occurrence-matrix)
