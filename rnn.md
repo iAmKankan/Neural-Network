@@ -111,6 +111,16 @@
 1. Unstable Gradient
 2. 
 
+
+
+### Rolled RNN and Unrolled version of RNN
+
+
+
+
+
+
+
 ## Bibliography
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 * **Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow, 2nd Edition by Aurélien Géron**
