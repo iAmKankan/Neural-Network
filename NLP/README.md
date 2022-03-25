@@ -1,6 +1,5 @@
 ## Index
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
-![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 
 ## Sequence-to-sequence models  
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
@@ -12,7 +11,8 @@
 * These are deep learning models that have achieved a lot of success in tasks like `machine translation`, `text summarization` and `image captioning`.
 * Google Translate started using such a model in production in late 2016. 
 * In neural machine translation a sequence is a series of words, processed one after another. The output is, likewise, a series of words:
-<img src="https://user-images.githubusercontent.com/12748752/160001494-3df9a3c0-a5e8-46f9-9860-ca354cca3e1f.png" width=50% />
+<img src="https://user-images.githubusercontent.com/12748752/160001494-3df9a3c0-a5e8-46f9-9860-ca354cca3e1f.png" width=60% />
+
 ### The Mechanisam
 * Under the hood, the model is composed of an **encoder** and a **decoder**.
 * The encoder processes each item in the input sequence, it compiles the information it captures into a vector (called the **context**). 
@@ -28,8 +28,21 @@
 * And the datatype of the Context Vector is float mainly 64bit.
 
 
-<img src="http://latex.codecogs.com/svg.latex?\begin{matrix}The,&space;&&space;&space;Man,&space;&space;&&space;&space;Loves,&space;&&space;His,&space;&&space;&space;Family&space;&space;\\\end{matrix}" title="http://latex.codecogs.com/svg.latex?\begin{matrix}The, & Man, & Loves, & His, & Family \\\end{matrix}" />
+## Encoder
+![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
+* The encoder transforms an input sequence of variable length into a fixed-shape context variable **_C_** and encodes the input sequence information in this context variable. 
 
+* Feature extraction and Aggrigation
+* Temporal Information - 
+   * `The Dog is Barking` `is` is after `Dog` and before `Barking`
+* By design, a RNN takes two inputs at each time step: **an input** (in the case of the encoder, one word from the input sentence), and **a hidden state**. 
+* The word, however, needs to be represented by a vector. To transform a word into a vector, we turn to the class of methods called “word embedding” algorithms. These turn words into vector spaces that capture a lot of the meaning/semantic information of the words (e.g. king - man + woman = queen).
+* Basically the last hidden state generated in the encoder is the Context Vector.
+## Decoder
+![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
+* The decoder also maintains a hidden state that it passes from one time step to the next. We just didn’t visualize it in this graphic because we’re concerned with the major parts of the model for now.
+
+Let’s now look at another way to visualize a sequence-to-sequence model. This animation will make it easier to understand the static graphics that describe these models. This is called an “unrolled” view where instead of showing the one decoder, we show a copy of it for each time step. This way we can look at the inputs and outputs of each time step.
 
 ## References 
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
