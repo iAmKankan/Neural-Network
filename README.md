@@ -1,6 +1,7 @@
 ## Index
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 ### _Neural-Network_
+### _Perceotron_
 * [The Perceptron](https://github.com/iAmKankan/Neural-Network/blob/main/perceptron.md)
 * [Multi-Layer Perceptron](https://github.com/iAmKankan/Neural-Network/blob/main/multilayer-perceptrons.md)
 * [Training a Neural Network](https://github.com/iAmKankan/Neural-Network/blob/main/training.md)
