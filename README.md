@@ -5,8 +5,8 @@
 * [The Perceptron](https://github.com/iAmKankan/Neural-Network/blob/main/perceptron/README.md)
 * [Multi-Layer Perceptron](https://github.com/iAmKankan/Neural-Network/blob/main/perceptron/README.md)
 * [Training a Neural Network](https://github.com/iAmKankan/Neural-Network/blob/main/perceptron/README.md)
-   * [Activation Function](https://github.com/iAmKankan/Neural-Network/blob/main/perceptron/README.md)
-   * [Optimizers](https://github.com/iAmKankan/Neural-Network/blob/main/perceptron/README.md)
+   * [Activation Function](https://github.com/iAmKankan/Neural-Network/blob/main/activation_functions/README.md)
+   * [Optimizers](https://github.com/iAmKankan/Neural-Network/tree/main/optimizer#readme)
 ### _RNN, LSTM, GRU_
 * [Recurrent Neural Networks](https://github.com/iAmKankan/Neural-Network/blob/main/rnn.md)
 * Types of Recurrent Neural Networks
