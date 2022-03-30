@@ -17,9 +17,9 @@
   * [Number of Neurons per Hidden Layer]()
   * [Learning Rate, Batch Size, and Other Hyperparameters]()
     * [Learning rate]()
-    * [Optimizer]()
+    * [Optimizer](https://github.com/iAmKankan/Neural-Network/tree/main/optimizer#readme)
     * [Batch size]()
-    * [Activation function]()
+    * [Activation function](https://github.com/iAmKankan/Neural-Network/tree/main/activation_functions)
     * [Number of iterations]()
 ### _References_
 * [Bibliography](https://github.com/iAmKankan/Neural-Network/blob/main/multilayer-perceptrons.md#bibliography)
