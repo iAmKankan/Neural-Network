@@ -8,10 +8,10 @@
 * [Backpropagation](#backpropagation)
   * [How Backpropagation works](#how-backpropagation-works)
 * [Regression MLPs](https://github.com/iAmKankan/Neural-Network/blob/main/multilayer-perceptrons.md#regression-mlps)
-  * <a href="https://nbviewer.org/github/iAmKankan/Hands-On-Machine-Learning-with-Scikit-Learn-Keras-and-TensorFlow-All_Codes/blob/main/Chapter%2010/2)%20Sequential%20API%20for%20Regression.ipynb">Building a Regression MLP Using the Sequential API</a>  
+  * <a href="https://nbviewer.org/github/iAmKankan/Hands-On-Machine-Learning-with-Scikit-Learn-Keras-and-TensorFlow-All_Codes/blob/main/Chapter%2010/2)%20Sequential%20API%20for%20Regression.ipynb">Building a Regression MLP Using the Sequential API </a>  <img src="https://img.shields.io/badge/Jupyter Notebook-FFFFFF.svg?&style=for-the-badge&logo=Jupyter&logoColor=black" align='center' width=20%/>
 * [Classification MLPs](https://github.com/iAmKankan/Neural-Network/blob/main/multilayer-perceptrons.md#classification-mlps)
-  * <a href="https://nbviewer.org/github/iAmKankan/Hands-On-Machine-Learning-with-Scikit-Learn-Keras-and-TensorFlow-All_Codes/blob/main/Chapter%2010/1)%20Sequential%20API%20for%20Image%20Classification.ipynb">Building an Image Classifier Using the Sequential API</a>    
-  * <a href="https://nbviewer.org/github/iAmKankan/Hands-On-Machine-Learning-with-Scikit-Learn-Keras-and-TensorFlow-All_Codes/blob/main/Chapter%2010/3)%20Functional%20API%20for%20Complex%20regression%20Model.ipynb">Building Complex Models Using the Functional API</a>
+  * <a href="https://nbviewer.org/github/iAmKankan/Hands-On-Machine-Learning-with-Scikit-Learn-Keras-and-TensorFlow-All_Codes/blob/main/Chapter%2010/1)%20Sequential%20API%20for%20Image%20Classification.ipynb">Building an Image Classifier Using the Sequential API</a> <img src="https://img.shields.io/badge/Jupyter Notebook-FFFFFF.svg?&style=for-the-badge&logo=Jupyter&logoColor=black" align='center' width=20%/>   
+  * <a href="https://nbviewer.org/github/iAmKankan/Hands-On-Machine-Learning-with-Scikit-Learn-Keras-and-TensorFlow-All_Codes/blob/main/Chapter%2010/3)%20Functional%20API%20for%20Complex%20regression%20Model.ipynb">Building Complex Models Using the Functional API</a> <img src="https://img.shields.io/badge/Jupyter Notebook-FFFFFF.svg?&style=for-the-badge&logo=Jupyter&logoColor=black" align='center' width=20%/>
 * [Hyperparameter selection intutive guideline]()
   * [Number of Hidden Layers]()
   * [Number of Neurons per Hidden Layer]()
