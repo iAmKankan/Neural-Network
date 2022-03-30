@@ -21,6 +21,7 @@
     * [Batch size]()
     * [Activation function]()
     * [Number of iterations]()
+### _References_
 * [Bibliography](https://github.com/iAmKankan/Neural-Network/blob/main/multilayer-perceptrons.md#bibliography)
 
 ## The Perceptron
