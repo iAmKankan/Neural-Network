@@ -14,7 +14,7 @@ _How do you know what combination of hyperparameters is the best for your task?_
   * _`GridSearchCV`_ : 
   * _`RandomizedSearchCV`_
 #### Problems:
-* **_GridSearchCV_**:We don’t want to train and evaluate a single model like this, though we want to train hundreds of variants and see which one performs best on the validation set. [_note: that the **score** will be the opposite of the **MSE** because Scikit-Learn wants scores, not losses (i.e., higher should be better)._]
+* **_GridSearchCV_**:We don’t want to train and evaluate a single model like this, though we want to train hundreds of variants and see which one performs best on the validation set. [_Note that the **score** will be the opposite of the **MSE** because Scikit-Learn wants scores, not losses (i.e., higher should be better)._]
 * **_RandomizedSearchCV_**:Using randomized search is not too hard, and it works well for many fairly simple problems. When training is slow, however (e.g., for more complex problems with larger datasets), this approach will only explore a tiny portion of the hyperparameter space. [_Note that **RandomizedSearchCV** uses **K-fold crossvalidation**, so it does not use **X_valid** and **y_valid**, which are only used for **early stopping**._]
 
 * Fortunately, there are many techniques to explore a search space much more efficiently than randomly. Their core idea is simple: when a region of the space turns out to be good, it should be explored more. Such techniques take care of the “zooming” process for you and lead to much better solutions in much less time. Here are some Python libraries you can use to optimize hyperparameters:
