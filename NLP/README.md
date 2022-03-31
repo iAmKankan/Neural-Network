@@ -46,8 +46,10 @@ Let’s now look at another way to visualize a sequence-to-sequence model. This 
 
 ---
 ### Encoder–Decoder Network for Neural Machine Translation
-#### #1 English sentences to French:
-In short, the English sentences are fed to the encoder, and the decoder outputs the French translations. Note that the French translations are also used as inputs to the decoder, but shifted back by one step. In other words, the decoder is given as input the word that it should have output at the previous step (regardless of what it actually output). For the very first word, it is given the **start-of-sequence (SOS)** token. The decoder is expected to end the sentence with an **end-of-sequence (EOS)** token.
+#### 1. English sentences to French:
+In short, the English sentences are fed to the **encoder**, and the **decoder** outputs the French translations. Note that the French translations are also used as inputs to the decoder, but shifted back by one step. In other words, the decoder is given as input the word that it should have output at the previous step (regardless of what it actually output). For the very first word, it is given the **start-of-sequence (SOS)** token. The decoder is expected to end the sentence with an **end-of-sequence (EOS)** token.
+
+English sentences are reversed before they are fed to the encoder. For example, **“I drink milk”** is reversed to **“milk drink I”**. This ensures that the beginning of the English sentence will be fed last to the 10 encoder, which is useful because that’s generally the first thing that the decoder needs to translate. Each word is initially represented by its ID (e.g., 288 for the word “milk”). Next, an embedding layer returns the word embedding. These word embeddings are what is actually fed to the encoder and the decoder.
 
 
 
