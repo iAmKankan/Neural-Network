@@ -17,7 +17,28 @@ _How do you know what combination of hyperparameters is the best for your task?_
 * **_GridSearchCV_**:We don’t want to train and evaluate a single model like this, though we want to train hundreds of variants and see which one performs best on the validation set. [_Note that the **score** will be the opposite of the **MSE** because Scikit-Learn wants scores, not losses (i.e., higher should be better)._]
 * **_RandomizedSearchCV_**:Using randomized search is not too hard, and it works well for many fairly simple problems. When training is slow, however (e.g., for more complex problems with larger datasets), this approach will only explore a tiny portion of the hyperparameter space. [_Note that **RandomizedSearchCV** uses **K-fold crossvalidation**, so it does not use **X_valid** and **y_valid**, which are only used for **early stopping**._]
 
+#### Solution #2:
 * Fortunately, there are many techniques to explore a search space much more efficiently than randomly. Their core idea is simple: when a region of the space turns out to be good, it should be explored more. Such techniques take care of the “zooming” process for you and lead to much better solutions in much less time. Here are some Python libraries you can use to optimize hyperparameters:
+  * Hyperopt
+  * Hyperas, kopt, or Talos
+  * Keras Tuner
+  * Scikit-Optimize (skopt)
+  * Spearmint
+  * Hyperband
+  * Sklearn-Deap
+
+But despite all this exciting progress and all these tools and services, it still helps to have an idea of what values are reasonable for each hyperparameter so that you can build a quick prototype and restrict the search space. The following sections provide guidelines for choosing the number of hidden layers and neurons in an MLP and for selecting good values for some of the main hyperparameters.
+
+### Number of Hidden Layers
+For many problems, you can begin with a single hidden layer and get reasonable results. An **Multi-Layered Perceptron(MLP)** with just one hidden layer can theoretically model even the most complex functions, provided it has enough neurons. 
+#### Why we need Deep Networks?
+_For complex problems, deep networks have a much higher parameter efficiency than shallow ones: they can model complex functions using exponentially fewer neurons than shallow nets, allowing them to reach much **better performance with the same amount of training data**._ 
+* Suppose you are asked to draw a forest using some drawing software, but forbidden to copy and paste anything. If you could draw one leaf, copy and paste it to draw a branch, then copy and paste that branch to create a tree, and finally copy and paste this tree to make a forest, you would be finished in no time. 
+* Real-world data is often structured in such a _hierarchical way_, and deep neural networks automatically take advantage of this fact: 
+  * lower hidden layers model lowlevel structures (e.g., line segments of various shapes and orientations), 
+  * intermediate hidden layers combine these low-level structures to model intermediate-level structures (e.g., squares, circles), and 
+  * the highest hidden layers and the output layer combine these intermediate structures to model high-level structures (e.g., faces).
+* **_Transfer Learning_** This way the network will not have to learn from scratch all the low-level structures that occur in most pictures; it will only have to learn the higher-level structures (e.g., hairstyles).
 
 
 
