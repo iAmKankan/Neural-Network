@@ -29,7 +29,7 @@ _How do you know what combination of hyperparameters is the best for your task?_
 
 But despite all this exciting progress and all these tools and services, it still helps to have an idea of what values are reasonable for each hyperparameter so that you can build a quick prototype and restrict the search space. The following sections provide guidelines for choosing the number of hidden layers and neurons in an MLP and for selecting good values for some of the main hyperparameters.
 
-### Number of Hidden Layers
+### _Number of Hidden Layers_
 For many problems, you can begin with a single hidden layer and get reasonable results. An **Multi-Layered Perceptron(MLP)** with just one hidden layer can theoretically model even the most complex functions, provided it has enough neurons. 
 #### Why we need Deep Networks?
 _For complex problems, deep networks have a much higher parameter efficiency than shallow ones: they can model complex functions using exponentially fewer neurons than shallow nets, allowing them to reach much **better performance with the same amount of training data**._ 
@@ -38,9 +38,14 @@ _For complex problems, deep networks have a much higher parameter efficiency tha
   * lower hidden layers model lowlevel structures (e.g., line segments of various shapes and orientations), 
   * intermediate hidden layers combine these low-level structures to model intermediate-level structures (e.g., squares, circles), and 
   * the highest hidden layers and the output layer combine these intermediate structures to model high-level structures (e.g., faces).
-* **_Transfer Learning_** This way the network will not have to learn from scratch all the low-level structures that occur in most pictures; it will only have to learn the higher-level structures (e.g., hairstyles).
+  * but it also improves their ability to generalize to new datasets.
+* _For complex problems, you can ramp up the number of hidden layers until you start overfitting the training set._ 
+* Very complex tasks, such as large image classification or speech recognition, typically require networks with dozens of layers (or even hundreds, but not fully connected ones), and they need a huge amount of training data. 
+* You will rarely have to train such networks from scratch: it is much more common to reuse parts of a pretrained state-of-the-art network that performs a similar task.
+* **_Transfer Learning_** This way the network will not have to learn from scratch all the low-level structures that occur in most pictures; it will only have to learn the higher-level structures.
 
-
+### _Number of Neurons per Hidden Layer_
+The number of neurons in the input and output layers is determined by the type of input and output your task requires. For example, the MNIST task requires 28 × 28 = 784 input neurons and 10 output neurons.
 
 
 
