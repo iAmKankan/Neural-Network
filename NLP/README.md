@@ -44,6 +44,29 @@
 
 Let’s now look at another way to visualize a sequence-to-sequence model. This animation will make it easier to understand the static graphics that describe these models. This is called an “unrolled” view where instead of showing the one decoder, we show a copy of it for each time step. This way we can look at the inputs and outputs of each time step.
 
+---
+### Encoder–Decoder Network for Neural Machine Translation
+#### #1 English sentences to French:
+In short, the English sentences are fed to the encoder, and the decoder outputs the French translations. Note that the French translations are also used as inputs to the decoder, but shifted back by one step. In other words, the decoder is given as input the word that it should have output at the previous step (regardless of what it actually output). For the very first word, it is given the **start-of-sequence (SOS)** token. The decoder is expected to end the sentence with an **end-of-sequence (EOS)** token.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## References 
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 * [Jay Alammar- "Visualizing A Neural Machine Translation Model (Mechanics of Seq2seq Models With Attention)"](https://jalammar.github.io/visualizing-neural-machine-translation-mechanics-of-seq2seq-models-with-attention/)
