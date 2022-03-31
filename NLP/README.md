@@ -49,14 +49,24 @@ Let’s now look at another way to visualize a sequence-to-sequence model. This 
 #### 1. English sentences to French:
 In short, the English sentences are fed to the **encoder**, and the **decoder** outputs the French translations. Note that the French translations are also used as inputs to the decoder, but shifted back by one step. In other words, the decoder is given as input the word that it should have output at the previous step (regardless of what it actually output). For the very first word, it is given the **start-of-sequence (SOS)** token. The decoder is expected to end the sentence with an **end-of-sequence (EOS)** token.
 
-English sentences are reversed before they are fed to the encoder. For example, **“I drink milk”** is reversed to **“milk drink I”**. This ensures that the beginning of the English sentence will be fed last to the 10 encoder, which is useful because that’s generally the first thing that the decoder needs to translate. Each word is initially represented by its ID (e.g., 288 for the word “milk”). Next, an embedding layer returns the word embedding. These word embeddings are what is actually fed to the encoder and the decoder.
+English sentences are **reversed** before they are fed to the encoder. 
+* For example, **“I drink milk”** is reversed to **“milk drink I”**. 
 
+This ensures that the beginning of the English sentence will be fed last to the 10 encoder, which is useful because that’s generally the first thing that the decoder needs to translate. 
 
+Each word is initially represented by its ID (e.g., 288 for the word “milk”). Next, an embedding layer returns the word embedding. These word embeddings are what is actually fed to the encoder and the decoder.
 
+<img src="https://user-images.githubusercontent.com/12748752/161118995-bfe94e09-a72a-4f2e-9ebd-a318efc94a6b.png" width=60% />
 
+#### Step 1:
+* Each word is initially represented by its ID (e.g., 288 for the word “**milk**”).
+* Next, an embedding layer returns the word embedding. These word embeddings are what is actually fed to the encoder and the decoder.
 
-
-
+#### Step 2:
+* At each step, the decoder outputs a _score_ for each word in the output vocabulary (i.e., French), and then the `softmax` layer turns these scores into probabilities. 
+  * **For example**, at the first step the word “**Je**” may have a probability of 20%, “**Tu**” may have a probability of 1%, and so on. The word with the highest probability is output. 
+* This is very much like a regular classification task, so you can train the model using the "**_sparse_categorical_crossentropy_**" loss.
+> #### Note: At inference time (after training), you will not have the target sentence to feed to the decoder. Instead, simply feed the decoder the word that it output at the previous step, as shown in Figure 16-4 (this will require an embedding lookup that is not shown in the diagram).
 
 
 
