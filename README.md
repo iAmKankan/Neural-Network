@@ -18,6 +18,7 @@
    * [Sentiment Analysis](https://github.com/iAmKankan/Neural-Network/blob/main/sentiment.md)
 ### _Natural Language Processing(NLP) with Deep Learning_
   * [Sequence to sequence models](https://github.com/iAmKankan/Neural-Network/tree/main/NLP#readme)
+  * Encoder–Decoder Network for Neural Machine Translation
 
 ### _Neural-Network Common Terms_
   * [Co-occurrence Matrix](#co-occurrence-matrix)
