@@ -9,7 +9,7 @@
    * [Activation Function](https://github.com/iAmKankan/Neural-Network/blob/main/activation_functions/README.md)
    * [Optimizers](https://github.com/iAmKankan/Neural-Network/tree/main/optimizer#readme)
 ### _RNN, LSTM, GRU_
-* [Recurrent Neural Networks](https://github.com/iAmKankan/Neural-Network/blob/main/rnn.md)
+* [Recurrent Neural Networks](https://github.com/iAmKankan/Neural-Network/blob/main/rnn/README.md)
 * Types of Recurrent Neural Networks
   * Simple RNN
   * LSTM
