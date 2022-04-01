@@ -66,18 +66,9 @@ Each word is initially represented by its ID (e.g., 288 for the word “milk”)
 * At each step, the decoder outputs a _score_ for each word in the output vocabulary (i.e., French), and then the `softmax` layer turns these scores into probabilities. 
   * **For example**, at the first step the word “**Je**” may have a probability of 20%, “**Tu**” may have a probability of 1%, and so on. The word with the highest probability is output. 
 * This is very much like a regular classification task, so you can train the model using the "**_sparse_categorical_crossentropy_**" loss.
-> #### Note: At inference time (after training), you will not have the target sentence to feed to the decoder. Instead, simply feed the decoder the word that it output at the previous step, as shown in Figure 16-4 (this will require an embedding lookup that is not shown in the diagram).
+> #### Note: At inference time (after training), you will not have the target sentence to feed to the decoder. Instead, simply feed the decoder the word that it output at the previous step, as shown in the following Figure (this will require an embedding lookup that is not shown in the diagram).
 
-
-
-
-
-
-
-
-
-
-
+<img src="https://user-images.githubusercontent.com/12748752/161141254-2acb3050-5584-486c-82a0-1f107d1d069e.png" width=50% />
 
 ## References 
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
