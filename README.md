@@ -16,6 +16,7 @@
   * GRU
 * Oparetions on RNN
    * [Sentiment Analysis](https://github.com/iAmKankan/Neural-Network/blob/main/sentiment.md)
+ * Bidirectional Recurrent Neural Networks
 ### _Natural Language Processing(NLP) with Deep Learning_
   * [Sequence to sequence models](https://github.com/iAmKankan/Neural-Network/tree/main/NLP#readme)
   * Encoder–Decoder Network for Neural Machine Translation
