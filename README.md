@@ -55,7 +55,8 @@ I hate productY.
 * _Coreference resolution is the task of finding all expressions that refer to the same entity in a text._ 
 * It is an important step for a lot of higher level NLP tasks that involve natural language understanding such as document summarization, question answering, and information extraction.
 <img src="https://user-images.githubusercontent.com/12748752/161392419-c0339364-baa1-4600-ac6b-4c486964e213.png" width=40%/>
-
+### Context
+* Meaning at any point of a sequence.
 
 ## Bibliography
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
