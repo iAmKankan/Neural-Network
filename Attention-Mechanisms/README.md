@@ -13,6 +13,10 @@ The optic nerve of a primate’s visual system receives massive sensory input, f
 ### Attention Cues in Biology
 To explain how our attention is deployed in the visual world, a two-component framework has emerged and been pervasive. This idea dates back to William James in the 1890s, who is considered the “father of American psychology”. In this framework, subjects selectively direct the spotlight of attention using both the **_nonvolitional_** cue and **_volitional_** cue.
 
-
+### Building blocks of attention
+* Followings are most important building blocks of attention.
+1) Reweight
+2) Normalization
+3) Dot product
 
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
