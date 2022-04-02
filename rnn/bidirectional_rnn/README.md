@@ -17,3 +17,5 @@ I am ___ hungry, and I can eat half a pig.
 
 ### Dynamic Programming in Hidden Markov Models
 The specific technical details of dynamic programming do not matter for understanding the deep learning models but they help in motivating why one might use deep learning and why one might pick specific architectures.
+
+If we want to solve the problem using probabilistic graphical models we could for instance design a latent variable model as follows. At any time step _t_, we assume that there exists some latent variable h<sub>t </sub> that governs our observed emission x<sub>t</sub>  via P(x<sub>t</sub>|h<sub>t</sub>). Moreover, any transition h<sub>t</sub>;rightarrow h<sub>t+1</sub>  is given by some state transition probability . This probabilistic graphical model is then a hidden Markov model as 
