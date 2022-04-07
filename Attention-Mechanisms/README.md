@@ -35,14 +35,16 @@ We had seen that Bahdanau et al.’s attention mechanism is divided into the ste
 #### 1) Alignment scores: 
 The alignment model takes the encoded hidden states, **_h<sub>i</sub>_** , and the previous decoder output,  **_S<sub>t-1</sub>_** , to compute a score,   **_e<sub>t,i</sub>_** , that indicates how well the elements of the input sequence align with the current output at position,  **_t_**. The alignment model is represented by a function,  **_a(._)** , which can be implemented by a feedforward neural network:
 
-` `**_e<sub>t,i</sub> = a(S<sub>t-1</sub>,h<sub>i</sub>)_**` `
+**e<sub>t,i</sub> = a(S<sub>t-1</sub>,h<sub>i</sub>)**
+#### 2) Weights: 
+The weights, ***&alpha; <sub>t,1</sub>***  are computed by applying a softmax operation to the previously computed alignment scores:
 
+**&alpha; <sub>t,1</sub> = softmax(e<sub>t,i</sub>)**
 
-
-
-
-
-
+#### 3) Context vector: 
+A unique context vector, **_c<sub>t</sub>_** , is fed into the decoder at each time step. It is computed by a weighted sum of all,**_T_** , encoder hidden states:
+ 
+<img src="https://latex.codecogs.com/svg.image?\mathbf{c_t=\sum_{i=1}^{T}&space;\alpha_{t,1}h_i}" title="https://latex.codecogs.com/svg.image?\mathbf{c_t=\sum_{i=1}^{T} \alpha_{t,1}h_i}" />
 
 
 
