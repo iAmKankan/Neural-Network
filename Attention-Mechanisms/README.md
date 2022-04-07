@@ -33,11 +33,9 @@ The attention mechanism was introduced to improve the performance of the _encode
 We had seen that Bahdanau et al.’s attention mechanism is divided into the step-by-step computations of the alignment scores, the weights and the context vector:
 
 #### 1) Alignment scores: 
-The alignment model takes the encoded hidden states, **_h<sub>i</sub>_** , and the previous decoder output,**_S<sub>t-1</sub>_** , to compute a score, **_e<sub>t,i</sub>_** , that indicates how well the elements of the input sequence align with the current output at position, **_t_**. The alignment model is represented by a function, **_a(._)** , which can be implemented by a feedforward neural network:
+The alignment model takes the encoded hidden states, **_h<sub>i</sub>_** , and the previous decoder output,  **_S<sub>t-1</sub>_** , to compute a score,   **_e<sub>t,i</sub>_** , that indicates how well the elements of the input sequence align with the current output at position,  **_t_**. The alignment model is represented by a function,  **_a(._)** , which can be implemented by a feedforward neural network:
 
-**_e<sub>t,i</sub>=a(S<sub>t-1</sub>,h<sub>i</sub>)_**
-
-
+` `**_e<sub>t,i</sub>=a(S<sub>t-1</sub>,h<sub>i</sub>)_**` `
 
 
 
