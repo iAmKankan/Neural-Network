@@ -47,8 +47,9 @@ A unique context vector, **_c<sub>t</sub>_** , is fed into the decoder at each t
 <img src="https://latex.codecogs.com/svg.image?\mathbf{c_t=\sum_{i=1}^{T}&space;\alpha_{t,1}h_i}" title="https://latex.codecogs.com/svg.image?\mathbf{c_t=\sum_{i=1}^{T} \alpha_{t,1}h_i}" />
 
 However, the attention mechanism can be re-formulated into a general form that can be applied to any sequence-to-sequence (abbreviated to seq2seq) task, where the information may not necessarily be related in a sequential fashion.
+![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 
-
+<img src="https://user-images.githubusercontent.com/12748752/163703981-531eea76-73c2-422d-b19e-6bea87ac6787.png" width=60%/>
 
 
 
