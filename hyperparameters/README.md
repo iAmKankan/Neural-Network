@@ -32,6 +32,27 @@ These are all questions that come up when designing a neural network.  There are
 * **SpatialDropout2D** - This version performs the same function as Dropout; however, it drops entire 2D feature maps instead of individual elements
 * **SpatialDropout3D** - This version performs the same function as Dropout; however, it drops entire 3D feature maps instead of individual elements. 
 There is always trial and error for choosing a good number of neurons and hidden layers.  Generally, the number of neurons on each layer will be larger closer to the hidden layer and smaller towards the output layer.  This configuration gives the neural network a somewhat triangular or trapezoid appearance.
+
+### Activation function
+* [All about activation function](https://github.com/iAmKankan/Neural-Network/blob/main/activation_functions/README.md)
+### Advanced Activation Functions
+* [All about Advanced activation function](https://github.com/iAmKankan/Neural-Network/blob/main/activation_functions/README.md#advanced-activation-functions)
+
+### Regularization: L1, L2, Dropout
+* [All about regularization](https://github.com/iAmKankan/Regularization#readme)
+* [Keras Regularization](https://keras.io/regularizers/)
+* [Keras Dropout](https://keras.io/layers/core/)
+
+### Batch Normalization
+* [Keras Batch Normalization](https://keras.io/layers/normalization/)
+* Ioffe, S., & Szegedy, C. (2015). [Batch normalization: Accelerating deep network training by reducing internal covariate shift](https://arxiv.org/abs/1502.03167). *arXiv preprint arXiv:1502.03167*.
+
+Normalize the activations of the previous layer at each batch, i.e. applies a transformation that maintains the mean activation close to 0 and the activation standard deviation close to 1.  Can allow learning rate to be larger.
+### Training Parameters
+* [Keras Optimizers](https://keras.io/optimizers/)
+* **Batch Size** - Usually small, such as 32 or so.
+* **Learning Rate**  - Usually small, 1e-3 or so.
+
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 
@@ -78,12 +99,6 @@ _For complex problems, deep networks have a much higher parameter efficiency tha
 
 ### _Number of Neurons per Hidden Layer_
 The number of neurons in the input and output layers is determined by the type of input and output your task requires. For example, the MNIST task requires 28 × 28 = 784 input neurons and 10 output neurons.
-
-
-
-
-
-
 
 
 ## References
