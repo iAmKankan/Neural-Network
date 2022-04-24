@@ -47,6 +47,17 @@ _For complex problems, deep networks have a much higher parameter efficiency tha
 ### _Number of Neurons per Hidden Layer_
 The number of neurons in the input and output layers is determined by the type of input and output your task requires. For example, the MNIST task requires 28 × 28 = 784 input neurons and 10 output neurons.
 
+## Architecting Network: Hyperparameters
+**_The number of layers_**, **_neuron counts per layers_**, **_layer types_** and **_activation functions_** are all choices you must make to optimize your neural network.  Some of the categories of hyperparameters for you to choose from come from the following list:
+
+* Number of Hidden Layers and Neuron Counts
+* Activation Functions
+* Advanced Activation Functions
+* Regularization: L1, L2, Dropout
+* Batch Normalization
+* Training Parameters
+
+The following sections will introduce each of these categories for Keras. While I will provide you with some general guidelines for hyperparameter selection; no two tasks are the same.  You will benefit from experimentation with these values to determine what works best for your neural network.  In the next part, we will see how machine learning can select some of these values on its own.
 
 
 
