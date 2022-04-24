@@ -19,7 +19,7 @@
 * After processing the entire input sequence, the encoder sends the context over to the decoder, which begins producing the output sequence item by item.
 * The context is a vector (an array of numbers, basically) in the case of machine translation. 
 * The encoder and decoder tend to both be RNN, LSTM, GRU
-<img src="https://user-images.githubusercontent.com/12748752/159683212-c666dd34-a293-4b7e-881f-7d60bef23663.png" />
+<img src="https://user-images.githubusercontent.com/12748752/159683212-c666dd34-a293-4b7e-881f-7d60bef23663.png" width=150% />
 
 * In a encoder model placeholders can be one type or combination of multiple types of RNNs.
 * **Context Vector:** You can set the size of the context vector when you set up your model. 
