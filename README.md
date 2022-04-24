@@ -5,7 +5,7 @@
 * [The Perceptron](https://github.com/iAmKankan/Neural-Network/blob/main/perceptron/README.md)
 * [Multi-Layer Perceptron](https://github.com/iAmKankan/Neural-Network/blob/main/perceptron/README.md)
 * [Training a Neural Network](https://github.com/iAmKankan/Neural-Network/blob/main/perceptron/README.md#training-perceptron)
-### ◼️ _Neural-Network Hyperparameters_
+### ◼️ [_Neural-Network Hyperparameters_](https://github.com/iAmKankan/Neural-Network/blob/main/hyperparameters/README.md)
    * [Activation Function](https://github.com/iAmKankan/Neural-Network/blob/main/activation_functions/README.md)
    * [Optimizers](https://github.com/iAmKankan/Neural-Network/tree/main/optimizer#readme)
 ### ◼️ _RNN, LSTM, GRU_
