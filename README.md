@@ -36,7 +36,6 @@
   * [Gradient Accumulation](#gradient-accumulation)
   * [Co-occurrence Matrix](#co-occurrence-matrix)
   * [Negative sampling](#negative-sampling)
-  * 
 ##  Neural-Network _Common Terms_
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 ### _Neural Network_
