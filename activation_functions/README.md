@@ -35,8 +35,8 @@ Some of the common activation functions in Keras are listed here:
 * **softmax** - Used for multi-class classification.  Ensures all output neurons behave as probabilities and sum to 1.0.
 * **elu** - Exponential linear unit.  Exponential Linear Unit or its widely known name ELU is a function that tend to converge cost to zero faster and produce more accurate results.  Can produce negative outputs.
 * **selu** - Scaled Exponential Linear Unit (SELU), essentially **elu** multiplied by a scaling constant.
-* **softplus** - Softplus activation function. $log(exp(x) + 1)$  [Introduced](https://papers.nips.cc/paper/1920-incorporating-second-order-functional-knowledge-for-better-option-pricing.pdf) in 2001.
-* **softsign** Softsign activation function. $x / (abs(x) + 1)$ Similar to tanh, but not widely used.
+* **softplus** - Softplus activation function. **_log(exp(x) + 1)_** [Introduced](https://papers.nips.cc/paper/1920-incorporating-second-order-functional-knowledge-for-better-option-pricing.pdf) in 2001.
+* **softsign** Softsign activation function. **_x / (abs(x) + 1)_** Similar to tanh, but not widely used.
 * **relu** - Very popular neural network activation function.  Used for hidden layers, cannot output negative values.  No trainable parameters.
 * **tanh** Classic neural network activation function, though often replaced by relu family on modern networks.
 * **sigmoid** - Classic neural network activation.  Often used on output layer of a binary classifier.
