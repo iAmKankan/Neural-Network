@@ -23,8 +23,30 @@
 * [Bibliography](#bibliography)
 ## Activation Function
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
-* **_Activation functions_** decide whether a neuron should be activated or not by calculating the **_weighted sum_** and further **_adding bias_** with it. 
-* They are differentiable operators to transform input signals to outputs, while most of them add non-linearity.
+**_Activation functions_** decide whether a neuron should be activated or not by calculating the **_weighted sum_** and further **_adding bias_** with it. They are differentiable operators to _transform input signals to outputs_, while most of them _add non-linearity_.
+<p style="background-color:tomato;">This is a paragraph.
+Activation functions are a choice that you must make for each layer.  Generally, you can follow this guideline:
+* Hidden Layers - **RELU**
+* Output Layer - **Softmax** for classification, **linear** for regression.
+</p>
+Some of the common activation functions in Keras are listed here:
+
+* **softmax** - Used for multi-class classification.  Ensures all output neurons behave as probabilities and sum to 1.0.
+* **elu** - Exponential linear unit.  Exponential Linear Unit or its widely known name ELU is a function that tend to converge cost to zero faster and produce more accurate results.  Can produce negative outputs.
+* **selu** - Scaled Exponential Linear Unit (SELU), essentially **elu** multiplied by a scaling constant.
+* **softplus** - Softplus activation function. $log(exp(x) + 1)$  [Introduced](https://papers.nips.cc/paper/1920-incorporating-second-order-functional-knowledge-for-better-option-pricing.pdf) in 2001.
+* **softsign** Softsign activation function. $x / (abs(x) + 1)$ Similar to tanh, but not widely used.
+* **relu** - Very popular neural network activation function.  Used for hidden layers, cannot output negative values.  No trainable parameters.
+* **tanh** Classic neural network activation function, though often replaced by relu family on modern networks.
+* **sigmoid** - Classic neural network activation.  Often used on output layer of a binary classifier.
+* **hard_sigmoid** - Less computationally expensive variant of sigmoid.
+* **exponential** - Exponential (base e) activation function.
+* **linear** - Pass through activation function. Usually used on the output layer of a regression neural network.
+
+For more information about Keras activation functions refer to the following:
+
+* [Keras Activation Functions](https://keras.io/activations/)
+* [Activation Function Cheat Sheets](https://ml-cheatsheet.readthedocs.io/en/latest/activation_functions.html)
 
 ### Why do we need activation functions in the first place
 ![light](https://user-images.githubusercontent.com/12748752/136802581-e8e0607f-3472-44f7-a8b2-8ba82a0f8070.png)
