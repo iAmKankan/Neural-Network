@@ -24,11 +24,12 @@
 ## Activation Function
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 **_Activation functions_** decide whether a neuron should be activated or not by calculating the **_weighted sum_** and further **_adding bias_** with it. They are differentiable operators to _transform input signals to outputs_, while most of them _add non-linearity_.
-<p style="background-color:tomato;">This is a paragraph.
+
 Activation functions are a choice that you must make for each layer.  Generally, you can follow this guideline:
-* Hidden Layers - **RELU**
-* Output Layer - **Softmax** for classification, **linear** for regression.
-</p>
+1) <ins>_Hidden Layers_ </ins>- **_RELU_**
+2) <ins>_Output Layer_ </ins>- **_Softmax_** for classification, **_linear_** for regression.
+
+
 Some of the common activation functions in Keras are listed here:
 
 * **softmax** - Used for multi-class classification.  Ensures all output neurons behave as probabilities and sum to 1.0.
