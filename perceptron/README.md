@@ -36,7 +36,7 @@
 * The Perceptron training algorithm proposed by Frank Rosenblatt was inspired by Hebb’s rule.
 * **Donald Hebb rule** suggested that when a biological neuron often triggers another neuron, the connection between these two neurons grows stronger.
 
-> #### <img src="http://latex.codecogs.com/svg.image?w_{i,j}^{(Next\&space;Step)}&space;=&space;w_{i,j}&space;&plus;&space;\eta(y_j&space;-&space;\hat{y_j})x_i" title="w_{i,j}^{(Next\ Step)} = w_{i,j} + \eta(y_j - \hat{y_j})x_i" width=45% />
+<img src="http://latex.codecogs.com/svg.image?w_{i,j}^{(Next\&space;Step)}&space;=&space;w_{i,j}&space;&plus;&space;\eta(y_j&space;-&space;\hat{y_j})x_i" title="w_{i,j}^{(Next\ Step)} = w_{i,j} + \eta(y_j - \hat{y_j})x_i" width=35% />
 
 > #### Where
 > 
