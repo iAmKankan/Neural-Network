@@ -49,6 +49,13 @@ For more information about Keras activation functions refer to the following:
 * [Keras Activation Functions](https://keras.io/activations/)
 * [Activation Function Cheat Sheets](https://ml-cheatsheet.readthedocs.io/en/latest/activation_functions.html)
 
+### Advanced Activation Functions
+Hyperparameters are not changed when the neural network trains. You, the network designer, must define the hyperparameters.  The neural network learns regular parameters during neural network training.  Neural network weights are the most common type of regular parameter.  The "[advanced activation functions](https://keras.io/layers/advanced-activations/)," as Keras call them, also contain parameters that the network will learn during training.  These activation functions may give you better performance than RELU.
+
+* **LeakyReLU** - Leaky version of a Rectified Linear Unit. It allows a small gradient when the unit is not active, controlled by alpha hyperparameter.
+* **PReLU** - Parametric Rectified Linear Unit, learns the alpha hyperparameter. 
+
+
 ### Why do we need activation functions in the first place
 ![light](https://user-images.githubusercontent.com/12748752/136802581-e8e0607f-3472-44f7-a8b2-8ba82a0f8070.png)
 * If you chain several linear transformations, all you get is a linear transformation.
