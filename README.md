@@ -78,7 +78,7 @@ Activation functions typically have the following properties:
 A loss function, or cost function, is a wrapper around our model’s predict function that tells us “how good” the model is at making predictions for a given set of parameters. The loss function has its own curve and its own derivatives. The slope of this curve tells us how to change our parameters to make the model more accurate! We use the model to make predictions. We use the cost function to update our parameters. Our cost function can take a variety of forms as there are many different cost functions available. Popular loss functions include: MSE (L2) and Cross-entropy Loss.
 
 ### Optimization Algorithms
-
+* [Link](https://github.com/iAmKankan/Neural-Network/tree/main/optimizer)
 ### Gradient Accumulation
 Gradient accumulation is a mechanism to split the batch of samples—used for training a neural network—into several mini-batches of samples that will be run sequentially.
 
