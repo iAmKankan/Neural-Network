@@ -23,15 +23,17 @@
 ### ◼️ _Attention Mechanism_
    * [Attention](https://github.com/iAmKankan/Neural-Network/tree/main/Attention-Mechanisms#readme)
 ### ◼️ _Neural-Network Common Terms_
-  * Neural Network
-  * Neuron
-  * Synapse
-  * Weights
-  * Bias
-  * Layers
-  * Weighted Input
-  * Activation Functions
-  * Loss Functions
+  * [Neural Network](#neural-network)
+  * [Neuron](#neuron)
+  * [Synapse](#synapse)
+  * [Weights](#weights)
+  * [Bias](#bias)
+  * [Layers](#layers)
+  * [Weighted Input](#weighted-input)
+  * [Activation Functions](#activation-functions)
+  * [Loss Functions](#loss-functions)
+  * [Optimization Algorithms](#optimization-algorithms)
+  * [Gradient Accumulation](#gradient-accumulation)
   * [Co-occurrence Matrix](#co-occurrence-matrix)
   * [Negative sampling](#negative-sampling)
   * 
@@ -68,11 +70,14 @@ Notice, it’s exactly the same equation we use with linear regression! In fact,
 
 ### Activation Functions
 Activation functions live inside neural network layers and modify the data they receive before passing it to the next layer. Activation functions give neural networks their power — allowing them to model complex non-linear relationships. By modifying inputs with non-linear functions neural networks can model highly complex relationships between features. Popular activation functions include relu and sigmoid.
-
 Activation functions typically have the following properties:
  * **Non-linear** - In linear regression we’re limited to a prediction equation that looks like a straight line. This is nice for simple datasets with a one-to-one relationship between inputs and outputs, but what if the patterns in our dataset were non-linear? (e.g. x2, sin, log). To model these relationships we need a non-linear prediction equation.¹ Activation functions provide this non-linearity.
  * **Continuously differentiable** — To improve our model with gradient descent, we need our output to have a nice slope so we can compute error derivatives with respect to weights. If our neuron instead outputted 0 or 1 (perceptron), we wouldn’t know in which direction to update our weights to reduce our error.
  * **Fixed Range** — Activation functions typically squash the input data into a narrow range that makes training the model more stable and efficient.
+
+### Loss Functions
+A loss function, or cost function, is a wrapper around our model’s predict function that tells us “how good” the model is at making predictions for a given set of parameters. The loss function has its own curve and its own derivatives. The slope of this curve tells us how to change our parameters to make the model more accurate! We use the model to make predictions. We use the cost function to update our parameters. Our cost function can take a variety of forms as there are many different cost functions available. Popular loss functions include: MSE (L2) and Cross-entropy Loss.
+
 ### Optimization Algorithms
 
 ### Gradient Accumulation
@@ -81,10 +86,6 @@ Gradient accumulation is a mechanism to split the batch of samples—used for tr
 This is used to enable using large batch sizes that require more GPU memory than available. Gradient accumulation helps in doing so by using mini-batches that require an amount of GPU memory that can be satisfied.
 
 Gradient accumulation means running all mini-batches sequentially (generally on the same GPU) while accumulating their calculated gradients and not updating the model variables - the weights and biases of the model. The model variables must not be updated during the accumulation in order to ensure all mini-batches use the same model variable values to calculate their gradients. Only after accumulating the gradients of all those mini-batches will we generate and apply the updates for the model variables.
-
-
-### Loss Functions
-A loss function, or cost function, is a wrapper around our model’s predict function that tells us “how good” the model is at making predictions for a given set of parameters. The loss function has its own curve and its own derivatives. The slope of this curve tells us how to change our parameters to make the model more accurate! We use the model to make predictions. We use the cost function to update our parameters. Our cost function can take a variety of forms as there are many different cost functions available. Popular loss functions include: MSE (L2) and Cross-entropy Loss.
 
 ### _Co-occurrence Matrix_
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
