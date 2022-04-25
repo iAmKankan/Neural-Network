@@ -1,6 +1,5 @@
 ## Index
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
-![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 
 ## Architecting Network: Hyperparameters
 **_The number of layers_**, **_neuron counts per layers_**, **_layer types_** and **_activation functions_** are all choices you must make to optimize your neural network.  Some of the categories of hyperparameters for you to choose from come from the following list:
