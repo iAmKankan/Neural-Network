@@ -31,6 +31,8 @@
 * A single TLU can be used for simple linear binary classification. 
 > * It computes a linear combination of the inputs and if the result exceeds a threshold, it outputs the positive class or else outputs the negative class (just like a Logistic Regression classifier or a linear SVM).
 
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/ArtificialNeuronModel_english.png/1024px-ArtificialNeuronModel_english.png" width=50%> 
+
 ### Training Perceptron
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 * The Perceptron training algorithm proposed by Frank Rosenblatt was inspired by Hebb’s rule.
