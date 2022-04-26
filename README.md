@@ -36,6 +36,13 @@
   * Gradient Accumulation 
   * Co-occurrence Matrix 
   * Negative sampling 
-## Bibliography
+## ◼️ Software Engineering Vs AI/ML
+<img src="https://user-images.githubusercontent.com/12748752/165293822-f6f8fe1c-ddd3-4ecb-8af9-12421f0d2639.png" width=50%/>
+
+## ◼️ _Deep Learning & Neural-Network_
+![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
+**_Deep learning_** implies the use of neural networks. The "**deep**" in deep learning refers to a _neural network_ with many _hidden layers_.
+
+## ◼️ Bibliography
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 * **Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow, 2nd Edition by Aurélien Géron**
