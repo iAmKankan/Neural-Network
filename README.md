@@ -42,6 +42,26 @@
 ## ◼️ _Deep Learning & Neural-Network_
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 **_Deep learning_** implies the use of neural networks. The "**deep**" in deep learning refers to a _neural network_ with many _hidden layers_.
+#### Feature Vector
+Neural networks accept input and produce output. The input to a neural network is called the _**feature vector**_. 
+   * The size of this vector is always a **_fixed length_**. 
+   * _Changing the size of the feature vector usually means recreating the entire neural network._ 
+   * Though the feature vector is called a "vector", this is not always the case. A vector implies a **1D array**. In convolutional neural networks (CNNs), which can allow the input size to change without retraining the neural network. 
+
+Historically the input to a neural network was always **1D**. However, with modern neural networks, you might see input data, such as:
+  * **1D Vector** - Classic input to a neural network, similar to rows in a spreadsheet.  Common in predictive modeling.
+  * **2D Matrix** - Grayscale image input to a convolutional neural network (CNN).
+  * **3D Matrix** - Color image input to a convolutional neural network (CNN).
+  * **nD Matrix** - Higher order input to a CNN.
+
+#### Dimention
+The term **dimension** can be confusing in neural networks.  In the sense of a **1D** input vector, dimension refers to how many elements are in that 1D array.  
+* **Example** a neural network with 10 input neurons has 10 dimensions.  
+* However, now that we have CNN's, the input has dimensions too.  
+* The input to the neural network will *usually* have 1, 2 or 3 dimensions.  4 or more dimensions is unusual.  
+* You might have a 2D input to a neural network that has 64x64 pixels. 
+* This would result in 4,096 input neurons.  
+* This network is either** 2D or 4,096D, **depending on which set of dimensions you are talking about!
 
 ## ◼️ Bibliography
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
