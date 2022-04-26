@@ -78,8 +78,29 @@ These neurons are grouped into layers:
 The input neurons accept data from the program for the network. The output neuron provides processed data from the network back to the program. The program will group these input and output neurons into separate layers called the input and output layers. The program normally represents the input to a neural network as an array or vector. The number of elements contained in the vector must equal the number of input neurons. For example, a neural network with three input neurons might accept the following input vector:
 
 Neural networks typically accept **floating-point vectors** as their input. To be consistent, we will represent the output of a single output neuron network as a single-element vector. Likewise, neural networks will output a vector with a length equal to the number of output neurons. The output will often be a single value from a single output neuron.
+### Hidden Neurons
+Hidden neurons have two essential characteristics.
+* **First**, hidden neurons only receive input from other neurons, such as _input_ or other _hidden neurons_. 
+* **Second**, hidden neurons only output to other neurons, such as _output_ or other _hidden neurons_. 
+Hidden neurons help the neural network understand the input and form the output. 
+### Bias Neurons
+Bias is disproportionate weight in favour of or against a thing or idea usually in a prejudicial, unfair, and close-minded way. In most cases, bias is considered a negative thing because it clouds your judgement and makes you take irrational decisions.
 
+However, the role of bias in neural network and deep learning is much different. 
+#### The Concept of Biased Data
+Whenever you feed your neural network with data, it affects the model’s behaviour. 
+
+So, if you feed your neural network with biased data, you shouldn’t expect fair results from your algorithms. Using biased data can cause your system to give very flawed and unexpected results. 
+
+For example, consider the case of Tay, a chatbot launched by Microsoft. Tay was a simple chatbot for talking to people through tweets. It was supposed to learn through the content people post on Twitter. However, instead of being a simple and sweet chatbot, Tay turned into an aggressive and very offensive chatbot. People were spoiling it with numerous abusive posts which fed biased data to Tay and it only learned offensive phrasings. Tay was turned off very soon after that. 
+
+* Programmers add bias neurons to _neural networks to help them learn patterns_. 
+* Bias neurons function like an input neuron that always produces a value of **1**.
+* **Because the bias neurons have a constant output of 1, they are not connected to the previous layer**. 
+* The value of 1, called the _bias activation_, can be set to values other than 1. However, 1 is the most common bias activation. 
+* Not all neural networks have bias neurons.
 
 ## Bibliography
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 * **Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow, 2nd Edition by Aurélien Géron**
+* [Upgrad](https://www.upgrad.com/blog/the-role-of-bias-in-neural-networks/)
