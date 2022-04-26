@@ -71,3 +71,15 @@ There are usually four types of neurons in a neural network:
   * **Bias Neurons** - Work similar to the y-intercept of a linear equation.
 
 These neurons are grouped into layers:
+* **Input Layer** - The input layer accepts feature vectors from the dataset.  Input layers usually have a bias neuron.
+* **Output Layer** - The output from the neural network.  The output layer does not have a bias neuron.
+* **Hidden Layers** - Layers that occur between the input and output layers.  Each hidden layer will usually have a bias neuron.
+### Input and Output Neurons
+The input neurons accept data from the program for the network. The output neuron provides processed data from the network back to the program. The program will group these input and output neurons into separate layers called the input and output layers. The program normally represents the input to a neural network as an array or vector. The number of elements contained in the vector must equal the number of input neurons. For example, a neural network with three input neurons might accept the following input vector:
+
+Neural networks typically accept **floating-point vectors** as their input. To be consistent, we will represent the output of a single output neuron network as a single-element vector. Likewise, neural networks will output a vector with a length equal to the number of output neurons. The output will often be a single value from a single output neuron.
+
+
+## Bibliography
+![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
+* **Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow, 2nd Edition by Aurélien Géron**
