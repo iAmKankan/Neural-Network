@@ -65,7 +65,7 @@ The term **dimension** can be confusing in neural networks.  In the sense of a *
 
 ### _Types of Neurons_
 
-<img src="(https://user-images.githubusercontent.com/12748752/165520711-70647dd9-87de-4ec5-be1e-feda8ad56ca3.png"/>
+<img src="https://user-images.githubusercontent.com/12748752/165520711-70647dd9-87de-4ec5-be1e-feda8ad56ca3.png"/>
 
 There are usually four types of neurons in a neural network:
   * **Input Neurons** - We map each input neuron to one element in the feature vector.
