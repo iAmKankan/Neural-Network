@@ -14,6 +14,7 @@
   * [Gradient Accumulation](#gradient-accumulation)
   * [Co-occurrence Matrix](#co-occurrence-matrix)
   * [Negative sampling](#negative-sampling)
+  * [Time series](#time-series)
 ##  Neural-Network _Common Terms_
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 ### _Neural Network_
@@ -89,6 +90,16 @@ I hate productY.
 * _Coreference resolution is the task of finding all expressions that refer to the same entity in a text._ 
 * It is an important step for a lot of higher level NLP tasks that involve natural language understanding such as document summarization, question answering, and information extraction.
 <img src="https://user-images.githubusercontent.com/12748752/161392419-c0339364-baa1-4600-ac6b-4c486964e213.png" width=40%/>
+
+### Time Series
+Suppose you are studying the number of _active users per hour on your website_, or _the daily temperature in your city_, or _your company’s financial health_, measured quarterly using multiple metrics. 
+
+In all these cases, the data will be a sequence of one or more values per time step. This is called a time series. 
+   1) In the first two examples there is _a single value per time step_, so these are **_univariate time series_**, 
+   2) In the financial example there are _multiple values per time step_ (e.g., the company’s revenue, debt, and so on), so it is a **_multivariate time series_**. 
+ 
+> #### A typical task is to predict future values, which is called **_forecasting_**. 
+> #### Another common task is to fill in the blanks: to predict (or rather “postdict”) missing values from the past. This is called **_imputation_**.
 
 ### Context
 * Meaning at any point of a sequence.
