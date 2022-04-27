@@ -1,6 +1,12 @@
 ## Index
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 
+## Why LSTM needed?
+![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
+* Due to the transformations that the data goes through when traversing an RNN, some information is lost at each time step. 
+* After a while, the RNN’s state contains virtually no trace of the first inputs. 
+* To tackle this problem, various types of cells with long-term memory have been introduced. They have proven so successful that the basic cells are not used much anymore.
+
 ## Long Short Term Memory 
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 _**The challenge to address long-term information preservation and short-term input skipping in latent variable models has existed for a long time. One of the earliest approaches to address this was the long short-term memory (LSTM)**_
@@ -19,12 +25,6 @@ _**The challenge to address long-term information preservation and short-term in
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 * Just like in GRUs, the data feeding into the LSTM gates are the input at the current time step and the hidden state of the previous time step, as illustrated in Fig. 9.2.1. They are processed by three fully-connected layers with a sigmoid activation function to compute the values of the input, forget. and output gates. As a result, values of the three gates are in the range of  (0,1) .
 
-## Why LSTM needed?
-![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
-* Due to the transformations that the data goes through when traversing an RNN, some information is lost at each time step. 
-* After a while, the RNN’s state contains virtually no trace of the first inputs. 
-* To tackle this problem, the LSTM is comming into the picture.
-
 > ### A type of RNN
 * All recurrent neural networks have the form of a chain of repeating modules of neural network. 
 * In standard RNNs, this repeating module will have a very simple structure, such as a single **_tanh_** layer.
@@ -41,9 +41,11 @@ _**The challenge to address long-term information preservation and short-term in
 
 ### The Core Idea Behind LSTMs
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
+---
+## How does an LSTM cell work?
+If you don’t look at what’s inside the box, the LSTM cell looks exactly like a regular cell, except that its state is split into two vectors: ***h<sub>(t)</sub>*** and ***c<sub>(t)</sub>*** (“**c**” stands for “cell”). You can think of ***h<sub>(t)</sub>*** as the short-term state and ***c<sub>(t)</sub>*** as the long-term state.
 
-
-
+Now let’s open the box! The key idea is that the network can learn what to store in the long-term state, what to throw away, and what to read from it. As the long-term state c traverses the network from left to right, you can see that it first goes through a forget gate, dropping some memories, and then it adds some new memories via the addition operation (which adds the memories that were selected by an input gate). The result c is sent straight out, without any further transformation. So, at each time step, some memories are dropped and some memories are added. Moreover, after the addition operation, the long-term state is copied and passed through the tanh function, and then the result is filtered by the output gate. This produces the short-term state h (which is equal to the cell’s output for this time step, y ). Now let’s look at where new memories come from and how the gates work.
 
 ## References
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
