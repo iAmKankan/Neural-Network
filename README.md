@@ -64,6 +64,9 @@ The term **dimension** can be confusing in neural networks.  In the sense of a *
 * This network is either** 2D or 4,096D, **depending on which set of dimensions you are talking about!**
 
 ### _Types of Neurons_
+
+<img src="(https://user-images.githubusercontent.com/12748752/165520711-70647dd9-87de-4ec5-be1e-feda8ad56ca3.png"/>
+
 There are usually four types of neurons in a neural network:
   * **Input Neurons** - We map each input neuron to one element in the feature vector.
   * **Hidden Neurons** - Hidden neurons allow the neural network to be abstract and process the input into the output.
