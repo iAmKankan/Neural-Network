@@ -43,7 +43,7 @@ _**The challenge to address long-term information preservation and short-term in
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 ---
 ## How does an LSTM cell work?
-<img src="https://user-images.githubusercontent.com/12748752/165817566-5cd304b9-97cd-4d53-87af-6bdf5adc2710.png" width=90% />
+<img src="https://user-images.githubusercontent.com/12748752/165821166-85670ec0-8c2a-409d-a4dc-e878366adc24.png" width=90% />
 
 If you don’t look at what’s inside the box, the LSTM cell looks exactly like a regular cell, except that its state is split into two vectors: ***h<sub>(t)</sub>*** and ***c<sub>(t)</sub>*** (“**c**” stands for “cell”). You can think of ***h<sub>(t)</sub>*** as the short-term state and ***c<sub>(t)</sub>*** as the long-term state.
 
