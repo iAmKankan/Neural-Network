@@ -108,6 +108,7 @@ Forward propagation is how neural networks make predictions. Input data is "forw
 
 <p align="center"><b><i> Prediction = A( A( XW<sub>h</sub>) W<sub>o</sub>)</b></i></p>
 Where A is an activation function like ReLU, X is the input and Wh and Wo are weights.
+
 #### Steps
 1. Calculate the weighted input to the hidden layer by multiplying **X** by the hidden weight **Wh**
 2. Apply the activation function and pass the result to the final layer
