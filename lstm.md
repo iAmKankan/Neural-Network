@@ -45,9 +45,13 @@ _**The challenge to address long-term information preservation and short-term in
 ## How does an LSTM cell work?
 <img src="https://user-images.githubusercontent.com/12748752/165821166-85670ec0-8c2a-409d-a4dc-e878366adc24.png" width=90% />
 
-If you don’t look at what’s inside the box, the LSTM cell looks exactly like a regular cell, except that its state is split into two vectors: ***h<sub>(t)</sub>*** and ***c<sub>(t)</sub>*** (“**c**” stands for “cell”). You can think of ***h<sub>(t)</sub>*** as the short-term state and ***c<sub>(t)</sub>*** as the long-term state.
-
-Now let’s open the box! The key idea is that the network can learn what to store in the long-term state, what to throw away, and what to read from it. As the long-term state c traverses the network from left to right, you can see that it first goes through a forget gate, dropping some memories, and then it adds some new memories via the addition operation (which adds the memories that were selected by an input gate). The result c is sent straight out, without any further transformation. So, at each time step, some memories are dropped and some memories are added. Moreover, after the addition operation, the long-term state is copied and passed through the tanh function, and then the result is filtered by the output gate. This produces the short-term state h (which is equal to the cell’s output for this time step, y ). Now let’s look at where new memories come from and how the gates work.
+The LSTM cell is split into two vectors: 
+  * ***h<sub>(t)</sub>*** (the short-term state)
+  * ***c<sub>(t)</sub>*** (the long-term stat).
+The key idea is that the network can learn _what to store in the long-term state_, _what to throw away_, and _what to read from it_. 
+#### Step 1: 
+As the long-term state c<sub>(t-1)</sub> traverses the network from left to right, it first goes through a forget gate (&otimes;),  dropping some memories, and then it adds some new memories via the addition operation &oplus; (which adds the memories that were selected by an input gate). The result c<sub>(t-1)</sub> is sent straight out, without any further transformation. So, at each time step, some memories are dropped and some memories are added. 
+Moreover, after the addition operation, the long-term state is copied and passed through the tanh function, and then the result is filtered by the output gate. This produces the short-term state h (which is equal to the cell’s output for this time step, y ). Now let’s look at where new memories come from and how the gates work.
 
 First, the current input vector x and the previous short-term state h are fed to four different fully connected layers. They all serve a different purpose:
 
