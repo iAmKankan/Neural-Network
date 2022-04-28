@@ -101,6 +101,12 @@ In all these cases, the data will be a sequence of one or more values per time s
 > #### A typical task is to predict future values, which is called **_forecasting_**. 
 > #### Another common task is to fill in the blanks: to predict (or rather “postdict”) missing values from the past. This is called **_imputation_**.
 
+### Forwardpropagation
+#### Simple Network:
+<img src="https://user-images.githubusercontent.com/12748752/165742485-709a249f-8fad-46aa-ab6b-9f49417b43ae.png" />
+Forward propagation is how neural networks make predictions. Input data is "forward propagated" through the network layer by layer to the final layer which outputs a prediction. For the toy neural network above, a single pass of forward propagation translates mathematically to:
+<p align="center"><b><i> Prediction = A( A( XW<sub>h</sub>) W<sub>o</sub>)</b></i></p>
+
 ### Context
 * Meaning at any point of a sequence.
 
