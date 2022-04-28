@@ -105,7 +105,14 @@ In all these cases, the data will be a sequence of one or more values per time s
 #### Simple Network:
 <img src="https://user-images.githubusercontent.com/12748752/165742485-709a249f-8fad-46aa-ab6b-9f49417b43ae.png" />
 Forward propagation is how neural networks make predictions. Input data is "forward propagated" through the network layer by layer to the final layer which outputs a prediction. For the toy neural network above, a single pass of forward propagation translates mathematically to:
+
 <p align="center"><b><i> Prediction = A( A( XW<sub>h</sub>) W<sub>o</sub>)</b></i></p>
+Where A is an activation function like ReLU, X is the input and Wh and Wo are weights.
+#### Steps
+1. Calculate the weighted input to the hidden layer by multiplying **X** by the hidden weight **Wh**
+2. Apply the activation function and pass the result to the final layer
+3. Repeat step 2 except this time **X** is replaced by the hidden layer’s output, **H**
+
 
 ### Context
 * Meaning at any point of a sequence.
