@@ -51,7 +51,7 @@ The LSTM cell is split into two vectors:
 
 The key idea is that the network can learn _what to store in the long-term state_, _what to throw away_, and _what to read from it_. 
 #### Section 1: 
-* As the long-term state **_c<sub>(t-1)</sub>_** traverses the network from left to right, it first goes through a _forget gate_ (**&otimes;**),  dropping some memories, and then it adds some new memories via the addition operation **&oplus;** (which adds the memories that were selected by an input gate). 
+* As the long-term state **_c<sub>(t-1)</sub>_** traverses the network from left to right, it first goes through a _forget gate_ (**&otimes;**),  dropping some memories, and then it adds some new memories via the _addition operation_ **&oplus;** (which adds the memories that were selected by an input gate). 
 * The result **c<sub>(t-1)</sub>** is sent straight out, without any further transformation. 
 * So, at each time step, some memories are dropped and some memories are added. After the addition operation, the long-term state is copied and passed through the **tanh** function, and then the result is filtered by the output gate. This produces the short-term state **h<sub>(t)</sub>** (which is equal to the cell’s output for this time step, **y<sub>(t)</sub>** ). 
 
