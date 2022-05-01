@@ -64,7 +64,12 @@ The current _input vector_ **x<sub>(t)</sub>** and the previous _short-term stat
      * **The input gate** (controlled by **i<sub>(t)</sub>** ) controls which parts of g should be added to the long-term state. 
      * **The output gate** (controlled by **o<sub>(t)</sub>** ) controls which parts of the long-term state should be read and output at this time step, both to **h<sub>(t)</sub>** and to **y<sub>(t)</sub>** . 
      
-In short, an LSTM cell can learn to recognize an important input (that’s the role of the _input gate_), store it in the _long-term state_, preserve it for as long as it is needed (that’s the role of the _forget gate_), and extract it whenever it is needed. This explains why these cells have been amazingly successful at capturing long-term patterns in `time series`, `long texts`, `audio recordings` and more. 
+In short, an LSTM cell can learn to recognize 
+* an important input (that’s the role of the _input gate_), 
+* store it in the _long-term state_, 
+* preserve it for as long as it is needed (that’s the role of the _forget gate_), and extract it whenever it is needed. 
+
+This explains why these cells have been amazingly successful at capturing long-term patterns in `time series`, `long texts`, `audio recordings` and more. 
 
 
 ## References
