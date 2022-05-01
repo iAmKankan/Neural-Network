@@ -61,7 +61,7 @@ The current _input vector_ **x<sub>(t)</sub>** and the previous _short-term stat
    * In a basic cell, there is nothing other than this layer, and its output goes straight out to **y<sub>(t)</sub>** and **h<sub>(t)</sub>** . _In contrast, in an LSTM cell this layer’s output does not go straight out, but instead its most important parts are stored in the long-term state (and the rest is dropped)._
    * The three other layers are **_gate controllers_**. Since they use the _logistic activation function_, their outputs range from **0** to **1**. As you can see, their outputs are fed to element-wise multiplication operations, so if they output **0s** they close the gate, and if they output **1s** they open it. Specifically:
      * **The forget gate** (controlled by **f<sub>(t)</sub>** ) controls which parts of the long-term state should be erased. 
-     * **The input gate** (controlled by **i<sub>(t)</sub>** ) controls which parts of g should be added to the long-term state. 
+     * **The input gate** (controlled by **i<sub>(t)</sub>** ) controls which parts of **g<sub>(t)</sub>** should be added to the long-term state. 
      * **The output gate** (controlled by **o<sub>(t)</sub>** ) controls which parts of the long-term state should be read and output at this time step, both to **h<sub>(t)</sub>** and to **y<sub>(t)</sub>** . 
      
 > #### In short, an LSTM cell can learn to recognize 
