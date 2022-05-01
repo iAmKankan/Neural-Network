@@ -73,5 +73,12 @@ This explains why these cells have been amazingly successful at capturing long-t
 
 <img src="https://latex.codecogs.com/svg.image?\\\mathbf{g_{(t)}&space;=&space;tanh(W_{xg}^\top&space;x_{(t)}&plus;W_{hg}^\top&space;x_{(t-1)}&plus;b_g&space;)}\\&space;\\\mathbf{i_{(t)}&space;=&space;\sigma(W_{xi}^\top&space;x_{(t)}&plus;W_{hi}^\top&space;x_{(t-1)}&plus;b_i&space;)}\\&space;\\\mathbf{f_{(t)}&space;=&space;\sigma(W_{xf}^\top&space;x_{(t)}&plus;W_{hf}^\top&space;x_{(t-1)}&plus;b_f&space;)}&space;\\&space;\\\mathbf{o_{(t)}&space;=&space;\sigma(W_{xo}^\top&space;x_{(t)}&plus;W_{ho}^\top&space;x_{(t-1)}&plus;b_o&space;)}&space;\\&space;\\\mathbf{c_{(t)}&space;=&space;f_{(t)}&space;\otimes&space;c_{(t-1)}&space;&plus;&space;i_{(t)}&space;\otimes&space;g_{(t)}}\\&space;\\\mathbf{y_{(t)}&space;=&space;h_{(t)}&space;=&space;o_{(t)}&space;\otimes&space;tanh&space;(c_{(t)})}" title="https://latex.codecogs.com/svg.image?\\\mathbf{g_{(t)} = tanh(W_{xg}^\top x_{(t)}+W_{hg}^\top x_{(t-1)}+b_g )}\\ \\\mathbf{i_{(t)} = \sigma(W_{xi}^\top x_{(t)}+W_{hi}^\top x_{(t-1)}+b_i )}\\ \\\mathbf{f_{(t)} = \sigma(W_{xf}^\top x_{(t)}+W_{hf}^\top x_{(t-1)}+b_f )} \\ \\\mathbf{o_{(t)} = \sigma(W_{xo}^\top x_{(t)}+W_{ho}^\top x_{(t-1)}+b_o )} \\ \\\mathbf{c_{(t)} = f_{(t)} \otimes c_{(t-1)} + i_{(t)} \otimes g_{(t)}}\\ \\\mathbf{y_{(t)} = h_{(t)} = o_{(t)} \otimes tanh (c_{(t)})}" />
 
+
+> #### **W<sub>xi</sub>** , **W<sub>xf</sub>** , **W<sub>xo</sub>** , **W<sub>xg</sub>** are the weight matrices of each of the four layers for their connection to the input vector **x<sub>(t)</sub>** .
+> ####**W<sub>hi</sub>** , **W<sub>hf</sub>** , **W<sub>ho</sub>** , **W<sub>hg</sub>** are the weight matrices of each of the
+four layers for their connection to the previous short-term state **h<sub>(t-1)</sub>** .
+> #### **b<sub>i</sub>** , **b<sub>f</sub>**, **b<sub>o</sub>** , **b<sub>g</sub>** are the bias terms for each of the four layers. Note that TensorFlow initializes **b<sub>f</sub>** to a vector full of **1s** instead of **0s**. This prevents forgetting everything at the beginning of training.
+
+
 ## References
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
