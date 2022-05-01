@@ -72,5 +72,6 @@ The current _input vector_ **x<sub>(t)</sub>** and the previous _short-term stat
 This explains why these cells have been amazingly successful at capturing long-term patterns in `time series`, `long texts`, `audio recordings` and more. 
 
 
+
 ## References
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
