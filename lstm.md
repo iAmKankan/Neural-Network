@@ -71,7 +71,7 @@ The current _input vector_ **x<sub>(t)</sub>** and the previous _short-term stat
 
 This explains why these cells have been amazingly successful at capturing long-term patterns in `time series`, `long texts`, `audio recordings` and more. 
 
-
+<img src="https://latex.codecogs.com/svg.image?\\\mathbf{g_{(t)}&space;=&space;tanh(W_{xg}^\top&space;x_{(t)}&plus;W_{hg}^\top&space;x_{(t-1)}&plus;b_g&space;)}\\&space;\\\mathbf{i_{(t)}&space;=&space;\sigma(W_{xi}^\top&space;x_{(t)}&plus;W_{hi}^\top&space;x_{(t-1)}&plus;b_i&space;)}\\&space;\\\mathbf{f_{(t)}&space;=&space;\sigma(W_{xf}^\top&space;x_{(t)}&plus;W_{hf}^\top&space;x_{(t-1)}&plus;b_f&space;)}&space;\\&space;\\\mathbf{o_{(t)}&space;=&space;\sigma(W_{xo}^\top&space;x_{(t)}&plus;W_{ho}^\top&space;x_{(t-1)}&plus;b_o&space;)}&space;\\&space;\\\mathbf{c_{(t)}&space;=&space;f_{(t)}&space;\otimes&space;c_{(t-1)}&space;&plus;&space;i_{(t)}&space;\otimes&space;g_{(t)}}\\&space;\\\mathbf{y_{(t)}&space;=&space;h_{(t)}&space;=&space;o_{(t)}&space;\otimes&space;tanh&space;(c_{(t)})}" title="https://latex.codecogs.com/svg.image?\\\mathbf{g_{(t)} = tanh(W_{xg}^\top x_{(t)}+W_{hg}^\top x_{(t-1)}+b_g )}\\ \\\mathbf{i_{(t)} = \sigma(W_{xi}^\top x_{(t)}+W_{hi}^\top x_{(t-1)}+b_i )}\\ \\\mathbf{f_{(t)} = \sigma(W_{xf}^\top x_{(t)}+W_{hf}^\top x_{(t-1)}+b_f )} \\ \\\mathbf{o_{(t)} = \sigma(W_{xo}^\top x_{(t)}+W_{ho}^\top x_{(t-1)}+b_o )} \\ \\\mathbf{c_{(t)} = f_{(t)} \otimes c_{(t-1)} + i_{(t)} \otimes g_{(t)}}\\ \\\mathbf{y_{(t)} = h_{(t)} = o_{(t)} \otimes tanh (c_{(t)})}" />
 
 ## References
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
