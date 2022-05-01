@@ -13,7 +13,7 @@
 * Types of Recurrent Neural Networks
   * Simple RNN
   * [LSTM](https://github.com/iAmKankan/Neural-Network/blob/main/rnn/lstm.md)
-  * GRU
+  * [GRU](https://github.com/iAmKankan/Neural-Network/blob/main/rnn/gru.md)
 * Oparetions on RNN
    * [Sentiment Analysis](https://github.com/iAmKankan/Neural-Network/blob/main/sentiment.md)
  * Bidirectional Recurrent Neural Networks
