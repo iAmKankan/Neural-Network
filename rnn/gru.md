@@ -13,3 +13,7 @@ The main simplifications of GRU:
 * There is _no_ **output gate**; the full state vector is output at every time step. However, there is a new gate controller **r<sub>(t)</sub>** that controls which part of the previous state will be shown to the main layer (**g<sub>(t)</sub>** ).
 
 <img src="https://latex.codecogs.com/svg.image?\\\mathbf{g_{(t)}&space;=&space;tanh(W_{xg}^\top&space;x_{(t)}&plus;W_{hg}^\top&space;(r_{(t)}&space;\otimes&space;h_{(t-1)})&plus;b_g&space;)}\\&space;\\\mathbf{z_{(t)}&space;=&space;\sigma(W_{xz}^\top&space;x_{(t)}&plus;W_{hz}^\top&space;x_{(t-1)}&plus;b_z&space;)}&space;\\&space;\\\mathbf{r_{(t)}&space;=&space;\sigma(W_{xr}^\top&space;x_{(t)}&plus;W_{hr}^\top&space;x_{(t-1)}&plus;b_r&space;)}\\&space;\\\mathbf{h_{(t)}&space;=&space;z_{(t)}&space;\otimes&space;h_{(t-1)}&space;&plus;&space;(1-z_{(t)})\otimes&space;g_{(t)}" title="https://latex.codecogs.com/svg.image?\\\mathbf{g_{(t)} = tanh(W_{xg}^\top x_{(t)}+W_{hg}^\top (r_{(t)} \otimes h_{(t-1)})+b_g )}\\ \\\mathbf{z_{(t)} = \sigma(W_{xz}^\top x_{(t)}+W_{hz}^\top x_{(t-1)}+b_z )} \\ \\\mathbf{r_{(t)} = \sigma(W_{xr}^\top x_{(t)}+W_{hr}^\top x_{(t-1)}+b_r )}\\ \\\mathbf{h_{(t)} = z_{(t)} \otimes h_{(t-1)} + (1-z_{(t)})\otimes g_{(t)}" />
+
+## Bibliography
+![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
+* **Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow, 2nd Edition by Aurélien Géron**
