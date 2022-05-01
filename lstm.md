@@ -48,15 +48,20 @@ _**The challenge to address long-term information preservation and short-term in
 The LSTM cell is split into two vectors: 
   * ***h<sub>(t)</sub>*** (the short-term state)
   * ***c<sub>(t)</sub>*** (the long-term stat).
+
 The key idea is that the network can learn _what to store in the long-term state_, _what to throw away_, and _what to read from it_. 
 #### Step 1: 
-As the long-term state c<sub>(t-1)</sub> traverses the network from left to right, it first goes through a forget gate (&otimes;),  dropping some memories, and then it adds some new memories via the addition operation &oplus; (which adds the memories that were selected by an input gate). The result c<sub>(t-1)</sub> is sent straight out, without any further transformation. So, at each time step, some memories are dropped and some memories are added. 
-Moreover, after the addition operation, the long-term state is copied and passed through the tanh function, and then the result is filtered by the output gate. This produces the short-term state h (which is equal to the cell’s output for this time step, y ). Now let’s look at where new memories come from and how the gates work.
+* As the long-term state **_c<sub>(t-1)</sub>_** traverses the network from left to right, it first goes through a _forget gate_ (**&otimes;**),  dropping some memories, and then it adds some new memories via the addition operation **&oplus;** (which adds the memories that were selected by an input gate). 
+* The result **c<sub>(t-1)</sub>** is sent straight out, without any further transformation. 
+* So, at each time step, some memories are dropped and some memories are added. After the addition operation, the long-term state is copied and passed through the **tanh** function, and then the result is filtered by the output gate. This produces the short-term state h<sub>(t)</sub> (which is equal to the cell’s output for this time step, y<sub>(t)</sub> ). 
 
-First, the current input vector x and the previous short-term state h are fed to four different fully connected layers. They all serve a different purpose:
+#### Step 2:
+First, the current input vector **x<sub>(t)</sub>** and the previous short-term state **h<sub>(t-1)</sub>** are fed to four different fully connected layers. They all serve a different purpose:
 
-   * The main layer is the one that outputs g<sub>(t)</sub> . It has the usual role of analyzing the current inputs x<sub>(t)</sub> and the previous (short-term) state h<sub>(t-1)</sub> . In a basic cell, there is nothing other than this layer, and its output goes straight out to y<sub>(t)</sub> and h<sub>(t)</sub> . In contrast, in an LSTM cell this layer’s output does not go straight out, but instead its most important parts are stored in the long-term state (and the rest is dropped).
+   * The main layer is the one that outputs **g<sub>(t)</sub>** . It has the usual role of analyzing the current inputs** x<sub>(t)</sub>** and the previous (short-term) state **h<sub>(t-1)</sub>**. In a basic cell, there is nothing other than this layer, and its output goes straight out to **y<sub>(t)</sub>** and **h<sub>(t)</sub>** . In contrast, in an LSTM cell this layer’s output does not go straight out, but instead its most important parts are stored in the long-term state (and the rest is dropped).
    * The three other layers are gate controllers. Since they use the logistic activation function, their outputs range from 0 to 1. As you can see, their outputs are fed to element-wise multiplication operations, so if they output 0s they close the gate, and if they output 1s they open it. Specifically:
    * The forget gate (controlled by f ) controls which parts of the long-term state should be erased. The input gate (controlled by i ) controls which parts of g should be added to the long-term state. Finally, the output gate (controlled by o ) controls which parts of the long-term state should be read and output at this time step, both to h and to y . In short, an LSTM cell can learn to recognize an important input (that’s the role of the input gate), store it in the long-term state, preserve it for as long as it is needed (that’s the role of the forget gate), and extract it whenever it is needed. This explains why these cells have been amazingly successful at capturing long-term patterns in time series, long texts, audio recordings, and more. 
+
+
 ## References
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
