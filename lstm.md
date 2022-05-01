@@ -75,8 +75,7 @@ This explains why these cells have been amazingly successful at capturing long-t
 
 
 > #### **W<sub>xi</sub>** , **W<sub>xf</sub>** , **W<sub>xo</sub>** , **W<sub>xg</sub>** are the weight matrices of each of the four layers for their connection to the input vector **x<sub>(t)</sub>** .
-> #### **W<sub>hi</sub>** , **W<sub>hf</sub>** , **W<sub>ho</sub>** , **W<sub>hg</sub>** are the weight matrices of each of the
-four layers for their connection to the previous short-term state **h<sub>(t-1)</sub>** .
+> #### **W<sub>hi</sub>** , **W<sub>hf</sub>** , **W<sub>ho</sub>** , **W<sub>hg</sub>** are the weight matrices of each of the four layers for their connection to the previous short-term state **h<sub>(t-1)</sub>** .
 > #### **b<sub>i</sub>** , **b<sub>f</sub>**, **b<sub>o</sub>** , **b<sub>g</sub>** are the bias terms for each of the four layers. Note that TensorFlow initializes **b<sub>f</sub>** to a vector full of **1s** instead of **0s**. This prevents forgetting everything at the beginning of training.
 
 
