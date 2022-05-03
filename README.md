@@ -38,8 +38,8 @@
   * Negative sampling 
   * Time series
 
-## What is AI
-**Artificial intelligence (AI)** is the ability of a computer or a robot controlled by a computer to do tasks that are usually done by humans because they require human intelligence and discernment. -by [Britannica](https://www.britannica.com/technology/artificial-intelligence)
+## What is AI [↗️](https://www.britannica.com/technology/artificial-intelligence) 
+**Artificial intelligence (AI)** is the ability of a computer or a robot controlled by a computer to do tasks that are usually done by humans because they require human intelligence and discernment.
 ## ◼️ Neural Network
 > #### A neural network is a series of algorithms that tries to recognize _underlying relationships in a set of data_ through a process that mimics the way the human brain operates. In this sense, neural networks refer to systems of neurons, either organic or artificial in nature.
 
