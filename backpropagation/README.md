@@ -17,9 +17,16 @@ For training of any neural network the aim is to minimize the loss (**_y - ŷ_**
 
 #### The formula : <img src="https://latex.codecogs.com/svg.image?\mathbf{W_{(new)}&space;=&space;W_{(old)}-\eta&space;{\color{Blue}&space;\frac{\partial&space;h&space;}{\partial&space;W_{(old)}}}}" title="https://latex.codecogs.com/svg.image?\mathbf{W_{(new)} = W_{(old)}-\eta {\color{Blue} \frac{\partial h }{\partial W_{(old)}}}}" align="center"/>
 
-<img src="https://latex.codecogs.com/svg.image?{\color{Red}&space;\eta}\&space;\&space;is\&space;the\&space;learning\&space;rate\&space;,\\&space;\\&space;{\color{Red}&space;\frac{\partial&space;h&space;}{\partial&space;W_{(old)}}&space;}\&space;is\&space;derivative\&space;of\&space;loss\&space;or\&space;the\&space;slope" title="https://latex.codecogs.com/svg.image?{\color{Red} \eta}\ \ is\ the\ learning\ rate\ ,\\ \\ {\color{Red} \frac{\partial h }{\partial W_{(old)}} }\ is\ derivative\ of\ loss\ or\ the\ slope" />
+<img src="https://latex.codecogs.com/svg.image?\\{\color{Red}&space;\eta}\&space;\&space;the\&space;'eta'&space;\&space;is\&space;the\&space;learning\&space;rate\&space;,\\&space;\\&space;{\color{Red}&space;\frac{\partial&space;h&space;}{\partial&space;W_{(old)}}&space;}\&space;is\&space;derivative\&space;of\&space;loss\&space;by\&space;derivative\&space;of\&space;old\&space;weight" title="https://latex.codecogs.com/svg.image?\\{\color{Red} \eta}\ \ the\ 'eta' \ is\ the\ learning\ rate\ ,\\ \\ {\color{Red} \frac{\partial h }{\partial W_{(old)}} }\ is\ derivative\ of\ loss\ by\ derivative\ of\ old\ weight" />
 
+#### For the -ve slope
 * **W<sub>(new)</sub> = W<sub>(old)</sub> - &eta; (-ve)**
 * **W<sub>(new)</sub> = W<sub>(old)</sub> +  &eta;**
-* So, for always 
-<img src="https://latex.codecogs.com/svg.image?\mathbf{{\color{Red}&space;W_{(new)}&space;>&space;W_{(old)}}}" title="https://latex.codecogs.com/svg.image?\mathbf{{\color{Red} W_{(new)} > W_{(old)}}}" />
+* That makes it for always <img src="https://latex.codecogs.com/svg.image?\\&space;\mathbf{{\color{Red}&space;W_{(new)}&space;>&space;W_{(old)}}}"  align="center" />
+
+#### For the +ve slope
+* **W<sub>(new)</sub> = W<sub>(old)</sub> - &eta; (+ve)**
+* **W<sub>(new)</sub> = W<sub>(old)</sub> -  &eta;**
+* That makes it for always <img src="https://latex.codecogs.com/svg.image?\\&space;\mathbf{{\color{Red}&space;W_{(new)}&space;<&space;W_{(old)}}}" title="https://latex.codecogs.com/svg.image?\\ \mathbf{{\color{Red} W_{(new)} < W_{(old)}}}" align="center" />
+
+
