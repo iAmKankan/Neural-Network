@@ -17,4 +17,4 @@ For training of any neural network the aim is to minimize the loss (**_y - ŷ_**
 
 <img src="https://latex.codecogs.com/svg.image?{\color{Red}&space;\eta}\&space;\&space;is\&space;the\&space;learning\&space;rate\&space;,\&space;{\color{Red}&space;\frac{\partial&space;h&space;}{\partial&space;W_{(old)}}&space;}\&space;is\&space;derivative\&space;of\&space;loss\&space;or\&space;the\&space;slope" title="https://latex.codecogs.com/svg.image?{\color{Red} \eta}\ \ is\ the\ learning\ rate\ ,\ {\color{Red} \frac{\partial h }{\partial W_{(old)}} }\ is\ derivative\ of\ loss\ or\ the\ slope" />
 
-img src="https://user-images.githubusercontent.com/12748752/166604801-f3610f6b-c03d-4aa5-93c2-f225dcad2eaa.png" width=50% />
+<img src="https://user-images.githubusercontent.com/12748752/166604801-f3610f6b-c03d-4aa5-93c2-f225dcad2eaa.png" width=50% />
