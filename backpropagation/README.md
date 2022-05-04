@@ -1,7 +1,13 @@
 ## Index
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 
+## Backpropagation
+
+In 1986, David Rumelhart, Geoffrey Hinton, and Ronald Williams published a paper that introduced the **_backpropagation_** training algorithm. 
+* It is a technique for _computing the gradients automatically_ using _Gradient Descent_ in just two passes through the network (one **forward**, one **backward**), the backpropagation algorithm is able find out how each connection weight and each bias term should be tweaked in order to reduce the error. Once it has these gradients, it just performs a regular Gradient Descent step, and the whole process is repeated until the network converges to the solution.
+
 <img src="https://user-images.githubusercontent.com/12748752/166812953-a0c9f542-1886-4f0c-bad4-a4cf815feeeb.png" width=50% />
+
 ## Backpropagation
 * Chain rule refresher
 * Applying the chain rule
