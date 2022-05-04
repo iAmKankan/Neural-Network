@@ -1,7 +1,7 @@
 ## Index
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 
-<img src="https://latex.codecogs.com/svg.image?\frac{d}{dx}x^n&space;=&space;nx^{n-1}" title="\frac{d}{dx}x^n = nx^{n-1}" />
+
 
 ## Backpropagation
 * Chain rule refresher
