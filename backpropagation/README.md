@@ -4,9 +4,18 @@
 ## Backpropagation
 
 In 1986, David Rumelhart, Geoffrey Hinton, and Ronald Williams published a paper that introduced the **_backpropagation_** training algorithm. 
-* It is a technique for _computing the gradients automatically_ using _Gradient Descent_ in just two passes through the network (one **forward**, one **backward**), the backpropagation algorithm is able find out how each connection weight and each bias term should be tweaked in order to reduce the error. Once it has these gradients, it just performs a regular Gradient Descent step, and the whole process is repeated until the network converges to the solution.
 
-<img src="https://user-images.githubusercontent.com/12748752/166812953-a0c9f542-1886-4f0c-bad4-a4cf815feeeb.png" width=50% />
+It is a technique for _computing the gradients automatically_ using _Gradient Descent_ in just two passes through the network (one **forward**, one **backward**), the backpropagation algorithm is able find out how each connection weight and each bias term should be tweaked in order to reduce the error. Once it has these gradients, it just performs a regular Gradient Descent step, and the whole process is repeated until the network converges to the solution.
+
+<img src="https://user-images.githubusercontent.com/12748752/166812953-a0c9f542-1886-4f0c-bad4-a4cf815feeeb.png" width=70% align="center" />
+
+It handles one **mini-batch** at a time (for example, containing 32 instances each), and it goes through the full training set multiple times. ( 1 pass = one epoch)
+#### Step 1 forward pass:
+* Each mini-batch is passed to the network’s **input layer**, which sends it to the **first hidden layer**. The algorithm then computes the output of all the neurons in this layer (for every instance in the mini-batch). 
+* The result is passed on to the next layer, its output is computed and passed to the next layer, and so on until we get the output of the last layer, the output layer. 
+* This is the forward pass: it is exactly like making predictions, except all intermediate results are preserved since they are needed for the backward pass.
+
+
 
 ## Backpropagation
 * Chain rule refresher
