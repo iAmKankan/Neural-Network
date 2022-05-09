@@ -9,9 +9,12 @@ In 1986, **David Rumelhart**, **Geoffrey Hinton** and **Ronald Williams** publis
 
 <img src="https://latex.codecogs.com/svg.image?\large&space;{\color{DarkOrange}&space;\mathbf{or}}" title="https://latex.codecogs.com/svg.image?\large {\color{DarkOrange} \mathbf{or}}" align="center"/>
 
-> Backpropagation refers to the method of calculating the gradient of neural network parameters. In short, the method traverses the network in _reverse order_, from the **output** to the **input layer**, according to the chain rule from calculus. The algorithm stores any intermediate variables (partial derivatives) required while calculating the gradient with respect to some parameters.
+> Backpropagation refers to the method of calculating the gradient of neural network parameters. In short, the method traverses the network in _reverse order_, from the **output** to the **input layer**, according to the _**chain rule**_ from _calculus_. The algorithm stores any intermediate variables (partial derivatives) required while calculating the gradient with respect to some parameters.
   
-  <img src="https://user-images.githubusercontent.com/12748752/166812953-a0c9f542-1886-4f0c-bad4-a4cf815feeeb.png" width=70% align="center" />
+<img src="https://user-images.githubusercontent.com/12748752/166812953-a0c9f542-1886-4f0c-bad4-a4cf815feeeb.png" width=70% align="center" />
+
+
+> Automatically computing gradients is called ***automatic differentiation***, or ***autodiff***. The autodiff technique used by backpropagation is called ***reverse-mode autodiff***. It is fast and precise, and is well suited when the function to differentiate has many variables (e.g., connection weights) and few outputs (e.g., one loss). 
 
 ### The Algorithm
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
