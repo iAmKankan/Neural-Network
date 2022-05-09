@@ -16,11 +16,11 @@ In 1986, **David Rumelhart**, **Geoffrey Hinton** and **Ronald Williams** publis
 
 > Automatically computing gradients is called ***automatic differentiation***, or ***autodiff***. The autodiff technique used by backpropagation is called ***reverse-mode autodiff***. It is fast and precise, and is well suited when the function to differentiate has many variables (e.g., connection weights) and few outputs (e.g., one loss). 
 
-### The Algorithm
+### _The Algorithm_
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 * It contains two parts - **forward** and **backward**
 * It handles one **mini-batch** at a time (for example, containing 32 instances each), and it goes through the full training set multiple times. ( 1 pass = one epoch)
-#### Forward pass:
+#### _Forward pass_:
 ##### Step 1:
 * Each mini-batch is passed to the network’s **input layer**, which sends it to the **first hidden layer**. The algorithm then computes the output of all the neurons in this layer (for every instance in the mini-batch). 
 ##### Step 2:
@@ -28,7 +28,7 @@ In 1986, **David Rumelhart**, **Geoffrey Hinton** and **Ronald Williams** publis
 
 **This is the forward pass:** it is exactly like making predictions, except all intermediate results are preserved since they are needed for the _backward pass_
 
-#### Backward pass:
+#### _Backward pass_:
 ##### Step 1: Chain Rule
 * After getting output of the output layer it computes how much each _output connection_ contributed to the error. This is done analytically by applying the **chain rule**, which makes this step fast and precise.
 ##### Step 2:
@@ -41,7 +41,7 @@ This reverse pass efficiently measures the error gradient across all the connect
 * Applying the chain rule
 * Saving work with memoization
 
-### Weight update:
+### _Weight update:_
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 For training of any neural network the aim is to minimize the loss (**_y - ŷ_**). The back propagation does this job by adjust each weight in the network in _proportion to how much it contributes to overall error_.
 ### The formula : <img src="https://latex.codecogs.com/svg.image?\large&space;\mathbf{W_{(new)}&space;=&space;W_{(old)}-\eta&space;{\color{Blue}&space;\frac{\partial&space;L&space;}{\partial&space;W_{(old)}}}}" title="https://latex.codecogs.com/svg.image?\large \mathbf{W_{(new)} = W_{(old)}-\eta {\color{Blue} \frac{\partial L }{\partial W_{(old)}}}}" align="center"/> <img src="https://latex.codecogs.com/svg.image?\large&space;\&space;\&space;\&space;\begin{cases}&space;{\color{Red}&space;\eta}&space;\mathrm{\&space;\&space;=&space;\&space;\&space;'eta'&space;\&space;is\&space;the\&space;learning\&space;rate&space;}&space;\&space;,\\&space;\\&space;{\color{Red}&space;\frac{\partial&space;L&space;}{\partial&space;W_{(old)}}&space;}&space;\mathrm{\&space;\&space;=&space;\&space;&space;&space;derivative\&space;of\&space;loss\&space;by\&space;derivative\&space;of\&space;old\&space;weight}\end{cases}&space;" title="https://latex.codecogs.com/svg.image?\large \ \ \ \begin{cases} {\color{Red} \eta} \mathrm{\ \ = \ \ 'eta' \ is\ the\ learning\ rate } \ ,\\ \\ {\color{Red} \frac{\partial L }{\partial W_{(old)}} } \mathrm{\ \ = \ derivative\ of\ loss\ by\ derivative\ of\ old\ weight}\end{cases} " align ="center"/>
@@ -49,7 +49,8 @@ For training of any neural network the aim is to minimize the loss (**_y - ŷ_**
 
 * For the weight **'W4'** in the above diagram we just need to calculate <img src="https://latex.codecogs.com/svg.image?\large&space;\mathbf{W_{4(new)}&space;=&space;W_{4(old)}-\eta&space;{\color{black}&space;\frac{\partial&space;L&space;}{\partial&space;W_{4(old)}}}}" title="https://latex.codecogs.com/svg.image?\large \mathbf{W_{4(new)} = W_{4(old)}-\eta {\color{black} \frac{\partial L }{\partial W_{4(old)}}}}" width=25% align="center"/>
 
-### But how does _`Derivative of Loss`_ by _`Derivative of old-weight`_  (  <img src="https://latex.codecogs.com/svg.image?\mathbf{{\color{Blue}&space;\frac{\partial&space;L&space;}{\partial&space;W_{(old)}}}}" title="https://latex.codecogs.com/svg.image?\mathbf{{\color{Blue} \frac{\partial L }{\partial W_{(old)}}}}" align="center"/>) come?
+### _But how does _`Derivative of Loss`_ by _`Derivative of old-weight`_  (  <img src="https://latex.codecogs.com/svg.image?\mathbf{{\color{Blue}&space;\frac{\partial&space;L&space;}{\partial&space;W_{(old)}}}}" title="https://latex.codecogs.com/svg.image?\mathbf{{\color{Blue} \frac{\partial L }{\partial W_{(old)}}}}" align="center"/>) come?_
+
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 
 
