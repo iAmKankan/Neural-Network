@@ -5,9 +5,13 @@
 
 In 1986, **David Rumelhart**, **Geoffrey Hinton** and **Ronald Williams** published a paper that introduced the **_backpropagation_** training algorithm. 
 
-> It is a technique for _computing the gradients automatically_ using _Gradient Descent_ in just two passes through the network (one **forward**, one **backward**), the **backpropagation algorithm** is able find out how each connection weight and each bias term should be tweaked in order to reduce the error. Once it has these gradients, it just performs a regular Gradient Descent step, and the whole process is repeated until the network converges to the solution.
+> Backpropagation is a technique for _computing the gradients automatically_ using _Gradient Descent_ in just two passes through the network (one **forward**, one **backward**), the **backpropagation algorithm** is able find out how each _connection weight_ and each _bias term_ should be **_tweaked_** in order to reduce the _error_. Once it has these gradients, it just performs a regular Gradient Descent step, and the whole process is repeated until the network converges to the solution.
 
-<img src="https://user-images.githubusercontent.com/12748752/166812953-a0c9f542-1886-4f0c-bad4-a4cf815feeeb.png" width=70% align="center" />
+<img src="https://latex.codecogs.com/svg.image?\large&space;{\color{DarkOrange}&space;\mathbf{or}}" title="https://latex.codecogs.com/svg.image?\large {\color{DarkOrange} \mathbf{or}}" align="center"/>
+
+> Backpropagation refers to the method of calculating the gradient of neural network parameters. In short, the method traverses the network in _reverse order_, from the **output** to the **input layer**, according to the chain rule from calculus. The algorithm stores any intermediate variables (partial derivatives) required while calculating the gradient with respect to some parameters.
+  
+  <img src="https://user-images.githubusercontent.com/12748752/166812953-a0c9f542-1886-4f0c-bad4-a4cf815feeeb.png" width=70% align="center" />
 
 ### The Algorithm
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
@@ -39,7 +43,13 @@ This reverse pass efficiently measures the error gradient across all the connect
 For training of any neural network the aim is to minimize the loss (**_y - ŷ_**). The back propagation does this job by adjust each weight in the network in _proportion to how much it contributes to overall error_.
 ### The formula : <img src="https://latex.codecogs.com/svg.image?\large&space;\mathbf{W_{(new)}&space;=&space;W_{(old)}-\eta&space;{\color{Blue}&space;\frac{\partial&space;L&space;}{\partial&space;W_{(old)}}}}" title="https://latex.codecogs.com/svg.image?\large \mathbf{W_{(new)} = W_{(old)}-\eta {\color{Blue} \frac{\partial L }{\partial W_{(old)}}}}" align="center"/> <img src="https://latex.codecogs.com/svg.image?\large&space;\&space;\&space;\&space;\begin{cases}&space;{\color{Red}&space;\eta}&space;\mathrm{\&space;\&space;=&space;\&space;\&space;'eta'&space;\&space;is\&space;the\&space;learning\&space;rate&space;}&space;\&space;,\\&space;\\&space;{\color{Red}&space;\frac{\partial&space;L&space;}{\partial&space;W_{(old)}}&space;}&space;\mathrm{\&space;\&space;=&space;\&space;&space;&space;derivative\&space;of\&space;loss\&space;by\&space;derivative\&space;of\&space;old\&space;weight}\end{cases}&space;" title="https://latex.codecogs.com/svg.image?\large \ \ \ \begin{cases} {\color{Red} \eta} \mathrm{\ \ = \ \ 'eta' \ is\ the\ learning\ rate } \ ,\\ \\ {\color{Red} \frac{\partial L }{\partial W_{(old)}} } \mathrm{\ \ = \ derivative\ of\ loss\ by\ derivative\ of\ old\ weight}\end{cases} " align ="center"/>
 
-### What is    <img src="https://latex.codecogs.com/svg.image?\mathbf{{\color{Blue}&space;\frac{\partial&space;L&space;}{\partial&space;W_{(old)}}}}" title="https://latex.codecogs.com/svg.image?\mathbf{{\color{Blue} \frac{\partial L }{\partial W_{(old)}}}}" align="center"/>
+
+* For the weight **'W4'** in the above diagram we just need to calculate <img src="https://latex.codecogs.com/svg.image?\large&space;\mathbf{W_{4(new)}&space;=&space;W_{4(old)}-\eta&space;{\color{black}&space;\frac{\partial&space;L&space;}{\partial&space;W_{4(old)}}}}" title="https://latex.codecogs.com/svg.image?\large \mathbf{W_{4(new)} = W_{4(old)}-\eta {\color{black} \frac{\partial L }{\partial W_{4(old)}}}}" width=25% align="center"/>
+
+### But how does _`Derivative of Loss`_ by _`Derivative of old-weight`_  (  <img src="https://latex.codecogs.com/svg.image?\mathbf{{\color{Blue}&space;\frac{\partial&space;L&space;}{\partial&space;W_{(old)}}}}" title="https://latex.codecogs.com/svg.image?\mathbf{{\color{Blue} \frac{\partial L }{\partial W_{(old)}}}}" align="center"/>) come?
+![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
+
+
 
 <img src="https://user-images.githubusercontent.com/12748752/166604801-f3610f6b-c03d-4aa5-93c2-f225dcad2eaa.png" width=50% align="right"/>
 
