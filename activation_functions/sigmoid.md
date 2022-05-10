@@ -1,6 +1,9 @@
 ## Index
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
-![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
+
+#### The formula: <img src="https://latex.codecogs.com/svg.image?\large&space;\mathbf{\sigma(x)\&space;=\&space;&space;\frac{1}{1&plus;e^{-x}}}" title="https://latex.codecogs.com/svg.image?\large \mathbf{\sigma(x)\ =\ \frac{1}{1+e^{-x}}}" width=20% align="center"/>
+
+<img src="https://user-images.githubusercontent.com/12748752/167588897-79a754f8-e4db-48c8-babf-3203d5d3e9bc.png" width=50% align="center"/>
 
 ### Sigmoid
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
@@ -17,7 +20,7 @@
 #### The Sigmoid Formula
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 
-<img src="https://latex.codecogs.com/svg.image?\mathit{S(x)}\&space;=&space;\&space;\frac{1}{1&plus;e^{-x}}" title="\mathit{S(x)}\ = \ \frac{1}{1+e^{-x}}" width=20% />
+
 
 #### Properties of Sigmoid function
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
