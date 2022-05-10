@@ -53,6 +53,7 @@ For more information about Keras activation functions refer to the following:
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 
 ### _Vanishing Gradients_
+![light](https://user-images.githubusercontent.com/12748752/136802581-e8e0607f-3472-44f7-a8b2-8ba82a0f8070.png)
 * During [Backpropagation](https://github.com/iAmKankan/Neural-Network/blob/main/backpropagation/README.md#backpropagation) gradients often get smaller and smaller as the algorithm progresses down to the lower layers.
 * As a result, the Gradient Descent update leaves the lower layers’ connection weights virtually unchanged, and training never converges to a good solution. We call this the vanishing gradients problem.
 
@@ -72,7 +73,11 @@ For more information about Keras activation functions refer to the following:
 
 * And after some point of time we will see that the gradient is no longer updating <img src="https://latex.codecogs.com/svg.image?\large&space;\mathbf{W_{(new)}&space;&space;\approx&space;W_{(old)}}" title="https://latex.codecogs.com/svg.image?\large \mathbf{W_{(new)} \approx W_{(old)}}" align="center"/>
 #### This scenario is called _Vanishing Gradients Problem_
+> #### To overcome this problem we use advanced activation functions like Relu etc.
+
 ### _Exploding Gradients_
+![light](https://user-images.githubusercontent.com/12748752/136802581-e8e0607f-3472-44f7-a8b2-8ba82a0f8070.png)
+
 * In some cases, the opposite of vanishing gradients can happen: the gradients can grow bigger and bigger until layers get insanely large weight updates and the algorithm diverges.
 * More generally, deep neural networks suffer from unstable gradients; different layers may learn at widely different speeds.
 
