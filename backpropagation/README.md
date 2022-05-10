@@ -94,6 +94,3 @@ For training of any neural network the aim is to minimize the loss (**_y - ŷ_**
 
 
 
-
-
-
