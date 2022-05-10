@@ -38,8 +38,9 @@ This reverse pass efficiently measures the error gradient across all the connect
 <img src="https://user-images.githubusercontent.com/12748752/167529284-53374f33-750f-4b94-a858-f470c82755b5.png" width=80%/>
 
 ### _Forwardpropagation with Weight update:_
-* Here unlike its counterpart the value(***X***) is getting calculated along with weights and bias values.
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
+
+* Here unlike its counterpart the value(***X***) is getting calculated along with weights and bias values.
 #### The formula : <img src="https://latex.codecogs.com/svg.image?\large&space;\mathbf{y\&space;=\&space;W^\top&space;X&space;&plus;&space;b}" title="https://latex.codecogs.com/svg.image?\large \mathbf{y\ =\ W^\top X + b}" align="center"/>
 * <img src="https://latex.codecogs.com/svg.image?\large&space;\mathbf{y\&space;=\&space;(W_1&space;X_1&space;&plus;W_2&space;X_2&space;&plus;W_3&space;X_3)&space;&plus;&space;b}" title="https://latex.codecogs.com/svg.image?\large \mathbf{y\ =\ (W_1 X_1 +W_2 X_2 +W_3 X_3) + b}" align="center"/>
 ### _Backpropagation Weight update:_
