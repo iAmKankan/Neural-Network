@@ -41,8 +41,6 @@ This reverse pass efficiently measures the error gradient across all the connect
 * Applying the chain rule
 * Saving work with memoization
 
-### _Bias update:_
-
 ### _Weight update:_
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 For training of any neural network the aim is to minimize the loss (**_y - ŷ_**). The back propagation does this job by adjust each weight in the network in _proportion to how much it contributes to overall error_.
@@ -51,6 +49,9 @@ For training of any neural network the aim is to minimize the loss (**_y - ŷ_**
 
 * For the weight **'W4'** in the above diagram we just need to calculate <img src="https://latex.codecogs.com/svg.image?\large&space;\mathbf{W_{4(new)}&space;=&space;W_{4(old)}-\eta&space;{\color{black}&space;\frac{\partial&space;L&space;}{\partial&space;W_{4(old)}}}}" title="https://latex.codecogs.com/svg.image?\large \mathbf{W_{4(new)} = W_{4(old)}-\eta {\color{black} \frac{\partial L }{\partial W_{4(old)}}}}" width=25% align="center"/>
 
+### _Bias update:_
+![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
+<img src="https://latex.codecogs.com/svg.image?\mathbf{b_{2\&space;new}&space;=&space;b_{2&space;\&space;old}-\eta&space;\frac{\partial&space;L&space;}{\partial&space;b_{2\&space;old}}}" title="https://latex.codecogs.com/svg.image?\mathbf{b_{2\ new} = b_{2 \ old}-\eta \frac{\partial L }{\partial b_{2\ old}}}" />
 
 ### _Chain Rule of differentiation:_
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
