@@ -11,9 +11,6 @@ In 1986, **David Rumelhart**, **Geoffrey Hinton** and **Ronald Williams** publis
 
 > Backpropagation refers to the method of calculating the gradient of neural network parameters. In short, the method traverses the network in _reverse order_, from the **output** to the **input layer**, according to the _**chain rule**_ from _calculus_. The algorithm stores any intermediate variables (partial derivatives) required while calculating the gradient with respect to some parameters.
   
-<img src="https://user-images.githubusercontent.com/12748752/166812953-a0c9f542-1886-4f0c-bad4-a4cf815feeeb.png" width=70% align="center" />
-
-
 > Automatically computing gradients is called ***automatic differentiation***, or ***autodiff***. The autodiff technique used by backpropagation is called ***reverse-mode autodiff***. It is fast and precise, and is well suited when the function to differentiate has many variables (e.g., connection weights) and few outputs (e.g., one loss). 
 
 ### _The Algorithm_
@@ -36,10 +33,7 @@ The algorithm then measures how much of these _error contributions came from eac
 
 This reverse pass efficiently measures the error gradient across all the connection weights in the network by propagating the error gradient backward through the network (hence the name of the algorithm). Finally, the algorithm performs a Gradient Descent step to tweak all the connection weights in the network, using the error gradients it just computed.
 
-### Techiniques Used
-* Chain rule refresher
-* Applying the chain rule
-* Saving work with memoization
+<img src="https://user-images.githubusercontent.com/12748752/167529284-53374f33-750f-4b94-a858-f470c82755b5.png" width=80%/>
 
 ### _Weight update:_
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
@@ -68,6 +62,7 @@ For training of any neural network the aim is to minimize the loss (**_y - ŷ_**
 * <img src="https://latex.codecogs.com/svg.image?\frac{\partial&space;L&space;}{\partial&space;W_{1\&space;new}}=" title="https://latex.codecogs.com/svg.image?\frac{\partial L }{\partial W_{1\ new}}=" align="center"/> <img src="https://latex.codecogs.com/svg.image?\large&space;\begin{bmatrix}\frac{\partial&space;L&space;}{\partial&space;O_{31}}*&space;\frac{\partial&space;O_{31}&space;}{\partial&space;O_{21}}*&space;\frac{\partial&space;O_{21}}{\partial&space;O_{11}}*&space;\frac{\partial&space;O_{11}&space;}{\partial&space;W_{1\&space;old}}\end{bmatrix}&space;&plus;&space;\begin{bmatrix}\frac{\partial&space;L&space;}{\partial&space;O_{31}}*&space;\frac{\partial&space;O_{31}&space;}{\partial&space;O_{22}}*&space;\frac{\partial&space;O_{22}}{\partial&space;O_{11}}*&space;\frac{\partial&space;O_{11}&space;}{\partial&space;W_{1\&space;old}}\end{bmatrix}" title="https://latex.codecogs.com/svg.image?\large \begin{bmatrix}\frac{\partial L }{\partial O_{31}}* \frac{\partial O_{31} }{\partial O_{21}}* \frac{\partial O_{21}}{\partial O_{11}}* \frac{\partial O_{11} }{\partial W_{1\ old}}\end{bmatrix} + \begin{bmatrix}\frac{\partial L }{\partial O_{31}}* \frac{\partial O_{31} }{\partial O_{22}}* \frac{\partial O_{22}}{\partial O_{11}}* \frac{\partial O_{11} }{\partial W_{1\ old}}\end{bmatrix}" align="center" />
 
 ### _But where does _`Derivative of Loss`_ by _`Derivative of old-weight`_  (  <img src="https://latex.codecogs.com/svg.image?\mathbf{{\color{Blue}&space;\frac{\partial&space;L&space;}{\partial&space;W_{(old)}}}}" title="https://latex.codecogs.com/svg.image?\mathbf{{\color{Blue} \frac{\partial L }{\partial W_{(old)}}}}" align="center"/>) come from?_
+![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 
 <img src="https://user-images.githubusercontent.com/12748752/166604801-f3610f6b-c03d-4aa5-93c2-f225dcad2eaa.png" width=50% align="right"/>
 
