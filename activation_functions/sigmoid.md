@@ -1,6 +1,13 @@
 ## Index
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 
+
+
+## Sigmoid
+![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
+* A sigmoid function is a mathematical function having a characteristic "**_S_**"-shaped curve or **sigmoid curve**.
+* A common example of a sigmoid function is the **logistic function**.
+* The term "**_Sigmoid function_**" is used as an alias for the **_logistic function_**.
 ### The formula: <img src="https://latex.codecogs.com/svg.image?\large&space;\mathbf{\sigma(x)\&space;=\&space;&space;\frac{1}{1&plus;e^{-x}}}" title="https://latex.codecogs.com/svg.image?\large \mathbf{\sigma(x)\ =\ \frac{1}{1+e^{-x}}}" width=20% align="center"/>
 
 ### Properties: <img src="https://latex.codecogs.com/svg.image?\large&space;\begin{matrix}{\color{Blue}&space;\textbf{Domain(input&space;range)}\&space;\&space;\sigma(x)}&space;&&space;{\color{Blue}&space;\textbf{Range(output&space;range)}&space;\&space;\&space;\sigma(x)}&&space;{\color{Blue}&space;\textbf{Thresold&space;value}&space;\&space;\&space;\sigma(x)}&space;&&space;{\color{Blue}&space;\textbf{Derivative}&space;\&space;\&space;\frac{\partial&space;}{\partial&space;x}&space;\sigma(x)}&space;\\&space;{\color{DarkRed}&space;(-\infty,\infty)}&space;&&space;{\color{DarkRed}\textbf{(0,1)}&space;}&{\color{DarkRed}&space;\textbf{0.5}}&{\color{DarkRed}&space;\textbf{0.25}}&space;\\&space;\end{matrix}" title="https://latex.codecogs.com/svg.image?\large \begin{matrix}{\color{Blue} \textbf{Domain(input range)}\ \ \sigma(x)} & {\color{Blue} \textbf{Range(output range)} \ \ \sigma(x)}& {\color{Blue} \textbf{Thresold value} \ \ \sigma(x)} & {\color{Blue} \textbf{Derivative} \ \ \frac{\partial }{\partial x} \sigma(x)} \\ {\color{DarkRed} (-\infty,\infty)} & {\color{DarkRed}\textbf{(0,1)} }&{\color{DarkRed} \textbf{0.5}}&{\color{DarkRed} \textbf{0.25}} \\ \end{matrix}" />
@@ -31,13 +38,6 @@ The function itself has certain defects.
 * Prone to gradient vanishing
 * Function output is not zero-centered
 * Power operations are relatively time consuming
-
-### Sigmoid
-![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
-* A sigmoid function is a mathematical function having a characteristic "S"-shaped curve or sigmoid curve.
-* A common example of a sigmoid function is the logistic function.
-* The term "sigmoid function" is used as an alias for the logistic function.
-
 
 #### The Sigmoid Curve
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
