@@ -58,7 +58,19 @@ For more information about Keras activation functions refer to the following:
 
 #### Example 01:
 * Suppose we have **Sigmoid** as activation function and we use it throughout a very long neural network.
-<img src="https://user-images.githubusercontent.com/12748752/167541362-d5995768-7693-4e85-a79b-9fb63419e21a.png" width=40%/>
+<img src="https://user-images.githubusercontent.com/12748752/167541362-d5995768-7693-4e85-a79b-9fb63419e21a.png" width=70%/>
+
+#### For backpropagation the weight update formula is - 
+<img src="https://latex.codecogs.com/svg.image?\large&space;\mathbf{W_{1\&space;new}&space;=&space;W_{1&space;\&space;old}-\eta&space;{\color{black}&space;\frac{\partial&space;L&space;}{\partial&space;W_{1\&space;old}}}}" title="https://latex.codecogs.com/svg.image?\large \mathbf{W_{1\ new} = W_{1 \ old}-\eta {\color{black} \frac{\partial L }{\partial W_{1\ old}}}}" align="center"/>
+
+#### When we calculate its gradients we need to calculate its darivatives like-
+<img src="https://latex.codecogs.com/svg.image?\mathbf{\frac{\partial&space;L&space;}{\partial&space;W_{1&space;\&space;old}}&space;=\&space;\frac{\partial&space;L&space;}{\partial&space;O_{51}}&space;*&space;\frac{\partial&space;O_{51}&space;}{\partial&space;O_{41}}*&space;\frac{\partial&space;O_{41}&space;}{\partial&space;O_{31}}*&space;\frac{\partial&space;O_{31}&space;}{\partial&space;O_{21}}*&space;\frac{\partial&space;O_{21}&space;}{\partial&space;W_{1}}" title="https://latex.codecogs.com/svg.image?\mathbf{\frac{\partial L }{\partial W_{1 \ old}} =\ \frac{\partial L }{\partial O_{51}} * \frac{\partial O_{51} }{\partial O_{41}}* \frac{\partial O_{41} }{\partial O_{31}}* \frac{\partial O_{31} }{\partial O_{21}}* \frac{\partial O_{21} }{\partial W_{1}}" align="center" />
+
+#### As we know for Sigmoid activation function its Range is between _0 to 1_, Thresold is _0.5_ and its derivative is  _0.25_
+* So, in our example when we want to calculate the derivative of weights inorder to update the new weights in the network we get lesser value each time.
+* <img src="https://latex.codecogs.com/svg.image?\mathbf{\frac{\partial&space;L&space;}{\partial&space;W_{1&space;\&space;old}}&space;=" title="https://latex.codecogs.com/svg.image?\mathbf{\frac{\partial L }{\partial W_{1 \ old}} =" align="center" />**_ 0.25 * 0.15 * 0.10 * 0.05 * 0.02_**
+
+
 ### _Exploding Gradients_
 * In some cases, the opposite of vanishing gradients can happen: the gradients can grow bigger and bigger until layers get insanely large weight updates and the algorithm diverges.
 * More generally, deep neural networks suffer from unstable gradients; different layers may learn at widely different speeds.
