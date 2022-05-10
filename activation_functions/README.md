@@ -49,6 +49,20 @@ For more information about Keras activation functions refer to the following:
 * [Keras Activation Functions](https://keras.io/activations/)
 * [Activation Function Cheat Sheets](https://ml-cheatsheet.readthedocs.io/en/latest/activation_functions.html)
 
+## The Vanishing or Exploding Gradients Problems
+![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
+
+### _Vanishing Gradients_
+* During [Backpropagation](https://github.com/iAmKankan/Neural-Network/blob/main/backpropagation/README.md#backpropagation) gradients often get smaller and smaller as the algorithm progresses down to the lower layers.
+* As a result, the Gradient Descent update leaves the lower layers’ connection weights virtually unchanged, and training never converges to a good solution. We call this the vanishing gradients problem.
+
+#### Example 01:
+* Suppose we have **Sigmoid** as activation function and we use it throughout a very long neural network.
+<img src="https://user-images.githubusercontent.com/12748752/167541362-d5995768-7693-4e85-a79b-9fb63419e21a.png" width=40%/>
+### _Exploding Gradients_
+* In some cases, the opposite of vanishing gradients can happen: the gradients can grow bigger and bigger until layers get insanely large weight updates and the algorithm diverges.
+* More generally, deep neural networks suffer from unstable gradients; different layers may learn at widely different speeds.
+
 ### Advanced Activation Functions
 Hyperparameters are not changed when the neural network trains. You, the network designer, must define the hyperparameters.  The neural network learns regular parameters during neural network training.  Neural network weights are the most common type of regular parameter.  The "[advanced activation functions](https://keras.io/layers/advanced-activations/)," as Keras call them, also contain parameters that the network will learn during training.  These activation functions may give you better performance than RELU.
 
@@ -99,19 +113,7 @@ model.add(layers.Activation(activations.relu))
 ```Python
 model.add(layers.Dense(64, activation='relu'))
 ```
-## The Vanishing or Exploding Gradients Problems
-![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
-### Backpropagation: [_`link for backpropagation in general`_](https://github.com/iAmKankan/Neural-Network/blob/main/multilayer-perceptrons.md#backpropagation)
-* The backpropagation algorithm works by going from the output layer to the input layer, propagating the error gradient along the way. 
-* Once the algorithm has computed the gradient of the cost function with regard to each parameter in the network, it uses these gradients to update each parameter with a Gradient Descent step.
 
-### _Vanishing Gradients_
-* During Backpropagation gradients often get smaller and smaller as the algorithm progresses down to the lower layers.
-* As a result, the Gradient Descent update leaves the lower layers’ connection weights virtually unchanged, and training never converges to a good solution. We call this the vanishing gradients problem.
-
-### _Exploding Gradients_
-* In some cases, the opposite of vanishing gradients can happen: the gradients can grow bigger and bigger until layers get insanely large weight updates and the algorithm diverges.
-* More generally, deep neural networks suffer from unstable gradients; different layers may learn at widely different speeds.
 
 ### _Problem with Logistic or Sigmoid Activation Function_
 * In logistic activation function,when inputs become large (negative or positive), the function saturates at 0 or 1, with a derivative extremely close to 0. 
