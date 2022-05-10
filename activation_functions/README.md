@@ -58,9 +58,9 @@
 ![light](https://user-images.githubusercontent.com/12748752/136802581-e8e0607f-3472-44f7-a8b2-8ba82a0f8070.png)
 
 
-<img src="https://user-images.githubusercontent.com/12748752/167583923-c90411f4-8b57-4663-93fa-be18ca47a7cb.png" width=40% /> <img src="https://user-images.githubusercontent.com/12748752/167583928-bfe56750-9917-4209-9eb5-04fc81743647.png" width=40% /> 
+<img src="https://user-images.githubusercontent.com/12748752/167583923-c90411f4-8b57-4663-93fa-be18ca47a7cb.png" width=45% /> <img src="https://user-images.githubusercontent.com/12748752/167583928-bfe56750-9917-4209-9eb5-04fc81743647.png" width=45% /> 
 
-<img src="https://user-images.githubusercontent.com/12748752/167583932-9d195974-375c-48a6-84db-04fdbcb5fb6b.png" width=50% />
+<img src="https://user-images.githubusercontent.com/12748752/167583932-9d195974-375c-48a6-84db-04fdbcb5fb6b.png" width=45% />
 
 
 
