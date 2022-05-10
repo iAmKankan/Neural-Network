@@ -77,9 +77,10 @@ For more information about Keras activation functions refer to the following:
 
 ### _Exploding Gradients_
 ![light](https://user-images.githubusercontent.com/12748752/136802581-e8e0607f-3472-44f7-a8b2-8ba82a0f8070.png)
-
 * In some cases, the opposite of vanishing gradients can happen: the gradients can grow bigger and bigger until layers get insanely large weight updates and the algorithm diverges.
 * More generally, deep neural networks suffer from unstable gradients; different layers may learn at widely different speeds.
+> ##### This problem associates with **_weights_**, sometimes the weights get big and when it multiplies with the derivative of the **Activation Function** it get bigger.. Not necessary the presents of **_Sigmoid_** function.
+
 
 ### Advanced Activation Functions
 Hyperparameters are not changed when the neural network trains. You, the network designer, must define the hyperparameters.  The neural network learns regular parameters during neural network training.  Neural network weights are the most common type of regular parameter.  The "[advanced activation functions](https://keras.io/layers/advanced-activations/)," as Keras call them, also contain parameters that the network will learn during training.  These activation functions may give you better performance than RELU.
