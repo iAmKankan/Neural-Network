@@ -2,7 +2,7 @@
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 
 ## Backpropagation
-
+![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 In 1986, **David Rumelhart**, **Geoffrey Hinton** and **Ronald Williams** published a paper that introduced the **_backpropagation_** training algorithm. 
 
 > Backpropagation is a technique for _computing the gradients automatically_ using _Gradient Descent_ in just two passes through the network (one **forward**, one **backward**), the **backpropagation algorithm** is able find out how each _connection weight_ and each _bias term_ should be **_tweaked_** in order to reduce the _error_. Once it has these gradients, it just performs a regular Gradient Descent step, and the whole process is repeated until the network converges to the solution.
@@ -80,3 +80,14 @@ For training of any neural network the aim is to minimize the loss (**_y - ŷ_**
 
 
 <img src="https://user-images.githubusercontent.com/12748752/166584966-66a93072-31ab-4490-a934-e8a1b43eea55.png" width=60% />
+
+## Vanishing gradient problem:
+![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
+
+
+
+
+
+
+
+
