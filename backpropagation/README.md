@@ -41,6 +41,8 @@ This reverse pass efficiently measures the error gradient across all the connect
 * Applying the chain rule
 * Saving work with memoization
 
+### _Bias update:_
+
 ### _Weight update:_
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 For training of any neural network the aim is to minimize the loss (**_y - ŷ_**). The back propagation does this job by adjust each weight in the network in _proportion to how much it contributes to overall error_.
@@ -49,9 +51,17 @@ For training of any neural network the aim is to minimize the loss (**_y - ŷ_**
 
 * For the weight **'W4'** in the above diagram we just need to calculate <img src="https://latex.codecogs.com/svg.image?\large&space;\mathbf{W_{4(new)}&space;=&space;W_{4(old)}-\eta&space;{\color{black}&space;\frac{\partial&space;L&space;}{\partial&space;W_{4(old)}}}}" title="https://latex.codecogs.com/svg.image?\large \mathbf{W_{4(new)} = W_{4(old)}-\eta {\color{black} \frac{\partial L }{\partial W_{4(old)}}}}" width=25% align="center"/>
 
-### _But how does _`Derivative of Loss`_ by _`Derivative of old-weight`_  (  <img src="https://latex.codecogs.com/svg.image?\mathbf{{\color{Blue}&space;\frac{\partial&space;L&space;}{\partial&space;W_{(old)}}}}" title="https://latex.codecogs.com/svg.image?\mathbf{{\color{Blue} \frac{\partial L }{\partial W_{(old)}}}}" align="center"/>) come?_
-### Chain Rule
+
+### _Chain Rule of differentiation:_
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
+<img src="https://user-images.githubusercontent.com/12748752/167518450-8c22a7e0-d41c-4400-90c4-1a322ed65d87.png" width=70%/>
+* <img src="https://latex.codecogs.com/svg.image?\frac{\partial&space;L&space;}{\partial&space;W_{1\&space;old}}=" title="https://latex.codecogs.com/svg.image?\frac{\partial L }{\partial W_{1\ old}}=" align="center"/> <img src="https://latex.codecogs.com/svg.image?\large&space;\begin{bmatrix}\frac{\partial&space;L&space;}{\partial&space;O_{31}}*&space;\frac{\partial&space;O_{31}&space;}{\partial&space;O_{21}}*&space;\frac{\partial&space;O_{21}}{\partial&space;O_{11}}*&space;\frac{\partial&space;O_{11}&space;}{\partial&space;W_{1\&space;old}}\end{bmatrix}&space;&plus;&space;\begin{bmatrix}\frac{\partial&space;L&space;}{\partial&space;O_{31}}*&space;\frac{\partial&space;O_{31}&space;}{\partial&space;O_{22}}*&space;\frac{\partial&space;O_{22}}{\partial&space;O_{11}}*&space;\frac{\partial&space;O_{11}&space;}{\partial&space;W_{1\&space;old}}\end{bmatrix}" title="https://latex.codecogs.com/svg.image?\large \begin{bmatrix}\frac{\partial L }{\partial O_{31}}* \frac{\partial O_{31} }{\partial O_{21}}* \frac{\partial O_{21}}{\partial O_{11}}* \frac{\partial O_{11} }{\partial W_{1\ old}}\end{bmatrix} + \begin{bmatrix}\frac{\partial L }{\partial O_{31}}* \frac{\partial O_{31} }{\partial O_{22}}* \frac{\partial O_{22}}{\partial O_{11}}* \frac{\partial O_{11} }{\partial W_{1\ old}}\end{bmatrix}" align="center" />
+
+### _But how does _`Derivative of Loss`_ by _`Derivative of old-weight`_  (  <img src="https://latex.codecogs.com/svg.image?\mathbf{{\color{Blue}&space;\frac{\partial&space;L&space;}{\partial&space;W_{(old)}}}}" title="https://latex.codecogs.com/svg.image?\mathbf{{\color{Blue} \frac{\partial L }{\partial W_{(old)}}}}" align="center"/>) come?_
+
+
+
+
 
 <img src="https://user-images.githubusercontent.com/12748752/167338642-add67dc2-66c3-4387-afd2-5babbcc64cd0.png" width=70% />
 
