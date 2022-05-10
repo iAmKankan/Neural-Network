@@ -63,14 +63,15 @@ For more information about Keras activation functions refer to the following:
 #### For backpropagation the weight update formula is - 
 <img src="https://latex.codecogs.com/svg.image?\large&space;\mathbf{W_{1\&space;new}&space;=&space;W_{1&space;\&space;old}-\eta&space;{\color{black}&space;\frac{\partial&space;L&space;}{\partial&space;W_{1\&space;old}}}}" title="https://latex.codecogs.com/svg.image?\large \mathbf{W_{1\ new} = W_{1 \ old}-\eta {\color{black} \frac{\partial L }{\partial W_{1\ old}}}}" align="center"/>
 
-#### When we calculate its gradients we need to calculate its darivatives like-
+#### When we calculate its gradients we need its darivative as well-
 <img src="https://latex.codecogs.com/svg.image?\mathbf{\frac{\partial&space;L&space;}{\partial&space;W_{1&space;\&space;old}}&space;=\&space;\frac{\partial&space;L&space;}{\partial&space;O_{51}}&space;*&space;\frac{\partial&space;O_{51}&space;}{\partial&space;O_{41}}*&space;\frac{\partial&space;O_{41}&space;}{\partial&space;O_{31}}*&space;\frac{\partial&space;O_{31}&space;}{\partial&space;O_{21}}*&space;\frac{\partial&space;O_{21}&space;}{\partial&space;W_{1}}" title="https://latex.codecogs.com/svg.image?\mathbf{\frac{\partial L }{\partial W_{1 \ old}} =\ \frac{\partial L }{\partial O_{51}} * \frac{\partial O_{51} }{\partial O_{41}}* \frac{\partial O_{41} }{\partial O_{31}}* \frac{\partial O_{31} }{\partial O_{21}}* \frac{\partial O_{21} }{\partial W_{1}}" align="center" />
 
-#### As we know for Sigmoid activation function its Range is between _0 to 1_, Thresold is _0.5_ and its derivative is  _0.25_
+#### As we know for Sigmoid activation function its Range is between [_0 to 1_], thresold is _0.5_ and its derivative is  _0.25_
 * So, in our example when we want to calculate the derivative of weights inorder to update the new weights in the network we get lesser value each time.
-* <img src="https://latex.codecogs.com/svg.image?\mathbf{\frac{\partial&space;L&space;}{\partial&space;W_{1&space;\&space;old}}&space;=" title="https://latex.codecogs.com/svg.image?\mathbf{\frac{\partial L }{\partial W_{1 \ old}} =" align="center" />**_ 0.25 * 0.15 * 0.10 * 0.05 * 0.02_**
+* <img src="https://latex.codecogs.com/svg.image?\mathbf{\frac{\partial&space;L&space;}{\partial&space;W_{1&space;\&space;old}}&space;=" title="https://latex.codecogs.com/svg.image?\mathbf{\frac{\partial L }{\partial W_{1 \ old}} =" align="center" /> <b><i> 0.25 * 0.15 * 0.10 * 0.05 * 0.02</i></b>
 
-
+* And after some point of time we will see that the gradient is no longer updating <img src="https://latex.codecogs.com/svg.image?\large&space;\mathbf{W_{(new)}&space;&space;\approx&space;W_{(old)}}" title="https://latex.codecogs.com/svg.image?\large \mathbf{W_{(new)} \approx W_{(old)}}" align="center"/>
+#### This scenario is called _Vanishing Gradients Problem_
 ### _Exploding Gradients_
 * In some cases, the opposite of vanishing gradients can happen: the gradients can grow bigger and bigger until layers get insanely large weight updates and the algorithm diverges.
 * More generally, deep neural networks suffer from unstable gradients; different layers may learn at widely different speeds.
