@@ -106,7 +106,7 @@ Hyperparameters are not changed when the neural network trains. You, the network
 ### Different types of Activation functions and their derivatives
 ![light](https://user-images.githubusercontent.com/12748752/136802581-e8e0607f-3472-44f7-a8b2-8ba82a0f8070.png)
 
-<img src="https://user-images.githubusercontent.com/12748752/146569902-e5b03528-bb1b-4a96-a8c6-cf2e998dd0c6.png"/>
+<img src="https://user-images.githubusercontent.com/12748752/146569902-e5b03528-bb1b-4a96-a8c6-cf2e998dd0c6.png" width=60%/>
 
 ### Performance of Different types of Activation functions
 ![light](https://user-images.githubusercontent.com/12748752/136802581-e8e0607f-3472-44f7-a8b2-8ba82a0f8070.png)
