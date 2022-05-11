@@ -76,7 +76,7 @@ Among them, **&delta;** is a set parameter, **y** represents the real value, and
 
 The advantage of this is that when the residual is small, the loss function is L2 norm, and when the residual is large, it is a linear function of L1 norm
 
-## ## 3.Hinge Loss
+## Hinge Loss
 
 Hinge loss is often used for binary classification problems, such as ground true: t = 1 or -1, predicted value y = wx + b
 
