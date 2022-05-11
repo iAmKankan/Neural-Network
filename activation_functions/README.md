@@ -23,9 +23,9 @@
 * [Bibliography](#bibliography)
 * [Todo 01](https://d2l.ai/chapter_multilayer-perceptrons/numerical-stability-and-init.html#vanishing-and-exploding-gradients)
 
-## The Vanishing or Exploding Gradients Problems
+## The Vanishing and Exploding Gradients Problems
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
-
+The question should be asked that why we need so namy types of Activation function! where as at the beggining people used the **step function** and later **sigmoid** function as the  Activation function. 
 ### _Vanishing Gradients_
 ![light](https://user-images.githubusercontent.com/12748752/136802581-e8e0607f-3472-44f7-a8b2-8ba82a0f8070.png)
 * During [Backpropagation](https://github.com/iAmKankan/Neural-Network/blob/main/backpropagation/README.md#backpropagation) gradients often get smaller and smaller as the algorithm progresses down to the lower layers.
