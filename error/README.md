@@ -72,7 +72,18 @@ It is also used to minimize the error which is the sum of all the squared differ
 **Huber Loss** is often used in _regression_ problems. Compared with _L2 loss_, Huber Loss is _**less sensitive to outliers**_(because if the residual is too large, it is a piecewise function, loss is a linear function of the residual).
 
 <img src="https://latex.codecogs.com/svg.image?\large&space;\mathbf{L\delta&space;(y,f(x))=}&space;\begin{cases}\mathbf{{\color{Purple}\frac{1}{2}(y-f(x))^2}}&&space;\mathbf{for&space;|y-f(x)|\leq&space;\delta&space;,&space;}\\\mathbf{{\color{Purple}\delta|y-f(x)|-\frac{1}{2}\delta&space;^2}}&&space;\mathbf{otherwise.}\end{cases}" title="https://latex.codecogs.com/svg.image?\large \mathbf{L\delta (y,f(x))=} \begin{cases}\mathbf{{\color{Purple}\frac{1}{2}(y-f(x))^2}}& \mathbf{for |y-f(x)|\leq \delta , }\\\mathbf{{\color{Purple}\delta|y-f(x)|-\frac{1}{2}\delta ^2}}& \mathbf{otherwise.}\end{cases}" />
+Among them, **&delta;** is a set parameter, **y** represents the real value, and _**f(x)**_ represents the predicted value.
 
+The advantage of this is that when the residual is small, the loss function is L2 norm, and when the residual is large, it is a linear function of L1 norm
+
+## ## 3.Hinge Loss
+
+Hinge loss is often used for binary classification problems, such as ground true: t = 1 or -1, predicted value y = wx + b
+
+In the svm classifier, the definition of hinge loss is
+
+
+In other words, the closer the y is to t, the smaller the loss will be.
 
 
 ## References:
