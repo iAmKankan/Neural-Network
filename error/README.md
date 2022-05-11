@@ -52,18 +52,25 @@ As these names imply, you train your model using the _training set_, and you tes
 ## L1 and L2 loss or Mean Absolute Error and Mean Square Error
 ![light](https://user-images.githubusercontent.com/12748752/136802581-e8e0607f-3472-44f7-a8b2-8ba82a0f8070.png)
 *L1* and *L2* are two common loss functions in machine learning which are mainly used to minimize the error.
-   1) **L1 loss function or Mean Absolute Error (MAE)**.
+   1) **L1 loss function and Mean Absolute Error (MAE)**.
    2) **L2 loss function or Mean Square Error (MSE)**.
 
-### 1) L1- _Loss function_ or _Least Absolute Deviations_(LAD) or Mean Absolute Error (MAE)
+## L1- _Loss function_ or _Least Absolute Deviations_(LAD) and _Mean Absolute Error (MAE)_
 It is used to minimize the error which is the sum of all the absolute differences in between the true value and the predicted value.
+### Math equation for _L1 loss_:
+<img src="https://latex.codecogs.com/svg.image?\large&space;\mathrm{\&space;L1-loss}\mathbf{\&space;={\color{Purple}&space;\sum_{i=1}^{n}|y_{true}-y_{pridicted}|}" title="https://latex.codecogs.com/svg.image?\large \mathrm{\ L1-loss}\mathbf{\ ={\color{Purple} \sum_{i=1}^{n}|y_{true}-y_{pridicted}|}" />
 
-<img src="https://latex.codecogs.com/svg.image?\large&space;'L1-loss'\mathrm{\&space;or\&space;MAE}\mathbf{\&space;={\color{Purple}&space;&space;\sum_{i=1}^{n}|y_{true}-y_{pridicted}|}" title="https://latex.codecogs.com/svg.image?\large 'L1-loss'\mathrm{\ or\ MAE}\mathbf{\ ={\color{Purple} \sum_{i=1}^{n}|y_{true}-y_{pridicted}|}" />
+### Math equation for  _Mean Absolute Error (MAE)_:
+<img src="https://latex.codecogs.com/svg.image?\large&space;\mathrm{\&space;MAE}\mathbf{\&space;={\color{Purple}\frac{1}{n}&space;\sum_{i=1}^{n}|y_{i}-\hat{y_{i}}|}" title="https://latex.codecogs.com/svg.image?\large \mathrm{\ MAE}\mathbf{\ ={\color{Purple}\frac{1}{n} \sum_{i=1}^{n}|y_{i}-\hat{y_{i}}|}" />
 
-### 2) L2- _Loss Function_ or _Least square errors_(LS) or Mean Square Error (MSE)
+## L2- _Loss Function_ or _Least square errors_(LS) and _Mean Square Error (MSE)_
 It is also used to minimize the error which is the sum of all the squared differences in between the true value and the pedicted value.
+### Math equation for _L2 loss_:
+<img src="https://latex.codecogs.com/svg.image?\large&space;&space;\mathrm{L2-loss}\mathbf{\&space;={\color{Purple}&space;\sum_{i=1}^{n}(y_{true}-y_{pridicted})^2}" title="https://latex.codecogs.com/svg.image?\large \mathrm{L2-loss}\mathbf{\ ={\color{Purple} \sum_{i=1}^{n}(y_{true}-y_{pridicted})^2}" />
 
-<img src="https://latex.codecogs.com/svg.image?\large&space;'L2-loss'&space;\mathrm{\&space;or\&space;MSE}\mathbf{\&space;={\color{Purple}&space;&space;\sum_{i=1}^{n}(y_{true}-y_{pridicted})^2}" title="https://latex.codecogs.com/svg.image?\large 'L2-loss' \mathrm{\ or\ MSE}\mathbf{\ ={\color{Purple} \sum_{i=1}^{n}(y_{true}-y_{pridicted})^2}" />
+### Math equation for  _Mean Square Error (MSE)_:
+<img src="https://latex.codecogs.com/svg.image?\large&space;&space;\mathrm{MSE}\mathbf{\&space;={\color{Purple}\frac{1}{n}&space;\sum_{i=1}^{n}(y_{i}-\hat{y_i})^2}" title="https://latex.codecogs.com/svg.image?\large \mathrm{MSE}\mathbf{\ ={\color{Purple}\frac{1}{n} \sum_{i=1}^{n}(y_{i}-\hat{y_i})^2}" />
+
 
 **The disadvantage** of the **L2 norm** is that when there are outliers, these points will account for the main component of the loss. For example, the true value is 1, the prediction is 10 times, the prediction value is 1000 once, and the prediction value of the other times is about 1, obviously the loss value is mainly dominated by 1000.
 
