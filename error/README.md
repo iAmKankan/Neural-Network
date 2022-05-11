@@ -86,30 +86,44 @@ In other words, the closer the y is to t, the smaller the loss will be.
 
 ## Cross-entropy loss
 ![light](https://user-images.githubusercontent.com/12748752/136802581-e8e0607f-3472-44f7-a8b2-8ba82a0f8070.png)
-### Categorical Crossentropy
+
+## Categorical Crossentropy
+![light](https://user-images.githubusercontent.com/12748752/136802581-e8e0607f-3472-44f7-a8b2-8ba82a0f8070.png)
 **Categorical crossentropy** is a loss function that is used in **_multi-class classification_** tasks. **_These are tasks where an example can only belong to one out of many possible categories, and the model must decide which one._**
 
 Formally, it is designed to quantify the difference between two probability distributions.
 
-#### Math equation:
+### Math equation:
 <img src="https://latex.codecogs.com/svg.image?\large&space;Loss\&space;\mathbf{={\color{Purple}&space;-&space;\sum_{i=1}^{Output\&space;size}y_i.&space;\log&space;\hat{y_i}}}" title="https://latex.codecogs.com/svg.image?\large Loss\ \mathbf{={\color{Purple} - \sum_{i=1}^{Output\ size}y_i. \log \hat{y_i}}}" />
 
+### How to use Categorical Crossentropy
+The categorical crossentropy is well suited to **classification tasks**, since one example can be considered to belong to a specific category with probability **1**, and to other categories with probability **0**.
+
+**Example:** The MNIST number recognition tutorial, where you have images of the digits 0, 1, 2, 3, 4, 5, 6, 7, 8, and 9.
+The model uses the categorical crossentropy to learn to give a high probability to the correct digit and a low probability to the other digits.
+
+### Activation functions
+#### **_Softmax_** is the only activation function recommended to use with the _categorical crossentropy loss function_.
+
+Strictly speaking, the output of the model only needs to be positive so that the logarithm of every output value <img src="https://latex.codecogs.com/svg.image?\mathrm{{\color{Purple}\hat{y_i}}}" title="https://latex.codecogs.com/svg.image?\mathrm{{\color{Purple}\hat{y_i}}}" align="center" /> exists. However, the main appeal of this loss function is for comparing two probability distributions. The **softmax** activation rescales the model output so that it has the right properties.
+
 ### Binary crossentropy
+![light](https://user-images.githubusercontent.com/12748752/136802581-e8e0607f-3472-44f7-a8b2-8ba82a0f8070.png)
 **Binary crossentropy** is a loss function that is used in **_binary classification_** tasks. These are tasks that answer a question with only two choices (**yes** or **no**, **A** or **B**, **0** or **1**, **left** or **right**). Several independent such questions can be answered at the same time, as in **_multi-label classification_** or in **_binary image segmentation_**.
 
 Formally, this loss is equal to the average of the categorical crossentropy loss on many two-category tasks.
 
-#### Math equation:
+### Math equation:
 <img src="https://latex.codecogs.com/svg.image?\large&space;Loss\&space;\mathrm{={\color{Purple}&space;-&space;\frac{1}{output\&space;size}}}\mathbf{{\color{Purple}&space;\sum_{i=1}^{output\&space;size}y_i.&space;\log&space;\hat{y_i}&space;&plus;&space;(1-y_i).\log(1-\hat{y_i})}}" title="https://latex.codecogs.com/svg.image?\large Loss\ \mathrm{={\color{Purple} - \frac{1}{output\ size}}}\mathbf{{\color{Purple} \sum_{i=1}^{output\ size}y_i. \log \hat{y_i} + (1-y_i).\log(1-\hat{y_i})}}" />
 
-#### How to use binary crossentropy
+### How to use binary crossentropy
 The binary crossentropy is very convenient to train a model to solve many _classification_ problems at the same time, if each classification can be reduced to a binary choice (i.e. **yes or no**, **A or B**, **0 or 1**).
 
 **Example**: The build your own music critic tutorial contains music data and 46 labels like Happy, Hopeful, Laid back, Relaxing etc.
 The model uses the binary crossentropy to learn to tag songs with every applicable label.
 
-#### Activation functions
-**_Sigmoid_** _is the only activation function compatible with the_ **_binary crossentropy loss function_**. You must use it on the **last block** before the target block.
+### Activation functions
+#### **_Sigmoid_** _is the only activation function compatible with the_ **_binary crossentropy loss function_**. You must use it on the **last block** before the target block.
 
 The binary crossentropy needs to compute the logarithms of <img src="https://latex.codecogs.com/svg.image?\mathrm{{\color{Purple}\hat{y_i}}}" title="https://latex.codecogs.com/svg.image?\mathrm{{\color{Purple}\hat{y_i}}}" align="center" /> and <img src="https://latex.codecogs.com/svg.image?\mathrm{{\color{Purple}(1-\hat{y_i})}}" title="https://latex.codecogs.com/svg.image?\mathrm{{\color{Purple}(1-\hat{y_i})}}" align="center"/>, which only exist if <img src="https://latex.codecogs.com/svg.image?\mathrm{{\color{Purple}\hat{y_i}}}" title="https://latex.codecogs.com/svg.image?\mathrm{{\color{Purple}\hat{y_i}}}" align="center" /> is between **0** and **1**. 
 
