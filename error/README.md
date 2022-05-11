@@ -99,7 +99,8 @@ Formally, it is designed to quantify the difference between two probability dist
 
 Formally, this loss is equal to the average of the categorical crossentropy loss on many two-category tasks.
 
-
+#### Math equation:
+<img src="https://latex.codecogs.com/svg.image?\large&space;Loss\&space;\mathrm{={\color{Purple}&space;-&space;\frac{1}{output\&space;size}}}\mathbf{{\color{Purple}&space;\sum_{i=1}^{output\&space;size}y_i.&space;\log&space;\hat{y_i}&space;&plus;&space;(1-y_i).\log(1-\hat{y_i})}}" title="https://latex.codecogs.com/svg.image?\large Loss\ \mathrm{={\color{Purple} - \frac{1}{output\ size}}}\mathbf{{\color{Purple} \sum_{i=1}^{output\ size}y_i. \log \hat{y_i} + (1-y_i).\log(1-\hat{y_i})}}" />
 
 
 ## References:
