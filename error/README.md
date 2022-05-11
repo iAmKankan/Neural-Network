@@ -82,8 +82,10 @@ Hinge loss is often used for binary classification problems, such as ground true
 
 In the svm classifier, the definition of hinge loss is
 
-
 In other words, the closer the y is to t, the smaller the loss will be.
+
+## Cross-entropy loss
+![light](https://user-images.githubusercontent.com/12748752/136802581-e8e0607f-3472-44f7-a8b2-8ba82a0f8070.png)
 
 
 ## References:
