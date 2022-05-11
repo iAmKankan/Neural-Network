@@ -86,6 +86,20 @@ In other words, the closer the y is to t, the smaller the loss will be.
 
 ## Cross-entropy loss
 ![light](https://user-images.githubusercontent.com/12748752/136802581-e8e0607f-3472-44f7-a8b2-8ba82a0f8070.png)
+### Categorical Crossentropy
+**Categorical crossentropy** is a loss function that is used in **_multi-class classification_** tasks. **_These are tasks where an example can only belong to one out of many possible categories, and the model must decide which one._**
+
+Formally, it is designed to quantify the difference between two probability distributions.
+
+#### Math equation:
+<img src="https://latex.codecogs.com/svg.image?\large&space;Loss\&space;\mathbf{={\color{Purple}&space;-&space;\sum_{i=1}^{Output\&space;size}y_i.&space;\log&space;\hat{y_i}}}" title="https://latex.codecogs.com/svg.image?\large Loss\ \mathbf{={\color{Purple} - \sum_{i=1}^{Output\ size}y_i. \log \hat{y_i}}}" />
+
+### Binary crossentropy
+**Binary crossentropy** is a loss function that is used in **_binary classification_** tasks. These are tasks that answer a question with only two choices (**yes** or **no**, **A** or **B**, **0** or **1**, **left** or **right**). Several independent such questions can be answered at the same time, as in **_multi-label classification_** or in **_binary image segmentation_**.
+
+Formally, this loss is equal to the average of the categorical crossentropy loss on many two-category tasks.
+
+
 
 
 ## References:
