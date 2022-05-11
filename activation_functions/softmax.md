@@ -5,16 +5,16 @@
 ## Introduction
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 > ### Softmax regression (or multinomial logistic regression) is a generalization of logistic regression to the case where we want to handle multiple classes.
-* In logistic regression we assumed that the labels were binary: <img src="https://render.githubusercontent.com/render/math?math=y^{(i)} \in\ \{0,1\}">.
-* Softmax regression allows us to handle <img src="https://render.githubusercontent.com/render/math?math=y^{(i)} \in\ \{1,..,K\}"> where _**K**_ is the number of classes.
+* In logistic regression we assumed that the labels were binary: <img src="https://render.githubusercontent.com/render/math?math=y^{(i)} \in\ \{0,1\}" align="center">.
+* Softmax regression allows us to handle <img src="https://render.githubusercontent.com/render/math?math=y^{(i)} \in\ \{1,..,K\}" align="center"/> where _**K**_ is the number of classes.
 
 
-* For binary logistic regression we had <img src="http://latex.codecogs.com/svg.image?f(x;w)=\sigma(w^\top&space;x)=\frac{1}{1&plus;e^{-w^\top&space;x}}\&space;\&space;with&space;\&space;y^{(i)}&space;\in\&space;\{0,1\}" title="f(x;w)=\sigma(w^\top x)=\frac{1}{1+e^{-w^\top x}}\ \ with \ y^{(i)} \in\ \{0,1\}" />
+* For binary logistic regression we had <img src="http://latex.codecogs.com/svg.image?f(x;w)=\sigma(w^\top&space;x)=\frac{1}{1&plus;e^{-w^\top&space;x}}\&space;\&space;with&space;\&space;y^{(i)}&space;\in\&space;\{0,1\}" title="f(x;w)=\sigma(w^\top x)=\frac{1}{1+e^{-w^\top x}}\ \ with \ y^{(i)} \in\ \{0,1\}" align="center" />
 
 * We interpreted the output as _**P(y = 1|x; w), implying P(y=0|x; w) = 1-f(x; w)**_ (if we want class 0 we just need to minus 1 from the class 1) .
 
 
-* For the multiclass setting we now have <img src="https://render.githubusercontent.com/render/math?math=y^{(i)} \in\ \{1,..,K\}">.
+* For the multiclass setting we now have <img src="https://render.githubusercontent.com/render/math?math=y^{(i)} \in\ \{1,..,K\}" align="center"/>.
 
 * **Idea:** Instead of just outputting a single value for the positive class, let's output a vector of probabilities for each class:
 
@@ -30,7 +30,7 @@
 
 
 
-* But probabilities need to be positive. So let's take the exponential: <img src="http://latex.codecogs.com/svg.image?e^{w^\top_k&space;x}" title="e^{w^\top_k x}" />
+* But probabilities need to be positive. So let's take the exponential: <img src="http://latex.codecogs.com/svg.image?e^{w^\top_k&space;x}" title="e^{w^\top_k x}" align="center" />
 
 
 * But probabilities need to sum to one. So let's normalise 
