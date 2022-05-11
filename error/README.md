@@ -22,15 +22,15 @@ As these names imply, you train your model using the _training set_, and you tes
 ## L1 and L2 loss
 ![light](https://user-images.githubusercontent.com/12748752/136802581-e8e0607f-3472-44f7-a8b2-8ba82a0f8070.png)
 *L1* and *L2* are two common loss functions in machine learning which are mainly used to minimize the error.
-   1) **L1 loss function** are also known as **Least Absolute Deviations** in short **LAD**.
-   2) **L2 loss function** are also known as **Least square errors** in short **LS**.
+   1) **L1 loss function**.
+   2) **L2 loss function**.
 
-### 1) L1 Loss function
+### 1) _L1 Loss function_ or _Least Absolute Deviations_ in short _LAD_
 It is used to minimize the error which is the sum of all the absolute differences in between the true value and the predicted value.
 
 <img src="https://latex.codecogs.com/svg.image?\large&space;\mathrm{L1\&space;loss}\mathbf{\&space;={\color{Purple}&space;&space;\sum_{i=1}^{n}|y_{true}-y_{pridicted}|}" title="https://latex.codecogs.com/svg.image?\large \mathrm{L1\ loss}\mathbf{\ ={\color{Purple} \sum_{i=1}^{n}|y_{true}-y_{pridicted}|}" />
 
-### 2) L2 Loss Function
+### 2) _L2 Loss Function_ or _Least square errors_ in short _LS_
 It is also used to minimize the error which is the sum of all the squared differences in between the true value and the pedicted value.
 
 <img src="https://latex.codecogs.com/svg.image?\large&space;\mathrm{L2\&space;loss}\mathbf{\&space;={\color{Purple}&space;&space;\sum_{i=1}^{n}(y_{true}-y_{pridicted})^2}" title="https://latex.codecogs.com/svg.image?\large \mathrm{L2\ loss}\mathbf{\ ={\color{Purple} \sum_{i=1}^{n}(y_{true}-y_{pridicted})^2}" />
