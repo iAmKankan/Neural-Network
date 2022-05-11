@@ -67,6 +67,13 @@ It is also used to minimize the error which is the sum of all the squared differ
 
 **The disadvantage** of the **L2 norm** is that when there are outliers, these points will account for the main component of the loss. For example, the true value is 1, the prediction is 10 times, the prediction value is 1000 once, and the prediction value of the other times is about 1, obviously the loss value is mainly dominated by 1000.
 
+## Huber loss
+![light](https://user-images.githubusercontent.com/12748752/136802581-e8e0607f-3472-44f7-a8b2-8ba82a0f8070.png)
+**Huber Loss** is often used in _regression_ problems. Compared with _L2 loss_, Huber Loss is _**less sensitive to outliers**_(because if the residual is too large, it is a piecewise function, loss is a linear function of the residual).
+
+<img src="https://latex.codecogs.com/svg.image?\large&space;\mathbf{L\delta&space;(y,f(x))=}&space;\begin{cases}\mathbf{{\color{Purple}\frac{1}{2}(y-f(x))^2}}&&space;\mathbf{for&space;|y-f(x)|\leq&space;\delta&space;,&space;}\\\mathbf{{\color{Purple}\delta|y-f(x)|-\frac{1}{2}\delta&space;^2}}&&space;\mathbf{otherwise.}\end{cases}" title="https://latex.codecogs.com/svg.image?\large \mathbf{L\delta (y,f(x))=} \begin{cases}\mathbf{{\color{Purple}\frac{1}{2}(y-f(x))^2}}& \mathbf{for |y-f(x)|\leq \delta , }\\\mathbf{{\color{Purple}\delta|y-f(x)|-\frac{1}{2}\delta ^2}}& \mathbf{otherwise.}\end{cases}" />
+
+
 
 ## References:
 * [Peltarion.com](https://peltarion.com/knowledge-center/documentation/modeling-view/build-an-ai-model/loss-functions)
