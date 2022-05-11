@@ -1,6 +1,18 @@
 ## Index
-
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
+* [Loss Functions](#loss-functions)
+* [Loss-Cost/Error](#loss-costerror)
+* [Generalization Error (or out-of-sample error)](#generalization-error-or-out-of-sample-error)
+* [L1- Loss function or Least Absolute Deviations(LAD) and Mean Absolute Error (MAE)](#l1--loss-function-or-least-absolute-deviationslad-and-mean-absolute-error-mae)
+* [L2- Loss Function or Least square errors(LS) and Mean Square Error (MSE)](#l2--loss-function-or-least-square-errorsls-and-mean-square-error-mse)
+* [Huber loss](#huber-loss)
+* [Hinge Loss](#hinge-loss)
+* [Categorical Crossentropy](#categorical-crossentropy)
+* [Binary crossentropy](#binary-crossentropy)
+* [References](:references)
+
+
+
 
 ## Loss Functions 
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
@@ -114,7 +126,7 @@ The model uses the categorical crossentropy to learn to give a high probability 
 
 Strictly speaking, the output of the model only needs to be positive so that the logarithm of every output value <img src="https://latex.codecogs.com/svg.image?\mathrm{{\color{Purple}\hat{y_i}}}" title="https://latex.codecogs.com/svg.image?\mathrm{{\color{Purple}\hat{y_i}}}" align="center" /> exists. However, the main appeal of this loss function is for comparing two probability distributions. The **softmax** activation rescales the model output so that it has the right properties.
 
-### Binary crossentropy
+## Binary crossentropy
 ![light](https://user-images.githubusercontent.com/12748752/136802581-e8e0607f-3472-44f7-a8b2-8ba82a0f8070.png)
 **Binary crossentropy** is a loss function that is used in **_binary classification_** tasks. These are tasks that answer a question with only two choices (**yes** or **no**, **A** or **B**, **0** or **1**, **left** or **right**). Several independent such questions can be answered at the same time, as in **_multi-label classification_** or in **_binary image segmentation_**.
 
