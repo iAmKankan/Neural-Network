@@ -35,7 +35,6 @@ First , there is the **_local error_**. This is the difference between the _**ac
 #### Global Error
 The local errors are aggregated together to form a **_global error_**. The global error is the measurement of how well a neural network performs to the entire training set. There are several different means by which a global error can be calculated. The global error calculation methods discussed in this chapter are listed below.
 
-
 ###  _Generalization Error_ (or _out-of-sample error_) 
 ![light](https://user-images.githubusercontent.com/12748752/136802581-e8e0607f-3472-44f7-a8b2-8ba82a0f8070.png)
 The only way to know how well a model will generalize to new cases is to actually try it out on new cases by split your data into two sets: **_1) the training set_** and **_2) the test set_**. 
@@ -43,6 +42,12 @@ The only way to know how well a model will generalize to new cases is to actuall
 As these names imply, you train your model using the _training set_, and you test it using the _test set_. The error rate on new cases is called the **_generalization error_** (or **out-of-sample error**), and by evaluating your model on the test set, you get an estimate of this error. _This value tells you how well your model will perform on instances it has never seen before_. 
 
 > #### If the training error is low (i.e., your model makes few mistakes on the training set) but the generalization error is high, it means that your model is _overfitting_ the training data.
+
+|                     **Classification**                    |                                          **Regression**                                         |
+|:-----------------------------------------------------:|:-------------------------------------------------------------------------------------------:|
+| **_Multiclass Classification:_**<br>Catagorical Crossentrophy            | **_Continuous Values:_**<br>Mean Squired Error<br>Mean absolute Error<br>Mean Squred Logggd Error |
+| **_Binary Classification:_**<br>Binary Cross Entrophy<br>Squred Hinge | **_Discreate Values:_**<br>Poisson                                                 |
+
 
 ## L1 and L2 loss
 ![light](https://user-images.githubusercontent.com/12748752/136802581-e8e0607f-3472-44f7-a8b2-8ba82a0f8070.png)
