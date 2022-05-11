@@ -102,6 +102,19 @@ Formally, this loss is equal to the average of the categorical crossentropy loss
 #### Math equation:
 <img src="https://latex.codecogs.com/svg.image?\large&space;Loss\&space;\mathrm{={\color{Purple}&space;-&space;\frac{1}{output\&space;size}}}\mathbf{{\color{Purple}&space;\sum_{i=1}^{output\&space;size}y_i.&space;\log&space;\hat{y_i}&space;&plus;&space;(1-y_i).\log(1-\hat{y_i})}}" title="https://latex.codecogs.com/svg.image?\large Loss\ \mathrm{={\color{Purple} - \frac{1}{output\ size}}}\mathbf{{\color{Purple} \sum_{i=1}^{output\ size}y_i. \log \hat{y_i} + (1-y_i).\log(1-\hat{y_i})}}" />
 
+#### How to use binary crossentropy
+The binary crossentropy is very convenient to train a model to solve many _classification_ problems at the same time, if each classification can be reduced to a binary choice (i.e. **yes or no**, **A or B**, **0 or 1**).
+
+**Example**: The build your own music critic tutorial contains music data and 46 labels like Happy, Hopeful, Laid back, Relaxing etc.
+The model uses the binary crossentropy to learn to tag songs with every applicable label.
+
+#### Activation functions
+**_Sigmoid_** _is the only activation function compatible with the_ **_binary crossentropy loss function_**. You must use it on the **last block** before the target block.
+
+The binary crossentropy needs to compute the logarithms of <img src="https://latex.codecogs.com/svg.image?\mathrm{{\color{Purple}\hat{y_i}}}" title="https://latex.codecogs.com/svg.image?\mathrm{{\color{Purple}\hat{y_i}}}" align="center" /> and <img src="https://latex.codecogs.com/svg.image?\mathrm{{\color{Purple}(1-\hat{y_i})}}" title="https://latex.codecogs.com/svg.image?\mathrm{{\color{Purple}(1-\hat{y_i})}}" align="center"/>, which only exist if <img src="https://latex.codecogs.com/svg.image?\mathrm{{\color{Purple}\hat{y_i}}}" title="https://latex.codecogs.com/svg.image?\mathrm{{\color{Purple}\hat{y_i}}}" align="center" /> is between **0** and **1**. 
+
+The **sigmoid activation function** is the only one to **guarantee that independent outputs lie within this range**.
 
 ## References:
+![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 * [Peltarion.com](https://peltarion.com/knowledge-center/documentation/modeling-view/build-an-ai-model/loss-functions)
