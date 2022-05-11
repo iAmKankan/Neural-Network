@@ -10,7 +10,7 @@
  #### ◾  [_Backpropagation_](https://github.com/iAmKankan/Neural-Network/blob/main/backpropagation/README.md)
    * [Activation Function](https://github.com/iAmKankan/Neural-Network/blob/main/activation_functions/README.md)
    * [Optimizers](https://github.com/iAmKankan/Neural-Network/tree/main/optimizer#readme)
-   * Loss
+   * [Loss](https://github.com/iAmKankan/Neural-Network/blob/main/error/README.md)
 ### ◼️ _RNN, LSTM, GRU_
 * [Recurrent Neural Networks](https://github.com/iAmKankan/Neural-Network/blob/main/rnn/README.md)
 * Types of Recurrent Neural Networks
