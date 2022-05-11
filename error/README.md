@@ -19,6 +19,14 @@ In other words, the terms cost and loss functions almost refer to the same meani
 
 The cost function is calculated as an average of loss functions. The loss function is a value that is calculated at every instance. So, for a single training cycle loss is calculated numerous times, but the cost function is only calculated once.
 
+#### Example 1:
+* One of the loss function used in Linear Regression, the **square loss**
+* One of the cost function used in Linear Regression, the **Mean Squared Error**
+
+#### Example 2:
+* One of the loss function used in SVM, the **hinge loss**
+* **SVM cost function
+**
 ## Error:
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 When performing **supervised training**, a neural network’s _actual output_ must be compared against the _ideal output_ specified in the training data.<ins> _The difference between actual and ideal output is the error of the neural network_</ins>. Error calculation occurs at two levels. 
