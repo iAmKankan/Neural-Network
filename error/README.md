@@ -49,7 +49,7 @@ As these names imply, you train your model using the _training set_, and you tes
 | **_Binary Classification:_**<br>Binary Cross Entrophy<br>Squred Hinge | **_Discreate Values:_**<br>Poisson                                                 |
 
 
-## L1 and L2 loss
+## L1 and L2 loss or Mean Absolute Error and Mean Square Error
 ![light](https://user-images.githubusercontent.com/12748752/136802581-e8e0607f-3472-44f7-a8b2-8ba82a0f8070.png)
 *L1* and *L2* are two common loss functions in machine learning which are mainly used to minimize the error.
    1) **L1 loss function or Mean Absolute Error (MAE)**.
