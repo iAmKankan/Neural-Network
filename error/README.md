@@ -9,7 +9,7 @@
 * [Hinge Loss](#hinge-loss)
 * [Categorical Crossentropy](#categorical-crossentropy)
 * [Binary crossentropy](#binary-crossentropy)
-* [References](:references)
+* [References](#references)
 
 
 
