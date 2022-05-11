@@ -47,7 +47,7 @@
 > #### A neural network is a series of algorithms that tries to recognize _underlying relationships in a set of data_ through a process that mimics the way the human brain operates. In this sense, neural networks refer to systems of neurons, either organic or artificial in nature.
 
 ## ◼️ Software Engineering Vs AI/ML
-<img src="https://user-images.githubusercontent.com/12748752/165293822-f6f8fe1c-ddd3-4ecb-8af9-12421f0d2639.png" width=50%/>
+<img src="https://user-images.githubusercontent.com/12748752/165293822-f6f8fe1c-ddd3-4ecb-8af9-12421f0d2639.png" width=70%/>
 
 ## ◼️ _Deep Learning & Neural-Network_
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
