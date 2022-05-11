@@ -3,16 +3,16 @@
 * [Loss Functions](#loss-functions)
 * [Loss-Cost/Error](#loss-costerror)
 * [Generalization Error (or out-of-sample error)](#generalization-error-or-out-of-sample-error)
+#### ◼️ Regression Loss
 * [L1- Loss function or Least Absolute Deviations(LAD) and Mean Absolute Error (MAE)](#l1--loss-function-or-least-absolute-deviationslad-and-mean-absolute-error-mae)
 * [L2- Loss Function or Least square errors(LS) and Mean Square Error (MSE)](#l2--loss-function-or-least-square-errorsls-and-mean-square-error-mse)
 * [Huber loss](#huber-loss)
 * [Hinge Loss](#hinge-loss)
+#### ◼️ Classification Loss
 * [Categorical Crossentropy](#categorical-crossentropy)
 * [Binary crossentropy](#binary-crossentropy)
-* [References](#references)
 
-
-
+◼️ [References](#references)
 
 ## Loss Functions 
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
