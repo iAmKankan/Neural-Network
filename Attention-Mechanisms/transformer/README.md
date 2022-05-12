@@ -4,8 +4,9 @@
 
 
 ### Transformer
-#### As a _Blackbox_
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
+
+#### As a _Blackbox_
 In a machine translation application, it would take a sentence in one language, and output its translation in another.
 <img src="https://user-images.githubusercontent.com/12748752/164888116-dfdb9a7f-60c1-4038-9bf6-3f47a133a244.png" width=80%/>
 
@@ -25,7 +26,7 @@ In a machine translation application, it would take a sentence in one language, 
   
 <img src="https://user-images.githubusercontent.com/12748752/168034980-004fd235-28cb-4831-9523-76480b411e11.png" width=80%/>
 
-<img src="https://user-images.githubusercontent.com/12748752/159683212-c666dd34-a293-4b7e-881f-7d60bef23663.png" width=80%/>
+<img src="https://user-images.githubusercontent.com/12748752/159683212-c666dd34-a293-4b7e-881f-7d60bef23663.png"/>
 
 
   
