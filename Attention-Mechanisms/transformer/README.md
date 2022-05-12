@@ -18,14 +18,16 @@ In a machine translation application, it would take a sentence in one language, 
 #### Each Encoder block having two components
   1) A **Feedforward layer** or a **place holder**(**_RNN, LSTM, GRU_**)
   2) A **Self-attention** layer
-
-<img src="https://user-images.githubusercontent.com/12748752/168034980-004fd235-28cb-4831-9523-76480b411e11.png" width=80%/>
-<img stc="https://user-images.githubusercontent.com/12748752/159683212-c666dd34-a293-4b7e-881f-7d60bef23663.png" width=80%/>
-
 #### Each Decoder block having three components
   1) A **Feedforward layer** or a **place holder**(**_RNN, LSTM, GRU_**)
   2) A **Self-attention** layer
   3) A **Encoder-Decoder Attention** layer
+  
+<img src="https://user-images.githubusercontent.com/12748752/168034980-004fd235-28cb-4831-9523-76480b411e11.png" width=80%/>
+
+<img stc="https://user-images.githubusercontent.com/12748752/159683212-c666dd34-a293-4b7e-881f-7d60bef23663.png" width=80%/>
+
+
   
 
 ### Types of Transformers:
