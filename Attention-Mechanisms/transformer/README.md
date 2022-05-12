@@ -25,7 +25,7 @@ In a machine translation application, it would take a sentence in one language, 
   
 <img src="https://user-images.githubusercontent.com/12748752/168034980-004fd235-28cb-4831-9523-76480b411e11.png" width=80%/>
 
-<img stc="https://user-images.githubusercontent.com/12748752/159683212-c666dd34-a293-4b7e-881f-7d60bef23663.png" width=80%/>
+<img src="https://user-images.githubusercontent.com/12748752/159683212-c666dd34-a293-4b7e-881f-7d60bef23663.png" width=80%/>
 
 
   
