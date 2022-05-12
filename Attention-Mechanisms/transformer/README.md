@@ -24,4 +24,4 @@ Let’s walk through this figure:
 <img src="https://user-images.githubusercontent.com/12748752/167968727-488848ff-40d1-49a9-99ad-61287bebba3e.png" />
 
 ### Types of Transformers:
-<img src="https://user-images.githubusercontent.com/12748752/167986288-0077b97f-4735-4caa-9de7-547f4cdfa156.png" />
+<img src="https://user-images.githubusercontent.com/12748752/167986704-ca5cb1fe-7730-4b61-a9f5-1aee7dbaa9e9.png" />
