@@ -46,7 +46,9 @@ Let’s start to look at the various **vectors**/**tensors** and how they flow b
 As is the case in NLP applications in general, we begin by turning each input word into a vector using an embedding algorithm.
 
 <img src="https://user-images.githubusercontent.com/12748752/168199685-3854cb24-caff-48b7-879d-d64a9748aa51.png" width=80%/>
-<ins> Each word is embedded into a vector of size 512. We'll represent those vectors with these simple boxes</ins>
+
+#####  <ins> Each word is embedded into a vector of size 512. We'll represent those vectors with these simple boxes</ins>
+
 
 The embedding only happens in the bottom-most encoder. The abstraction that is common to all the encoders is that they receive a list of vectors each of the size 512 – In the bottom encoder that would be the word embeddings, but in other encoders, it would be the output of the encoder that’s directly below. The size of this list is hyperparameter we can set – basically it would be the length of the longest sentence in our training dataset.
 
