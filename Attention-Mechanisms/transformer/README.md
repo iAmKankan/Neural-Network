@@ -21,13 +21,14 @@ In a machine translation application, it would take a sentence in one language, 
   1) A **Feedforward layer** or a **place holder**(**_RNN, LSTM, GRU_**)
   2) A **Self-attention** layer
 
-<img src="https://user-images.githubusercontent.com/12748752/168034980-004fd235-28cb-4831-9523-76480b411e11.png" width=80%/>
-
 <img src="https://user-images.githubusercontent.com/12748752/159683212-c666dd34-a293-4b7e-881f-7d60bef23663.png"/>
 
-#### The encoder’s inputs first flow through a self-attention layer – a layer that helps the encoder look at other words in the input sentence as it encodes a specific word. We’ll look closer at self-attention later in the post.
+<img src="https://user-images.githubusercontent.com/12748752/168034980-004fd235-28cb-4831-9523-76480b411e11.png" width=80%/>
 
-The outputs of the self-attention layer are fed to a feed-forward neural network. The exact same feed-forward network is independently applied to each position.
+
+#### The encoder’s inputs first flow through a self-attention layer – a layer that helps the encoder look at other words in the input sentence as it encodes a specific word.
+
+The outputs of the **self-attention layer** are fed to a feed-forward neural network. The exact same feed-forward network is independently applied to each position.
 
 The decoder has both those layers, but between them is an attention layer that helps the decoder focus on relevant parts of the input sentence (similar what attention does in seq2seq models).
 
