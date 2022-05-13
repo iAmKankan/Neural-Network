@@ -2,58 +2,43 @@
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 
-
-### Transformer
+## Transformer
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 
-#### 🔲 As a _Blackbox_
+### 🔲 Types of Transformers:
+<img src="https://user-images.githubusercontent.com/12748752/167986704-ca5cb1fe-7730-4b61-a9f5-1aee7dbaa9e9.png" width=70%/>
+
+### 🔲 As a _Blackbox_
 In a machine translation application, it would take a sentence in one language, and output its translation in another.
 <img src="https://user-images.githubusercontent.com/12748752/164888116-dfdb9a7f-60c1-4038-9bf6-3f47a133a244.png" width=80%/>
 
-#### 🔲 Inside the Transformer box _Encoder-Decoder_ Block and a connection between them.
+### 🔲 The _Encoder-Decoder_ Blocks
+Inside the Transformer box _Encoder-Decoder_ Block and a connection between them.
+
 <img src="https://user-images.githubusercontent.com/12748752/164888115-281a74f2-971d-4eb3-8bcb-0bb58b35727b.png" width=80% />
 
-#### 🔲 The encoding component is a stack of encoders (the paper stacks six of them on top of each other – there’s nothing magical about the number six, one can definitely experiment with other arrangements). The decoding component is a stack of decoders of the same number.
+### 🔲 Inside  _Encoder-Decoder_ Stack
+The encoding component is a stack of encoders (the paper stacks six of them on top of each other – there’s nothing magical about the number six, one can definitely experiment with other arrangements). The decoding component is a stack of decoders of the same number.
 <img src="https://user-images.githubusercontent.com/12748752/167968727-488848ff-40d1-49a9-99ad-61287bebba3e.png" width=80%/>
 
-#### 🔲 The encoders are all identical in structure (yet they do not share weights). Each one is broken down into two sub-layers:
+### 🔲 The individual _Encoder-Decoder_ Blocks
+The encoders are all identical in structure (yet they do not share weights). Each one is broken down into two sub-layers:
 #### Each Encoder block having two components
   1) A **Feedforward layer** or a **place holder**(**_RNN, LSTM, GRU_**)
   2) A **Self-attention** layer
+The encoder’s inputs first flow through a **self-attention layer** – _a layer that helps the encoder look at other words in the input sentence as it encodes a specific word._
 
-<img src="https://user-images.githubusercontent.com/12748752/159683212-c666dd34-a293-4b7e-881f-7d60bef23663.png"/>
-
-<img src="https://user-images.githubusercontent.com/12748752/168034980-004fd235-28cb-4831-9523-76480b411e11.png" width=80%/>
-
-
-#### The encoder’s inputs first flow through a self-attention layer – a layer that helps the encoder look at other words in the input sentence as it encodes a specific word.
-
-The outputs of the **self-attention layer** are fed to a feed-forward neural network. The exact same feed-forward network is independently applied to each position.
-
-The decoder has both those layers, but between them is an attention layer that helps the decoder focus on relevant parts of the input sentence (similar what attention does in seq2seq models).
-
+The outputs of the **self-attention layer** are fed to a **feed-forward** or a **place holder**(**_RNN, LSTM, GRU_**) neural network. The exact same neural network is independently applied to each position.
 #### Each Decoder block having three components
   1) A **Feedforward layer** or a **place holder**(**_RNN, LSTM, GRU_**)
   2) A **Self-attention** layer
   3) A **Encoder-Decoder Attention** layer
   
+The decoder has both those layers, but between them is an **attention layer** that helps the decoder focus on relevant parts of the input sentence (_similar what attention does in seq2seq models_).
 
+<img src="https://user-images.githubusercontent.com/12748752/168034980-004fd235-28cb-4831-9523-76480b411e11.png" width=80%/>
 
-
-  
-
-### Types of Transformers:
-<img src="https://user-images.githubusercontent.com/12748752/167986704-ca5cb1fe-7730-4b61-a9f5-1aee7dbaa9e9.png" width=60%/>
-
-
-
-
-
-
-
-
-
-
+<img src="https://user-images.githubusercontent.com/12748752/168194597-3cda4628-3d67-474d-820c-32ee64577e19.png"/>
 
 
 
