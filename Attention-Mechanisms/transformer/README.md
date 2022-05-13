@@ -40,6 +40,8 @@ The decoder has both those layers, but between them is an **attention layer** th
 
 <img src="https://user-images.githubusercontent.com/12748752/168195356-8a08298c-9157-4656-9464-0dd4f7d56145.png"/>
 
+### 🔲 Embedding Algorithm
+
 
 
 ## The Transformer Architecture
