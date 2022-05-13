@@ -36,7 +36,16 @@ This refers to the proportion (total number) of all observations that have been 
 
 <img src="https://latex.codecogs.com/svg.image?\large&space;\mathbf{{\color{Purple}&space;Precision=&space;\frac{TP}{TP&plus;FP}&space;}" title="https://latex.codecogs.com/svg.image?\large \mathbf{{\color{Purple} Precision= \frac{TP}{TP+FP} }" align="center" />
 
+### Recall
+This is the proportion of observation predicted to belong to the positive class, that truly belongs to the positive class. It indirectly tells us the model’s ability to randomly identify an observation that belongs to the positive class. The formula for Recall is as follows:
 
+<img src="https://latex.codecogs.com/svg.image?\large&space;\mathbf{{\color{Purple}&space;Recall=&space;\frac{TP}{TP&plus;FN}&space;}" title="https://latex.codecogs.com/svg.image?\large \mathbf{{\color{Purple} Recall= \frac{TP}{TP+FN} }" align="center" />
+
+### F1 Score.
+This is an averaging Evaluation Metric that is used to generate a ratio. The F1 Score is also known as the Harmonic Mean of the precision and recall Evaluation Metrics. This Evaluation Metric is a measure of overall correctness that our model has achieved in a positive prediction environment-
+i.e., Of all observations that our model has labeled as positive, how many of these observations are actually positive. The formula for the F1 Score
+
+<img src="https://latex.codecogs.com/svg.image?\large&space;\\\mathrm{{\color{Purple}&space;F1\&space;Score\&space;}}\mathbf{{\color{Purple}=&space;\frac{2}{\frac{1}{Precision}&plus;\frac{1}{Recall}}&space;}&space;}\mathbf{{\color{Purple}=&space;\frac{2(Precision\&space;*&space;\&space;Recall)}{{Precision}&plus;{Recall}}&space;}&space;}" title="https://latex.codecogs.com/svg.image?\large \\\mathrm{{\color{Purple} F1\ Score\ }}\mathbf{{\color{Purple}= \frac{2}{\frac{1}{Precision}+\frac{1}{Recall}} } }\mathbf{{\color{Purple}= \frac{2(Precision\ * \ Recall)}{{Precision}+{Recall}} } }" />
 
 
 
