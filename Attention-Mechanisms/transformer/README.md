@@ -45,11 +45,7 @@ Let’s start to look at the various **vectors**/**tensors** and how they flow b
 
 As is the case in NLP applications in general, we begin by turning each input word into a vector using an embedding algorithm.
 
-<img src="https://user-images.githubusercontent.com/12748752/168199685-3854cb24-caff-48b7-879d-d64a9748aa51.png" width=80%/>
-
-#####  <ins> Each word is embedded into a vector of size 512. We'll represent those vectors with these simple boxes</ins>
-
-<img src="(https://user-images.githubusercontent.com/12748752/168201541-73b96f67-a6b5-4b72-9201-4a26dfd7670a.png" width=80%/>
+<img src="https://user-images.githubusercontent.com/12748752/168201541-73b96f67-a6b5-4b72-9201-4a26dfd7670a.png" width=80%/>
 
 #####  <ins> Each word is embedded into a vector of size 512. We'll represent those vectors with these simple boxes</ins>
 
