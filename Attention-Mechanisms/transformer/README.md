@@ -38,7 +38,7 @@ The decoder has both those layers, but between them is an **attention layer** th
 
 <img src="https://user-images.githubusercontent.com/12748752/168034980-004fd235-28cb-4831-9523-76480b411e11.png" width=80%/>
 
-<img src="https://user-images.githubusercontent.com/12748752/168194597-3cda4628-3d67-474d-820c-32ee64577e19.png"/>
+<img src="https://user-images.githubusercontent.com/12748752/168195356-8a08298c-9157-4656-9464-0dd4f7d56145.png"/>
 
 
 
