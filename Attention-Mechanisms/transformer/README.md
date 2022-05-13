@@ -6,20 +6,24 @@
 ### Transformer
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 
-#### As a _Blackbox_
+#### 🔲 As a _Blackbox_
 In a machine translation application, it would take a sentence in one language, and output its translation in another.
 <img src="https://user-images.githubusercontent.com/12748752/164888116-dfdb9a7f-60c1-4038-9bf6-3f47a133a244.png" width=80%/>
 
-####  Inside the Transformer box _Encoder-Decoder_ Block and a connection between them.
+#### 🔲 Inside the Transformer box _Encoder-Decoder_ Block and a connection between them.
 <img src="https://user-images.githubusercontent.com/12748752/164888115-281a74f2-971d-4eb3-8bcb-0bb58b35727b.png" width=80% />
 
-#### The encoding component is a stack of encoders (the paper stacks six of them on top of each other – there’s nothing magical about the number six, one can definitely experiment with other arrangements). The decoding component is a stack of decoders of the same number.
+#### 🔲 The encoding component is a stack of encoders (the paper stacks six of them on top of each other – there’s nothing magical about the number six, one can definitely experiment with other arrangements). The decoding component is a stack of decoders of the same number.
 <img src="https://user-images.githubusercontent.com/12748752/167968727-488848ff-40d1-49a9-99ad-61287bebba3e.png" width=80%/>
 
-#### The encoders are all identical in structure (yet they do not share weights). Each one is broken down into two sub-layers:
+#### 🔲 The encoders are all identical in structure (yet they do not share weights). Each one is broken down into two sub-layers:
 #### Each Encoder block having two components
   1) A **Feedforward layer** or a **place holder**(**_RNN, LSTM, GRU_**)
   2) A **Self-attention** layer
+
+<img src="https://user-images.githubusercontent.com/12748752/168034980-004fd235-28cb-4831-9523-76480b411e11.png" width=80%/>
+
+<img src="https://user-images.githubusercontent.com/12748752/159683212-c666dd34-a293-4b7e-881f-7d60bef23663.png"/>
 
 #### The encoder’s inputs first flow through a self-attention layer – a layer that helps the encoder look at other words in the input sentence as it encodes a specific word. We’ll look closer at self-attention later in the post.
 
@@ -32,9 +36,7 @@ The decoder has both those layers, but between them is an attention layer that h
   2) A **Self-attention** layer
   3) A **Encoder-Decoder Attention** layer
   
-<img src="https://user-images.githubusercontent.com/12748752/168034980-004fd235-28cb-4831-9523-76480b411e11.png" width=80%/>
 
-<img src="https://user-images.githubusercontent.com/12748752/159683212-c666dd34-a293-4b7e-881f-7d60bef23663.png"/>
 
 
   
