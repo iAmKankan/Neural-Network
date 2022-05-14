@@ -55,6 +55,14 @@ After embedding the words in our input sequence, each of them flows through each
 
 <img src="https://user-images.githubusercontent.com/12748752/168204497-97f950e0-ad92-4037-a076-3eaf07196dcb.png" width=80% />
 
+Here we begin to see one key property of the Transformer, which is that the word in each position flows through its own path in the encoder. There are dependencies between these paths in the self-attention layer. The feed-forward layer does not have those dependencies, however, and thus the various paths can be executed in parallel while flowing through the feed-forward layer.
+
+Next, we’ll switch up the example to a shorter sentence and we’ll look at what happens in each sub-layer of the encoder.
+
+### 🔲 Now We’re Encoding!
+As we’ve mentioned already, an encoder receives a list of vectors as input. It processes this list by passing these vectors into a ‘self-attention’ layer, then into a feed-forward neural network, then sends out the output upwards to the next encoder.
+
+> #### The word at each position passes through a **self-attention** process. Then, they each pass through a feed-forward neural network -- the exact same network with each vector flowing through it separately.
 
 
 ## The Transformer Architecture
