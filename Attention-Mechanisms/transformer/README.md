@@ -21,7 +21,7 @@ Inside the Transformer box _Encoder-Decoder_ Block and a connection between them
 <img src="https://user-images.githubusercontent.com/12748752/164888115-281a74f2-971d-4eb3-8bcb-0bb58b35727b.png" width=80% />
 
 ### 🔲 Inside  _Encoder-Decoder_ Stack
-The encoding component is a stack of encoders (the paper stacks six of them on top of each other – there’s nothing magical about the number six, one can definitely experiment with other arrangements). The decoding component is a stack of decoders of the same number.
+The encoding component is a stack of encoders (the paper stacks **six** of them on top of each other – there’s nothing magical about the number **6**, one can definitely experiment with other arrangements). The decoding component is a stack of decoders of the same number.
 <img src="https://user-images.githubusercontent.com/12748752/167968727-488848ff-40d1-49a9-99ad-61287bebba3e.png" width=80%/>
 
 ### 🔲 The individual _Encoder-Decoder_ Blocks
