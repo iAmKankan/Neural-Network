@@ -25,6 +25,8 @@ The encoding component is a stack of encoders (the paper stacks **six** of them 
 <img src="https://user-images.githubusercontent.com/12748752/167968727-488848ff-40d1-49a9-99ad-61287bebba3e.png" width=80%/>
 
 ### 🔲 The individual _Encoder-Decoder_ Blocks
+<img src="https://user-images.githubusercontent.com/12748752/164050988-292430e3-b184-4942-a92e-f2297b1541d1.png" align="right" width=35% />
+
 The encoders are all identical in structure (yet they do not share weights). Each one is broken down into two sub-layers:
 #### Each Encoder block having two components
   1) A **Feedforward layer** or a **place holder**(**_RNN, LSTM, GRU_**)
@@ -39,9 +41,10 @@ The outputs of the **self-attention layer** are fed to a **feed-forward** or a *
   
 The decoder has both those layers, but between them is an **attention layer** that helps the decoder focus on relevant parts of the input sentence (_similar what attention does in seq2seq models_).
 
-<img src="https://user-images.githubusercontent.com/12748752/168034980-004fd235-28cb-4831-9523-76480b411e11.png" width=80%/>
+<img src="https://user-images.githubusercontent.com/12748752/168034980-004fd235-28cb-4831-9523-76480b411e11.png" width=80%/> 
 
 <img src="https://user-images.githubusercontent.com/12748752/168195356-8a08298c-9157-4656-9464-0dd4f7d56145.png"/>
+
 
 ### 🔲 Embedding Algorithm
 Let’s start to look at the various **vectors**/**tensors** and how they flow between the _above components_ to turn the _input of a trained model into an output_.
