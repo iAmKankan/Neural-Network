@@ -103,5 +103,6 @@ Let’s walk through this figure:
 
 ## References:
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
+* **Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow, 2nd Edition by Aurélien Géron**
 * [Jay Alammar](http://jalammar.github.io/illustrated-transformer/)
 * [Kheirie Elhariri](https://towardsdatascience.com/attention-is-all-you-need-e498378552f9)
