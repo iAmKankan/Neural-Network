@@ -25,7 +25,7 @@ The encoding component is a stack of encoders (the paper stacks **six** of them 
 <img src="https://user-images.githubusercontent.com/12748752/167968727-488848ff-40d1-49a9-99ad-61287bebba3e.png" width=80%/>
 
 ### 🔲 The individual _Encoder-Decoder_ Blocks
-<img src="https://user-images.githubusercontent.com/12748752/164050988-292430e3-b184-4942-a92e-f2297b1541d1.png" align="right" width=35% />
+<img src="https://user-images.githubusercontent.com/12748752/164050988-292430e3-b184-4942-a92e-f2297b1541d1.png" align="right" width=25% />
 
 The encoders are all identical in structure (yet they do not share weights). Each one is broken down into two sub-layers:
 #### Each Encoder block having two components
@@ -70,15 +70,22 @@ As we’ve mentioned already, an encoder receives a list of vectors as input. It
 
 > #### The word at each position passes through a **self-attention** process. Then, they each pass through a feed-forward neural network -- the exact same network with each vector flowing through it separately.
 
+![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 ## ⬛ Self-Attention at a High Level
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 " Attention is All You Need" this paper first showed us the concept of “self-attention”.
 #### Input sentence : "<img src="https://latex.codecogs.com/svg.image?{\color{Purple}&space;\textbf{\textrm&space;{The&space;animal&space;didn't&space;cross&space;the&space;street&space;because&space;it&space;was&space;too&space;tired}}}" title="https://latex.codecogs.com/svg.image?{\color{Purple} \textbf{\textrm {The animal didn't cross the street because it was too tired}}}" align="center" /> "
 
+![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 
 
 
 
+## ⬛ A Deep Dive Into the Transformer
+![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
+This section details the different components of the Transformer by explaining the steps that the inputs go through to generate the outputs.
+
+In this article, the classical example of translating from English to French using the transformer is considered. Input sentence is as such “I am a student”, and the expected output is “Je suis un étudiant”.
 
 
 
