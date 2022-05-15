@@ -4,7 +4,9 @@
 
 ## ⬛ Transformer
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
-The architecture of the **_transformer_** model inspires from the **attention mechanism** used in the **encoder-decoder** architecture in **RNNs** to handle s**equence-to-sequence (seq2seq)** tasks, yet by eliminating the factor of **sequentiality**; meaning that, unlike RNNs, the transformer does not process data in sequence (i.e. in order), which allows for more [parallelization](https://github.com/iAmKankan/MachineLearning_With_Python/blob/master/README.md#parallelization) and reduces training time.
+The architecture of the **_transformer_** model inspires from the **attention mechanism** used in the **encoder-decoder** architecture in **RNNs** to handle s**equence-to-sequence (seq2seq)** tasks.
+
+But it eliminates the factor of **sequentiality**; meaning that, unlike _RNNs_, _the transformer does not process data in sequence (i.e. in order)_, which allows for **_more_** [**_parallelization_**](https://github.com/iAmKankan/MachineLearning_With_Python/blob/master/README.md#parallelization) and **_reduces training time_**.
 
 ### 🔲 Types of Transformers:
 <img src="https://user-images.githubusercontent.com/12748752/167986704-ca5cb1fe-7730-4b61-a9f5-1aee7dbaa9e9.png" width=70%/>
