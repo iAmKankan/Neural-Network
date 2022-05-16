@@ -37,6 +37,18 @@ _At even dimension_ indices the sine formula is applied and _at odd dimension_ i
 
 
 ### _◼️ The Multi-Head Attention Layer — Self-Attention_
+> The Multi-Head Attention Layer (source)
+
+There are two terms that need to be addressed in this section, self-attention and multi-head.
+
+### Self-Attention:
+
+We will start by looking at what self-attention is and how it is applied. The goal of self-attention is to capture contextual relationships between words in the sentence by creating an attention-based vector of every input word. The attention-based vectors help to understand how relevant every word in the input sentence is with respect to other words in the sentence (as well as itself).
+
+The scale dot-product attention illustrated on the left side of figure 6 is applied to calculate attention-based vectors. Below is a detailed explanation of how these vectors are created from the positional embeddings.
+
+The first step is to obtain the Query (Q), Keys (K) and Values (V). This is done by passing the same copy of the positional embeddings through three different linear layers, as seen in the figure below.
+
 
 
 
