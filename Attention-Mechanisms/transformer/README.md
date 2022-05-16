@@ -11,12 +11,24 @@ Here, the classical example of translating from _English to French_ using the tr
 ### 🔲 The Encoder
 We will start by taking a closer look at the encoder side, and discover what is happening at each step.
 
-### ◼️ The input
-The raw data is an english text, however the transformer, like any other model, does not understand english language and, thus, the text is processed to convert every word into a **_unique numeric ID_**. This is done by using a specific dictionary of vocabulary, which can be generated from the training data, and that maps each word to a numeric index.
+### _◼️ The input_
+The raw data is an english text, however the transformer, like any other model, does not understand english language and, thus, the text is processed to convert every word into a **_unique numeric ID_**. 
 
+This is done by using a specific dictionary of vocabulary, which can be generated from the training data, and that maps each word to a **numeric index**.
+> Figure 2: Numerical Representation of the Raw Text (Image by Author)
+ 
+### _◼️ Embedding Layer_
+As in other models, the transformer uses learned embeddings to transform the input tokens into vectors of dimension **d = 512**. During training, the model updates the numbers in the vectors to better represent the input tokens.
 
+> Figure 3: Embeddings of d=512 by The Embedding Layer (Image by Author)
 
+### _◼️ Positional Encoding_
+One aspect that differentiates the transformer from previous sequence models is that **it does not take in the input embeddings sequentially**; on the contraire, **it takes in all the embeddings at once.** This allows for **parallelization** and **significantly decreases training time**. However, the drawback is that it loses the important information related to words' order. 
 
+For the model to preserve the advantage of words' order, **positional encodings** are added to the **input embeddings**. Since the positional encodings and embeddings are summed up, they both have the same dimension of d = 512. There are different ways to choose positional encodings; the creators of the transformer used sine and cosine functions to obtain the positional encodings. 
+
+_At even dimension_ indices the sine formula is applied and _at odd dimension_ indices the cosine formula is applied. 
+> Figure 4, shows the formulas used to obtain the positional encodings.
 
 
 
