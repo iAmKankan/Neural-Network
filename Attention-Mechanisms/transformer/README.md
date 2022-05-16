@@ -10,10 +10,9 @@ This section details the different components of the Transformer by explaining t
 Here, the classical example of translating from _English to French_ using the transformer is considered. Input sentence is as such <img src="https://latex.codecogs.com/svg.image?{\color{Purple}\mathbf{I\&space;am\&space;a\&space;student}&space;}&space;&space;" title="https://latex.codecogs.com/svg.image?{\color{Purple}\mathbf{I\ am\ a\ student} } " />, and the expected output is <img src="https://latex.codecogs.com/svg.image?{\color{Purple}\mathbf{Je\&space;suis\&space;un\&space;\acute{e}tudiant}&space;}&space;" title="https://latex.codecogs.com/svg.image?{\color{Purple}\mathbf{Je\ suis\ un\ \acute{e}tudiant} }" />.
 ### 🔲 The Encoder
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
-
 We will start by taking a closer look at the encoder side, and discover what is happening at each step.
 
-The input
+### ◼️ The input
 The raw data is an english text, however the transformer, like any other model, does not understand english language and, thus, the text is processed to convert every word into a unique numeric ID. This is done by using a specific dictionary of vocabulary, which can be generated from the training data, and that maps each word to a numeric index.
 
 
