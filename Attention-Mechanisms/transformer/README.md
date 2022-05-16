@@ -2,6 +2,23 @@
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 
+
+## ⬛ A Deep Dive Into the Transformer
+![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
+This section details the different components of the Transformer by explaining the steps that the inputs go through to generate the outputs.
+
+Here, the classical example of translating from _English to French_ using the transformer is considered. Input sentence is as such “**_I am a student_**”, and the expected output is “_**Je suis un étudiant**_”.
+
+
+
+
+
+
+
+
+
+
+
 ## ⬛ Transformer
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 The architecture of the **_transformer_** model inspires from the **attention mechanism** used in the **encoder-decoder** architecture in **RNNs** to handle s**equence-to-sequence (seq2seq)** tasks.
@@ -77,23 +94,6 @@ As we’ve mentioned already, an encoder receives a list of vectors as input. It
 #### Input sentence : "<img src="https://latex.codecogs.com/svg.image?{\color{Purple}&space;\textbf{\textrm&space;{The&space;animal&space;didn't&space;cross&space;the&space;street&space;because&space;it&space;was&space;too&space;tired}}}" title="https://latex.codecogs.com/svg.image?{\color{Purple} \textbf{\textrm {The animal didn't cross the street because it was too tired}}}" align="center" /> "
 
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
-
-
-
-
-## ⬛ A Deep Dive Into the Transformer
-![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
-This section details the different components of the Transformer by explaining the steps that the inputs go through to generate the outputs.
-
-In this article, the classical example of translating from English to French using the transformer is considered. Input sentence is as such “I am a student”, and the expected output is “Je suis un étudiant”.
-
-
-
-
-
-
-
-
 
 
 
