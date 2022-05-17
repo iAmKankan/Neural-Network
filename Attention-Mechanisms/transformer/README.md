@@ -44,7 +44,7 @@ _At even dimension_ indices the sine formula is applied and _at odd dimension_ i
 There are two terms that need to be addressed in this section, _**self-attention**_ and **_multi-head_**.
 
 ### _◼️ Self-Attention:_
-> #### The goal of **_self-attention_** is to <i><ins>capture contextual relationships between words</ins></i> in the sentence by creating an <i><ins>attention-based vector of every input word</ins></i>. 
+> #### The goal of **_self-attention_** is to <i><ins>capture contextual relationships between words</ins></i> in the sentence <i><ins>by creating an attention-based vector of every input word</ins></i>. 
 
 The attention-based vectors help to understand how relevant every word in the input sentence is with respect to other words in the sentence (as well as itself).
 
