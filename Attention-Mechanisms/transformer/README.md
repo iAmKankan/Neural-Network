@@ -9,6 +9,7 @@ This section details the different components of the Transformer by explaining t
 
 Here, the classical example of translating from _English to French_ using the transformer is considered. Input sentence is as such <img src="https://latex.codecogs.com/svg.image?{\color{Purple}\mathbf{I\&space;am\&space;a\&space;student}&space;}&space;&space;" title="https://latex.codecogs.com/svg.image?{\color{Purple}\mathbf{I\ am\ a\ student} } " />, and the expected output is <img src="https://latex.codecogs.com/svg.image?{\color{Purple}\mathbf{Je\&space;suis\&space;un\&space;\acute{e}tudiant}&space;}&space;" title="https://latex.codecogs.com/svg.image?{\color{Purple}\mathbf{Je\ suis\ un\ \acute{e}tudiant} }" />.
 ### 🔲 The Encoder
+![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 We will start by taking a closer look at the encoder side, and discover what is happening at each step.
 
 ### _◼️ The input_
@@ -36,14 +37,16 @@ _At even dimension_ indices the sine formula is applied and _at odd dimension_ i
 > Adding Positional Encodings to the Embeddings to Generate Positional Embeddings (ep) (Image by Author)
 
 
-### _◼️ The Multi-Head Attention Layer — Self-Attention_
+### 🔲 The Multi-Head Attention Layer — Self-Attention
+![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 > The Multi-Head Attention Layer (source)
 
-There are two terms that need to be addressed in this section, self-attention and multi-head.
+There are two terms that need to be addressed in this section, _**self-attention**_ and **_multi-head_**.
 
-### Self-Attention:
+### _◼️ Self-Attention:_
+> #### The goal of **_self-attention_** is to <i><ins>capture contextual relationships between words</ins></i> in the sentence by creating an <i><ins>attention-based vector of every input word</ins></i>. 
 
-We will start by looking at what self-attention is and how it is applied. The goal of self-attention is to capture contextual relationships between words in the sentence by creating an attention-based vector of every input word. The attention-based vectors help to understand how relevant every word in the input sentence is with respect to other words in the sentence (as well as itself).
+The attention-based vectors help to understand how relevant every word in the input sentence is with respect to other words in the sentence (as well as itself).
 
 The scale dot-product attention illustrated on the left side of figure 6 is applied to calculate attention-based vectors. Below is a detailed explanation of how these vectors are created from the positional embeddings.
 
