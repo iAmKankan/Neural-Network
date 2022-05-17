@@ -46,11 +46,12 @@ There are two terms that need to be addressed in this section, _**self-attention
 ### _◼️ Self-Attention:_
 > #### The goal of **_self-attention_** is to <i><ins>capture contextual relationships between words</ins></i> in the sentence <i><ins>by creating an attention-based vector of every input word</ins></i>. 
 
-The attention-based vectors help to understand how relevant every word in the input sentence is with respect to other words in the sentence (as well as itself).
+The **_attention-based vectors_** help to understand how relevant every word in the input sentence is with respect to other words in the sentence (as well as itself).
 
 The scale dot-product attention illustrated on the left side of figure 6 is applied to calculate attention-based vectors. Below is a detailed explanation of how these vectors are created from the positional embeddings.
 
 The first step is to obtain the Query (Q), Keys (K) and Values (V). This is done by passing the same copy of the positional embeddings through three different linear layers, as seen in the figure below.
+
 
 
 
