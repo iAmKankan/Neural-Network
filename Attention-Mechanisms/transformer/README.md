@@ -52,7 +52,13 @@ The scale dot-product attention illustrated on the left side of figure 6 is appl
 
 The first step is to obtain the Query (Q), Keys (K) and Values (V). This is done by passing the same copy of the positional embeddings through three different linear layers, as seen in the figure below.
 
+The second step is to create an attention filter from the Query (Q) and the Key (K). The attention filter will indicate how much each word is attended to at every position. It is created by applying the formula found in figure 8.
 
+
+Figure 8: Generating an Attention Filter from the Query (Q) and the Key (K) (Image by Author)
+Finally, to obtain an attention-based matrix (the final output of the self-attention layer), a matrix to matrix multiplication (matmul) is done between the attention filter and the Value (V) matrix generated previously. Resulting in the following final formula:
+
+<img src="https://latex.codecogs.com/svg.image?{\color{Purple}&space;\mathbf{Attention(Q,K,V)=&space;softmax(\frac{QK^T}{\sqrt{d_k}})V&space;}&space;}" title="https://latex.codecogs.com/svg.image?{\color{Purple} \mathbf{Attention(Q,K,V)= softmax(\frac{QK^T}{\sqrt{d_k}})V } }" />
 
 
 
