@@ -81,7 +81,7 @@ The decoder takes in two inputs:
 
 <img src="https://user-images.githubusercontent.com/12748752/169286828-a4baa0aa-3069-4546-a09e-8ee6ea0b4a1d.gif" />
  
- <ins>Outputs Shifted by Right as Inputs to the Decoder In the Inference Stage</ins>[Image by](https://towardsdatascience.com/attention-is-all-you-need-e498378552f9) 
+ <ins>Outputs Shifted by Right as Inputs to the Decoder In the Inference Stage</ins>[...Image by](https://towardsdatascience.com/attention-is-all-you-need-e498378552f9) 
  
  
  
