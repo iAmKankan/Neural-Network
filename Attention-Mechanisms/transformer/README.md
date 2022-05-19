@@ -60,6 +60,38 @@ Finally, to obtain an attention-based matrix (the final output of the self-atten
 
 <img src="https://latex.codecogs.com/svg.image?\large&space;{\color{Purple}&space;\mathbf{Attention(Q,K,V)=&space;softmax(\frac{QK^T}{\sqrt{d_k}})V&space;}&space;}" title="https://latex.codecogs.com/svg.image?\large {\color{Purple} \mathbf{Attention(Q,K,V)= softmax(\frac{QK^T}{\sqrt{d_k}})V } }" />
 
+### _◼️ Multi-Head Attention:_
+As seen on the right side of figure 6, the scaled-dot product attention (i.e. self-attention) is not applied only once, but also several times (in the original paper it is applied 8 times). The objective is to generate several attention-based vectors for the same word. This helps the model to have different representations of the words' relations in a sentence.
+
+The different attention-based matrices generated from the different heads are concatenated together and passed through a linear layer to shrink the size back to that of a single matrix.
+
+#### Residual Connections, Add & Norm and the Feed-Forward Network
+
+As one can notice from figure 1, the architecture includes residual connections (RC). The residual connections' goal is avoid loss of important information found in old information by allowing these information to bypass the multi-head attention layer. Therefore, the positional embeddings are added to the output of the multi-head attention and then normalized (Add & Norm) before passing it into a regular feed-forward network.
+
+### 🔲 The Decoder
+![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
+The decoder side has a lot of shared components with the encoder side. Therefore, this section will not be as detailed as the previous one. The main differences between the decoder and the encoder are that the decoder takes in two inputs, and applies multi-head attention twice with one of them being "masked". Also, the final linear layer in the decoder has the size (i.e. number of units) equal to the number of words in the target dictionary (in this case the french language dictionary). Each unit will be assigned a score; the softmax is applied to convert these scores into probabilities indicating the probability of each word to be present in the output.
+
+### _◼️ The input_
+The decoder takes in two inputs:
+
+1. **The output of the encoder** — these are the keys (K) and the values (V) that the decoder performs multi-head attention on (the second multi-head attention in figure 1). In this multi-head attention layer, the query (Q) is the output of the masked multi-head attention.
+2. **The output text shifted to the right** — This is to ensure that predictions at a specific position "i" can only depend at positions less than i (see figure 10). Therefore, the decoder will take in all words already predicted (position 0 to i-1) before the actual word to be predicted at position i. Note that the first generated word passed to the decoder is the token <start> and the prediction process continues until the decoder generates a special end token <eos>.
+
+<img src="https://user-images.githubusercontent.com/12748752/169286828-a4baa0aa-3069-4546-a09e-8ee6ea0b4a1d.gif" />
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 
