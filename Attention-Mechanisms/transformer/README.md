@@ -85,10 +85,12 @@ The decoder takes in two inputs:
  <ins>Outputs Shifted by Right as Inputs to the Decoder In the Inference Stage</ins>[...Image by](https://towardsdatascience.com/attention-is-all-you-need-e498378552f9) 
  
  
+ ### _◼️ Masked Multi-Head Attention_
+The process of the masked multi-head attention is similar to that of the regular multi-head attention. The only difference is that after multiplying the matrices Q and K, and scaling them, a special mask is applied on the resulting matrix before applying the softmax (see left diagram of figure 6-Mask opt.). The objective is to have every word at a specific position "i" in the text to only attend to every other position in the text up until its current position included (position 0 until position i). This is important in the training phase, as when predicting the word at position i+1, the model will only pay attention to all the words before that position. Therefore, all positions after i, are masked and set to negative infinity before passing them to the softmax operation, which results in 0s in the attention filter (see figure 11).
  
  
- 
- 
+ ### 🔲 The Conclusion
+The Transformer model is a deep learning model that has been in the field for five years now, and that has lead to several top performing and state of the art models such as the BERT model. Giving its dominance in the field of NLP and its expanding usage in other fields such as computer vision, it is important to understand its architecture. This article covers the different components of the transformer and highlights their functionalities.
  
  
 
