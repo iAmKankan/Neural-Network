@@ -80,7 +80,7 @@ The decoder takes in two inputs:
 2. **The output text shifted to the right** — This is to ensure that predictions at a specific position "i" can only depend at positions less than i (see figure 10). Therefore, the decoder will take in all words already predicted (position 0 to i-1) before the actual word to be predicted at position i. Note that the first generated word passed to the decoder is the token <start> and the prediction process continues until the decoder generates a special end token <eos>.
 
 
- <img src="https://user-images.githubusercontent.com/12748752/169290757-0d143632-7fd4-45af-857e-c25ee5db6ed9.gif" align="right"/>
+ <img src="https://user-images.githubusercontent.com/12748752/169290757-0d143632-7fd4-45af-857e-c25ee5db6ed9.gif"/>
 
  <ins>Outputs Shifted by Right as Inputs to the Decoder In the Inference Stage</ins>[...Image by](https://towardsdatascience.com/attention-is-all-you-need-e498378552f9) 
  
