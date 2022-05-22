@@ -9,11 +9,14 @@
 
 ## Attention Mechanisms
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
-The optic nerve of a primate’s visual system receives massive sensory input, far exceeding what the brain can fully process. Fortunately, not all stimuli are created equal. 
 
-Focalization and concentration of consciousness have enabled primates to direct attention to objects of interest, such as preys and predators, in the complex visual environment. The ability of paying attention to only a small fraction of the information has evolutionary significance, allowing human beings to live and succeed.
+> #### The ability of paying attention to only a _small fraction of the information_( such as _preys_ and _predators_) has evolutionary significance, allowing human beings to live and succeed.
+
 ### Attention Cues in Biology
-To explain how our attention is deployed in the visual world, a two-component framework has emerged and been pervasive. This idea dates back to William James in the 1890s, who is considered the “father of American psychology”. In this framework, subjects selectively direct the spotlight of attention using both the **_nonvolitional_** cue and **_volitional_** cue.
+To explain how our attention is deployed in the visual world, a two-component framework has emerged and been pervasive. This idea dates back to William James in the 1890s, who is considered the “father of American psychology”. In this framework, subjects selectively direct the spotlight of attention using both the **_nonvolitional cue_** and **_volitional cue_**.
+
+* **_Nonvolitional cue_**: Using the nonvolitional cue based on _saliency_ (red cup, non-paper), attention is **involuntarily** directed to the coffee.
+* **_Volitional cue_**: Using the volitional cue (want to read a book) that is task-dependent, attention is **directed** to the book under _volitional control_.
 
 ### Building blocks of attention
 * Followings are most important building blocks of attention.
