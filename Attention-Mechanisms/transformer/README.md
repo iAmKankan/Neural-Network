@@ -82,7 +82,7 @@ The decoder takes in two inputs:
 
  <img src="https://user-images.githubusercontent.com/12748752/169290757-0d143632-7fd4-45af-857e-c25ee5db6ed9.gif"/>
 
- <ins>Outputs Shifted by Right as Inputs to the Decoder In the Inference Stage</ins>[...Image by](https://towardsdatascience.com/attention-is-all-you-need-e498378552f9) 
+ <ins>Outputs Shifted by Right as Inputs to the Decoder In the Inference Stage</ins>[...Image by 'Kheirie Elhariri'](https://towardsdatascience.com/attention-is-all-you-need-e498378552f9) 
  
  
  ### _◼️ Masked Multi-Head Attention_
