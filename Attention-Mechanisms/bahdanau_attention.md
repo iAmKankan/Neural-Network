@@ -19,7 +19,8 @@ In a separate but related challenge of handwriting generation for a given text s
 
 When describing Bahdanau attention for the RNN encoder-decoder below, we will follow the same notation in Sequence to Sequence model. The new attention-based model is the same as that inSequence to Sequence except that the context variable **c** in Sequence to Sequence  is replaced by **c<sub>t&prime;</sub>** at any decoding time step . Suppose that there are  tokens in the input sequence, the context variable at the decoding time step  is the output of attention pooling:
 
-(10.4.1)
+<img src="https://latex.codecogs.com/svg.image?\large&space;{\color{Purple}&space;\mathbf{c_{t'}=\sum_{t=1}^{T}\alpha&space;(s_{t'-1},h_t)h_t&space;}}" title="https://latex.codecogs.com/svg.image?\large {\color{Purple} \mathbf{c_{t'}=\sum_{t=1}^{T}\alpha (s_{t'-1},h_t)h_t }}" />
+
 where the decoder hidden state  at time step  is the query, and the encoder hidden states  are both the keys and values, and the attention weight  is computed as in (10.3.2) using the additive attention scoring function defined by (10.3.3).
 
 Slightly different from the vanilla RNN encoder-decoder architecture in Fig. 9.7.2, the same architecture with Bahdanau attention is depicted in Fig. 10.4.1.
