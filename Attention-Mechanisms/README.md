@@ -26,11 +26,14 @@ In the following we will describe a framework for designing attention mechanisms
 To begin with, consider the simpler case where only nonvolitional cues are available. To bias selection over sensory inputs, we can simply use a parameterized fully-connected layer or even non-parameterized max or average pooling.
 
 Therefore, what sets attention mechanisms apart from those **fully-connected layers** or **pooling layers** is the inclusion of the volitional cues. 
-#### Queries:
+
+**_Queries:_**
 In the context of attention mechanisms, we refer to **volitional cues** as **queries**. 
-#### Values:
+
+**_Values:_**
 Given any query, attention mechanisms bias selection over sensory inputs (e.g., intermediate feature representations) via attention pooling. These sensory inputs are called **values** in the context of attention mechanisms. 
-#### Keys:
+
+**_Keys:_**
 More generally, every **value** is paired with a **key**, which can be thought of the nonvolitional cue of that sensory input. 
 
 As shown in the following picture, we can design attention pooling so that the given **query** (_volitional cue_) can interact with **keys** (_nonvolitional cues_), which guides bias selection over values (sensory inputs).
