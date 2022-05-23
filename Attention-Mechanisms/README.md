@@ -19,6 +19,7 @@ To explain how our attention is deployed in the visual world, a two-component fr
 * **_Volitional cue_**: Using the volitional cue (want to read a book) that is task-dependent, attention is **directed** to the book under _volitional control_.
 
 ### Queries, Keys, and Values
+![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 Inspired by the nonvolitional and volitional attention cues that explain the attentional deployment, 
 
 In the following we will describe a framework for designing attention mechanisms by incorporating **_nonvolitional cue_** and **_volitional cue_** attention cues.
