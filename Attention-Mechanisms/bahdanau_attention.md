@@ -11,8 +11,11 @@ However, even though not all the input (source) tokens are useful for decoding a
 
 In a separate but related challenge of handwriting generation for a given text sequence, Graves designed a differentiable attention model to align text characters with the much longer pen trace, where the alignment moves only in one direction [Graves, 2013]. Inspired by the idea of learning to align, Bahdanau et al. proposed a differentiable attention model without the severe unidirectional alignment limitation [Bahdanau et al., 2014]. When predicting a token, if not all the input tokens are relevant, the model aligns (or attends) only to parts of the input sequence that are relevant to the current prediction. This is achieved by treating the context variable as an output of attention pooling.
 
-### Model
-<img src="https://user-images.githubusercontent.com/12748752/169920322-0f8f15d3-ec11-4769-bca3-f9d33b273210.png" width=50% />
+### The Model
+![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
+<img src="https://user-images.githubusercontent.com/12748752/169920322-0f8f15d3-ec11-4769-bca3-f9d33b273210.png" width=70% />
+<ins><b><i>Layers in an RNN encoder-decoder model with Bahdanau attention.</i></b></ins>
+
 When describing Bahdanau attention for the RNN encoder-decoder below, we will follow the same notation in Section 9.7. The new attention-based model is the same as that in Section 9.7 except that the context variable  in (9.7.3) is replaced by  at any decoding time step . Suppose that there are  tokens in the input sequence, the context variable at the decoding time step  is the output of attention pooling:
 
 (10.4.1)
