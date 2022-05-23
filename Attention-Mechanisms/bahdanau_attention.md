@@ -13,10 +13,11 @@ In a separate but related challenge of handwriting generation for a given text s
 
 ### The Model
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
-<img src="https://user-images.githubusercontent.com/12748752/169920322-0f8f15d3-ec11-4769-bca3-f9d33b273210.png" width=70% />
+<img src="https://user-images.githubusercontent.com/12748752/169920735-610fb558-9650-454d-af72-65d63037339a.png" width=70% />
+
 <ins><b><i>Layers in an RNN encoder-decoder model with Bahdanau attention.</i></b></ins>
 
-When describing Bahdanau attention for the RNN encoder-decoder below, we will follow the same notation in Section 9.7. The new attention-based model is the same as that in Section 9.7 except that the context variable  in (9.7.3) is replaced by  at any decoding time step . Suppose that there are  tokens in the input sequence, the context variable at the decoding time step  is the output of attention pooling:
+When describing Bahdanau attention for the RNN encoder-decoder below, we will follow the same notation in Sequence to Sequence model. The new attention-based model is the same as that inSequence to Sequence except that the context variable **c** in Sequence to Sequence  is replaced by **c<sub>t&prime;</sub>** at any decoding time step . Suppose that there are  tokens in the input sequence, the context variable at the decoding time step  is the output of attention pooling:
 
 (10.4.1)
 where the decoder hidden state  at time step  is the query, and the encoder hidden states  are both the keys and values, and the attention weight  is computed as in (10.3.2) using the additive attention scoring function defined by (10.3.3).
