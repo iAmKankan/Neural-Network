@@ -40,7 +40,9 @@ More generally, every **value** is paired with a **key**, which can be thought o
 As shown in the following picture, we can design attention pooling so that the given **query** (_volitional cue_) can interact with **keys** (_nonvolitional cues_), which guides bias selection over values (sensory inputs).
 
 
-
+## Attention Pooling: Nadaraya-Watson Kernel Regression
+![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
+The interactions between queries (volitional cues) and keys (nonvolitional cues) result in attention pooling. The attention pooling selectively aggregates values (sensory inputs) to produce the output. 
 
 
 ### Building blocks of attention
