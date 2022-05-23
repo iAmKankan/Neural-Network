@@ -18,6 +18,17 @@ To explain how our attention is deployed in the visual world, a two-component fr
 * **_Nonvolitional cue_**: Using the nonvolitional cue based on _saliency_ (red cup, non-paper), attention is **involuntarily** directed to the coffee.
 * **_Volitional cue_**: Using the volitional cue (want to read a book) that is task-dependent, attention is **directed** to the book under _volitional control_.
 
+### Queries, Keys, and Values
+Inspired by the nonvolitional and volitional attention cues that explain the attentional deployment, in the following we will describe a framework for designing attention mechanisms by incorporating these two attention cues.
+
+To begin with, consider the simpler case where only nonvolitional cues are available. To bias selection over sensory inputs, we can simply use a parameterized fully-connected layer or even non-parameterized max or average pooling.
+
+Therefore, what sets attention mechanisms apart from those fully-connected layers or pooling layers is the inclusion of the volitional cues. In the context of attention mechanisms, we refer to volitional cues as queries. Given any query, attention mechanisms bias selection over sensory inputs (e.g., intermediate feature representations) via attention pooling. These sensory inputs are called values in the context of attention mechanisms. More generally, every value is paired with a key, which can be thought of the nonvolitional cue of that sensory input. As shown in Fig. 10.1.3, we can design attention pooling so that the given query (volitional cue) can interact with keys (nonvolitional cues), which guides bias selection over values (sensory inputs).
+
+
+
+
+
 ### Building blocks of attention
 * Followings are most important building blocks of attention.
 1) Reweight
