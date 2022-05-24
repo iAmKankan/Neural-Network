@@ -15,3 +15,6 @@ This design is called multi-head attention, where each of the  attention pooling
 
 <img src="https://user-images.githubusercontent.com/12748752/170055315-b69b2b13-f3a5-44c6-8a6a-6a4655359f80.png" width=60%/>
 <ins><i><b>Multi-head attention, where multiple heads are concatenated then linearly transformed.</b></i></ins>
+
+* **_Multi-head attention_** combines knowledge of the same attention pooling via different representation subspaces of **queries**, **keys**, and **values**.
+* To compute multiple heads of multi-head attention in parallel, proper tensor manipulation is needed. 
