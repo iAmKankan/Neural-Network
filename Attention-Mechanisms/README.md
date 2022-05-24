@@ -2,7 +2,7 @@
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 
 ### _Attention Mechanisms_
-* [Bahdanau Attention]([url](https://github.com/iAmKankan/Neural-Network/blob/main/Attention-Mechanisms/bahdanau_attention.md))
+* [Bahdanau Attention](https://github.com/iAmKankan/Neural-Network/blob/main/Attention-Mechanisms/bahdanau_attention.md)
 * [Multi-head Attention](https://github.com/iAmKankan/Neural-Network/blob/main/Attention-Mechanisms/multi-head.md) 
 * [Self-Attention](https://github.com/iAmKankan/Neural-Network/blob/main/Attention-Mechanisms/self-attention.md)
 * [Transformer](https://github.com/iAmKankan/Neural-Network/blob/main/Attention-Mechanisms/transformer/README.md)
