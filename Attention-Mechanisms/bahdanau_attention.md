@@ -25,3 +25,7 @@ where the decoder hidden state  at time step  is the query, and the encoder hidd
 
 Slightly different from the vanilla RNN encoder-decoder architecture in Fig. 9.7.2, the same architecture with Bahdanau attention is depicted in Fig. 10.4.1.
 
+### Notes:
+* When predicting a token, if not all the input tokens are relevant, the RNN encoder-decoder with Bahdanau attention selectively aggregates different parts of the input sequence. This is achieved by treating the context variable as an output of additive attention pooling.
+
+* In the RNN encoder-decoder, Bahdanau attention treats the decoder hidden state at the previous time step as the query, and the encoder hidden states at all the time steps as both the keys and values.
