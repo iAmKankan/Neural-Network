@@ -10,4 +10,4 @@ In practice, given the same set of queries, keys, and values we may want our mod
 To this end, instead of performing a single attention pooling, queries, keys, and values can be transformed with  independently learned linear projections. Then these  projected queries, keys, and values are fed into attention pooling in parallel. In the end,  attention pooling outputs are concatenated and transformed with another learned linear projection to produce the final output. This design is called multi-head attention, where each of the  attention pooling outputs is a head [Vaswani et al., 2017]. Using fully-connected layers to perform learnable linear transformations, Fig. 10.5.1 describes multi-head attention.
 
 <img src="https://user-images.githubusercontent.com/12748752/170055315-b69b2b13-f3a5-44c6-8a6a-6a4655359f80.png" width=60%/>
-<ins><i><b>Multi-head attention, where multiple heads are concatenated then linearly transformed.¶</b></i></ins>
+<ins><i><b>Multi-head attention, where multiple heads are concatenated then linearly transformed.</b></i></ins>
