@@ -22,8 +22,16 @@ Given a sequence of input tokens <img src="https://latex.codecogs.com/svg.image?
 according to the definition of attention pooling <img src="https://latex.codecogs.com/svg.image?\mathit{f}" title="https://latex.codecogs.com/svg.image?\mathit{f}" align="center" /> in (10.2.4). Using multi-head attention, the following code snippet computes the self-attention of a tensor with shape (batch size, number of time steps or sequence length in tokens, ). The output tensor has the same shape.
 
 ### 🔲 Comparing CNNs, RNNs, and Self-Attention
+![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 Let us compare architectures for mapping a sequence of  tokens to another sequence of equal length, where each input or output token is represented by a -dimensional vector. Specifically, we will consider CNNs, RNNs, and self-attention. We will compare their computational complexity, sequential operations, and maximum path lengths. Note that sequential operations prevent parallel computation, while a shorter path between any combination of sequence positions makes it easier to learn long-range dependencies within the sequence.
 
 <img src="https://user-images.githubusercontent.com/12748752/170157769-9b87bc29-61f2-48b1-9419-16cabc397fb4.png" width=30% align="center"/> <img src="https://user-images.githubusercontent.com/12748752/170158752-5a05a0d6-39c3-4f64-b2e5-8b375c2296a7.png" width=55% align="top"/>
 
 <ins><i><b>Comparing CNN (padding tokens are omitted), RNN, and self-attention architectures.</b></i></ins>
+
+
+### Conclision:
+![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
+* In self-attention, the queries, keys, and values all come from the same place.
+* Both CNNs and self-attention enjoy parallel computation and self-attention has the shortest maximum path length. However, the quadratic computational complexity with respect to the sequence length makes self-attention prohibitively slow for very long sequences.
+* To use the sequence order information, we can inject absolute or relative positional information by adding positional encoding to the input representations.
