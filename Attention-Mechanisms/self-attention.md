@@ -30,8 +30,7 @@ Let us compare architectures for mapping a sequence of  tokens to another sequen
 
 ### 🔲 Positional Encoding
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
-Unlike **RNNs** that recurrently process tokens of a sequence one by one, self-attention ditches sequential operations in favor of parallel computation. 
-
+**One major difference in the Transformer approach from previous Sequence Models**-One aspect that differentiates the _transformer_ from previous _sequence models_ is that **it does not take the input embeddings sequentially**; on the contrary, **it takes in all the embeddings at once.** This allows for **parallelization** and **significantly decreases training time**. However, the drawback is that it loses the important information related to **words' order**. 
 To use the sequence order information, we can inject absolute or relative positional information by adding **positional encoding** to the input representations. Positional encodings can be either learned or fixed. In the following, we describe a **fixed positional encoding** based on sine and cosine functions.
 
 ### 🔲 Conclision:
