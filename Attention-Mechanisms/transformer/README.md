@@ -24,7 +24,7 @@ As in other models, the transformer uses learned embeddings to transform the inp
 > Figure 3: Embeddings of d=512 by The Embedding Layer (Image by Author)
 
 ### _◼️ Positional Encoding_
-One aspect that differentiates the transformer from previous sequence models is that **it does not take in the input embeddings sequentially**; on the contraire, **it takes in all the embeddings at once.** This allows for **parallelization** and **significantly decreases training time**. However, the drawback is that it loses the important information related to words' order. 
+One aspect that differentiates the _transformer_ from previous _sequence models_ is that **it does not take the input embeddings sequentially**; on the contrary, **it takes in all the embeddings at once.** This allows for **parallelization** and **significantly decreases training time**. However, the drawback is that it loses the important information related to **words' order**. 
 
 For the model to preserve the advantage of words' order, **positional encodings** are added to the **input embeddings**. Since the positional encodings and embeddings are summed up, they both have the same dimension of d = 512. There are different ways to choose positional encodings; the creators of the transformer used sine and cosine functions to obtain the positional encodings. 
 
