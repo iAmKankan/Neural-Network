@@ -75,7 +75,10 @@ for i in range(8):
 7 in binary is 111
 ```
 In binary representations, a higher bit has a lower frequency than a lower bit. Similarly, as demonstrated in the heat map below, the positional encoding decreases frequencies along the encoding dimension by using trigonometric functions. Since the outputs are float numbers, such continuous representations are more space-efficient than binary representations.
+### 🔲  Relative Positional Information
+Besides capturing absolute positional information, the above positional encoding also allows a model to easily learn to attend by relative positions. This is because for any fixed position offset **_&delta;_**, the positional encoding at position **_i + &delta;_** can be represented by a linear projection of that at position **_i_**.
 
+This projection can be explained mathematically. Denoting **_&omega;<sub>j</sub>_** **= 1/10000_<sub>2j/d</sub>_**, any pair of  in (10.6.2) can be linearly projected to  for any fixed offset :
 ### 🔲 Conclision:
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 * In self-attention, the queries, keys, and values all come from the same place.
