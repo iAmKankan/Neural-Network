@@ -30,8 +30,25 @@ Let us compare architectures for mapping a sequence of  tokens to another sequen
 
 ### 🔲 Positional Encoding
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
-**One major difference in the Transformer approach from previous Sequence Models**-One aspect that differentiates the _transformer_ from previous _sequence models_ is that **it does not take the input embeddings sequentially**; on the contrary, **it takes in all the embeddings at once.** This allows for **parallelization** and **significantly decreases training time**. However, the drawback is that it loses the important information related to **words' order**. 
-To use the sequence order information, we can inject absolute or relative positional information by adding **positional encoding** to the input representations. Positional encodings can be either learned or fixed. In the following, we describe a **fixed positional encoding** based on sine and cosine functions.
+#### How _Transformer approach_ differs from _Sequence Model approach_:
+* Unlike _sequence models_, _transformer_ **does not take the input embeddings sequentially**; on the contrary, **it takes in all the embeddings at once.** 
+* This allows for **parallelization** and **significantly decreases training time**. 
+#### Problems associated with this approach
+* However, the drawback is that it **loses** the important information related to **_words' order_**. 
+#### To use the sequence order information
+* We can inject **absolute** or **relative** positional information by adding **positional encoding** to the input representations. Positional encodings can be either learned or fixed. 
+
+#### A **fixed positional encoding** based on sine and cosine functions:
+Suppose that the input representation  <img src="https://latex.codecogs.com/svg.image?\mathbf{X&space;\in&space;\mathbb{R}^{\mathit{n&space;\times&space;d}}}" title="https://latex.codecogs.com/svg.image?\mathbf{X \in \mathbb{R}^{\mathit{n \times d}}}" align="center"/> contains the **_d_**-dimensional embeddings for **_n_** tokens of a sequence. The positional encoding **X + P** outputs  using a positional embedding matrix <img src="https://latex.codecogs.com/svg.image?\mathbf{P&space;\in&space;\mathbb{R}^{\mathit{n&space;\times&space;d}}}" title="https://latex.codecogs.com/svg.image?\mathbf{P \in \mathbb{R}^{\mathit{n \times d}}}" align="center" /> of the same shape, whose element on the **_i<sup>th</sup>_** row and the **_(2j)<sup>th</sup>_** or the  column is **_(2j + 1)<sup>th</sup>_**
+
+<img src="https://latex.codecogs.com/svg.image?\large&space;\\{\color{Blue}&space;\mathbf{p_{\mathit{i,2j}}&space;=&space;\sin&space;\left&space;(&space;\frac{\mathit{i}}{10000^{\mathit{2j/d}}}&space;\right&space;),&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;}}\\&space;\\{\color{Blue}&space;\mathbf{p_{\mathit{i,2j&plus;1}}&space;=&space;\cos&space;\left&space;(&space;\frac{\mathit{i}}{10000^{\mathit{2j/d}}}&space;\right&space;)&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;}}&space;" title="https://latex.codecogs.com/svg.image?\large \\{\color{Blue} \mathbf{p_{\mathit{i,2j}} = \sin \left ( \frac{\mathit{i}}{10000^{\mathit{2j/d}}} \right ), }}\\ \\{\color{Blue} \mathbf{p_{\mathit{i,2j+1}} = \cos \left ( \frac{\mathit{i}}{10000^{\mathit{2j/d}}} \right ) }} " />
+ 
+<img src="https://latex.codecogs.com/svg.image?\large&space;&space;\mathbf{Or}" title="https://latex.codecogs.com/svg.image?\large \mathbf{Or}" align="center"/>
+ 
+ <img src="https://latex.codecogs.com/svg.image?\large&space;\\{\color{Purple}\mathbf{PE_{(pos,\&space;2i)}=sin\left&space;(pos/10000^{2i/d_{model}}\right&space;)}}&space;\\{\color{Purple}\mathbf{PE_{(pos,\&space;2i&plus;1)}=cos\left&space;(pos/10000^{2i/d_{model}}\right&space;)}}" title="https://latex.codecogs.com/svg.image?\large \\{\color{Purple}\mathbf{PE_{(pos,\ 2i)}=sin\left (pos/10000^{2i/d_{model}}\right )}} \\{\color{Purple}\mathbf{PE_{(pos,\ 2i+1)}=cos\left (pos/10000^{2i/d_{model}}\right )}}" />  <img src="https://latex.codecogs.com/svg.image?\begin{cases}{\color{Purple}\mathbf{pos}}=&space;\textrm{The&space;current&space;position}&space;\\&space;{\color{Purple}\mathbf{2i}}=&space;\textrm{Dimention&space;Index}&space;\\{\color{Purple}\mathbf{d_{model}}}=&space;\textrm{Dimention&space;=&space;512}&space;\end{cases}" title="https://latex.codecogs.com/svg.image?\begin{cases}{\color{Purple}\mathbf{pos}}= \textrm{The current position} \\ {\color{Purple}\mathbf{2i}}= \textrm{Dimention Index} \\{\color{Purple}\mathbf{d_{model}}}= \textrm{Dimention = 512} \end{cases}" align="right"/>
+
+<ins> Positional Encodings Formula</ins>
+ 
 
 ### 🔲 Conclision:
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
