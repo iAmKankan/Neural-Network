@@ -30,21 +30,21 @@ Let us compare architectures for mapping a sequence of  tokens to another sequen
 
 ### 🔲 Positional Encoding
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
-#### How _Transformer approach_ differs from _Sequence Model approach_:
+### How _Transformer approach_ differs from _Sequence Model approach_:
 * Unlike _sequence models_, _transformer_ **does not take the input embeddings sequentially**; on the contrary, **it takes in all the embeddings at once.** 
 * This allows for **parallelization** and **significantly decreases training time**. 
-#### Problems associated with this approach
+### Problems associated with this approach
 * However, the drawback is that it **loses** the important information related to **_words' order_**. 
-#### To use the sequence order information
+### To use the sequence order information
 * We can inject **absolute** or **relative** _positional information_ by adding **positional encoding** to the input representations. 
 * Positional encodings can be either learned or fixed. 
 * For the model to preserve the advantage of _words' order_, **positional encodings** are added to the **input embeddings**. 
 * Since the positional encodings and embeddings are summed up, they both have the same dimension of **_d = 512_**.
 * There are different ways to choose positional encodings; the creators of the transformer used **sine** and **cosine** functions to obtain the positional encodings. 
 
-**_At even dimension_** _indices_ the **sine** formula is applied and **_at odd dimension_** _indices_ the **cosine** formula is applied. 
+> **_At even dimension_** _indices_ the **sine** formula is applied and **_at odd dimension_** _indices_ the **cosine** formula is applied. 
 
-#### A **fixed positional encoding** based on `sine` and `cosine` functions:
+### A **fixed positional encoding** based on `sine` and `cosine` functions:
 Suppose that the input representation  <img src="https://latex.codecogs.com/svg.image?\mathbf{X&space;\in&space;\mathbb{R}^{\mathit{n&space;\times&space;d}}}" title="https://latex.codecogs.com/svg.image?\mathbf{X \in \mathbb{R}^{\mathit{n \times d}}}" align="center"/> contains the **_d_**-dimensional embeddings for **_n_** tokens of a sequence. The positional encoding **X + P** outputs  using a positional embedding matrix <img src="https://latex.codecogs.com/svg.image?\mathbf{P&space;\in&space;\mathbb{R}^{\mathit{n&space;\times&space;d}}}" title="https://latex.codecogs.com/svg.image?\mathbf{P \in \mathbb{R}^{\mathit{n \times d}}}" align="center" /> of the same shape, whose element on the **_i<sup>th</sup>_** row and the **_(2j)<sup>th</sup>_** or the  column is **_(2j + 1)<sup>th</sup>_**
 
 <img src="https://latex.codecogs.com/svg.image?\large&space;\\{\color{Blue}&space;\mathbf{p_{\mathit{i,2j}}&space;=&space;\sin&space;\left&space;(&space;\frac{\mathit{i}}{10000^{\mathit{2j/d}}}&space;\right&space;),&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;}}\\&space;\\{\color{Blue}&space;\mathbf{p_{\mathit{i,2j&plus;1}}&space;=&space;\cos&space;\left&space;(&space;\frac{\mathit{i}}{10000^{\mathit{2j/d}}}&space;\right&space;)&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;}}&space;" title="https://latex.codecogs.com/svg.image?\large \\{\color{Blue} \mathbf{p_{\mathit{i,2j}} = \sin \left ( \frac{\mathit{i}}{10000^{\mathit{2j/d}}} \right ), }}\\ \\{\color{Blue} \mathbf{p_{\mathit{i,2j+1}} = \cos \left ( \frac{\mathit{i}}{10000^{\mathit{2j/d}}} \right ) }} " />
