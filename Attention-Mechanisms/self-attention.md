@@ -78,7 +78,7 @@ In binary representations, a higher bit has a lower frequency than a lower bit. 
 ### 🔲  Relative Positional Information
 Besides capturing absolute positional information, the above positional encoding also allows a model to easily learn to attend by relative positions. This is because for any fixed position offset **_&delta;_**, the positional encoding at position **_i + &delta;_** can be represented by a linear projection of that at position **_i_**.
 
-This projection can be explained mathematically. Denoting **_&omega;<sub>j</sub>_** **= 1/10000_<sub>2j/d</sub>_**, any pair of  in (10.6.2) can be linearly projected to  for any fixed offset :
+This projection can be explained mathematically. Denoting **_&omega;<sub>j</sub>_** **= 1/10000** **_<sup>2j/d</sup>_**, any pair of ( **p<sub>(i,2j)</sub>,p<sub>(i,2j+1)</sub>** ) in [above](https://github.com/iAmKankan/Neural-Network/edit/main/Attention-Mechanisms/self-attention.md#a-fixed-positional-encoding-based-on-sine-and-cosine-functions) can be linearly projected to ( **p<sub>(i+&delta;,2j)</sub>,p<sub>(i+&delta;,2j+1)</sub>** )  for any fixed offset **_&delta;_**:
 ### 🔲 Conclision:
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 * In self-attention, the queries, keys, and values all come from the same place.
