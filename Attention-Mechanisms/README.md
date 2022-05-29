@@ -65,6 +65,13 @@ Here we generate an artificial dataset according to the following nonlinear func
 
 <img src="https://latex.codecogs.com/svg.image?\large&space;{\color{Purple}&space;\mathbf{y_i=2&space;\sin(x_i)&plus;x_{i}^{0.8}&plus;\epsilon&space;}}" title="https://latex.codecogs.com/svg.image?\large {\color{Purple} \mathbf{y_i=2 \sin(x_i)+x_{i}^{0.8}+\epsilon }}" align="center" />
 
+where <img src="https://latex.codecogs.com/svg.image?\large&space;{\color{Purple}&space;\mathbf{\epsilon&space;}}" title="https://latex.codecogs.com/svg.image?\large {\color{Purple} \mathbf{\epsilon }}" align="center" /> obeys a normal distribution with zero mean and standard deviation 0.5. Both 50 training examples and 50 testing examples are generated. To better visualize the pattern of attention later, the training inputs are sorted.
+
+### Average Pooling
+We begin with perhaps the world’s “dumbest” estimator for this regression problem: using average pooling to average over all the training outputs:
+<img src="https://latex.codecogs.com/svg.image?\large&space;{\color{Purple}f&space;\mathbf{(x)=&space;\frac{1}{n}\sum_{i=1}^{n}y_i&space;}}" title="https://latex.codecogs.com/svg.image?\large {\color{Purple}f \mathbf{(x)= \frac{1}{n}\sum_{i=1}^{n}y_i }}" align="center" />
+ 
+which is plotted below. As we can see, this estimator is indeed not so smart.
 
 ### Building blocks of attention
 * Followings are most important building blocks of attention.
