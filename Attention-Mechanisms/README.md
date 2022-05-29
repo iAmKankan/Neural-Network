@@ -23,15 +23,15 @@ To explain how our attention is deployed in the visual world, a two-component fr
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 Inspired by the nonvolitional and volitional attention cues that explain the attentional deployment, 
 
-<ins>**_Bias Selection :_**</ins> Consider, only **nonvolitional cues** are available. To bias selection over **sensory inputs**, we can simply use a _parameterized fully-connected layer_ or even non-parameterized max or average pooling. Therefore, what sets attention mechanisms apart from those **fully-connected layers** or **pooling layers** is the inclusion of the volitional cues. 
+<ins>**_Bias Selection_**</ins>**:** Consider, only **nonvolitional cues** are available. To bias selection over **sensory inputs**, we can simply use a _parameterized fully-connected layer_ or even non-parameterized max or average pooling. Therefore, what sets attention mechanisms apart from those **fully-connected layers** or **pooling layers** is the inclusion of the volitional cues. 
 
-**_Queries:_**
+<ins>**_Queries:_**</ins>
 In the context of attention mechanisms, we refer to **volitional cues** as **queries**. 
 
-**_Values:_**
+<ins>**_Values:_**</ins>
 Given any query, attention mechanisms bias selection over sensory inputs (e.g., intermediate feature representations) via attention pooling. These sensory inputs are called **values** in the context of attention mechanisms. 
 
-**_Keys:_**
+<ins>**_Keys:_**</ins>
 More generally, every **value** is paired with a **key**, which can be thought of the nonvolitional cue of that sensory input. 
 
 As shown in the following picture, we can design attention pooling so that the given **query** (_volitional cue_) can interact with **keys** (_nonvolitional cues_), which guides bias selection over values (sensory inputs).
