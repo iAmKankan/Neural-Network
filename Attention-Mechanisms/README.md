@@ -59,12 +59,11 @@ In this section, we will describe attention pooling in greater detail to give yo
 
 ### Generating the Dataset
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
-Let us consider the following regression problem: **_f(x)_** given a dataset of input-output pairs , how to learn  to predict the output 
- for any new input ?
+Let us consider the following regression problem:  given a dataset of input-output pairs <img src="https://latex.codecogs.com/svg.image?{\color{Purple}&space;\mathbf{{(x_1,y_1),...,(x_n,y_n)}}}" title="https://latex.codecogs.com/svg.image?{\color{Purple} \mathbf{{(x_1,y_1),...,(x_n,y_n)}}}" align="center" />, how to learn <img src="https://latex.codecogs.com/svg.image?{\color{Purple}&space;\mathit{f}}" title="https://latex.codecogs.com/svg.image?{\color{Purple} \mathit{f}}" align="center" /> to predict the output <img src="https://latex.codecogs.com/svg.image?{\color{Purple}&space;\mathbf{\hat{y}&space;=&space;}f\mathbf{(x)}}" title="https://latex.codecogs.com/svg.image?{\color{Purple} \mathbf{\hat{y} = }f\mathbf{(x)}}" align="center"/> for any new input <img src="https://latex.codecogs.com/svg.image?{\color{Purple}&space;\mathbf{x}}" title="https://latex.codecogs.com/svg.image?{\color{Purple} \mathbf{x}}" align="center" />?
 
+Here we generate an artificial dataset according to the following nonlinear function with the noise term : <img src="https://latex.codecogs.com/svg.image?\large&space;{\color{Purple}&space;\mathbf{\epsilon&space;}}" title="https://latex.codecogs.com/svg.image?\large {\color{Purple} \mathbf{\epsilon }}" align="center" />.
 
-
-
+<img src="https://latex.codecogs.com/svg.image?\large&space;{\color{Purple}&space;\mathbf{y_i=2&space;\sin(x_i)&plus;x_{i}^{0.8}&plus;\epsilon&space;}}" title="https://latex.codecogs.com/svg.image?\large {\color{Purple} \mathbf{y_i=2 \sin(x_i)+x_{i}^{0.8}+\epsilon }}" align="center" />
 
 
 ### Building blocks of attention
