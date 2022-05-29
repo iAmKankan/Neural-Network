@@ -49,9 +49,22 @@ As shown in the following picture, we can design attention pooling so that the g
 * We can visualize **attention weights** between **queries** and **keys**.
 
 
-## Attention Pooling: Nadaraya-Watson Kernel Regression
+## _Attention Pooling_: Nadaraya-Watson Kernel Regression
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
-The interactions between queries (volitional cues) and keys (nonvolitional cues) result in attention pooling. The attention pooling selectively aggregates values (sensory inputs) to produce the output. 
+As we have seen in the above figure the major components of attention mechanisms. 
+* The interactions between **queries** (_volitional cues_) and_ **keys** (_nonvolitional cues_) result in **_attention pooling_**. 
+* **The attention pooling** selectively aggregates **values** (_sensory inputs_) to produce the output. 
+
+In this section, we will describe attention pooling in greater detail to give you a high-level view of how attention mechanisms work in practice. Specifically, the _Nadaraya-Watson_ kernel regression model proposed in 1964 is a simple yet complete example for demonstrating machine learning with attention mechanisms.
+
+### Generating the Dataset
+![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
+Let us consider the following regression problem: **_f(x)_** given a dataset of input-output pairs , how to learn  to predict the output 
+ for any new input ?
+
+
+
+
 
 
 ### Building blocks of attention
