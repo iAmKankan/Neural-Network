@@ -91,6 +91,6 @@ This projection can be explained mathematically. Denoting **_&omega;<sub>j</sub>
 where the **2 &times; 2** projection matrix does not depend on any position index **_i_**.
 ### 🔲 Conclision:
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
-* In self-attention, the queries, keys, and values all come from the same place.
-* Both CNNs and self-attention enjoy parallel computation and self-attention has the shortest maximum path length. However, the quadratic computational complexity with respect to the sequence length makes self-attention prohibitively slow for very long sequences.
-* To use the sequence order information, we can inject absolute or relative positional information by adding positional encoding to the input representations.
+* In self-attention, the **queries**, **keys**, and **values** all come from the same place.
+* Both **CNNs** and **self-attention** enjoy **parallel computation** and *self-attention* has the <ins>**shortest maximum path length**</ins>. However, the **quadratic computational complexity** ( **O (n<sup>2</sup>)** ) with respect to the sequence length makes _self-attention_ **prohibitively slow** for very long sequences.
+* To use the **sequence order** information, we can _inject_ **absolute** or **relative positional** information by adding **positional encoding** to the input representations.
