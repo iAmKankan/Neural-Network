@@ -93,7 +93,9 @@ To gain intuitions of attention pooling, just consider a Gaussian kernel defined
 
 Plugging the Gaussian kernel into (10.2.4) and (10.2.3) gives
 
-<img src="https://latex.codecogs.com/svg.image?\large&space;\\{\color{Purple}&space;f\mathbf{(x)=\sum^{n}_{i=0}\alpha(x,x_i)y_i}}&space;\\{\color{Purple}&space;f\mathbf{(x)=\sum^{n}_{i=0}\frac{exp\left&space;(&space;-\frac{1}{2}(x-x_i)^2&space;\right&space;)}{\sum^{n}_{j=0}exp\left&space;(&space;-\frac{1}{2}(x-x_i)^2&space;\right&space;)}y_i}}&space;" title="https://latex.codecogs.com/svg.image?\large \\{\color{Purple} f\mathbf{(x)=\sum^{n}_{i=0}\alpha(x,x_i)y_i}} \\{\color{Purple} f\mathbf{(x)=\sum^{n}_{i=0}\frac{exp\left ( -\frac{1}{2}(x-x_i)^2 \right )}{\sum^{n}_{j=0}exp\left ( -\frac{1}{2}(x-x_i)^2 \right )}y_i}} " />
+<img src="https://latex.codecogs.com/svg.image?\large&space;\\{\color{Purple}&space;f\mathbf{(x)=\sum^{n}_{i=1}\alpha(x,x_i)y_i}}&space;\\{\color{Purple}&space;f\mathbf{(x)=\sum^{n}_{i=1}\frac{exp\left&space;(&space;-\frac{1}{2}(x-x_i)^2&space;\right&space;)}{\sum^{n}_{j=1}exp\left&space;(&space;-\frac{1}{2}(x-x_i)^2&space;\right&space;)}y_i}}" title="https://latex.codecogs.com/svg.image?\large \\{\color{Purple} f\mathbf{(x)=\sum^{n}_{i=1}\alpha(x,x_i)y_i}} \\{\color{Purple} f\mathbf{(x)=\sum^{n}_{i=1}\frac{exp\left ( -\frac{1}{2}(x-x_i)^2 \right )}{\sum^{n}_{j=1}exp\left ( -\frac{1}{2}(x-x_i)^2 \right )}y_i}}" />
+
+<img src="https://latex.codecogs.com/svg.image?\large&space;\\{\color{Purple}&space;f\mathbf{(x)=\sum^{n}_{i=1}softmax\left&space;(-\frac{1}{2}(x-x_i)^2&space;\right&space;)y_i.}}" title="https://latex.codecogs.com/svg.image?\large \\{\color{Purple} f\mathbf{(x)=\sum^{n}_{i=1}softmax\left (-\frac{1}{2}(x-x_i)^2 \right )y_i.}}" />
 
 ### Parametric Attention Pooling
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
