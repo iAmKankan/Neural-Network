@@ -80,6 +80,24 @@ which is plotted below. As we can see, this estimator is indeed not so smart.
 
 <img src="https://latex.codecogs.com/svg.image?\large&space;\large&space;{\color{Purple}f&space;\mathbf{(x)=&space;\sum_{i=1}^{n}\frac{K(x-x_i)}{\sum_{j=1}^{n}K(x-x_j)}y_i&space;}}" title="https://latex.codecogs.com/svg.image?\large \large {\color{Purple}f \mathbf{(x)= \sum_{i=1}^{n}\frac{K(x-x_i)}{\sum_{j=1}^{n}K(x-x_j)}y_i }}" />
 
+where  **_K_** is a kernel. The estimator in (10.2.3) is called Nadaraya-Watson kernel regression. Here we will not dive into details of kernels. Recall the framework of attention mechanisms in Fig. 10.1.3. From the perspective of attention, we can rewrite (10.2.3) in a more generalized form of attention pooling: 
+
+<img src="https://latex.codecogs.com/svg.image?\large&space;{\color{Purple}&space;f\mathbf{(x)=\sum^{n}_{i=0}\alpha(x,x_i)y_i}}" title="https://latex.codecogs.com/svg.image?\large {\color{Purple} f\mathbf{(x)=\sum^{n}_{i=0}\alpha(x,x_i)y_i}}" />
+
+
+where **_x_** is the query and <img src="https://latex.codecogs.com/svg.image?{\color{Purple}&space;\mathbf{(x_i,y_i)}}" title="https://latex.codecogs.com/svg.image?{\color{Purple} \mathbf{(x_i,y_i)}}" align="center"/> is the key-value pair. Comparing (10.2.4) and (10.2.2), the attention pooling here is a weighted average of values **y<sub>i</sub>**. The attention weight <img src="https://latex.codecogs.com/svg.image?{\color{Purple}&space;\mathbf{\alpha(x,x_i)}" title="https://latex.codecogs.com/svg.image?{\color{Purple} \mathbf{\alpha(x,x_i)}" align="center" /> in (10.2.4) is assigned to the corresponding value **y<sub>i</sub>** based on the interaction between the query  and the key **x<sub>i</sub>** modeled by **&alpha;** . For any query, its attention weights over all the key-value pairs are a valid probability distribution: they are non-negative and sum up to one.
+
+To gain intuitions of attention pooling, just consider a Gaussian kernel defined as
+
+<img src="https://latex.codecogs.com/svg.image?\large&space;{\color{Purple}&space;K\mathbf{(u)=\frac{1}{\sqrt{2\pi}}exp&space;\left&space;(&space;-\frac{u^2}{2}&space;\right&space;)&space;}&space;&space;}" title="https://latex.codecogs.com/svg.image?\large {\color{Purple} K\mathbf{(u)=\frac{1}{\sqrt{2\pi}}exp \left ( -\frac{u^2}{2} \right ) } }" />
+
+Plugging the Gaussian kernel into (10.2.4) and (10.2.3) gives
+
+<img src="https://latex.codecogs.com/svg.image?\large&space;\\{\color{Purple}&space;f\mathbf{(x)=\sum^{n}_{i=0}\alpha(x,x_i)y_i}}&space;\\{\color{Purple}&space;f\mathbf{(x)=\sum^{n}_{i=0}\frac{exp\left&space;(&space;-\frac{1}{2}(x-x_i)^2&space;\right&space;)}{\sum^{n}_{j=0}exp\left&space;(&space;-\frac{1}{2}(x-x_i)^2&space;\right&space;)}y_i}}&space;" title="https://latex.codecogs.com/svg.image?\large \\{\color{Purple} f\mathbf{(x)=\sum^{n}_{i=0}\alpha(x,x_i)y_i}} \\{\color{Purple} f\mathbf{(x)=\sum^{n}_{i=0}\frac{exp\left ( -\frac{1}{2}(x-x_i)^2 \right )}{\sum^{n}_{j=0}exp\left ( -\frac{1}{2}(x-x_i)^2 \right )}y_i}} " />
+
+### Parametric Attention Pooling
+![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
+
 ### Building blocks of attention
 * Followings are most important building blocks of attention.
 1) Reweight
