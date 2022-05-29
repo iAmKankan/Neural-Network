@@ -107,7 +107,28 @@ Plugging the Gaussian kernel into (10.2.4) and (10.2.3) gives
  ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 To more efficiently compute attention for minibatches, we can leverage batch matrix multiplication utilities provided by deep learning frameworks.
 
-Suppose that the first minibatch contains **n** matrices **X<sub>1</sub>,..., X<sub>n</sub>** of shape **a &times b** , and the second minibatch contains **n** matrices **Y<sub>1</sub>,..., Y<sub>n</sub>** of shape **b &times c**. Their batch matrix multiplication results in **n** matrices **X<sub>1</sub>Y<sub>1</sub>,..., X<sub>n</sub>Y<sub>n</sub>** of shape **a &times c**. Therefore, given two tensors of shape **( n, a, b )** and **( n, b, c )**, the shape of their batch matrix multiplication output is **( n, a, c )**.
+Suppose that the first minibatch contains **n** matrices **X<sub>1</sub>,..., X<sub>n</sub>** of shape **a &times; b** , and the second minibatch contains **n** matrices **Y<sub>1</sub>,..., Y<sub>n</sub>** of shape **b &times; c**. Their batch matrix multiplication results in **n** matrices **X<sub>1</sub>Y<sub>1</sub>,..., X<sub>n</sub>Y<sub>n</sub>** of shape **a &times; c**. Therefore, given two tensors of shape **( n, a, b )** and **( n, b, c )**, the shape of their batch matrix multiplication output is **( n, a, c )**.
+
+## Summary
+![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
+* **Nadaraya-Watson** _kernel regression_ is an example of **_machine learning with attention mechanisms_**.
+* The attention pooling of **Nadaraya-Watson** kernel regression is a **weighted average** of the training outputs. From the attention perspective, the attention weight is assigned to a value based on a function of a query and the key that is paired with the value.
+* Attention pooling can be either nonparametric or parametric.
+
+
+## Attention Scoring Functions
+![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
+In the above we used a **Gaussian kernel** to model interactions between **queries** and **keys**. Treating the exponent of the Gaussian kernel in (10.2.6) as an attention scoring function (or scoring function for short), the results of this function were essentially fed into a softmax operation. As a result, we obtained a probability distribution (attention weights) over values that are paired with keys. In the end, the output of the attention pooling is simply a weighted sum of the values based on these attention weights.
+
+At a high level, we can use the above algorithm to instantiate the framework of attention mechanisms in Fig. 10.1.3. Denoting an attention scoring function by , Fig. 10.3.1 illustrates how the output of attention pooling can be computed as a weighted sum of values. Since attention weights are a probability distribution, the weighted sum is essentially a weighted average.
+
+
+
+
+
+
+
+
 
 ### Building blocks of attention
 * Followings are most important building blocks of attention.
