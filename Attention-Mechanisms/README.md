@@ -44,6 +44,15 @@ As shown in the following picture, we can design attention pooling so that the g
 
 <ins><i><b>Attention mechanisms bias selection over values (sensory inputs) via attention pooling, which incorporates queries (volitional cues) and keys (nonvolitional cues).</b></i></ins>
 
+## Summary: 
+![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
+* Human attention is a **limited**, **valuable**, and **scarce resource**.
+* Subjects selectively direct attention using both the **nonvolitional**(based on **saliency**) and **volitional cues**(task-dependent).
+* **Attention mechanisms** are different from **fully-connected layers** or **pooling layers** _due to inclusion of the_ **_volitional cues_**.
+* **Attention mechanisms** <ins>**_bias_**</ins> selection over **_values_** (_sensory inputs_) via **attention pooling**, which incorporates **queries** (_volitional cues_) and **keys** (_nonvolitional cues_). **Keys** and **values** are paired.
+* We can visualize **attention weights** between **queries** and **keys**.
+
+
 ## Attention Pooling: Nadaraya-Watson Kernel Regression
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 The interactions between queries (volitional cues) and keys (nonvolitional cues) result in attention pooling. The attention pooling selectively aggregates values (sensory inputs) to produce the output. 
