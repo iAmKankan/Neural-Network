@@ -103,6 +103,12 @@ Plugging the Gaussian kernel into (10.2.4) and (10.2.3) gives
 <img src="https://latex.codecogs.com/svg.image?\large&space;\\{\color{Purple}&space;f\mathbf{(x)=\sum^{n}_{i=1}\alpha(x,x_i)y_i,}}&space;\\{\color{Purple}&space;f\mathbf{(x)=\sum^{n}_{i=1}\frac{exp\left&space;(&space;-\frac{1}{2}\left&space;((x-x_i)w&space;\right&space;)^2\right&space;)}{\sum^{n}_{j=1}exp\left&space;(&space;-\frac{1}{2}\left&space;((x-x_i)w&space;\right&space;)^2\right&space;)}y_i,}}\\{\color{Purple}&space;f\mathbf{(x)=\sum^{n}_{i=1}softmax&space;\left&space;(&space;-\frac{1}{2}\left&space;((x-x_i)w&space;\right&space;)^2\right&space;)y_i}}&space;" title="https://latex.codecogs.com/svg.image?\large \\{\color{Purple} f\mathbf{(x)=\sum^{n}_{i=1}\alpha(x,x_i)y_i,}} \\{\color{Purple} f\mathbf{(x)=\sum^{n}_{i=1}\frac{exp\left ( -\frac{1}{2}\left ((x-x_i)w \right )^2\right )}{\sum^{n}_{j=1}exp\left ( -\frac{1}{2}\left ((x-x_i)w \right )^2\right )}y_i,}}\\{\color{Purple} f\mathbf{(x)=\sum^{n}_{i=1}softmax \left ( -\frac{1}{2}\left ((x-x_i)w \right )^2\right )y_i}} " />
 
 
+ ### Batch Matrix Multiplication
+ ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
+To more efficiently compute attention for minibatches, we can leverage batch matrix multiplication utilities provided by deep learning frameworks.
+
+Suppose that the first minibatch contains **n** matrices **X<sub>1</sub>,..., X<sub>n</sub>** of shape **a &times b** , and the second minibatch contains **n** matrices **Y<sub>1</sub>,..., Y<sub>n</sub>** of shape **b &times c**. Their batch matrix multiplication results in **n** matrices **X<sub>1</sub>Y<sub>1</sub>,..., X<sub>n</sub>Y<sub>n</sub>** of shape **a &times c**. Therefore, given two tensors of shape **( n, a, b )** and **( n, b, c )**, the shape of their batch matrix multiplication output is **( n, a, c )**.
+
 ### Building blocks of attention
 * Followings are most important building blocks of attention.
 1) Reweight
