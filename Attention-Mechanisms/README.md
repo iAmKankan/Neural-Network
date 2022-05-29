@@ -59,6 +59,7 @@ In this section, we will describe attention pooling in greater detail to give yo
 
 ### Generating the Dataset
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
+![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 Let us consider the following regression problem:  given a dataset of input-output pairs <img src="https://latex.codecogs.com/svg.image?{\color{Purple}&space;\mathbf{{(x_1,y_1),...,(x_n,y_n)}}}" title="https://latex.codecogs.com/svg.image?{\color{Purple} \mathbf{{(x_1,y_1),...,(x_n,y_n)}}}" align="center" />, how to learn <img src="https://latex.codecogs.com/svg.image?{\color{Purple}&space;\mathit{f}}" title="https://latex.codecogs.com/svg.image?{\color{Purple} \mathit{f}}" align="center" /> to predict the output <img src="https://latex.codecogs.com/svg.image?{\color{Purple}&space;\mathbf{\hat{y}&space;=&space;}f\mathbf{(x)}}" title="https://latex.codecogs.com/svg.image?{\color{Purple} \mathbf{\hat{y} = }f\mathbf{(x)}}" align="center"/> for any new input <img src="https://latex.codecogs.com/svg.image?{\color{Purple}&space;\mathbf{x}}" title="https://latex.codecogs.com/svg.image?{\color{Purple} \mathbf{x}}" align="center" />?
 
 Here we generate an artificial dataset according to the following nonlinear function with the noise term : <img src="https://latex.codecogs.com/svg.image?\large&space;{\color{Purple}&space;\mathbf{\epsilon&space;}}" title="https://latex.codecogs.com/svg.image?\large {\color{Purple} \mathbf{\epsilon }}" align="center" />.
@@ -68,10 +69,16 @@ Here we generate an artificial dataset according to the following nonlinear func
 where <img src="https://latex.codecogs.com/svg.image?\large&space;{\color{Purple}&space;\mathbf{\epsilon&space;}}" title="https://latex.codecogs.com/svg.image?\large {\color{Purple} \mathbf{\epsilon }}" align="center" /> obeys a normal distribution with zero mean and standard deviation 0.5. Both 50 training examples and 50 testing examples are generated. To better visualize the pattern of attention later, the training inputs are sorted.
 
 ### Average Pooling
+![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 We begin with perhaps the world’s “dumbest” estimator for this regression problem: using average pooling to average over all the training outputs:
 <img src="https://latex.codecogs.com/svg.image?\large&space;{\color{Purple}f&space;\mathbf{(x)=&space;\frac{1}{n}\sum_{i=1}^{n}y_i&space;}}" title="https://latex.codecogs.com/svg.image?\large {\color{Purple}f \mathbf{(x)= \frac{1}{n}\sum_{i=1}^{n}y_i }}" align="center" />
  
 which is plotted below. As we can see, this estimator is indeed not so smart.
+
+### Nonparametric Attention Pooling
+![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
+
+<img src="https://latex.codecogs.com/svg.image?\large&space;\large&space;{\color{Purple}f&space;\mathbf{(x)=&space;\sum_{i=1}^{n}\frac{K(x-x_i)}{\sum_{j=1}^{n}K(x-x_j)}y_i&space;}}" title="https://latex.codecogs.com/svg.image?\large \large {\color{Purple}f \mathbf{(x)= \sum_{i=1}^{n}\frac{K(x-x_i)}{\sum_{j=1}^{n}K(x-x_j)}y_i }}" />
 
 ### Building blocks of attention
 * Followings are most important building blocks of attention.
