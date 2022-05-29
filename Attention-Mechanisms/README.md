@@ -122,9 +122,9 @@ In the above we used a **Gaussian kernel** to model interactions between **queri
 
 At a high level, we can use the above algorithm to instantiate the framework of attention mechanisms in Fig. 10.1.3. Denoting an attention scoring function by , Fig. 10.3.1 illustrates how the output of attention pooling can be computed as a weighted sum of values. Since attention weights are a probability distribution, the weighted sum is essentially a weighted average.
 
-<img src="https://user-images.githubusercontent.com/12748752/170890210-d8b92410-afa4-493d-8500-a9e00a78b5f4.png" width=60% />
+<img src="https://user-images.githubusercontent.com/12748752/170890210-d8b92410-afa4-493d-8500-a9e00a78b5f4.png" width=90% />
 
-
+<ins><i><b>Computing the output of attention pooling as a weighted average of values.</b></i></ins>
 
 
 
