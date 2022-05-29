@@ -59,7 +59,7 @@ In this section, we will describe attention pooling in greater detail to give yo
 
 ### Generating the Dataset
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
-![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
+
 Let us consider the following regression problem:  given a dataset of input-output pairs <img src="https://latex.codecogs.com/svg.image?{\color{Purple}&space;\mathbf{{(x_1,y_1),...,(x_n,y_n)}}}" title="https://latex.codecogs.com/svg.image?{\color{Purple} \mathbf{{(x_1,y_1),...,(x_n,y_n)}}}" align="center" />, how to learn <img src="https://latex.codecogs.com/svg.image?{\color{Purple}&space;\mathit{f}}" title="https://latex.codecogs.com/svg.image?{\color{Purple} \mathit{f}}" align="center" /> to predict the output <img src="https://latex.codecogs.com/svg.image?{\color{Purple}&space;\mathbf{\hat{y}&space;=&space;}f\mathbf{(x)}}" title="https://latex.codecogs.com/svg.image?{\color{Purple} \mathbf{\hat{y} = }f\mathbf{(x)}}" align="center"/> for any new input <img src="https://latex.codecogs.com/svg.image?{\color{Purple}&space;\mathbf{x}}" title="https://latex.codecogs.com/svg.image?{\color{Purple} \mathbf{x}}" align="center" />?
 
 Here we generate an artificial dataset according to the following nonlinear function with the noise term : <img src="https://latex.codecogs.com/svg.image?\large&space;{\color{Purple}&space;\mathbf{\epsilon&space;}}" title="https://latex.codecogs.com/svg.image?\large {\color{Purple} \mathbf{\epsilon }}" align="center" />.
@@ -130,6 +130,8 @@ But where do these ***&alpha; <sub>(t,i)</sub>*** weights come from? It’s actu
 ### _EXPLAINABILITY:_
 One extra benefit of attention mechanisms is that they make it easier to understand what led the model to produce its output. This is called explainability. It can be especially useful when the model makes a mistake: for example, if an image of a dog walking in the snow is labeled as “a wolf walking in the snow,” then you can go back and check what the model focused on when it output the word “wolf.” You may find that it was paying attention not only to the dog, but also to the snow, hinting at a possible explanation: perhaps the way the model learned to distinguish dogs from wolves is by checking whether or not there’s a lot of snow around. You can then fix this by training the model with more images of wolves without snow, and dogs with snow. This example comes from a great 2016 paper by Marco Tulio Ribeiro et al. that uses a different approach to explainability: learning an interpretable model locally around a classifier’s prediction. In some applications, explainability is not just a tool to debug a model; it can be a legal requirement (think of a system deciding whether or not it should grant you a loan).
 
+## Todo
+* [Dive into DL](https://d2l.ai/chapter_attention-mechanisms/nadaraya-watson.html)
 
 ## References
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
