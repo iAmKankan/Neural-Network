@@ -21,7 +21,7 @@ Though originally proposed for **sequence to sequence learning** on **text data*
 As we can see, the **transformer** is composed of an **_encoder_** and a **_decoder_**. Different from [Bahdanau attention](https://github.com/iAmKankan/Neural-Network/blob/main/Attention-Mechanisms/bahdanau_attention.md) for _sequence to sequence learning_, the **input** (_source_) and **output** (_target_) **sequence embeddings** are added with [**positional encoding**](https://github.com/iAmKankan/Neural-Network/blob/main/Attention-Mechanisms/self-attention.md#-positional-encoding) before being fed into the **encoder** and the **decoder** that stack modules based on **self-attention**.
 
 <img src="https://user-images.githubusercontent.com/12748752/164050988-292430e3-b184-4942-a92e-f2297b1541d1.png" width=30%/>
-<ins><i>The transformer architecture</i></ins>.
+<p align="center"><ins><i>The transformer architecture</i></ins>.</p>
 
 ## The architecture in detail:
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
@@ -49,7 +49,8 @@ In a _machine translation_ application, it would take a sentence in one language
 ### 🔲 The Encoder
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 <img src="https://user-images.githubusercontent.com/12748752/171049973-6959aa04-a62b-4a5c-abbe-f2481462ea74.png" width=30%/>
-<ins><i>A single Encoder Block</i></ins>
+<p align="center"><ins><i>A single Encoder Block</i></ins></p>
+
 The **_transformer encoder_** is a stack of _multiple identical layers_ with **_residual connections_** and **_layer normalizations_**, where each layer has **two sublayers** (_either is denoted as sublayer_).
   * The first is a **multi-head self-attention pooling** and 
   * the second is a **positionwise feed-forward network**. 
@@ -62,7 +63,7 @@ The **_transformer encoder_** is a stack of _multiple identical layers_ with **_
 ### 🔲 The Decoder
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 <img src="https://user-images.githubusercontent.com/12748752/171049969-c7791fe9-5c19-4459-9bca-ca48944c7597.png" width=25%/>
-<ins><i>A single Decoder Block</i></ins>
+<p align="center"> <ins><i>A single Decoder Block</i></ins></p>
 
 The **_transformer decoder_** is also a stack of _multiple identical layers_ with **_residual connections_** and **_layer normalizations_**, the **decoder** inserts one more sublayer (total **three**), known as the **encoder-decoder attention**, between these two layers. 
 * In the **encoder-decoder attention** , **queries** are from the _outputs_ of the _previous decoder layer_, and the **keys** and **values** are from the **transformer encoder outputs**. 
