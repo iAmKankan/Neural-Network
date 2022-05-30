@@ -212,13 +212,13 @@ The Transformer model is a deep learning model that has been in the field for fi
 
 The encoders are all identical in structure (yet they do not share weights). Each one is broken down into two sub-layers:
 #### Each Encoder block having two components
-  1) A **Feedforward layer** or a **place holder**(**_RNN, LSTM, GRU_**)
+  1) A **Feedforward layer**
   2) A **Self-attention** layer
 The encoder’s inputs first flow through a **self-attention layer** – _a layer that helps the encoder look at other words in the input sentence as it encodes a specific word._
 
-The outputs of the **self-attention layer** are fed to a **feed-forward** or a **place holder**(**_RNN, LSTM, GRU_**) neural network. The exact same neural network is independently applied to each position.
+The outputs of the **self-attention layer** are fed to a **feed-forward** neural network. The exact same neural network is independently applied to each position.
 #### Each Decoder block having three components
-  1) A **Feedforward layer** or a **place holder**(**_RNN, LSTM, GRU_**)
+  1) A **Feedforward layer** 
   2) A **Self-attention** layer
   3) A **Encoder-Decoder Attention** layer
   
