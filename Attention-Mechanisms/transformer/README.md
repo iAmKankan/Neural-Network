@@ -48,7 +48,7 @@ In a _machine translation_ application, it would take a sentence in one language
 
 ### 🔲 The Encoder
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
-The **_transformer encoder_** is a stack of _multiple identical layers_, where each layer has **two sublayers** (_either is denoted as sublayer_).
+The **_transformer encoder_** is a stack of _multiple identical layers_ with **_residual connections_** and **_layer normalizations_**, where each layer has **two sublayers** (_either is denoted as sublayer_).
   * The first is a **multi-head self-attention pooling** and 
   * the second is a **positionwise feed-forward network**. 
 * Specifically, in the encoder **self-attention**- **queries**, **keys** and **values** are all from the the _outputs_ of the previous encoder layer. 
