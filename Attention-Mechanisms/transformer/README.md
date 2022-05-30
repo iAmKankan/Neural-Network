@@ -4,7 +4,7 @@
 
 ## ⬛ A Deep Dive Into the Transformer
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
-Unlike **self-attention** models that still rely on _RNNs_ for _input representations_, the **transformer model** is solely based on attention mechanisms without any _convolutional_ or _recurrent_ layer. 
+Unlike **self-attention** models that still rely on _RNNs_ for **_input representations_**, the **transformer model** is solely based on **_attention mechanisms_** without any **_convolutional_** or **_recurrent_** layer. 
 
 Though originally proposed for **sequence to sequence learning** on **text data**, transformers have been pervasive in a wide range of modern deep learning applications, such as in areas of **language**, **vision**, **speech**, and **reinforcement learning**.
 
