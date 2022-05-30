@@ -41,20 +41,24 @@ In a _machine translation_ application, it would take a sentence in one language
 ### <ins>Inside each Encoder-Decoder Stack</ins>
 <img src="https://user-images.githubusercontent.com/12748752/167968727-488848ff-40d1-49a9-99ad-61287bebba3e.png" width=80% align="center"/>
 
+
+### <ins>Inside each Encoder-Decoder Block</ins>
+<img src="https://user-images.githubusercontent.com/12748752/168034980-004fd235-28cb-4831-9523-76480b411e11.png" width=80% align="center"/> 
+
+
 ### 🔲 The Encoder
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
-We will start by taking a closer look at the encoder side, and discover what is happening at each step.
-
 The **_transformer encoder_** is a stack of _multiple identical layers_, where each layer has **two sublayers** (_either is denoted as sublayer_).
   * The first is a **multi-head self-attention pooling** and 
   * the second is a **positionwise feed-forward network**. 
-* Specifically, in the encoder **self-attention**, **queries**, **keys** and **values** are all from the the _outputs_ of the previous encoder layer. 
+* Specifically, in the encoder **self-attention**- **queries**, **keys** and **values** are all from the the _outputs_ of the previous encoder layer. 
 * Inspired by the **ResNet** design, a **residual connection** is employed around **both sublayers**. 
 * In the transformer, for any input <img src="https://latex.codecogs.com/gif.image?\dpi{110}{\color{Purple}&space;\mathbf{x&space;\in&space;\mathbb{R}^{d}}}&space;" title="https://latex.codecogs.com/gif.image?\dpi{110}{\color{Purple} \mathbf{x \in \mathbb{R}^{d}}} " align="center" /> at any position of the sequence, we require that <img src="https://latex.codecogs.com/gif.image?\dpi{110}{\color{Purple}&space;\mathbf{sublayer(x)&space;\in&space;\mathbb{R}^{d}}}&space;" title="https://latex.codecogs.com/gif.image?\dpi{110}{\color{Purple} \mathbf{sublayer(x) \in \mathbb{R}^{d}}} " align="center"/> so that the residual connection <img src="https://latex.codecogs.com/gif.image?\dpi{110}{\color{Purple}&space;\mathbf{x&plus;sublayer(x)&space;\in&space;\mathbb{R}^{d}}}&space;" title="https://latex.codecogs.com/gif.image?\dpi{110}{\color{Purple} \mathbf{x+sublayer(x) \in \mathbb{R}^{d}}} " align="center" /> is feasible. 
 * This addition from the _residual connection_ is immediately followed by **_layer normalization_**. 
 * As a result, the **transformer encoder** outputs a _d-dimensional vector_ representation for _each position_ of the input sequence.
 
-
+### 🔲 The Decoder
+![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 The **_transformer decoder_** is also a stack of _multiple identical layers_ with **_residual connections_** and **_layer normalizations_**. 
 * Besides the **two sublayers** described in the _encoder_, the **decoder** inserts **a third sublayer**, known as the **encoder-decoder attention**, between these two. 
 * In the **encoder-decoder** attention, **queries** are from the _outputs_ of the _previous decoder layer_, and the **keys** and **values** are from the **transformer encoder outputs**. 
@@ -175,7 +179,6 @@ The outputs of the **self-attention layer** are fed to a **feed-forward** or a *
   
 The decoder has both those layers, but between them is an **attention layer** that helps the decoder focus on relevant parts of the input sentence (_similar what attention does in seq2seq models_).
 
-<img src="https://user-images.githubusercontent.com/12748752/168034980-004fd235-28cb-4831-9523-76480b411e11.png" width=80%/> 
 
 <img src="https://user-images.githubusercontent.com/12748752/168195356-8a08298c-9157-4656-9464-0dd4f7d56145.png"/>
 
