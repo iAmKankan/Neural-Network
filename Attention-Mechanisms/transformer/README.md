@@ -59,8 +59,7 @@ The **_transformer encoder_** is a stack of _multiple identical layers_ with **_
 
 ### 🔲 The Decoder
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
-The **_transformer decoder_** is also a stack of _multiple identical layers_ with **_residual connections_** and **_layer normalizations_**. 
-* Besides the **two sublayers** described in the _encoder_, the **decoder** inserts **a third sublayer**, known as the **encoder-decoder attention**, between these two. 
+The **_transformer decoder_** is also a stack of _multiple identical layers_ with **_residual connections_** and **_layer normalizations_**, the **decoder** inserts one more sublayer (total ***three**), known as the **encoder-decoder attention**, between these two. 
 * In the **encoder-decoder** attention, **queries** are from the _outputs_ of the _previous decoder layer_, and the **keys** and **values** are from the **transformer encoder outputs**. 
 * In the decoder **self-attention**, **queries**, **keys**, and **values** are all from the the outputs of the **previous decoder layer**. 
 * However, each position in the decoder is allowed to only attend to all positions in the decoder up to that position.
