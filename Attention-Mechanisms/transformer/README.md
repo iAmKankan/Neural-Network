@@ -34,13 +34,12 @@ In a _machine translation_ application, it would take a sentence in one language
 
 ### <ins>The Encoder-Decoder Blocks</ins>
 * Inside the Transformer box, exist _Encoder-Decoder_ Blocks and a connection between them.
-* The encoding component is a stack of encoders (the paper stacks **six** of them on top of each other – there’s nothing magical about the number **6**, one can definitely experiment with other arrangements). The decoding component is a stack of decoders of the _same number_.
+* The **Encoding components** are in the stack of encoders (the paper stacks **six** of them on top of each other – there’s nothing magical about the number **6**, one can definitely experiment with other arrangements). The decoding components are in the stack of decoders of the _same number_(**6**).
 
-<img src="https://user-images.githubusercontent.com/12748752/164888115-281a74f2-971d-4eb3-8bcb-0bb58b35727b.png" width=80% align="left"/> <img src="https://user-images.githubusercontent.com/12748752/167968727-488848ff-40d1-49a9-99ad-61287bebba3e.png" width=80% align="right"/>
+<img src="https://user-images.githubusercontent.com/12748752/164888115-281a74f2-971d-4eb3-8bcb-0bb58b35727b.png" width=80% align="center"/> 
 
-### 🔲 Inside  _Encoder-Decoder_ Stack
-
-
+### <ins>Inside each Encoder-Decoder Stack</ins>
+<img src="https://user-images.githubusercontent.com/12748752/167968727-488848ff-40d1-49a9-99ad-61287bebba3e.png" width=80% align="center"/>
 
 ### 🔲 The Encoder
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
