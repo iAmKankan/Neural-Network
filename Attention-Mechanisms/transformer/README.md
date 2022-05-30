@@ -48,6 +48,8 @@ In a _machine translation_ application, it would take a sentence in one language
 
 ### 🔲 The Encoder
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
+<img src="https://user-images.githubusercontent.com/12748752/171049973-6959aa04-a62b-4a5c-abbe-f2481462ea74.png" width=30%/>
+<ins><i>A single Encoder Block</i></ins>
 The **_transformer encoder_** is a stack of _multiple identical layers_ with **_residual connections_** and **_layer normalizations_**, where each layer has **two sublayers** (_either is denoted as sublayer_).
   * The first is a **multi-head self-attention pooling** and 
   * the second is a **positionwise feed-forward network**. 
@@ -59,9 +61,12 @@ The **_transformer encoder_** is a stack of _multiple identical layers_ with **_
 
 ### 🔲 The Decoder
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
-The **_transformer decoder_** is also a stack of _multiple identical layers_ with **_residual connections_** and **_layer normalizations_**, the **decoder** inserts one more sublayer (total ***three**), known as the **encoder-decoder attention**, between these two. 
-* In the **encoder-decoder** attention, **queries** are from the _outputs_ of the _previous decoder layer_, and the **keys** and **values** are from the **transformer encoder outputs**. 
-* In the decoder **self-attention**, **queries**, **keys**, and **values** are all from the the outputs of the **previous decoder layer**. 
+<img src="https://user-images.githubusercontent.com/12748752/171049969-c7791fe9-5c19-4459-9bca-ca48944c7597.png" width=25%/>
+<ins><i>A single Decoder Block</i></ins>
+
+The **_transformer decoder_** is also a stack of _multiple identical layers_ with **_residual connections_** and **_layer normalizations_**, the **decoder** inserts one more sublayer (total **three**), known as the **encoder-decoder attention**, between these two layers. 
+* In the **encoder-decoder attention** , **queries** are from the _outputs_ of the _previous decoder layer_, and the **keys** and **values** are from the **transformer encoder outputs**. 
+* In the decoder **self-attention**- **queries**, **keys**, and **values** are all from the the outputs of the **previous decoder layer**. 
 * However, each position in the decoder is allowed to only attend to all positions in the decoder up to that position.
 * This **masked attention** preserves the **auto-regressive** property, ensuring that the _prediction only depends on those output tokens that have been generated_.
 
