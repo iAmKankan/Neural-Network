@@ -225,7 +225,6 @@ The outputs of the **self-attention layer** are fed to a **feed-forward** neural
 The decoder has both those layers, but between them is an **attention layer** that helps the decoder focus on relevant parts of the input sentence (_similar what attention does in seq2seq models_).
 
 
-<img src="https://user-images.githubusercontent.com/12748752/168195356-8a08298c-9157-4656-9464-0dd4f7d56145.png"/>
 
 
 ### 🔲 Embedding Algorithm
