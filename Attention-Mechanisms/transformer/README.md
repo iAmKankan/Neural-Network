@@ -12,8 +12,30 @@ Though originally proposed for **sequence to sequence learning** on **text data*
 ### The Model
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 <img src="https://user-images.githubusercontent.com/12748752/164050988-292430e3-b184-4942-a92e-f2297b1541d1.png" width=30%/>
+<ins>The transformer architecture.</ins>
 
-As we can see, the **transformer** is composed of an **_encoder_** and a **_decoder_**. Different from [Bahdanau attention](https://github.com/iAmKankan/Neural-Network/blob/main/Attention-Mechanisms/bahdanau_attention.md) for _sequence to sequence learning_, the **input** (_source_) and **output** (_target_) sequence embeddings are added with **positional encoding** before being fed into the **encoder** and the **decoder** that stack modules based on **self-attention**.
+As we can see, the **transformer** is composed of an **_encoder_** and a **_decoder_**. Different from [Bahdanau attention](https://github.com/iAmKankan/Neural-Network/blob/main/Attention-Mechanisms/bahdanau_attention.md) for _sequence to sequence learning_, the **input** (_source_) and **output** (_target_) **sequence embeddings** are added with **positional encoding** before being fed into the **encoder** and the **decoder** that stack modules based on **self-attention**.
+
+#### <ins>The architecture</ins>:
+**On a high level**, 
+The **_transformer encoder_** is a stack of _multiple identical layers_, where each layer has **two sublayers** (_either is denoted as sublayer_).
+  * The first is a **multi-head self-attention pooling** and 
+  * the second is a **positionwise feed-forward network**. 
+* Specifically, in the encoder **self-attention**, **queries**, **keys** and **values** are all from the the _outputs_ of the previous encoder layer. 
+* Inspired by the **ResNet** design, a **residual connection** is employed around **both sublayers**. 
+* In the transformer, for any input <img src="https://latex.codecogs.com/gif.image?\dpi{110}{\color{Purple}&space;\mathbf{x&space;\in&space;\mathbb{R}^{d}}}&space;" title="https://latex.codecogs.com/gif.image?\dpi{110}{\color{Purple} \mathbf{x \in \mathbb{R}^{d}}} " align="center" /> at any position of the sequence, we require that <img src="https://latex.codecogs.com/gif.image?\dpi{110}{\color{Purple}&space;\mathbf{sublayer(x)&space;\in&space;\mathbb{R}^{d}}}&space;" title="https://latex.codecogs.com/gif.image?\dpi{110}{\color{Purple} \mathbf{sublayer(x) \in \mathbb{R}^{d}}} " align="center"/> so that the residual connection <img src="https://latex.codecogs.com/gif.image?\dpi{110}{\color{Purple}&space;\mathbf{x&plus;sublayer(x)&space;\in&space;\mathbb{R}^{d}}}&space;" title="https://latex.codecogs.com/gif.image?\dpi{110}{\color{Purple} \mathbf{x+sublayer(x) \in \mathbb{R}^{d}}} " align="center" /> is feasible. 
+* This addition from the _residual connection_ is immediately followed by **_layer normalization_**. 
+* As a result, the **transformer encoder** outputs a _d-dimensional vector_ representation for _each position_ of the input sequence.
+
+
+The **_transformer decoder_** is also a stack of _multiple identical layers_ with **_residual connections_** and **_layer normalizations_**. 
+* Besides the **two sublayers** described in the _encoder_, the **decoder** inserts **a third sublayer**, known as the **encoder-decoder attention**, between these two. 
+* In the **encoder-decoder** attention, **queries** are from the _outputs_ of the _previous decoder layer_, and the **keys** and **values** are from the **transformer encoder outputs**. 
+* In the decoder **self-attention**, **queries**, **keys**, and **values** are all from the the outputs of the **previous decoder layer**. 
+* However, each position in the decoder is allowed to only attend to all positions in the decoder up to that position.
+* This **masked attention** preserves the **auto-regressive** property, ensuring that the _prediction only depends on those output tokens that have been generated_.
+
+We have already described and implemented multi-head attention based on [scaled dot-products](https://github.com/iAmKankan/Neural-Network/blob/main/Attention-Mechanisms/multi-head.md) and [positional encoding](https://github.com/iAmKankan/Neural-Network/blob/main/Attention-Mechanisms/self-attention.md#-positional-encoding). 
 
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 Here, the classical example of translating from _English to French_ using the transformer is considered. Input sentence is as such <img src="https://latex.codecogs.com/svg.image?{\color{Purple}\mathbf{I\&space;am\&space;a\&space;student}&space;}&space;&space;" title="https://latex.codecogs.com/svg.image?{\color{Purple}\mathbf{I\ am\ a\ student} } " />, and the expected output is <img src="https://latex.codecogs.com/svg.image?{\color{Purple}\mathbf{Je\&space;suis\&space;un\&space;\acute{e}tudiant}&space;}&space;" title="https://latex.codecogs.com/svg.image?{\color{Purple}\mathbf{Je\ suis\ un\ \acute{e}tudiant} }" />.
