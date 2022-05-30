@@ -5,9 +5,9 @@
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 The architecture of the **_transformer_** model inspires from the **attention mechanism** used in the **encoder-decoder** architecture in **RNNs** to handle s**equence-to-sequence (seq2seq)** tasks.
 
-Unlike [**self-attention**](https://github.com/iAmKankan/Neural-Network/blob/main/Attention-Mechanisms/self-attention.md#-self-attention-and-positional-encoding), models that still rely on _RNNs_ for **_input representations_**, the **transformer model** is solely based on **_attention mechanisms_** without any **_convolutional_** or **_recurrent_** layer. 
+Unlike [**self-attention models**](https://github.com/iAmKankan/Neural-Network/blob/main/Attention-Mechanisms/self-attention.md#-self-attention-and-positional-encoding),  that still rely on _RNNs_ for **_input representations_**, the **transformer model** is solely based on **_attention mechanisms_** without any **_convolutional_** or **_recurrent_** layer. 
 
-Transformer eliminates the factor of **sequentiality**; meaning that, unlike _RNNs_, _the transformer does not process data in_ **_sequence (i.e. in order)_**, which allows for **_more_** [**_parallelization_**](https://github.com/iAmKankan/MachineLearning_With_Python/blob/master/README.md#parallelization) and [**_reduces training time_**](https://github.com/iAmKankan/Data-Structure/blob/main/complexity.md).
+Transformer eliminates the factor of **sequentiality**; meaning that, unlike _RNNs_, _the transformer does not process data in_ **_sequence (i.e. in order)_**, which allows for **more** [**_parallelization_**](https://github.com/iAmKankan/MachineLearning_With_Python/blob/master/README.md#parallelization) and **reduces** [**_training time_**](https://github.com/iAmKankan/Data-Structure/blob/main/complexity.md).
 
 ### 🔲 Types of Transformers:
 <img src="https://user-images.githubusercontent.com/12748752/167986704-ca5cb1fe-7730-4b61-a9f5-1aee7dbaa9e9.png" width=70%/>
