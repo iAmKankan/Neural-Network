@@ -17,5 +17,13 @@ This design is called **_multi-head attention_**, where each **_h_** of the  att
 <img src="https://user-images.githubusercontent.com/12748752/170055315-b69b2b13-f3a5-44c6-8a6a-6a4655359f80.png" width=60%/>
 <p align="center"><ins><i><b>Multi-head attention, where multiple heads are concatenated then linearly transformed.</b></i></ins></p>
 
+### Model
+![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
+Let us formalize this model mathematically. 
+
+Given a **query** <img src="https://latex.codecogs.com/svg.image?{\color{Purple}\mathbf{q&space;\in&space;\mathbb{R}^{d_q}}&space;}" title="https://latex.codecogs.com/svg.image?{\color{Purple}\mathbf{q \in \mathbb{R}^{d_q}} }" align="center"/> , **a key** <img src="https://latex.codecogs.com/svg.image?{\color{Purple}\mathbf{k&space;\in&space;\mathbb{R}^{d_k}}&space;}" title="https://latex.codecogs.com/svg.image?{\color{Purple}\mathbf{k \in \mathbb{R}^{d_k}} }" /> , and **a value**  <img src="https://latex.codecogs.com/svg.image?{\color{Purple}\mathbf{v&space;\in&space;\mathbb{R}^{d_v}}&space;}" title="https://latex.codecogs.com/svg.image?{\color{Purple}\mathbf{v \in \mathbb{R}^{d_v}} }" align="center" /> , each attention head <img src="https://latex.codecogs.com/svg.image?{\color{Purple}\mathbf{h_i(i=1,\dots,&space;h)}&space;}" title="https://latex.codecogs.com/svg.image?{\color{Purple}\mathbf{h_i(i=1,\dots, h)} }" align="center"/> is computed as
+
+## Summary:
+![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 * **_Multi-head attention_** combines knowledge of the same **attention pooling** via different representation subspaces of **queries**, **keys**, and **values**.
 * To compute multiple heads of multi-head attention in parallel, proper tensor manipulation is needed. 
