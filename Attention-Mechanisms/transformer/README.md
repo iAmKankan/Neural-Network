@@ -95,54 +95,24 @@ In a _machine translation_ application, it would take a sentence in one language
 * This addition from the _residual connection_ is immediately followed by **_layer normalization_**. 
 * As a result, the **transformer encoder** outputs a _d-dimensional vector_ representation for _each position_ of the input sequence.
 
-### 🔲 The Decoder
-![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
-<img src="https://user-images.githubusercontent.com/12748752/171049969-c7791fe9-5c19-4459-9bca-ca48944c7597.png" width=25%/>
-<p align="center"> <ins><i>A single Decoder Block</i></ins></p>
-
-The **_transformer decoder_** is also a stack of _multiple identical layers_ with **_residual connections_** and **_layer normalizations_**, the **decoder** inserts one more sublayer (total **three**), known as the **encoder-decoder attention**, between these two layers. 
-* In the **encoder-decoder attention** , **queries** are from the _outputs_ of the _previous decoder layer_, and the **keys** and **values** are from the **transformer encoder outputs**. 
-* In the decoder **self-attention**- **queries**, **keys**, and **values** are all from the the outputs of the **previous decoder layer**. 
-* However, each position in the decoder is allowed to only attend to all positions in the decoder up to that position.
-* This **masked attention** preserves the **auto-regressive** property, ensuring that the _prediction only depends on those output tokens that have been generated_.
-
-We have already described and implemented multi-head attention based on [scaled dot-products](https://github.com/iAmKankan/Neural-Network/blob/main/Attention-Mechanisms/multi-head.md) and [positional encoding](https://github.com/iAmKankan/Neural-Network/blob/main/Attention-Mechanisms/self-attention.md#-positional-encoding). 
-
-![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
-
-
-
-
-
-
-
-### 🔲 The Encoder
-![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
-We will start by taking a closer look at the encoder side, and discover what is happening at each step.
-
-### _◼️ The input_
-The raw data is an english text, however the transformer, like any other model, does not understand english language and, thus, the text is processed to convert every word into a **_unique numeric ID_**. 
+### <ins>_The input_</ins>
+The raw data is an english text( in this particular scenario), however the transformer, like any other model, does not understand english language and thus, _the text is processed to convert every word into a_ **_unique numeric ID_**. 
 
 This is done by using a specific dictionary of vocabulary, which can be generated from the training data, and that maps each word to a **numeric index**.
-> Figure 2: Numerical Representation of the Raw Text (Image by Author)
- 
-### _◼️ Embedding Layer_
-As in other models, the transformer uses learned embeddings to transform the input tokens into vectors of dimension **d = 512**. During training, the model updates the numbers in the vectors to better represent the input tokens.
 
-> Figure 3: Embeddings of d=512 by The Embedding Layer (Image by Author)
+### <ins>_Embedding Layer_</ins>
+As in other models, the transformer uses learned embeddings to transform the **input tokens** into **vectors of dimension d = 512**. During training, the model updates the numbers in the vectors to better represent the input tokens
 
-### _◼️ Positional Encoding_
-One aspect that differentiates the _transformer_ from previous _sequence models_ is that **it does not take the input embeddings sequentially**; on the contrary, **it takes in all the embeddings at once.** This allows for **parallelization** and **significantly decreases training time**. However, the drawback is that it loses the important information related to **words' order**. 
+### <ins>_Positional Encoding_</ins>
+* Refer to the [**Positional Encoding** in self-Attention page](https://github.com/iAmKankan/Neural-Network/blob/main/Attention-Mechanisms/self-attention.md#-positional-encoding)
 
-For the model to preserve the advantage of words' order, **positional encodings** are added to the **input embeddings**. Since the positional encodings and embeddings are summed up, they both have the same dimension of d = 512. There are different ways to choose positional encodings; the creators of the transformer used sine and cosine functions to obtain the positional encodings. 
+![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 
-_At even dimension_ indices the sine formula is applied and _at odd dimension_ indices the cosine formula is applied. 
-> Figure 4, shows the formulas used to obtain the positional encodings.
 
-<img src="https://latex.codecogs.com/svg.image?\large&space;\\{\color{Purple}\mathbf{PE_{(pos,\&space;2i)}=sin\left&space;(pos/10000^{2i/d_{model}}\right&space;)}}&space;\\{\color{Purple}\mathbf{PE_{(pos,\&space;2i&plus;1)}=cos\left&space;(pos/10000^{2i/d_{model}}\right&space;)}}" title="https://latex.codecogs.com/svg.image?\large \\{\color{Purple}\mathbf{PE_{(pos,\ 2i)}=sin\left (pos/10000^{2i/d_{model}}\right )}} \\{\color{Purple}\mathbf{PE_{(pos,\ 2i+1)}=cos\left (pos/10000^{2i/d_{model}}\right )}}" />  <img src="https://latex.codecogs.com/svg.image?\begin{cases}{\color{Purple}\mathbf{pos}}=&space;\textrm{The&space;current&space;position}&space;\\&space;{\color{Purple}\mathbf{2i}}=&space;\textrm{Dimention&space;Index}&space;\\{\color{Purple}\mathbf{d_{model}}}=&space;\textrm{Dimention&space;=&space;512}&space;\end{cases}" title="https://latex.codecogs.com/svg.image?\begin{cases}{\color{Purple}\mathbf{pos}}= \textrm{The current position} \\ {\color{Purple}\mathbf{2i}}= \textrm{Dimention Index} \\{\color{Purple}\mathbf{d_{model}}}= \textrm{Dimention = 512} \end{cases}" align="right"/>
 
-<ins> Positional Encodings Formula</ins>
-> Adding Positional Encodings to the Embeddings to Generate Positional Embeddings (ep) (Image by Author)
+
+
+
 
 
 ### 🔲 The Multi-Head Attention Layer — Self-Attention
@@ -176,6 +146,20 @@ The different attention-based matrices generated from the different heads are co
 #### Residual Connections, Add & Norm and the Feed-Forward Network
 
 As one can notice from figure 1, the architecture includes residual connections (RC). The residual connections' goal is avoid loss of important information found in old information by allowing these information to bypass the multi-head attention layer. Therefore, the positional embeddings are added to the output of the multi-head attention and then normalized (Add & Norm) before passing it into a regular feed-forward network.
+
+
+### 🔲 The Decoder
+![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
+<img src="https://user-images.githubusercontent.com/12748752/171049969-c7791fe9-5c19-4459-9bca-ca48944c7597.png" width=25%/>
+<p align="center"> <ins><i>A single Decoder Block</i></ins></p>
+
+The **_transformer decoder_** is also a stack of _multiple identical layers_ with **_residual connections_** and **_layer normalizations_**, the **decoder** inserts one more sublayer (total **three**), known as the **encoder-decoder attention**, between these two layers. 
+* In the **encoder-decoder attention** , **queries** are from the _outputs_ of the _previous decoder layer_, and the **keys** and **values** are from the **transformer encoder outputs**. 
+* In the decoder **self-attention**- **queries**, **keys**, and **values** are all from the the outputs of the **previous decoder layer**. 
+* However, each position in the decoder is allowed to only attend to all positions in the decoder up to that position.
+* This **masked attention** preserves the **auto-regressive** property, ensuring that the _prediction only depends on those output tokens that have been generated_.
+
+We have already described and implemented multi-head attention based on [scaled dot-products](https://github.com/iAmKankan/Neural-Network/blob/main/Attention-Mechanisms/multi-head.md) and [positional encoding](https://github.com/iAmKankan/Neural-Network/blob/main/Attention-Mechanisms/self-attention.md#-positional-encoding).
 
 ### 🔲 The Decoder
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
