@@ -1,21 +1,31 @@
 ## Index
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 
-
-## ⬛ A Deep Dive Into the Transformer
+## ⬛ Transformer
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
-Unlike **self-attention** models that still rely on _RNNs_ for **_input representations_**, the **transformer model** is solely based on **_attention mechanisms_** without any **_convolutional_** or **_recurrent_** layer. 
+The architecture of the **_transformer_** model inspires from the **attention mechanism** used in the **encoder-decoder** architecture in **RNNs** to handle s**equence-to-sequence (seq2seq)** tasks.
+
+Unlike [**self-attention**](https://github.com/iAmKankan/Neural-Network/blob/main/Attention-Mechanisms/self-attention.md#-self-attention-and-positional-encoding), models that still rely on _RNNs_ for **_input representations_**, the **transformer model** is solely based on **_attention mechanisms_** without any **_convolutional_** or **_recurrent_** layer. 
+
+Transformer eliminates the factor of **sequentiality**; meaning that, unlike _RNNs_, _the transformer does not process data in_ **_sequence (i.e. in order)_**, which allows for **_more_** [**_parallelization_**](https://github.com/iAmKankan/MachineLearning_With_Python/blob/master/README.md#parallelization) and [**_reduces training time_**](https://github.com/iAmKankan/Data-Structure/blob/main/complexity.md).
+
+### 🔲 Types of Transformers:
+<img src="https://user-images.githubusercontent.com/12748752/167986704-ca5cb1fe-7730-4b61-a9f5-1aee7dbaa9e9.png" width=70%/>
+
+## ⬛ Transformer
+![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
+
 
 Though originally proposed for **sequence to sequence learning** on **text data**, transformers have been pervasive in a wide range of modern deep learning applications, such as in areas of **language**, **vision**, **speech**, and **reinforcement learning**.
 
 ### The Model
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
-As we can see, the **transformer** is composed of an **_encoder_** and a **_decoder_**. Different from [Bahdanau attention](https://github.com/iAmKankan/Neural-Network/blob/main/Attention-Mechanisms/bahdanau_attention.md) for _sequence to sequence learning_, the **input** (_source_) and **output** (_target_) **sequence embeddings** are added with [**positional encoding**](https://github.com/iAmKankan/Neural-Network/blob/main/Attention-Mechanisms/self-attention.md#-positional-encoding) before being fed into the **encoder** and the **decoder** that stack modules based on [**self-attention**](https://github.com/iAmKankan/Neural-Network/blob/main/Attention-Mechanisms/self-attention.md#-self-attention-and-positional-encoding).
+As we can see, the **transformer** is composed of an **_encoder_** and a **_decoder_**. Different from [Bahdanau attention](https://github.com/iAmKankan/Neural-Network/blob/main/Attention-Mechanisms/bahdanau_attention.md) for _sequence to sequence learning_, the **input** (_source_) and **output** (_target_) **sequence embeddings** are added with [**positional encoding**](https://github.com/iAmKankan/Neural-Network/blob/main/Attention-Mechanisms/self-attention.md#-positional-encoding) before being fed into the **encoder** and the **decoder** that stack modules based on **self-attention**.
 
 <img src="https://user-images.githubusercontent.com/12748752/164050988-292430e3-b184-4942-a92e-f2297b1541d1.png" width=30%/>
-<ins>The transformer architecture.</ins>
+<ins><i>The transformer architecture</i></ins>.
 
-#### <ins>The architecture</ins>:
+### <ins>The architecture</ins>:
 The **_transformer encoder_** is a stack of _multiple identical layers_, where each layer has **two sublayers** (_either is denoted as sublayer_).
   * The first is a **multi-head self-attention pooling** and 
   * the second is a **positionwise feed-forward network**. 
@@ -126,14 +136,7 @@ The Transformer model is a deep learning model that has been in the field for fi
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 
-## ⬛ Transformer
-![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
-The architecture of the **_transformer_** model inspires from the **attention mechanism** used in the **encoder-decoder** architecture in **RNNs** to handle s**equence-to-sequence (seq2seq)** tasks.
 
-But it eliminates the factor of **sequentiality**; meaning that, unlike _RNNs_, _the transformer does not process data in sequence (i.e. in order)_, which allows for **_more_** [**_parallelization_**](https://github.com/iAmKankan/MachineLearning_With_Python/blob/master/README.md#parallelization) and **_reduces training time_**.
-
-### 🔲 Types of Transformers:
-<img src="https://user-images.githubusercontent.com/12748752/167986704-ca5cb1fe-7730-4b61-a9f5-1aee7dbaa9e9.png" width=70%/>
 
 ### 🔲 As a _Blackbox_
 In a machine translation application, it would take a sentence in one language, and output its translation in another.
