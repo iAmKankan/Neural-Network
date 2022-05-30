@@ -9,6 +9,8 @@ Unlike [**self-attention models**](https://github.com/iAmKankan/Neural-Network/b
 
 Transformer eliminates the factor of **sequentiality**; meaning that, unlike _RNNs_, _the transformer does not process data in_ **_sequence (i.e. in order)_**, which allows for **more** [**_parallelization_**](https://github.com/iAmKankan/MachineLearning_With_Python/blob/master/README.md#parallelization) and **reduces** [**_training time_**](https://github.com/iAmKankan/Data-Structure/blob/main/complexity.md).
 
+Though originally proposed for **sequence to sequence learning** on **text data**, _transformers_ have been pervasive in a wide range of modern deep learning applications, such as in areas of **language**, **vision**, **speech**, and **reinforcement learning**.
+
 ### 🔲 Types of Transformers:
 <img src="https://user-images.githubusercontent.com/12748752/167986704-ca5cb1fe-7730-4b61-a9f5-1aee7dbaa9e9.png" width=70%/>
 
@@ -16,7 +18,6 @@ Transformer eliminates the factor of **sequentiality**; meaning that, unlike _RN
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 
 
-Though originally proposed for **sequence to sequence learning** on **text data**, transformers have been pervasive in a wide range of modern deep learning applications, such as in areas of **language**, **vision**, **speech**, and **reinforcement learning**.
 
 ### The Model
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
