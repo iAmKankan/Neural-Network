@@ -11,12 +11,8 @@ Transformer eliminates the factor of **sequentiality**; meaning that, unlike _RN
 
 Though originally proposed for **sequence to sequence learning** on **text data**, _transformers_ have been pervasive in a wide range of modern deep learning applications, such as in areas of **language**, **vision**, **speech**, and **reinforcement learning**.
 
-### 🔲 Types of Transformers:
+### 🔲 Classification of Transformers:
 <img src="https://user-images.githubusercontent.com/12748752/167986704-ca5cb1fe-7730-4b61-a9f5-1aee7dbaa9e9.png" width=70%/>
-
-## ⬛ Transformer
-![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
-
 
 
 ### The Model
