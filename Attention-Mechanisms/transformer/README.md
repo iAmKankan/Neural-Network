@@ -11,13 +11,12 @@ Though originally proposed for **sequence to sequence learning** on **text data*
 
 ### The Model
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
+As we can see, the **transformer** is composed of an **_encoder_** and a **_decoder_**. Different from [Bahdanau attention](https://github.com/iAmKankan/Neural-Network/blob/main/Attention-Mechanisms/bahdanau_attention.md) for _sequence to sequence learning_, the **input** (_source_) and **output** (_target_) **sequence embeddings** are added with **positional encoding** before being fed into the **encoder** and the **decoder** that stack modules based on **self-attention**.
+
 <img src="https://user-images.githubusercontent.com/12748752/164050988-292430e3-b184-4942-a92e-f2297b1541d1.png" width=30%/>
 <ins>The transformer architecture.</ins>
 
-As we can see, the **transformer** is composed of an **_encoder_** and a **_decoder_**. Different from [Bahdanau attention](https://github.com/iAmKankan/Neural-Network/blob/main/Attention-Mechanisms/bahdanau_attention.md) for _sequence to sequence learning_, the **input** (_source_) and **output** (_target_) **sequence embeddings** are added with **positional encoding** before being fed into the **encoder** and the **decoder** that stack modules based on **self-attention**.
-
 #### <ins>The architecture</ins>:
-**On a high level**, 
 The **_transformer encoder_** is a stack of _multiple identical layers_, where each layer has **two sublayers** (_either is denoted as sublayer_).
   * The first is a **multi-head self-attention pooling** and 
   * the second is a **positionwise feed-forward network**. 
