@@ -75,6 +75,45 @@ We have already described and implemented multi-head attention based on [scaled 
 
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 ### ◼️ 1) <ins>_Positionwise Feed-Forward Networks_</ins> 
+The **positionwise feed-forward network** transforms the representation at all the sequence positions using the same **Multilayer Perceptron**(MLP). This is why we call it positionwise. In the implementation below, the input **X** with shape (batch size, number of time steps or sequence length in tokens, number of hidden units or feature dimension) will be transformed by a two-layer MLP into an output tensor of shape (batch size, number of time steps, ffn_num_outputs).
+
+```Python
+#@save
+class PositionWiseFFN(tf.keras.layers.Layer):
+    """Positionwise feed-forward network."""
+    def __init__(self, ffn_num_hiddens, ffn_num_outputs, **kwargs):
+        super().__init__(*kwargs)
+        self.dense1 = tf.keras.layers.Dense(ffn_num_hiddens)
+        self.relu = tf.keras.layers.ReLU()
+        self.dense2 = tf.keras.layers.Dense(ffn_num_outputs)
+
+    def call(self, X):
+        return self.dense2(self.relu(self.dense1(X)))
+        
+ffn = PositionWiseFFN(4, 8)
+ffn(tf.ones((2, 3, 4)))[0]
+```        
+
+### 2) <ins>_Residual Connection and Layer Normalization_</ins> 
+Now let us focus on the “add & norm” component in Fig. 10.7.1. As we described at the beginning of this section, this is a residual connection immediately followed by layer normalization. Both are key to effective deep architectures.
+
+In Section 7.5, we explained how batch normalization recenters and rescales across the examples within a minibatch. Layer normalization is the same as batch normalization except that the former normalizes across the feature dimension. Despite its pervasive applications in computer vision, batch normalization is usually empirically less effective than layer normalization in natural language processing tasks, whose inputs are often variable-length sequences.
+
+The following code snippet compares the normalization across different dimensions by layer normalization and batch normalization.
+
+### Summary
+![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
+* The transformer is an instance of the encoder-decoder architecture, though either the encoder or the decoder can be used individually in practice.
+* In the transformer, multi-head self-attention is used for representing the input sequence and the output sequence, though the decoder has to preserve the auto-regressive property via a masked version.
+* Both the residual connections and the layer normalization in the transformer are important for training a very deep model.
+* The positionwise feed-forward network in the transformer model transforms the representation at all the sequence positions using the same MLP.
+
+
+
+
+
+
+
 
 ### 🔲 The Encoder
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
