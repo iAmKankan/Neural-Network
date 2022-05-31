@@ -208,11 +208,11 @@ Next, we’ll switch up the example to a shorter sentence and we’ll look at wh
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 ## ⬛ Self-Attention at a High Level
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
-> "_Attention is All You Need_" this paper first showed us the concept of “**_self-attention_**”.
+### "_Attention is All You Need_" this paper first showed us the concept of “**_self-attention_**”.
 ### <ins>How does it work</ins>
 #### Input sentence : "<img src="https://latex.codecogs.com/svg.image?{\color{Purple}&space;\textbf{\textrm&space;{The&space;animal&space;didn't&space;cross&space;the&space;street&space;because&space;it&space;was&space;too&space;tired}}}" title="https://latex.codecogs.com/svg.image?{\color{Purple} \textbf{\textrm {The animal didn't cross the street because it was too tired}}}" align="center" /> "
 
-What does “**it**” in this sentence refer to?  Is it referring to the street or to the animal? 
+> #### What does “**it**” in this sentence refer to?  Is it referring to the street or to the animal? 
 * It’s a simple question to a human, but not as simple to an algorithm.
 
 #### When the model is processing the word “**it**”, self-attention allows it to associate “**it**” with “**animal**”.
@@ -220,10 +220,6 @@ What does “**it**” in this sentence refer to?  Is it referring to the street
 As the model processes each word (each position in the input sequence), self attention allows it to look at other positions in the input sequence for clues that can help lead to a better encoding for this word.
 
 If you’re familiar with RNNs, think of how maintaining a hidden state allows an RNN to incorporate its representation of previous words/vectors it has processed with the current one it’s processing. Self-attention is the method the Transformer uses to bake the “understanding” of other relevant words into the one we’re currently processing.
-
-
-
-
 
 
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
