@@ -200,7 +200,7 @@ Next, we’ll switch up the example to a shorter sentence and we’ll look at wh
 * As we’ve mentioned already, an **encoder** receives a _list of vectors as input_. 
 * It processes this list by passing these vectors into a ‘**self-attention**’ layer, then into a **feed-forward neural network**, then sends out the output upwards to the next encoder.
 
-<img src="https://user-images.githubusercontent.com/12748752/171093005-300c9b35-ee50-44f0-9d73-1cefc56067ca.png" width=50%/>
+<img src="https://user-images.githubusercontent.com/12748752/171093005-300c9b35-ee50-44f0-9d73-1cefc56067ca.png" width=80%/>
 
 <p align="center"><i><ins><b>The word at each position passes through a **self-attention** process. Then, they each pass through a feed-forward neural network -- the exact same network with each vector flowing through it separately.</b></ins></i></p>
 
@@ -209,16 +209,24 @@ Next, we’ll switch up the example to a shorter sentence and we’ll look at wh
 ## ⬛ Self-Attention at a High Level
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 " Attention is All You Need" this paper first showed us the concept of “self-attention”.
+### <ins>How does it work</ins>
 #### Input sentence : "<img src="https://latex.codecogs.com/svg.image?{\color{Purple}&space;\textbf{\textrm&space;{The&space;animal&space;didn't&space;cross&space;the&space;street&space;because&space;it&space;was&space;too&space;tired}}}" title="https://latex.codecogs.com/svg.image?{\color{Purple} \textbf{\textrm {The animal didn't cross the street because it was too tired}}}" align="center" /> "
+What does “it” in this sentence refer to? Is it referring to the street or to the animal? It’s a simple question to a human, but not as simple to an algorithm.
+
+When the model is processing the word “it”, self-attention allows it to associate “it” with “animal”.
+
+As the model processes each word (each position in the input sequence), self attention allows it to look at other positions in the input sequence for clues that can help lead to a better encoding for this word.
+
+If you’re familiar with RNNs, think of how maintaining a hidden state allows an RNN to incorporate its representation of previous words/vectors it has processed with the current one it’s processing. Self-attention is the method the Transformer uses to bake the “understanding” of other relevant words into the one we’re currently processing.
+
+
+
+
+
 
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 
-
-
-
-
-
-
+![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 
 ## The Transformer Architecture
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
