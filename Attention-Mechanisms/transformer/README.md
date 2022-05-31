@@ -70,14 +70,14 @@ As in other models, the transformer uses learned embeddings to transform the **i
 
 ### <ins>_Positional Encoding_</ins>
 * Refer to the [**Positional Encoding** in self-Attention page](https://github.com/iAmKankan/Neural-Network/blob/main/Attention-Mechanisms/self-attention.md#-positional-encoding)
+### <ins>_The Multi-Head Attention Layer — Self-Attention_</ins>
+An attention function can be described as mapping a query and a set of key-value pairs to an output, where the query, keys, values, and output are all vectors. The output is computed as a weighted sum of the values, where the weight assigned to each value is computed by a compatibility function of the query with the corresponding key.
+
+<img src="https://user-images.githubusercontent.com/12748752/171082932-d39bfe4b-8ae6-4f93-b6ee-3b8d53e1a4bb.png" width=50%/>
+
+<p align="center"><ins><i><b>(left) Scaled Dot-Product Attention. (right) Multi-Head Attention consists of several attention layers running in parallel.</b></i></ins>.</p>
 
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
-
-
-
-
-
-
 
 
 ### 🔲 The Multi-Head Attention Layer — Self-Attention
@@ -113,6 +113,9 @@ The different attention-based matrices generated from the different heads are co
 As one can notice from figure 1, the architecture includes residual connections (RC). The residual connections' goal is avoid loss of important information found in old information by allowing these information to bypass the multi-head attention layer. Therefore, the positional embeddings are added to the output of the multi-head attention and then normalized (Add & Norm) before passing it into a regular feed-forward network.
 
 
+![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
+
+
 ### 🔲 The Decoder
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 <img src="https://user-images.githubusercontent.com/12748752/171049969-c7791fe9-5c19-4459-9bca-ca48944c7597.png" width=25%/>
@@ -126,20 +129,18 @@ The **_transformer decoder_** is also a stack of _multiple identical layers_ wit
 
 We have already described and implemented multi-head attention based on [scaled dot-products](https://github.com/iAmKankan/Neural-Network/blob/main/Attention-Mechanisms/multi-head.md) and [positional encoding](https://github.com/iAmKankan/Neural-Network/blob/main/Attention-Mechanisms/self-attention.md#-positional-encoding).
 
-### 🔲 The Decoder
-![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
-The decoder side has a lot of shared components with the encoder side. Therefore, this section will not be as detailed as the previous one. The main differences between the decoder and the encoder are that the decoder takes in two inputs, and applies multi-head attention twice with one of them being "masked". Also, the final linear layer in the decoder has the size (i.e. number of units) equal to the number of words in the target dictionary (in this case the french language dictionary). Each unit will be assigned a score; the softmax is applied to convert these scores into probabilities indicating the probability of each word to be present in the output.
+* The main differences between the decoder and the encoder are that the **decoder** takes in **two inputs** and applies **_multi-head attention_** _twice_ with one of them being "**masked**". 
+* Also, the **final linear layer** in the decoder has the size (i.e. number of units) equal to the number of words in the target dictionary (in this case the french language dictionary). Each unit will be assigned a score; the softmax is applied to convert these scores into probabilities indicating the probability of each word to be present in the output.
 
-### _◼️ The input_
+### <ins>_The input_</ins>
 The decoder takes in two inputs:
 
-1. **The output of the encoder** — these are the keys (K) and the values (V) that the decoder performs multi-head attention on (the second multi-head attention in figure 1). In this multi-head attention layer, the query (Q) is the output of the masked multi-head attention.
-2. **The output text shifted to the right** — This is to ensure that predictions at a specific position "i" can only depend at positions less than i (see figure 10). Therefore, the decoder will take in all words already predicted (position 0 to i-1) before the actual word to be predicted at position i. Note that the first generated word passed to the decoder is the token `<start>` and the prediction process continues until the decoder generates a special end token `<eos>`.
-
+1. **The output of the encoder** — these are the **keys (K)** and the **values (V)** that the decoder performs **multi-head attention on** . In this **multi-head attention layer**, the **query (Q)** is the output of the masked multi-head attention.
+2. **The output text shifted to the right** — This is to ensure that predictions at a specific position **"i"** can only depend at positions less than **i** (see figure below). Therefore, the decoder will take in all words already predicted (position **0 to i-1**) before the actual word to be predicted at position **i**. Note that the first generated word passed to the decoder is the token `<start>` and the prediction process continues until the decoder generates a special end token `<eos>`.
 
  <img src="https://user-images.githubusercontent.com/12748752/169290757-0d143632-7fd4-45af-857e-c25ee5db6ed9.gif" />
 
- <ins>Outputs Shifted by Right as Inputs to the Decoder In the Inference Stage</ins>[...Image by 'Kheirie Elhariri](https://towardsdatascience.com/attention-is-all-you-need-e498378552f9) 
+ <p align="center"><ins>Outputs Shifted by Right as Inputs to the Decoder In the Inference Stage</ins></p>[...Image by 'Kheirie Elhariri](https://towardsdatascience.com/attention-is-all-you-need-e498378552f9) 
  
  
  ### _◼️ Masked Multi-Head Attention_
