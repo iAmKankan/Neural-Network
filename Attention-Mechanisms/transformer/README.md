@@ -150,13 +150,8 @@ The process of the masked multi-head attention is similar to that of the regular
  ### 🔲 The Conclusion
 The Transformer model is a deep learning model that has been in the field for five years now, and that has lead to several top performing and state of the art models such as the BERT model. Giving its dominance in the field of NLP and its expanding usage in other fields such as computer vision, it is important to understand its architecture. This article covers the different components of the transformer and highlights their functionalities.
  
- 
-
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
-
- 
-
 
 ### 🔲 The individual _Encoder-Decoder_ Blocks
 <img src="https://user-images.githubusercontent.com/12748752/164050988-292430e3-b184-4942-a92e-f2297b1541d1.png" align="right" width=25% />
@@ -176,32 +171,39 @@ The outputs of the **self-attention layer** are fed to a **feed-forward** neural
 The decoder has both those layers, but between them is an **attention layer** that helps the decoder focus on relevant parts of the input sentence (_similar what attention does in seq2seq models_).
 
 
+![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
+![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 
-
-### 🔲 Embedding Algorithm
+## ⬛ Embedding Algorithm
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
+
 Let’s start to look at the various **vectors**/**tensors** and how they flow between the _above components_ to turn the _input of a trained model into an output_.
-
-As is the case in NLP applications in general, we begin by turning each input word into a **vector** using an **_embedding algorithm_**.
-
 <img src="https://user-images.githubusercontent.com/12748752/168201541-73b96f67-a6b5-4b72-9201-4a26dfd7670a.png" width=80%/>
 
 <p align="center"><i><ins><b> Each word is embedded into a vector of size 512. We'll represent those vectors with these simple boxes</b></ins></i></p>
 
-The embedding only happens in the **bottom-most encoder**. The abstraction that is common to all the encoders is that they receive a list of vectors each of the size 512 – In the bottom encoder that would be the word embeddings, but in other encoders, it would be the output of the encoder that’s directly below. The size of this list is hyperparameter we can set – basically it would be the length of the longest sentence in our training dataset.
-
-After embedding the words in our input sequence, each of them flows through each of the two layers of the encoder.
+* As is the case in NLP applications in general, we begin by turning each input word into a **vector** using an **_embedding algorithm_**.
+* The _embedding only happens_ in the **bottom-most encoder**. 
+* It is common to all the **encoders** is that they receive a **list of vectors each of the size 512** – In the bottom encoder that would be the **word embeddings**, but in **other encoders**, it would be the output of the encoder that’s directly below. 
+* The size of this list is **hyperparameter** we can set – **_basically it would be the length of the longest sentence in our training dataset_**.
+* After embedding the words in our **input sequence**, each of them flows through each of the two layers of the encoder.
 
 <img src="https://user-images.githubusercontent.com/12748752/168204497-97f950e0-ad92-4037-a076-3eaf07196dcb.png" width=80% />
 
-Here we begin to see one key property of the Transformer, which is that the word in each position flows through its own path in the encoder. There are dependencies between these paths in the self-attention layer. The feed-forward layer does not have those dependencies, however, and thus the various paths can be executed in parallel while flowing through the feed-forward layer.
+#### _Important Notes_:
+* One key property of the **Transformer**, _the word in each position flows through its own path in the encoder_. There are dependencies between these paths in the **self-attention layer**. 
+* The **feed-forward layer** does not have those dependencies, how ever and thus the various paths can be executed in parallel while flowing through the feed-forward layer.
 
 Next, we’ll switch up the example to a shorter sentence and we’ll look at what happens in each sub-layer of the encoder.
 
 ### 🔲 Now We’re Encoding!
-As we’ve mentioned already, an encoder receives a list of vectors as input. It processes this list by passing these vectors into a ‘self-attention’ layer, then into a feed-forward neural network, then sends out the output upwards to the next encoder.
+* As we’ve mentioned already, an **encoder** receives a _list of vectors as input_. 
+* It processes this list by passing these vectors into a ‘**self-attention**’ layer, then into a **feed-forward neural network**, then sends out the output upwards to the next encoder.
 
-> #### The word at each position passes through a **self-attention** process. Then, they each pass through a feed-forward neural network -- the exact same network with each vector flowing through it separately.
+<img src="https://user-images.githubusercontent.com/12748752/171093005-300c9b35-ee50-44f0-9d73-1cefc56067ca.png" width=50%/>
+
+<p align="center"><i><ins><b>The word at each position passes through a **self-attention** process. Then, they each pass through a feed-forward neural network -- the exact same network with each vector flowing through it separately.</b></ins></i></p>
+
 
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 ## ⬛ Self-Attention at a High Level
