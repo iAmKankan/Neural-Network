@@ -179,13 +179,14 @@ The decoder has both those layers, but between them is an **attention layer** th
 
 
 ### 🔲 Embedding Algorithm
+![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 Let’s start to look at the various **vectors**/**tensors** and how they flow between the _above components_ to turn the _input of a trained model into an output_.
 
-As is the case in NLP applications in general, we begin by turning each input word into a vector using an embedding algorithm.
+As is the case in NLP applications in general, we begin by turning each input word into a **vector** using an **_embedding algorithm_**.
 
 <img src="https://user-images.githubusercontent.com/12748752/168201541-73b96f67-a6b5-4b72-9201-4a26dfd7670a.png" width=80%/>
 
-#####  <i><ins> Each word is embedded into a vector of size 512. We'll represent those vectors with these simple boxes</ins></i>
+<p align="center"><i><ins><b> Each word is embedded into a vector of size 512. We'll represent those vectors with these simple boxes</b></ins></i></p>
 
 The embedding only happens in the **bottom-most encoder**. The abstraction that is common to all the encoders is that they receive a list of vectors each of the size 512 – In the bottom encoder that would be the word embeddings, but in other encoders, it would be the output of the encoder that’s directly below. The size of this list is hyperparameter we can set – basically it would be the length of the longest sentence in our training dataset.
 
