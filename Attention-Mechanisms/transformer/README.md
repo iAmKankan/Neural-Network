@@ -214,9 +214,23 @@ Next, we’ll switch up the example to a shorter sentence and we’ll look at wh
 
 > #### What does “**it**” in this sentence refer to?  Is it referring to the street or to the animal? It’s a simple question to a human, but not as simple to an algorithm. 
 
-When the model is processing the word “**it**”, self-attention allows it to associate “**it**” with “**animal**”. As the model processes each word (each position in the input sequence), **self attention** allows it to look at other positions in the input sequence for clues that can help lead to a better encoding for this word.
+* When the model is processing the word “**it**”, **self-attention** allows it to associate “**it**” with “**animal**”.
+* As the model processes each _word_ (each position in the input sequence), **self attention** allows it to look at _other positions_ in the input sequence for clues that can help lead to a better encoding for this word.
+* In **RNNs**, think of how maintaining a hidden state allows an **RNN** to incorporate its representation of previous words/vectors it has processed with the current one it’s processing. 
+* Self-attention is the method the Transformer uses to bake the “**understanding**” of other relevant words into the one we’re currently processing.
 
-If you’re familiar with RNNs, think of how maintaining a hidden state allows an RNN to incorporate its representation of previous words/vectors it has processed with the current one it’s processing. Self-attention is the method the Transformer uses to bake the “understanding” of other relevant words into the one we’re currently processing.
+## ⬛ Self-Attention in Detail
+![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
+Let’s first look at how to calculate self-attention using vectors, then proceed to look at how it’s actually implemented – using matrices.
+### <ins>self-attention using vectors</ins>
+* **The first step** in calculating self-attention is to create **three vectors** from each of the encoder’s input vectors (_in this case, the embedding of each word_). So for each word, we create a **Query vector**, a **Key vector**, and a **Value vector**. 
+* These vectors are created by multiplying the embedding by three matrices that we trained during the training process.
+
+> Notice that these new vectors are smaller in dimension than the embedding vector. Their dimensionality is 64, while the embedding and encoder input/output vectors have dimensionality of 512. They don’t HAVE to be smaller, this is an architecture choice to make the computation of multiheaded attention (mostly) constant.
+
+
+
+
 
 
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
