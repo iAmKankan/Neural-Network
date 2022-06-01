@@ -271,11 +271,13 @@ This **softmax** score determines how much each word will be expressed at this p
 The first step is to calculate the Query, Key, and Value matrices. We do that by packing our embeddings into a matrix **X**, and multiplying it by the weight matrices we’ve trained (**WQ**, **WK**, **WV**).
 
 <img src="https://user-images.githubusercontent.com/12748752/171481646-a1d00cb5-1915-4b40-bce6-d53202402b0e.png" width=60%/>
+<p align="center" ><ins><i><b>Every row in the X matrix corresponds to a word in the input sentence. We again see the difference in size of the embedding vector (512, or 4 boxes in the figure), and the q/k/v vectors (64, or 3 boxes in the figure)</b></i></ins></p>
 
 #### <ins>Finally</ins>:
 Finally, since we’re dealing with **matrices**, we can condense steps two through six in one formula to calculate the outputs of the self-attention layer.
-<img src="https://user-images.githubusercontent.com/12748752/171481640-20367973-a9d1-4512-89b3-5039371a6bd5.png" width=60%/>
 
+<img src="https://user-images.githubusercontent.com/12748752/171481640-20367973-a9d1-4512-89b3-5039371a6bd5.png" width=60%/>
+<p align="center" ><ins><i><b>The self-attention calculation in matrix form</b></i></ins></p>
 
 
 
