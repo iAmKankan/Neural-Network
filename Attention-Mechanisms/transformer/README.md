@@ -243,10 +243,14 @@ Let’s first look at how to calculate self-attention using vectors, then procee
    * _We need to score each word of the input sentence against this word._ 
    * The score determines how much focus to place on other parts of the input sentence as we encode a word at a certain position.
 
-The score is calculated by taking the dot product of the **_query vector_** with the key vector of the respective word we’re scoring. So if we’re processing the self-attention for the word in position **#1**, the first score would be the dot product of **q1** and **k1**. The second score would be the dot product of q1 and k2.
+The score is calculated by taking the dot product of the **_query vector_** with the key vector of the respective word we’re scoring. So if we’re processing the **self-attention** for the word in _position_ **#1**, the first score would be the dot product of **q1** and **k1**. The second score would be the dot product of **q1** and **k2**.
+
+<img src="https://user-images.githubusercontent.com/12748752/171481656-e8230d49-a591-4563-9437-3c875973db1d.png" width=60%/>
 
 #### <ins>The third and fourth steps</ins>:
 These steps are to divide the scores by **8** (_the square root of the dimension of the key vectors used in the paper – 64. This leads to having more stable gradients. There could be other possible values here, but this is the default_), then pass the result through a **softmax** operation. **Softmax** **_normalizes_** the scores so they’re all positive and add up to **1**.
+
+<img src="https://user-images.githubusercontent.com/12748752/171481652-6564521c-42a2-4c24-a773-c2f30a4eebeb.png" width=60%/>
 
 This **softmax** score determines how much each word will be expressed at this position. Clearly the word at this position will have the highest **softmax** score, but sometimes it’s useful to attend to another word that is relevant to the current word.
 
@@ -255,19 +259,22 @@ This **softmax** score determines how much each word will be expressed at this p
 * The intuition here is to keep intact the values of the word(s) we want to focus on, and drown-out irrelevant words (_by multiplying them by tiny numbers like 0.001, for example_).
 
 #### <ins>The sixth step</ins>:
-
 * The sixth step is to _sum up_ the **_weighted value vectors_**. This produces the **output** of the **self-attention** layer at this position (_for the first word_).
 * That concludes the self-attention calculation. 
 * The resulting vector is one we can send along to the **feed-forward neural network**. 
 * In the actual implementation, however, this calculation is done in matrix form for faster processing. 
 * So let’s look at that now that we’ve seen the intuition of the calculation on the word level.
+<img src="https://user-images.githubusercontent.com/12748752/171481649-61f756c0-5ad7-49a1-9b01-10aa30776769.png" width=60%/>
 
 ### <ins><i>Matrix Calculation of Self-Attention</i></ins>:
 #### <ins>The first step</ins>:
 The first step is to calculate the Query, Key, and Value matrices. We do that by packing our embeddings into a matrix **X**, and multiplying it by the weight matrices we’ve trained (**WQ**, **WK**, **WV**).
 
+<img src="https://user-images.githubusercontent.com/12748752/171481646-a1d00cb5-1915-4b40-bce6-d53202402b0e.png" width=60%/>
+
 #### <ins>Finally</ins>:
 Finally, since we’re dealing with **matrices**, we can condense steps two through six in one formula to calculate the outputs of the self-attention layer.
+<img src="https://user-images.githubusercontent.com/12748752/171481640-20367973-a9d1-4512-89b3-5039371a6bd5.png" width=60%/>
 
 
 
