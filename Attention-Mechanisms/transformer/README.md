@@ -218,20 +218,28 @@ Next, we’ll switch up the example to a shorter sentence and we’ll look at wh
 * As the model processes each _word_ (each position in the input sequence), **self attention** allows it to look at _other positions_ in the input sequence for clues that can help lead to a better encoding for this word.
 * In **RNNs**, think of how maintaining a hidden state allows an **RNN** to incorporate its representation of previous words/vectors it has processed with the current one it’s processing. 
 * Self-attention is the method the Transformer uses to bake the “**understanding**” of other relevant words into the one we’re currently processing.
+<img src="https://user-images.githubusercontent.com/12748752/171284998-28585e5b-fd1b-4303-8be1-61938921aa75.png" width= 50%/>
 
 ## ⬛ Self-Attention in Detail
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 Let’s first look at how to calculate self-attention using vectors, then proceed to look at how it’s actually implemented – using matrices.
 ### <ins>self-attention using vectors</ins>
 * **The first step** in calculating self-attention is to create **three vectors** from each of the encoder’s input vectors (_in this case, the embedding of each word_). So for each word, we create a **Query vector**, a **Key vector**, and a **Value vector**. 
-* These vectors are created by multiplying the embedding by three matrices that we trained during the training process.
+* These vectors are created by **multiplying the embedding** by **three matrices** that we trained during the training process.
 
 > Notice that these new vectors are smaller in dimension than the embedding vector. Their dimensionality is 64, while the embedding and encoder input/output vectors have dimensionality of 512. They don’t HAVE to be smaller, this is an architecture choice to make the computation of multiheaded attention (mostly) constant.
 
+<img src="https://user-images.githubusercontent.com/12748752/171284991-437781f4-ab77-47f9-bf73-64296d190174.png" width= 50%/>
 
+<p align="center"><i><ins><b>Multiplying x1 by the WQ weight matrix produces q1, the "query" vector associated with that word. We end up creating a "query", a "key", and a "value" projection of each word in the input sentence.</b></ins></i></p>
 
+### <ins>What are the “query”, “key”, and “value” vectors</ins>?
 
+They’re abstractions that are useful for calculating and thinking about attention. Once you proceed with reading how attention is calculated below, you’ll know pretty much all you need to know about the role each of these vectors plays.
 
+The second step in calculating self-attention is to calculate a score. Say we’re calculating the self-attention for the first word in this example, “Thinking”. We need to score each word of the input sentence against this word. The score determines how much focus to place on other parts of the input sentence as we encode a word at a certain position.
+
+The score is calculated by taking the dot product of the query vector with the key vector of the respective word we’re scoring. So if we’re processing the self-attention for the word in position #1, the first score would be the dot product of q1 and k1. The second score would be the dot product of q1 and k2.
 
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 
