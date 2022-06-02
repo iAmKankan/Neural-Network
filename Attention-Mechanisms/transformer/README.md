@@ -45,7 +45,7 @@ In a _machine translation_ application, it would take a sentence in one language
 ### <ins>Inside each Encoder-Decoder Block</ins>
 <img src="https://user-images.githubusercontent.com/12748752/168034980-004fd235-28cb-4831-9523-76480b411e11.png" width=80% align="center"/> 
 
-### <ins>Inside each Encoder-Decoder Block</ins>
+### <ins>Embedding</ins>
 Let’s start to look at the various **vectors**/**tensors** and how they flow between the _above components_ to turn the _input of a trained model into an output_.
 <img src="https://user-images.githubusercontent.com/12748752/168201541-73b96f67-a6b5-4b72-9201-4a26dfd7670a.png" width=80%/>
 
@@ -62,9 +62,6 @@ Let’s start to look at the various **vectors**/**tensors** and how they flow b
 #### _Important Notes_:
 * One key property of the **Transformer**, _the word in each position flows through its own path in the encoder_. There are dependencies between these paths in the **self-attention layer**. 
 * The **feed-forward layer** does not have those dependencies, how ever and thus the various paths can be executed in parallel while flowing through the feed-forward layer.
-
-Next, we’ll switch up the example to a shorter sentence and we’ll look at what happens in each sub-layer of the encoder.
-
 
 
 ### 🔲 The Encoder
