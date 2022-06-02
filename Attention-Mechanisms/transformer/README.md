@@ -76,7 +76,7 @@ Let’s start to look at the various **vectors**/**tensors** and how they flow b
 <p align="center"><i><ins><b>The word at each position passes through a self-attention process. Then, they each pass through a feed-forward neural network -- the exact same network with each vector flowing through it separately.</b></ins></i></p>
 
 <img src="https://user-images.githubusercontent.com/12748752/171049973-6959aa04-a62b-4a5c-abbe-f2481462ea74.png" width=30%/>
-<p align="center"><ins><i>A single Encoder Block</i></ins></p>
+<p align="center"><ins><i><b>A single Encoder Block</b></i></ins></p>
 
 * The **_transformer encoder_** is a stack of _multiple identical layers_ with **_residual connections_** and **_layer normalizations_**, where each layer has **two sublayers** (_either is denoted as sublayer_).
     * The first is a **multi-head self-attention pooling** and 
