@@ -299,13 +299,16 @@ How do we do that? We concat the matrices then multiply them by an additional we
 <img src="https://user-images.githubusercontent.com/12748752/171481663-3a2c2ffd-8c20-4aab-a9e7-7758d8f11e38.png" width=60%/>
 
 That’s pretty much all there is to multi-headed self-attention. It’s quite a handful of matrices, I realize. Let me try to put them all in one visual so we can look at them in one place
+
 <img src="https://user-images.githubusercontent.com/12748752/171481659-b9a340f1-5cec-4479-aadc-fe73acec3283.png" width=60%/>
 
 Now that we have touched upon attention heads, let’s revisit our example from before to see where the different attention heads are focusing as we encode the word “it” in our example sentence:
+
 <img src="https://user-images.githubusercontent.com/12748752/171727414-6f6a4a3f-cb1d-4910-bb68-5f72c66b8c05.png" width=60%/>
 <ins><b><i>As we encode the word "it", one attention head is focusing most on "the animal", while another is focusing on "tired" -- in a sense, the model's representation of the word "it" bakes in some of the representation of both "animal" and "tired".</i></b></ins>
 
 If we add all the attention heads to the picture, however, things can be harder to interpret:
+
 <img src="https://user-images.githubusercontent.com/12748752/171727404-c3c0f61a-3653-4bf5-9d82-bd6f257e5339.png" width=60%/>
 
 ## Representing The Order of The Sequence Using Positional Encoding
@@ -318,6 +321,7 @@ To address this, the transformer adds a vector to each input embedding. These ve
 <ins><b><i>To give the model a sense of the order of the words, we add positional encoding vectors -- the values of which follow a specific pattern</i></b></ins>
 
 If we assumed the embedding has a dimensionality of 4, the actual positional encodings would look like this:
+
 <img src="https://user-images.githubusercontent.com/12748752/171743545-4abd6f3d-e5b1-47fd-afa9-c68bcc41a04d.png" width=60%/>
 
 What might this pattern look like?
@@ -337,9 +341,11 @@ One detail in the architecture of the encoder that we need to mention before mov
 <img src="https://user-images.githubusercontent.com/12748752/171743538-2e08ce92-68d8-438d-bdf3-2536c2000a6a.png" width=60%/>
 
 If we’re to visualize the vectors and the layer-norm operation associated with self attention, it would look like this:
+
 <img src="https://user-images.githubusercontent.com/12748752/171743535-263f3f2a-06d1-443e-9307-cb09e8d14004.png" width=60%/>
 
 This goes for the sub-layers of the decoder as well. If we’re to think of a Transformer of 2 stacked encoders and decoders, it would look something like this:
+
 <img src="https://user-images.githubusercontent.com/12748752/171743529-09aedc03-34fa-424e-954f-9e1ad039e1ac.png" width=60%/>
 
 
