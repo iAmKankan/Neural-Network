@@ -304,12 +304,12 @@ That’s pretty much all there is to multi-headed self-attention. It’s quite a
 
 Now that we have touched upon attention heads, let’s revisit our example from before to see where the different attention heads are focusing as we encode the word “it” in our example sentence:
 
-<img src="https://user-images.githubusercontent.com/12748752/171727414-6f6a4a3f-cb1d-4910-bb68-5f72c66b8c05.png" width=60%/>
+<img src="https://user-images.githubusercontent.com/12748752/171727414-6f6a4a3f-cb1d-4910-bb68-5f72c66b8c05.png" width=40%/>
 <ins><b><i>As we encode the word "it", one attention head is focusing most on "the animal", while another is focusing on "tired" -- in a sense, the model's representation of the word "it" bakes in some of the representation of both "animal" and "tired".</i></b></ins>
 
 If we add all the attention heads to the picture, however, things can be harder to interpret:
 
-<img src="https://user-images.githubusercontent.com/12748752/171727404-c3c0f61a-3653-4bf5-9d82-bd6f257e5339.png" width=60%/>
+<img src="https://user-images.githubusercontent.com/12748752/171727404-c3c0f61a-3653-4bf5-9d82-bd6f257e5339.png" width=40%/>
 
 ## Representing The Order of The Sequence Using Positional Encoding
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
