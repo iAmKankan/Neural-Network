@@ -59,7 +59,7 @@ Let’s start to look at the various **vectors**/**tensors** and how they flow b
 
 <img src="https://user-images.githubusercontent.com/12748752/168204497-97f950e0-ad92-4037-a076-3eaf07196dcb.png" width=80% />
 
-#### _Important Notes_:
+### <ins>_Important Notes_</ins>:
 * One key property of the **Transformer**, _the word in each position flows through its own path in the encoder_. There are dependencies between these paths in the **self-attention layer**. 
 * The **feed-forward layer** does not have those dependencies, how ever and thus the various paths can be executed in parallel while flowing through the feed-forward layer.
 
