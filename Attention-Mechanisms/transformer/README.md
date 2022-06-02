@@ -285,7 +285,23 @@ The paper further refined the **self-attention** layer by adding a mechanism cal
 * It expands the model’s ability to focus on different positions. Yes, in the example above, **z1** contains a little bit of every other encoding, but it could be dominated by the the actual word itself. It would be useful if we’re translating a sentence like “_The animal didn’t cross the street because it was too tired_”, we would want to know which word “it” refers to.
 * It gives the attention layer multiple “**representation subspaces**”. As we’ll see next, with multi-headed attention we have not only one, but multiple sets of **Query**/**Key**/**Value** weight matrices (the Transformer uses eight attention heads, so we end up with eight sets for each encoder/decoder). Each of these sets is randomly initialized. Then, after training, each set is used to project the input embeddings (or vectors from lower encoders/decoders) into a different representation subspace.
 
+<img src="https://user-images.githubusercontent.com/12748752/171481637-fadbcd00-b01d-4d2d-9ecc-9b7e43e7e39f.png" width=60%/>
 
+<p align="center" ><ins><i><b>With multi-headed attention, we maintain separate Q/K/V weight matrices for each head resulting in different Q/K/V matrices. As we did before, we multiply X by the WQ/WK/WV matrices to produce Q/K/V matrices.</b></i></ins></p>
+
+If we do the same self-attention calculation we outlined above, just eight different times with different weight matrices, we end up with eight different Z matrices
+<img src="https://user-images.githubusercontent.com/12748752/171481622-3238a862-c630-4711-b13c-39215b45a2cb.png" width=60%/>
+
+This leaves us with a bit of a challenge. The feed-forward layer is not expecting eight matrices – it’s expecting a single matrix (a vector for each word). So we need a way to condense these eight down into a single matrix.
+
+How do we do that? We concat the matrices then multiply them by an additional weights matrix WO.
+
+<img src="https://user-images.githubusercontent.com/12748752/171481663-3a2c2ffd-8c20-4aab-a9e7-7758d8f11e38.png" width=60%/>
+
+That’s pretty much all there is to multi-headed self-attention. It’s quite a handful of matrices, I realize. Let me try to put them all in one visual so we can look at them in one place
+<img src="https://user-images.githubusercontent.com/12748752/171481659-b9a340f1-5cec-4479-aadc-fe73acec3283.png" width=60%/>
+
+Now that we have touched upon attention heads, let’s revisit our example from before to see where the different attention heads are focusing as we encode the word “it” in our example sentence:
 
 
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
