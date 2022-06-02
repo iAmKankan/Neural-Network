@@ -279,6 +279,13 @@ Finally, since we’re dealing with **matrices**, we can condense steps two thro
 <img src="https://user-images.githubusercontent.com/12748752/171481640-20367973-a9d1-4512-89b3-5039371a6bd5.png" width=60%/>
 <p align="center" ><ins><i><b>The self-attention calculation in matrix form</b></i></ins></p>
 
+## Multi-Headed Attention
+![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
+The paper further refined the **self-attention** layer by adding a mechanism called “**multi-headed**” attention. This improves the performance of the attention layer in **two ways**:
+* It expands the model’s ability to focus on different positions. Yes, in the example above, **z1** contains a little bit of every other encoding, but it could be dominated by the the actual word itself. It would be useful if we’re translating a sentence like “_The animal didn’t cross the street because it was too tired_”, we would want to know which word “it” refers to.
+* It gives the attention layer multiple “**representation subspaces**”. As we’ll see next, with multi-headed attention we have not only one, but multiple sets of **Query**/**Key**/**Value** weight matrices (the Transformer uses eight attention heads, so we end up with eight sets for each encoder/decoder). Each of these sets is randomly initialized. Then, after training, each set is used to project the input embeddings (or vectors from lower encoders/decoders) into a different representation subspace.
+
+
 
 
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
