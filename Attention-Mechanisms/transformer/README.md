@@ -296,33 +296,12 @@ That’s pretty much all there is to multi-headed self-attention. It’s quite a
 Now that we have touched upon attention heads, let’s revisit our example from before to see where the different attention heads are focusing as we encode the word “it” in our example sentence:
 
 <img src="https://user-images.githubusercontent.com/12748752/171727414-6f6a4a3f-cb1d-4910-bb68-5f72c66b8c05.png" width=40%/>
-<ins><b><i>As we encode the word "it", one attention head is focusing most on "the animal", while another is focusing on "tired" -- in a sense, the model's representation of the word "it" bakes in some of the representation of both "animal" and "tired".</i></b></ins>
+<p align="center"><ins><b><i>As we encode the word "it", one attention head is focusing most on "the animal", while another is focusing on "tired" -- in a sense, the model's representation of the word "it" bakes in some of the representation of both "animal" and "tired".</i></b></ins></p>
 
 If we add all the attention heads to the picture, however, things can be harder to interpret:
 
 <img src="https://user-images.githubusercontent.com/12748752/171727404-c3c0f61a-3653-4bf5-9d82-bd6f257e5339.png" width=40%/>
 
-## Representing The Order of The Sequence Using Positional Encoding
-![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
-One thing that’s missing from the model as we have described it so far is a way to account for the order of the words in the input sequence.
-
-To address this, the transformer adds a vector to each input embedding. These vectors follow a specific pattern that the model learns, which helps it determine the position of each word, or the distance between different words in the sequence. The intuition here is that adding these values to the embeddings provides meaningful distances between the embedding vectors once they’re projected into Q/K/V vectors and during dot-product attention.
-
-<img src="https://user-images.githubusercontent.com/12748752/171743549-2dd3b49b-a845-4573-956d-aa347a83da81.png" width=60%/>
-<ins><b><i>To give the model a sense of the order of the words, we add positional encoding vectors -- the values of which follow a specific pattern</i></b></ins>
-
-If we assumed the embedding has a dimensionality of 4, the actual positional encodings would look like this:
-
-<img src="https://user-images.githubusercontent.com/12748752/171743545-4abd6f3d-e5b1-47fd-afa9-c68bcc41a04d.png" width=60%/>
-
-What might this pattern look like?
-
-In the following figure, each row corresponds to a positional encoding of a vector. So the first row would be the vector we’d add to the embedding of the first word in an input sequence. Each row contains 512 values – each with a value between 1 and -1. We’ve color-coded them so the pattern is visible.
-
-
-The formula for positional encoding is described in the paper (section 3.5). You can see the code for generating positional encodings in get_timing_signal_1d(). This is not the only possible method for positional encoding. It, however, gives the advantage of being able to scale to unseen lengths of sequences (e.g. if our trained model is asked to translate a sentence longer than any of those in our training set).
-
-July 2020 Update: The positional encoding shown above is from the Tranformer2Transformer implementation of the Transformer. The method shown in the paper is slightly different in that it doesn’t directly concatenate, but interweaves the two signals. The following figure shows what that looks like. Here’s the code to generate it:
 
 
 ## The Residuals
