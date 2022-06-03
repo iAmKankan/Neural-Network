@@ -200,12 +200,7 @@ ffn = PositionWiseFFN(4, 8)
 ffn(tf.ones((2, 3, 4)))[0]
 ```        
 
-### 2) <ins>_Residual Connection and Layer Normalization_</ins> 
-Now let us focus on the “add & norm” component in Fig. 10.7.1. As we described at the beginning of this section, this is a residual connection immediately followed by layer normalization. Both are key to effective deep architectures.
 
-In Section 7.5, we explained how batch normalization recenters and rescales across the examples within a minibatch. Layer normalization is the same as batch normalization except that the former normalizes across the feature dimension. Despite its pervasive applications in computer vision, batch normalization is usually empirically less effective than layer normalization in natural language processing tasks, whose inputs are often variable-length sequences.
-
-The following code snippet compares the normalization across different dimensions by layer normalization and batch normalization.
 
 ### Summary
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
