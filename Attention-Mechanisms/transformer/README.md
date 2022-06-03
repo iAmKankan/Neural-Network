@@ -101,40 +101,6 @@ As in other models, the transformer uses learned embeddings to transform the **i
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 
 
-### 🔲 The Multi-Head Attention Layer — Self-Attention
-![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
-> The Multi-Head Attention Layer (source)
-
-There are two terms that need to be addressed in this section, _**self-attention**_ and **_multi-head_**.
-
-### _◼️ Self-Attention:_
-> #### The goal of **_self-attention_** is to <i><ins>capture contextual relationships between words</ins></i> in the sentence <i><ins>by creating an attention-based vector of every input word</ins></i>. 
-
-The **_attention-based vectors_** help to understand how relevant every word in the input sentence is with respect to other words in the sentence (as well as itself).
-
-The scale dot-product attention illustrated on the left side of figure 6 is applied to calculate attention-based vectors. Below is a detailed explanation of how these vectors are created from the positional embeddings.
-
-The first step is to obtain the Query (Q), Keys (K) and Values (V). This is done by passing the same copy of the positional embeddings through three different linear layers, as seen in the figure below.
-
-The second step is to create an attention filter from the Query (Q) and the Key (K). The attention filter will indicate how much each word is attended to at every position. It is created by applying the formula found in figure 8.
-
-
-Figure 8: Generating an Attention Filter from the Query (Q) and the Key (K) (Image by Author)
-Finally, to obtain an attention-based matrix (the final output of the self-attention layer), a matrix to matrix multiplication (matmul) is done between the attention filter and the Value (V) matrix generated previously. Resulting in the following final formula:
-
-<img src="https://latex.codecogs.com/svg.image?\large&space;{\color{Purple}&space;\mathbf{Attention(Q,K,V)=&space;softmax(\frac{QK^T}{\sqrt{d_k}})V&space;}&space;}" title="https://latex.codecogs.com/svg.image?\large {\color{Purple} \mathbf{Attention(Q,K,V)= softmax(\frac{QK^T}{\sqrt{d_k}})V } }" />
-
-### _◼️ Multi-Head Attention:_
-As seen on the right side of figure 6, the scaled-dot product attention (i.e. self-attention) is not applied only once, but also several times (in the original paper it is applied 8 times). The objective is to generate several attention-based vectors for the same word. This helps the model to have different representations of the words' relations in a sentence.
-
-The different attention-based matrices generated from the different heads are concatenated together and passed through a linear layer to shrink the size back to that of a single matrix.
-
-#### Residual Connections, Add & Norm and the Feed-Forward Network
-
-As one can notice from figure 1, the architecture includes residual connections (RC). The residual connections' goal is avoid loss of important information found in old information by allowing these information to bypass the multi-head attention layer. Therefore, the positional embeddings are added to the output of the multi-head attention and then normalized (Add & Norm) before passing it into a regular feed-forward network.
-
-
-![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 
 
 ### 🔲 The Decoder
