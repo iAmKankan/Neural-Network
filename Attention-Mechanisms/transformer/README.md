@@ -303,22 +303,6 @@ If we add all the attention heads to the picture, however, things can be harder 
 <img src="https://user-images.githubusercontent.com/12748752/171727404-c3c0f61a-3653-4bf5-9d82-bd6f257e5339.png" width=40%/>
 
 
-
-## The Residuals
-![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
-One detail in the architecture of the encoder that we need to mention before moving on, is that each sub-layer (self-attention, ffnn) in each encoder has a **residual connection around it**, and is followed by a **layer-normalization step**.
-
-<img src="https://user-images.githubusercontent.com/12748752/171743538-2e08ce92-68d8-438d-bdf3-2536c2000a6a.png" width=60%/>
-
-If we’re to visualize the vectors and the layer-norm operation associated with self attention, it would look like this:
-
-<img src="https://user-images.githubusercontent.com/12748752/171743535-263f3f2a-06d1-443e-9307-cb09e8d14004.png" width=60%/>
-
-This goes for the sub-layers of the decoder as well. If we’re to think of a Transformer of 2 stacked encoders and decoders, it would look something like this:
-
-<img src="https://user-images.githubusercontent.com/12748752/171743529-09aedc03-34fa-424e-954f-9e1ad039e1ac.png" width=60%/>
-
-
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 
