@@ -114,6 +114,9 @@ As in other models, the transformer uses learned embeddings to transform the **i
 * [The Residuals](https://github.com/iAmKankan/Neural-Network/blob/main/Attention-Mechanisms/p-encoding_residual.md#-the-residuals)
 
 
+### <ins>_Layer-Normalization_</ins>
+* [Crude version](https://arxiv.org/abs/1607.06450)
+
 ### 🔲 The Decoder
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 <img src="https://user-images.githubusercontent.com/12748752/171049969-c7791fe9-5c19-4459-9bca-ca48944c7597.png" width=25%/>
