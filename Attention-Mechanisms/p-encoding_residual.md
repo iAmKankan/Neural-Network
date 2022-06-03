@@ -116,3 +116,11 @@ This goes for the sub-layers of the decoder as well. If we’re to think of a Tr
 
 <img src="https://user-images.githubusercontent.com/12748752/171743529-09aedc03-34fa-424e-954f-9e1ad039e1ac.png" width=80%/>
 
+### <ins>_Layer Normalization_</ins> 
+* Now let us focus on the “**add & norm**” component in the [model](https://github.com/iAmKankan/Neural-Network/blob/main/Attention-Mechanisms/transformer/README.md#-the-model). As we described earlier, this is a **residual connection** immediately followed by **layer normalization**. 
+* Both are_ key to effective deep architectures_.
+
+[Batch normalization](https://d2l.ai/chapter_convolutional-modern/batch-norm.html#sec-batch-norm) recenters and rescales across the examples within a **minibatch**.
+* **Layer normalization** is the same as **batch normalization** except that the former normalizes across the feature dimension. Despite its pervasive applications in **computer vision**, **batch normalization** is usually empirically less effective than **layer normalization** in natural language processing tasks, whose _inputs are often variable-length sequences._
+
+
