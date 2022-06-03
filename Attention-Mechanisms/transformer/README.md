@@ -122,6 +122,28 @@ As in other models, the transformer uses learned embeddings to transform the **i
 <img src="https://user-images.githubusercontent.com/12748752/171049969-c7791fe9-5c19-4459-9bca-ca48944c7597.png" width=25%/>
 <p align="center"> <ins><i>A single Decoder Block</i></ins></p>
 
+Most of the concepts has been covered on the **encoder** side, we basically know how the components of **decoders** work as well. But let’s take a look at how they work together.
+
+* The **encoder** start by processing the **input sequence**. 
+* The **output** of the **top encoder** is then transformed into a set of attention vectors **K** and **V**. 
+* These are to be used by each **decoder** in its “**_encoder-decoder attention_**” layer which helps the **decoder** focus on appropriate places in the input sequence:
+
+<img src="https://user-images.githubusercontent.com/12748752/171801079-2b6bd472-c68c-4a76-b212-a0c97c9313b5.gif" width=50%/>
+
+<p align="center"> <ins><i>After finishing the encoding phase, we begin the decoding phase. Each step in the decoding phase outputs an element from the output sequence (the English translation sentence in this case).</i></ins></p>
+
+The following steps repeat the process until a special symbol is reached indicating the transformer decoder has completed its output. The output of each step is fed to the bottom decoder in the next time step, and the decoders bubble up their decoding results just like the encoders did. And just like we did with the encoder inputs, we embed and add positional encoding to those decoder inputs to indicate the position of each word.
+
+<img src="https://user-images.githubusercontent.com/12748752/171801041-4259d732-a49b-4e89-9506-1fa1d2d4cf4b.gif" width=50%/>
+
+
+The self attention layers in the decoder operate in a slightly different way than the one in the encoder:
+
+In the decoder, the self-attention layer is only allowed to attend to earlier positions in the output sequence. This is done by masking future positions (setting them to -inf) before the softmax step in the self-attention calculation.
+
+The “Encoder-Decoder Attention” layer works just like multiheaded self-attention, except it creates its Queries matrix from the layer below it, and takes the Keys and Values matrix from the output of the encoder stack.
+
+
 The **_transformer decoder_** is also a stack of _multiple identical layers_ with **_residual connections_** and **_layer normalizations_**, the **decoder** inserts one more sublayer (total **three**), known as the **encoder-decoder attention**, between these two layers. 
 * In the **encoder-decoder attention** , **queries** are from the _outputs_ of the _previous decoder layer_, and the **keys** and **values** are from the **transformer encoder outputs**. 
 * In the decoder **self-attention**- **queries**, **keys**, and **values** are all from the the outputs of the **previous decoder layer**. 
