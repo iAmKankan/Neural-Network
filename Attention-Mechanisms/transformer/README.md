@@ -94,6 +94,7 @@ This is done by using a specific dictionary of vocabulary, which can be generate
 
 ### <ins>_Embedding Layer_</ins>
 As in other models, the transformer uses learned embeddings to transform the **input tokens** into **vectors of dimension d = 512**. During training, the model updates the numbers in the vectors to better represent the input tokens
+* [In detail](https://github.com/iAmKankan/Neural-Network/blob/main/Attention-Mechanisms/transformer/README.md#embedding)
 
 ### <ins>_Self-Attention_</ins>
 * [Overview - Self-Attention](https://github.com/iAmKankan/Neural-Network/blob/main/Attention-Mechanisms/self-attention.md#-self-attention-at-a-high-level)
