@@ -74,6 +74,8 @@ Finally, since we’re dealing with **matrices**, we can condense steps two thro
 <img src="https://user-images.githubusercontent.com/12748752/171481640-20367973-a9d1-4512-89b3-5039371a6bd5.png" width=60%/>
 <p align="center" ><ins><i><b>The self-attention calculation in matrix form</b></i></ins></p>
 
+<img src="https://latex.codecogs.com/svg.image?\large&space;{\color{Purple}&space;\mathbf{Attention(Q,K,V)=&space;softmax(\frac{QK^T}{\sqrt{d_k}})V&space;}&space;}" title="https://latex.codecogs.com/svg.image?\large {\color{Purple} \mathbf{Attention(Q,K,V)= softmax(\frac{QK^T}{\sqrt{d_k}})V } }" />
+
 ## Multi-Headed Attention
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 The paper further refined the **self-attention** layer by adding a mechanism called “**multi-headed**” attention. This improves the performance of the attention layer in **two ways**:
