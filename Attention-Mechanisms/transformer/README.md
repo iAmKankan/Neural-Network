@@ -68,15 +68,15 @@ Let’s start to look at the various **vectors**/**tensors** and how they flow b
 ### 🔲 The Encoder
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 
+<img src="https://user-images.githubusercontent.com/12748752/171049973-6959aa04-a62b-4a5c-abbe-f2481462ea74.png" width=30%/>
+<p align="center"><ins><i><b>A single Encoder Block</b></i></ins></p>
+
 * As we’ve mentioned already, an **encoder** receives a _list of vectors as input_. 
 * It processes this list by passing these vectors into a ‘**self-attention**’ layer, then into a **feed-forward neural network**, then sends out the output upwards to the next encoder.
 
 <img src="https://user-images.githubusercontent.com/12748752/171093005-300c9b35-ee50-44f0-9d73-1cefc56067ca.png" width=80%/>
 
 <p align="center"><i><ins><b>The word at each position passes through a self-attention process. Then, they each pass through a feed-forward neural network -- the exact same network with each vector flowing through it separately.</b></ins></i></p>
-
-<img src="https://user-images.githubusercontent.com/12748752/171049973-6959aa04-a62b-4a5c-abbe-f2481462ea74.png" width=30%/>
-<p align="center"><ins><i><b>A single Encoder Block</b></i></ins></p>
 
 * The **_transformer encoder_** is a stack of _multiple identical layers_ with **_residual connections_** and **_layer normalizations_**, where each layer has **two sublayers** (_either is denoted as sublayer_).
     * The first is a **multi-head self-attention pooling** and 
