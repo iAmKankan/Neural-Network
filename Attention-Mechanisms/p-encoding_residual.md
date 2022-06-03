@@ -109,12 +109,3 @@ This goes for the sub-layers of the decoder as well. If we’re to think of a Tr
 
 <img src="https://user-images.githubusercontent.com/12748752/171743529-09aedc03-34fa-424e-954f-9e1ad039e1ac.png" width=60%/>
 
-
-
-
-
-
-
-
-
-
