@@ -98,9 +98,24 @@ As in other models, the transformer uses learned embeddings to transform the **i
 ### <ins>_Positional Encoding_</ins>
 * Refer to the [**Positional Encoding** in self-Attention page](https://github.com/iAmKankan/Neural-Network/blob/main/Attention-Mechanisms/self-attention.md#-positional-encoding)
 
-![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 
+### <ins>_Self-Attention_</ins>
+* [Overview - Self-Attention](https://github.com/iAmKankan/Neural-Network/blob/main/Attention-Mechanisms/self-attention.md#-self-attention-at-a-high-level)
+* Self-Attention in detail
+    * [Vector Calculation - Self-Attention](https://github.com/iAmKankan/Neural-Network/blob/main/Attention-Mechanisms/self-attention.md#self-attention-using-vectors)
+    * [Matrix Calculation - Self-Attention](https://github.com/iAmKankan/Neural-Network/blob/main/Attention-Mechanisms/self-attention.md#matrix-calculation-of-self-attention)
 
+### <ins>_Multi-Headed Attention_</ins>
+   * [Multi-Headed Attention in detail](https://github.com/iAmKankan/Neural-Network/blob/main/Attention-Mechanisms/self-attention.md#multi-headed-attention) 
+
+### <ins>_Positional Encoding_</ins>
+* [How Transformer approach differs from Sequence Model approach:](https://github.com/iAmKankan/Neural-Network/blob/main/Attention-Mechanisms/p-encoding_residual.md#how-transformer-approach-differs-from-sequence-model-approach)
+   * Problems associated with this approach
+   * Solution
+* [A fixed positional encoding based on sine and cosine functions:](https://github.com/iAmKankan/Neural-Network/blob/main/Attention-Mechanisms/p-encoding_residual.md#a-fixed-positional-encoding-based-on-sine-and-cosine-functions)
+
+### <ins>_Residual connection_</ins>
+* [The Residuals](https://github.com/iAmKankan/Neural-Network/blob/main/Attention-Mechanisms/p-encoding_residual.md#-the-residuals)
 
 
 ### 🔲 The Decoder
