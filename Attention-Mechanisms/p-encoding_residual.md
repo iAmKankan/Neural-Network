@@ -10,7 +10,6 @@
 * However, the drawback is that it **loses** the important information related to **_words' order_**. 
 
 ### The solution:
-![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 * To address this, the **transformer** adds **a vector** to each **input embedding**. 
 * These **vectors** follow a **specific pattern** that the model learns, which helps it determine the position of each word, or the **distance between different words** in the sequence.
 > The intuition here is that _adding these values to the embeddings provides meaningful distances between the embedding vectors_ once they’re projected into **Q**/**K**/**V** **vectors** and during **dot-product attention**.
