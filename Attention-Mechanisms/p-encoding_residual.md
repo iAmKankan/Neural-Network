@@ -74,6 +74,7 @@ for i in range(8):
 ```
 In binary representations, a higher bit has a lower frequency than a lower bit. Similarly, as demonstrated in the heat map below, the positional encoding decreases frequencies along the encoding dimension by using trigonometric functions. Since the outputs are float numbers, such continuous representations are more space-efficient than binary representations.
 ### Relative Positional Information
+![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 Besides capturing absolute positional information, the above positional encoding also allows a model to easily learn to attend by relative positions. This is because for any fixed position offset **_&delta;_**, the positional encoding at position **_i + &delta;_** can be represented by a linear projection of that at position **_i_**.
 
 This projection can be explained mathematically. Denoting **_&omega;<sub>j</sub>_** **= 1/10000** **_<sup>2j/d</sup>_**, any pair of ( **p<sub>(i,2j)</sub>,p<sub>(i,2j+1)</sub>** ) in [above](https://github.com/iAmKankan/Neural-Network/edit/main/Attention-Mechanisms/self-attention.md#a-fixed-positional-encoding-based-on-sine-and-cosine-functions) can be linearly projected to ( **p<sub>(i+&delta;,2j)</sub>,p<sub>(i+&delta;,2j+1)</sub>** )  for any fixed offset **_&delta;_**:
@@ -87,7 +88,7 @@ This projection can be explained mathematically. Denoting **_&omega;<sub>j</sub>
 = <img src="https://latex.codecogs.com/svg.image?\large&space;{\color{Purple}\begin{bmatrix}{\color{Purple}p_{i&plus;\delta,2j}}&space;\\{\color{Purple}p_{i&plus;\delta,2j&plus;1}}\\\end{bmatrix}&space;" title="https://latex.codecogs.com/svg.image?\large {\color{Purple}\begin{bmatrix}{\color{Purple}p_{i+\delta,2j}} \\{\color{Purple}p_{i+\delta,2j+1}}\\\end{bmatrix} "  align="center"/>
 
 where the **2 &times; 2** projection matrix does not depend on any position index **_i_**.
-### Conclision:
+### Conclusion:
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 * In self-attention, the **queries**, **keys**, and **values** all come from the same place.
 * Both **CNNs** and **self-attention** enjoy **parallel computation** and *self-attention* has the <ins>**shortest maximum path length**</ins>. However, the **quadratic computational complexity** ( **O (n<sup>2</sup>)** ) with respect to the sequence length makes _self-attention_ **prohibitively slow** for very long sequences.
