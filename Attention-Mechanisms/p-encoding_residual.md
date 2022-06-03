@@ -6,7 +6,9 @@
 * [Conclision](#conclision)
 
 ### [_The Residuals_](#-the-residuals)
-### [_Layer-Normalization_](https://arxiv.org/abs/1607.06450)
+### Layer-Normalization
+* [_Layer-Normalization Origine_](https://arxiv.org/abs/1607.06450)
+* [Layer-Normalization](https://github.com/iAmKankan/Neural-Network/blob/main/Attention-Mechanisms/p-encoding_residual.md#layer-normalization-1)
 
 ## 🔲 Positional Encoding
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
