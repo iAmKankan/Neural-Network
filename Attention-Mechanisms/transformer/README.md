@@ -3,7 +3,7 @@
 ### [_Transformer_](#-transformer)
 ### [Classification of Transformers](#-classification-of-transformers)
 ### [The Model](#-the-model)
-### [The architecture in brief](#the-architecture-in-brief)
+### [The architecture in brief](#-the-architecture-in-brief)
 * [Transformers as a Blackbox](#transformers-as-a-blackbox)
 * [The Encoder-Decoder Blocks](#the-encoder-decoder-blocks)
 * [Inside each Encoder-Decoder Stack](#inside-each-encoder-decoder-stack)
