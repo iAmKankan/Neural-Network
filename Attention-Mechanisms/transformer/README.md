@@ -158,7 +158,7 @@ The softmax layer then turns those scores into probabilities (all positive, all 
 
 
 <img src="https://user-images.githubusercontent.com/12748752/171743551-8454433a-4885-4a79-afc3-c1b23d5322d9.png" width=50%/>
-<p align="center"> <ins><i>This figure starts from the bottom with the vector produced as the output of the decoder stack. It is then turned into an output word.</i></ins></p>
+<p align="center"> <ins><i><b>This figure starts from the bottom with the vector produced as the output of the decoder stack. It is then turned into an output word.</b></i></ins></p>
 
 
 
