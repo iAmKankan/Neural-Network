@@ -18,7 +18,9 @@ If the original sentence is -<img src="https://latex.codecogs.com/svg.image?{\co
 
 
 ### <ins><i>2. Next sentence prediction (NSP)</i></ins>
-The model is trained to predict whether two sentences are consecutive or not. For example, it should predict that “The dog sleeps” and “It snores loudly” are consecutive sentences, while “The dog sleeps” and “The Earth orbits the Sun” are not consecutive. This is a challenging task, and it significantly improves the performance of the model when it is fine-tuned on tasks such as question answering or entailment.
+* The model is trained to predict whether two sentences are consecutive or not. 
+* For example, it should predict that “**The dog sleeps**” and “**It snores loudly**” are consecutive sentences, while “**The dog sleeps**” and “**The Earth orbits the Sun**” are not consecutive. 
+* This is a challenging task, and it significantly improves the performance of the model when it is fine-tuned on tasks such as question answering or entailment.
 
 
 
