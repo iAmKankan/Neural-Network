@@ -45,9 +45,8 @@ In a _machine translation_ application, it would take a sentence in one language
 ### <ins>Inside each Encoder-Decoder Block</ins>
 <img src="https://user-images.githubusercontent.com/12748752/168034980-004fd235-28cb-4831-9523-76480b411e11.png" width=80% align="center"/> 
 
-### Embedding
-![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
-
+### <ins>Embedding</ins>
+ 
 Let’s start to look at the various **vectors**/**tensors** and how they flow between the _above components_ to turn the _input of a trained model into an output_.
 
 <img src="https://user-images.githubusercontent.com/12748752/168201541-73b96f67-a6b5-4b72-9201-4a26dfd7670a.png" width=80%/>
