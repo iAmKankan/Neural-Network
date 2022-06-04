@@ -144,6 +144,25 @@ In the decoder, the self-attention layer is only allowed to attend to earlier po
 
 The “Encoder-Decoder Attention” layer works just like multiheaded self-attention, except it creates its Queries matrix from the layer below it, and takes the Keys and Values matrix from the output of the encoder stack.
 
+
+
+## The Final Linear and Softmax Layer
+![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
+The decoder stack outputs a vector of floats. How do we turn that into a word? That’s the job of the final Linear layer which is followed by a Softmax Layer.
+
+The Linear layer is a simple fully connected neural network that projects the vector produced by the stack of decoders, into a much, much larger vector called a logits vector.
+
+Let’s assume that our model knows 10,000 unique English words (our model’s “output vocabulary”) that it’s learned from its training dataset. This would make the logits vector 10,000 cells wide – each cell corresponding to the score of a unique word. That is how we interpret the output of the model followed by the Linear layer.
+
+The softmax layer then turns those scores into probabilities (all positive, all add up to 1.0). The cell with the highest probability is chosen, and the word associated with it is produced as the output for this time step.
+
+
+<img src="https://user-images.githubusercontent.com/12748752/171743551-8454433a-4885-4a79-afc3-c1b23d5322d9.png" width=50%/>
+<p align="center"> <ins><i>This figure starts from the bottom with the vector produced as the output of the decoder stack. It is then turned into an output word.</i></ins></p>
+
+
+
+
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 
 
