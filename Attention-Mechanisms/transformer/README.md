@@ -1,7 +1,7 @@
 ## Index
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 
-## Transformer
+## ⬛ Transformer
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 The architecture of the **_transformer_** model inspires from the **attention mechanism** used in the **encoder-decoder** architecture in **RNNs** to handle s**equence-to-sequence (seq2seq)** tasks.
 
@@ -23,7 +23,7 @@ As we can see, the **transformer** is composed of an **_encoder_** and a **_deco
 <img src="https://user-images.githubusercontent.com/12748752/164050988-292430e3-b184-4942-a92e-f2297b1541d1.png" width=30%/>
 <p align="center"><ins><i>The transformer architecture</i></ins>.</p>
 
-## The architecture in brief:
+## 🔲 The architecture in brief:
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 Here, the classical example of translating from _English to French_ using the transformer is considered. Input sentence is as such <img src="https://latex.codecogs.com/svg.image?{\color{Purple}\mathbf{I\&space;am\&space;a\&space;student}&space;}&space;&space;" title="https://latex.codecogs.com/svg.image?{\color{Purple}\mathbf{I\ am\ a\ student} } " />, and the expected output is <img src="https://latex.codecogs.com/svg.image?{\color{Purple}\mathbf{Je\&space;suis\&space;un\&space;\acute{e}tudiant}&space;}&space;" title="https://latex.codecogs.com/svg.image?{\color{Purple}\mathbf{Je\ suis\ un\ \acute{e}tudiant} }" />. 
 
@@ -45,7 +45,7 @@ In a _machine translation_ application, it would take a sentence in one language
 ### <ins>Inside each Encoder-Decoder Block</ins>
 <img src="https://user-images.githubusercontent.com/12748752/168034980-004fd235-28cb-4831-9523-76480b411e11.png" width=80% align="center"/> 
 
-## _Embedding_
+### Embedding
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 
 Let’s start to look at the various **vectors**/**tensors** and how they flow between the _above components_ to turn the _input of a trained model into an output_.
@@ -67,7 +67,7 @@ Let’s start to look at the various **vectors**/**tensors** and how they flow b
 * The **feed-forward layer** does not have those dependencies, how ever and thus the various paths can be executed in parallel while flowing through the feed-forward layer.
 
 
-### 🔲 The Encoder
+## 🔲 The Encoder
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 
 <img src="https://user-images.githubusercontent.com/12748752/171049973-6959aa04-a62b-4a5c-abbe-f2481462ea74.png" width=30%/>
