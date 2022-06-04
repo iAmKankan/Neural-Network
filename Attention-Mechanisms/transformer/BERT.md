@@ -12,9 +12,20 @@ This means that the _model is naturally bidirectional_; hence the **B** in **BER
 Each word in a sentence has a 15% probability of being masked, and the model is trained to predict the masked words. 
 #### For example:
 If the original sentence is -<img src="https://latex.codecogs.com/svg.image?{\color{Purple}&space;\textbf{She&space;had&space;fun&space;at&space;the&space;birthday&space;party}}" title="https://latex.codecogs.com/svg.image?{\color{Purple} \textbf{She had fun at the birthday party}}" align="center"/>  
-* Then the model may be given the sentence <img src="https://latex.codecogs.com/svg.image?{\color{Purple}&space;\mathbf{She&space;<mask>&space;fun\&space;at\&space;the&space;<mask>&space;party}}" title="https://latex.codecogs.com/svg.image?{\color{Purple} \mathbf{She <mask> fun\ at\ the <mask> party}}" align="center"/>  and it must predict the words “had” and “birthday” (the other outputs will be ignored). To be more precise, each selected word has an 80% chance of being masked, a 10% chance of being replaced by a random word (to reduce the discrepancy between pretraining and fine-tuning, since the model will not see <mask> tokens during fine-tuning), and a 10% chance of being left alone (to bias the model toward the correct answer).
+* Then the model may be given the sentence 
+<img src="https://latex.codecogs.com/svg.image?{\color{Purple}&space;\mathbf{She&space;\left<&space;mask\right>&space;fun\&space;at\&space;the&space;\left<&space;mask\right>&space;party}}" title="" align="center"/>  and it must predict the words “**had**” and “**birthday**” (the other outputs will be ignored). 
+* To be more precise, each selected word has an **80%** chance of being **masked**, a **10%** chance of being **replaced** by a random word (to reduce the discrepancy between pretraining and fine-tuning, since the model will not see **`<mask>`** tokens during fine-tuning), and a **10%** chance of being left alone (to **bias** the model toward the correct answer).
 
-We have introduced several word embedding models for natural language understanding. After pretraining, the output can be thought of as a matrix where each row is a vector that represents a word of a predefined vocabulary. In fact, these word embedding models are all context-independent. Let us begin by illustrating this property.
+
+### <ins><i>2. Next sentence prediction (NSP)</i></ins>
+The model is trained to predict whether two sentences are consecutive or not. For example, it should predict that “The dog sleeps” and “It snores loudly” are consecutive sentences, while “The dog sleeps” and “The Earth orbits the Sun” are not consecutive. This is a challenging task, and it significantly improves the performance of the model when it is fine-tuned on tasks such as question answering or entailment.
+
+
+
+
+
+
+We have introduced several word embedding models for natural language understanding. After pretraining, the output can be thought of as a matrix where each row is a vector that represents a word of a predefined vocabulary. In fact, these word embedding models are all **context-independent**. Let us begin by illustrating this property.
 
 ### From Context-Independent to Context-Sensitive
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
