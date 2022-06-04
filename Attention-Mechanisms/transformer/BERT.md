@@ -4,6 +4,16 @@
 
 ## Bidirectional Encoder Representations from Transformers (BERT)
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
+The [**BERT** paper](https://arxiv.org/abs/1810.04805) by Jacob Devlin and other Google researchers also demonstrates the effectiveness of **self-supervised pretraining** on a large corpus, using a similar architecture to GPT but **nonmasked Multi-Head Attention layers** (like in the **Transformer’s encoder**). 
+
+This means that the _model is naturally bidirectional_; hence the **B** in **BERT (Bidirectional Encoder Representations from Transformers)**. Most importantly, the authors proposed **two pretraining** tasks that explain most of the model’s strength:
+
+### <ins><i>1. Masked language model (MLM)</i></ins>
+Each word in a sentence has a 15% probability of being masked, and the model is trained to predict the masked words. 
+#### For example:
+If the original sentence is <img src="https://latex.codecogs.com/svg.image?\large&space;{\color{Purple}&space;\textbf{She&space;had&space;fun&space;at&space;the&space;birthday&space;party}}" title="https://latex.codecogs.com/svg.image?\large {\color{Purple} \textbf{She had fun at the birthday party}}" align="center"/>
+then the model may be given the sentence “She <mask> fun at the <mask> party” and it must predict the words “had” and “birthday” (the other outputs will be ignored). To be more precise, each selected word has an 80% chance of being masked, a 10% chance of being replaced by a random word (to reduce the discrepancy between pretraining and fine-tuning, since the model will not see <mask> tokens during fine-tuning), and a 10% chance of being left alone (to bias the model toward the correct answer).
+
 We have introduced several word embedding models for natural language understanding. After pretraining, the output can be thought of as a matrix where each row is a vector that represents a word of a predefined vocabulary. In fact, these word embedding models are all context-independent. Let us begin by illustrating this property.
 
 ### From Context-Independent to Context-Sensitive
