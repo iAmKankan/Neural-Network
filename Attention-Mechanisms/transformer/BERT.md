@@ -38,12 +38,28 @@ This motivates the development of context-sensitive word representations, where 
 
 For example, by taking the entire sequence as the input, ELMo is a function that assigns a representation to each word from the input sequence. Specifically, ELMo combines all the intermediate layer representations from pretrained bidirectional LSTM as the output representation. Then the ELMo representation will be added to a downstream task’s existing supervised model as additional features, such as by concatenating ELMo representation and the original representation (e.g., GloVe) of tokens in the existing model. On one hand, all the weights in the pretrained bidirectional LSTM model are frozen after ELMo representations are added. On the other hand, the existing supervised model is specifically customized for a given task. Leveraging different best models for different tasks at that time, adding ELMo improved the state of the art across six natural language processing tasks: sentiment analysis, natural language inference, semantic role labeling, coreference resolution, named entity recognition, and question answering.
 
+![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
+![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
+
 ## Masking Operation(removed words / token within the corpus)
 * mask token works both ways (bidirectional)
 * 1st BERT was on Wikipedia dataset(70GB or 80 GB)
 * LSTM works well on small MBs datasets but GBs like BERT
 ### What does it can do?
 * a Language model-has been tested 70+ language and worked well.
-* 
+### EOS and SOS
+In BERT we will refer the above as following
+* EOS-SEP
+* SOS-CLS(classification token)
+## Tokenization Strategy
+* 1) data loading
+* 2) data processing 
+* 3) Tokenization
+* **80%** masked token
+* **10%** chance of being **replaced** by a random words
+* **10%** chance of being left alone/Unchanged (to **bias** the model toward the correct answer)
 
+## Where does the Masking hasbeen applied
+* It is done by randomly
+* direction L->R,R->L and L->R & R->L(BERT)
 
