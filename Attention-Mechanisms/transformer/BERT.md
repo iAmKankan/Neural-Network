@@ -37,3 +37,13 @@ Recall the experiments in Section 14.4 and Section 14.7. For instance, word2vec 
 This motivates the development of context-sensitive word representations, where representations of words depend on their contexts. Hence, a context-sensitive representation of token  is a function  depending on both  and its context . Popular context-sensitive representations include TagLM (language-model-augmented sequence tagger) [Peters et al., 2017b], CoVe (Context Vectors) [McCann et al., 2017], and ELMo (Embeddings from Language Models) [Peters et al., 2018].
 
 For example, by taking the entire sequence as the input, ELMo is a function that assigns a representation to each word from the input sequence. Specifically, ELMo combines all the intermediate layer representations from pretrained bidirectional LSTM as the output representation. Then the ELMo representation will be added to a downstream task’s existing supervised model as additional features, such as by concatenating ELMo representation and the original representation (e.g., GloVe) of tokens in the existing model. On one hand, all the weights in the pretrained bidirectional LSTM model are frozen after ELMo representations are added. On the other hand, the existing supervised model is specifically customized for a given task. Leveraging different best models for different tasks at that time, adding ELMo improved the state of the art across six natural language processing tasks: sentiment analysis, natural language inference, semantic role labeling, coreference resolution, named entity recognition, and question answering.
+
+## Masking Operation(removed words / token within the corpus)
+* mask token works both ways (bidirectional)
+* 1st BERT was on Wikipedia dataset(70GB or 80 GB)
+* LSTM works well on small MBs datasets but GBs like BERT
+### What does it can do?
+* a Language model-has been tested 70+ language and worked well.
+* 
+
+
