@@ -52,9 +52,9 @@ In BERT we will refer the above as following
 * EOS-SEP
 * SOS-CLS(classification token)
 ## Tokenization Strategy
-* 1) data loading
-* 2) data processing 
-* 3) Tokenization
+1) data loading
+2) data processing 
+3) Tokenization
 * **80%** masked token
 * **10%** chance of being **replaced** by a random words
 * **10%** chance of being left alone/Unchanged (to **bias** the model toward the correct answer)
