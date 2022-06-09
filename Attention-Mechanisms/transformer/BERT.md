@@ -58,8 +58,62 @@ In BERT we will refer the above as following
 * **80%** masked token
 * **10%** chance of being **replaced** by a random words
 * **10%** chance of being left alone/Unchanged (to **bias** the model toward the correct answer)
-
+* Stopwords not need to be removed
 ## Where does the Masking hasbeen applied
 * It is done by randomly
 * direction L->R,R->L and L->R & R->L(BERT)
 
+#### Word tokenization is more common than Sentence Tokenization
+
+
+---
+EOS and SOS
+---
+Different types of tasks by NLP
+## 1. What is BERT used for?
+BERT can be used on a wide variety of language tasks:
+
+* Can determine how positive or negative a movie’s reviews are. (Sentiment Analysis)
+* Helps chatbots answer your questions. (Question answering)
+* Predicts your text when writing an email (Gmail). (Text prediction)
+* Can write an article about any topic with just a few sentence inputs. (Text generation)
+* Can quickly summarize long legal contracts. (Summarization)
+* Can differentiate words that have multiple meanings (like ‘bank’) based on the surrounding text. (Polysemy resolution)
+
+#### There are many more language/NLP tasks + more detail behind each of these.
+> Fun Fact: You interact with NLP (and likely BERT) almost every single day!
+
+NLP is behind Google Translate, voice assistants (Alexa, Siri, etc.), chatbots, Google searches, voice-operated GPS, and more.
+
+## What is a Masked Language Model?
+MLM enables/enforces bidirectional learning from text by masking (hiding) a word in a sentence and forcing BERT to bidirectionally use the words on either side of the covered word to predict the masked word. This had never been done before!
+
+Fun Fact: We naturally do this as humans!
+
+Masked Language Model Example:
+
+Imagine your friend calls you while camping in Glacier National Park and their service begins to cut out. The last thing you hear before the call drops is:
+
+Friend: “Dang! I’m out fishing and a huge trout just [blank] my line!”
+
+Can you guess what your friend said??
+
+You’re naturally able to predict the missing word by considering the words bidirectionally before and after the missing word as context clues (in addition to your historical knowledge of how fishing works). Did you guess that your friend said, ‘broke’? That’s what we predicted as well but even we humans are error-prone to some of these methods.
+
+Note: This is why you’ll often see a “Human Performance” comparison to a language model’s performance scores. And yes, newer models like BERT can be more accurate than humans! 🤯
+
+The bidirectional methodology you did to fill in the [blank] word above is similar to how BERT attains state-of-the-art accuracy. A random 15% of tokenized words are hidden during training and BERT’s job is to correctly predict the hidden words. Thus, directly teaching the model about the English language (and the words we use). Isn’t that neat?
+
+Play around with BERT’s masking predictions:
+
+## What is Next Sentence Prediction?
+NSP (Next Sentence Prediction) is used to help BERT learn about relationships between sentences by predicting if a given sentence follows the previous sentence or not.
+
+Next Sentence Prediction Example:
+
+* Paul went shopping. He bought a new shirt. (correct sentence pair)
+* Ramona made coffee. Vanilla ice cream cones for sale. (incorrect sentence pair)
+
+In training, 50% correct sentence pairs are mixed in with 50% random sentence pairs to help BERT increase next sentence prediction accuracy.
+
+Fun Fact: BERT is trained on both MLM (50%) and NSP (50%) at the same time.
