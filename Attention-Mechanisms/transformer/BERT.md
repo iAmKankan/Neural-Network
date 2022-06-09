@@ -117,3 +117,6 @@ Next Sentence Prediction Example:
 In training, 50% correct sentence pairs are mixed in with 50% random sentence pairs to help BERT increase next sentence prediction accuracy.
 
 Fun Fact: BERT is trained on both MLM (50%) and NSP (50%) at the same time.
+
+
+
