@@ -125,3 +125,9 @@ BERT has successfully achieved state-of-the-art accuracy on 11 common NLP tasks,
 ### SQuAD v1.1 & v2.0
 SQuAD (**Stanford Question Answering Dataset**) is a reading comprehension dataset of around 108k questions that can be answered via a corresponding paragraph of Wikipedia text. BERT’s performance on this evaluation method was a big achievement beating previous state-of-the-art models and human-level performance:
 
+## BERT - Tokenization and Encoding
+### The [CLS],[SEP] and [PAD] Tokens
+* Every word having unique token id that not be prediced but the tokens of the flllowing are always fixed
+   * [CLS]-101 
+   * [SEP]-102
+   * [PAD]-0
