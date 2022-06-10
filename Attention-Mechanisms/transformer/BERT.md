@@ -118,5 +118,10 @@ In training, 50% correct sentence pairs are mixed in with 50% random sentence pa
 
 Fun Fact: BERT is trained on both MLM (50%) and NSP (50%) at the same time.
 
+##  BERT's performance on common language tasks
+BERT has successfully achieved state-of-the-art accuracy on 11 common NLP tasks, outperforming previous top NLP models, and is the first to outperform humans! But, how are these achievements measured?
 
+> NLP Evaluation Methods:
+### SQuAD v1.1 & v2.0
+SQuAD (**Stanford Question Answering Dataset**) is a reading comprehension dataset of around 108k questions that can be answered via a corresponding paragraph of Wikipedia text. BERT’s performance on this evaluation method was a big achievement beating previous state-of-the-art models and human-level performance:
 
