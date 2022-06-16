@@ -131,3 +131,6 @@ SQuAD (**Stanford Question Answering Dataset**) is a reading comprehension datas
    * [CLS]-101 
    * [SEP]-102
    * [PAD]-0
+---
+## GPT is auto regressiove
+---
