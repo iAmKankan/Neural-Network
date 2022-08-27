@@ -9,5 +9,10 @@
 * Acts like identity near origin- Sigmoid is also Linear near origin but not identity
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/12748752/187023656-dcfef30c-5923-4a9b-840e-3480cd9f3638.png" width=60%/>
+<img src="https://user-images.githubusercontent.com/12748752/187023656-dcfef30c-5923-4a9b-840e-3480cd9f3638.png" width=20%/> 
+  
+ <ins><b><i>Tanh function</i></b></ins>
   </p>
+  
+  
+$$\large{\color{Purple} tanh(x)} $$
