@@ -20,6 +20,7 @@
    * [Sigmoid](https://github.com/iAmKankan/Neural-Network/blob/main/activation_functions/sigmoid.md)
    * [Softmax](https://github.com/iAmKankan/Neural-Network/blob/main/activation_functions/softmax.md)
    * [TanH](https://github.com/iAmKankan/Neural-Network/blob/main/activation_functions/tanh.md)
+   
 * [Bibliography](#bibliography)
 * [Todo 01](https://d2l.ai/chapter_multilayer-perceptrons/numerical-stability-and-init.html#vanishing-and-exploding-gradients)
 
