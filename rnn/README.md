@@ -9,14 +9,21 @@
     * [Vector-to-Sequence Network](#vector-to-sequence-network)
     * [Encoder-Decoder Network](#encoder-decoder-network)
   * [Backpropagation or Training RNNs](#backpropagation-or-training-rnns)
-## Why RNN?
+## Why Recurrent Neural Networks(RNN)?
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 
 Both ANNs and CNNs generally have
 * Fixed sized inputs
-* The whole input available simultaneously
+* The **whole input** available **simultaneously**
 
 Consider, however, the following problems
+* Speech processing
+* Langiage Translation
+* Video analysis
+
+Variable sized input where sequential information matters
+
+
 
 > #### Drawbacks of CNN/ANN
 * No memory element. 
