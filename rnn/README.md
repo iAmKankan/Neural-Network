@@ -9,6 +9,12 @@
     * [Vector-to-Sequence Network](#vector-to-sequence-network)
     * [Encoder-Decoder Network](#encoder-decoder-network)
   * [Backpropagation or Training RNNs](#backpropagation-or-training-rnns)
+
+## Recurrent Neural Network (RNN)
+![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
+A Recurrent Neural Network is a type of ANN that contains **loops**, allowing **information to be stored within the network**. It is absolutely essential for **sequential like information** (**variable input size**)
+
+
 ## Why Recurrent Neural Networks(RNN)?
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 
