@@ -30,20 +30,55 @@ Variable sized input where sequential information matters
 
 
 
-> #### Drawbacks of CNN/ANN
+#### Drawbacks of CNN/ANN
 * No memory element. 
 * The present data doesn't dependent on the pevious data.
+
+
+### Different types of RNN based on Input and Output Sequences
+![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/12748752/144064476-e96cb279-6ea7-4a07-aad8-d883b0549bc2.png" width=50% />
+<br> <ins><b><i>Many-to-Many (top left), Many-to-One (top right), One-to-Many (bottom left), and Encoder–Decoder (bottom right) networks </i></b></ins>
+</p>
+
+### Many-to-Many(Sequence-to-Sequence) Network
+* An RNN can simultaneously take a sequence of inputs and produce a sequence of outputs.
+* **Example #1:** **Language Translation**, **Speech Recognition**
+  * The output does not comes simultaniously with the input and **the size of the output need not to be same as input**
+* **Example #2:** Video frame by frame analysis
+  * The output size fixed by the input size
+   
+### Many-to-One (Sequence-to-Vector) Network
+* You could feed the network a sequence of inputs and ignore all outputs except for the last one. 
+* For example: **Sentiment Analysis**- you could feed the network a sequence of words corresponding to a **movie review** and the network would output a **sentiment score**.
+
+###  One-to-Many(Vector-to-Sequence) Network
+* Conversely, you could feed the network the same input vector over and over again at each time step and let it output a sequence.
+* For example: **Image Captioning**- the input could be an image (or the output of a CNN), and the output could be a caption(text) for that image.
+
+### Encoder-Decoder Network
+* Lastly, you could have a **sequence-to-vector network**, called an **`encoder`**, followed by a **vector-to-sequence network**, called a **`decoder`**. 
+* For example, this could be used for translating a sentence from one language to another. 
+  * You would feed the network a sentence in one language, the encoder would convert this sentence into a single vector representation, and then the decoder would decode this vector into a sentence in another language. 
+  * This two-step model, called an `Encoder–Decoder`, works much better than trying to translate on the fly with a single `sequence-to-sequence RNN` (like the one represented at the top left): the last words of a sentence can affect the first words of the translation, so you need to wait until you have seen the whole sentence before translating it.
+  
 ## Recurrent Neural Networks(RNN)
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
-> #### Feedforward Neural Networks
-* Where the activations flow only in one direction, from the _`input layer`_ to the _`output layer`_ (a few exceptions are there). 
 
-> #### Recurrent Neural Network(RNN)
+<p align="center">
+<img src="https://user-images.githubusercontent.com/12748752/144027506-ea345023-d777-493c-88fd-fae058e70097.png" width=50%/>
+<br><ins><b><i>A recurrent neuron (left)    |    unrolled through time (right)</i></b></ins>
+</p>
+
+In general- **variably sized**, **sequential data** combine an input vector with a state vector via a fixed function to produce a new state.
+* **variably sized**: Number of features are fixed the size of the data is not.
+
+
 * It looks very much like a feedforward neural network, except it also has connections pointing backward. 
 
-<img src="https://user-images.githubusercontent.com/12748752/144027506-ea345023-d777-493c-88fd-fae058e70097.png" width=50%/>
 
-> ####  <ins>A recurrent neuron (left)    |    unrolled through time (right)</ins>
 
 <img src="https://user-images.githubusercontent.com/12748752/144035005-3e1f7cb9-3cd8-4f2f-9d11-98a4bfc61ce0.png" width=50%/>
 
@@ -77,34 +112,6 @@ Variable sized input where sequential information matters
 * In the case of the basic cells we have discussed so far, the output is simply equal to the state, but in more complex cells this is not always the case
 
 <img src="https://user-images.githubusercontent.com/12748752/144058855-ddbd4576-7fbe-4ed0-89c8-3c9ba29655b2.png" width=40%>
-
-### Different types of RNN based on Input and Output Sequences
-![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
-
-<p align="center">
-<img src="https://user-images.githubusercontent.com/12748752/144064476-e96cb279-6ea7-4a07-aad8-d883b0549bc2.png" width=50% />
-<br> <ins><b><i>Seq-to-seq (top left), Many-to-One (top right), vector-to-seq (bottom left), and Encoder–Decoder (bottom right) networks </i></b></ins>
-</p>
-
-### Sequence-to-Sequence Network
-* An RNN can simultaneously take a sequence of inputs and produce a sequence of outputs.
-* This type of network is useful for predicting time series such as stock prices: you feed it the prices over the last _N_ days, and it must output the prices shifted by one day into the future (i.e., from _N – 1_ days ago to tomorrow).
-
-### Many-to-One (Sequence-to-Vector) Network
-* You could feed the network a sequence of inputs and ignore all outputs except for the last one. 
-* For example: **Sentiment Analysis**- you could feed the network a sequence of words corresponding to a **movie review** and the network would output a **sentiment score**.
-
-
-###  Vector-to-Sequence Network
-* Conversely, you could feed the network the same input vector over and over again at each time step and let it output a sequence.
-*  For example, the input could be an image (or the output of a CNN), and the output could be a caption for that image.
-
-
-### Encoder-Decoder Network
-* Lastly, you could have a **sequence-to-vector network**, called an **`encoder`**, followed by a **vector-to-sequence network**, called a **`decoder`**. 
-* For example, this could be used for translating a sentence from one language to another. 
-  * You would feed the network a sentence in one language, the encoder would convert this sentence into a single vector representation, and then the decoder would decode this vector into a sentence in another language. 
-  * This two-step model, called an `Encoder–Decoder`, works much better than trying to translate on the fly with a single `sequence-to-sequence RNN` (like the one represented at the top left): the last words of a sentence can affect the first words of the translation, so you need to wait until you have seen the whole sentence before translating it.
 
 ### Backpropagation or Training RNNs
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
