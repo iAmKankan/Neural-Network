@@ -81,9 +81,11 @@ Variable sized input where sequential information matters
 ### Different types of RNN based on Input and Output Sequences
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 
+<p align="center">
 <img src="https://user-images.githubusercontent.com/12748752/144064476-e96cb279-6ea7-4a07-aad8-d883b0549bc2.png" width=50% />
 
-> #### <ins>Seq-to-seq (top left), seq-to-vector (top right), vector-to-seq (bottom left), and Encoder–Decoder (bottom right) networks </ins>
+<br> <ins>Seq-to-seq (top left), seq-to-vector (top right), vector-to-seq (bottom left), and Encoder–Decoder (bottom right) networks </ins>
+</p>
 
 ### Sequence-to-Sequence Network
 * An RNN can simultaneously take a sequence of inputs and produce a sequence of outputs.
