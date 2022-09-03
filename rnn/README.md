@@ -83,17 +83,16 @@ Variable sized input where sequential information matters
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/12748752/144064476-e96cb279-6ea7-4a07-aad8-d883b0549bc2.png" width=50% />
-
-<br> <ins>Seq-to-seq (top left), seq-to-vector (top right), vector-to-seq (bottom left), and Encoder–Decoder (bottom right) networks </ins>
+<br> <ins><b><i>Seq-to-seq (top left), Many-to-One (top right), vector-to-seq (bottom left), and Encoder–Decoder (bottom right) networks </i></b></ins>
 </p>
 
 ### Sequence-to-Sequence Network
 * An RNN can simultaneously take a sequence of inputs and produce a sequence of outputs.
 * This type of network is useful for predicting time series such as stock prices: you feed it the prices over the last _N_ days, and it must output the prices shifted by one day into the future (i.e., from _N – 1_ days ago to tomorrow).
 
-### Sequence-to-Vector Network
+### Many-to-One (Sequence-to-Vector) Network
 * You could feed the network a sequence of inputs and ignore all outputs except for the last one. 
-* For example, you could feed the network a sequence of words corresponding to a movie review, and the network would output a sentiment score (e.g., from –1 [hate] to +1 [love]).
+* For example: **Sentiment Analysis**- you could feed the network a sequence of words corresponding to a **movie review** and the network would output a **sentiment score**.
 
 
 ###  Vector-to-Sequence Network
