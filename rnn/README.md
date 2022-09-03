@@ -14,17 +14,16 @@
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 A Recurrent Neural Network is a type of ANN that contains **loops**, allowing **information to be stored within the network**. It is absolutely essential for **sequential like information** (**variable input size**)
 
-
 ## Why Recurrent Neural Networks(RNN)?
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 
-Both ANNs and CNNs generally have
+Artificial Neural Network(ANN) and Convolutional Neural Network(CNN) are not capable of handling Sequential data or time series, e.g. 1) Text, 2) Audio, 3) Video, because they take the followings- 
 * Fixed sized inputs
-* The **whole input** available **simultaneously**
+* The whole input available simultaneously
 
-Consider, however, the following problems
+Whereas the RNN takes **variable sized input** inorder to process the sequential information. In the following problems-
 * Speech processing
-* Langiage Translation
+* Language Translation
 * Video analysis
 
 Variable sized input where sequential information matters
