@@ -78,7 +78,7 @@ In general- **variably sized**, **sequential data** combine an input vector with
 
 #### Incorporate with RNN the idea of equally spread, repetative, temporal relationship
 
-<img src="https://user-images.githubusercontent.com/12748752/188303495-8e5a52d2-be62-4bd0-9dd5-1e391ca82fab.png" width=20% />
+<img src="https://user-images.githubusercontent.com/12748752/188321976-67e6563e-d6cf-4387-933d-7bda64a88131.png" width=70% />
 
 ### Hidden Layers:
 
@@ -88,7 +88,7 @@ In general- **variably sized**, **sequential data** combine an input vector with
 $$\Huge{\color{Purple}
 \begin{align*}
 & \ h_t = f_w (h_{t-1}, x_t) &\\
-& \Huge \boxed{h_t = tanh (W_{{\color{Cyan}hh}}h_{t-1},W_{{\color{Cyan}xh}} x_t)}  & \normalsize \begin{cases}
+& \Huge \boxed{h_t = tanh (W_{{\color{Cyan}hh}}h_{t-1},W_{{\color{Cyan}xh}} x_t) + \textrm{b}}  & \normalsize \begin{cases}
 W_{{\color{Cyan}hh}} &= \textit{ takes an \textbf{h} and gives out an \textbf{h}} \\
 W_{{\color{Cyan}xh}} &= \textit{ takes an \textbf{x} and gives out an \textbf{h}} 
 \end{cases}
@@ -100,14 +100,21 @@ $$
 * Those two weight matrices are different in general. Not only that, they also have different sizes.
 * So this is the general formula for the hidden layer of an **RNN**, some people will replace this tanh by **_f<sub>w</sub>_** or by **_g_**.
 
+The calculation for hiddenlayer **_h<sub>2</sub>_**  would be-
+
+$$
+\large{\color{Purple} h_2 = tanh (W_{hh}h_{1},W_{xh} x_2) + \textrm{b}} 
+$$
 
 ### Output Layer: 
+The Output size is variable. 
 What about this $\large{\color{Purple} \hat{y}_t}$ ?
 
 **Answer:**  $\large{\color{Purple} \hat{y}_t}$ is equal to some function of $\large{\color{Purple} h_t}$. 
 
 Now in some cases, it simply makes sense for this function to be a **linear function**( for regression output). In some cases, it makes sense for the function to be a **non-linear function** ( for Classification output).
-
+* If it is a classifcation task and let us say it is a binary classification task, then **g** will become a **Sigmoid** &sigma; . 
+* If it is a multiclass classification task, you will use a **Softmax**.
 
 
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
