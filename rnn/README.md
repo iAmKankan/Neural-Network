@@ -80,30 +80,37 @@ In general- **variably sized**, **sequential data** combine an input vector with
 
 <img src="https://user-images.githubusercontent.com/12748752/188303495-8e5a52d2-be62-4bd0-9dd5-1e391ca82fab.png" width=20% />
 
-$$\Huge{\color{Purple}
-\begin{align*}
-h_t &= f_w (h_{t-1}, x_t) \\
-\end{align*}
-}
-$$
+### Hidden Layers:
 
-#### what is the most general function we typically use within neural network? 
-* It is very simple. We take **linear combination followed by non-linearity** always.
-* Typically in **RNNs** we usually use **tanh** for the **nonlinearity** in the **hidden layers**, okay. 
-* So in this case, this will be **tanh** and we need a linear combination of **h** and **x**. So there will be some **weight matrix** **_W_** which we will multiply **h** and some other **weight matrix** **_W_** which we will multiply **x**. 
-* So these are 2 weight matrices in general will be different. Not only that, they will also have different sizes.
-
+### What is the most general function we typically use within neural network? 
+**Answer:** We take **linear combination** followed by **non-linearity** always. Typically in **RNNs** we usually use **tanh** for the **nonlinearity** in the **hidden layers**. 
 
 $$\Huge{\color{Purple}
 \begin{align*}
-h_t &= tanh (W_{{\color{Cyan}hh}}h_{t-1},W_{{\color{Cyan}xh}} x_t) \\
-\end{align*}
-\large \begin{cases}
-W_{{\color{Cyan}hh}} &= \textit{ takes an h and gives out an h} \\
-W_{{\color{Cyan}xh}} &= \textit{ takes a x and gives an h} 
+& \ h_t = f_w (h_{t-1}, x_t) &\\
+& \Huge \boxed{h_t = tanh (W_{{\color{Cyan}hh}}h_{t-1},W_{{\color{Cyan}xh}} x_t)}  & \normalsize \begin{cases}
+W_{{\color{Cyan}hh}} &= \textit{ takes an \textbf{h} and gives out an \textbf{h}} \\
+W_{{\color{Cyan}xh}} &= \textit{ takes an \textbf{x} and gives out an \textbf{h}} 
 \end{cases}
+\end{align*}
 }
 $$
+
+* So in this case, this will be **tanh** and we need a linear combination of **h** and **x**. So there will be some **weight matrix** **_W_** which we will multiply **h** and some other **weight matrix** **_W_** which we will multiply **x**. 
+* Those two weight matrices are different in general. Not only that, they also have different sizes.
+* So this is the general formula for the hidden layer of an **RNN**, some people will replace this tanh by **_f<sub>w</sub>_** or by **_g_**.
+
+
+### Output Layer: 
+What about this $\large{\color{Purple} \hat{y}_t}$ ?
+
+**Answer:**  $\large{\color{Purple} \hat{y}_t}$ is equal to some function of $\large{\color{Purple} h_t}$. 
+
+Now in some cases, it simply makes sense for this function to be a **linear function**( for regression output). In some cases, it makes sense for the function to be a **non-linear function** ( for Classification output).
+
+
+
+![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 
 <img src="https://user-images.githubusercontent.com/12748752/144035005-3e1f7cb9-3cd8-4f2f-9d11-98a4bfc61ce0.png" width=50%/>
 
