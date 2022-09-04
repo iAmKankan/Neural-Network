@@ -89,8 +89,9 @@ $$\Huge{\color{Purple}
 \begin{align*}
 & \ h_t = f_w (h_{t-1}, x_t) &\\
 & \Huge \boxed{h_t = tanh (W_{{\color{Cyan}hh}}h_{t-1},W_{{\color{Cyan}xh}} x_t) + \textrm{b}}  & \normalsize \begin{cases}
-W_{{\color{Cyan}hh}} &= \textit{ takes an \textbf{h} and gives out an \textbf{h}} \\
-W_{{\color{Cyan}xh}} &= \textit{ takes an \textbf{x} and gives out an \textbf{h}} 
+W_{{\color{Cyan}hh}} = \textit{ takes an \textbf{h} and gives out an \textbf{h}} \\
+W_{{\color{Cyan}xh}} = \textit{ takes an \textbf{x} and gives out an \textbf{h}}\\ 
+W_{{\color{Cyan}xh}}, W_{{\color{Cyan}xh}} , \textbf{b}_n = \textit{ are constant with time}
 \end{cases}
 \end{align*}
 }
@@ -116,8 +117,18 @@ Now in some cases, it simply makes sense for this function to be a **linear func
 * If it is a classifcation task and let us say it is a binary classification task, then **g** will become a **Sigmoid** &sigma; . 
 * If it is a multiclass classification task, you will use a **Softmax**.
 
+### Constant with time meaning
+**Answer:** The **weights** and **bias** in **_h<sub>3</sub>_** are the same **_W<sub>hh</sub>  ,  W<sub>xh</sub>_** and  **_b<sub>n</sub>_** for **_h<sub>2</sub>_**
 
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
+
+
+### Training RNN
+
+#### Calculating Loss in RNN
+#### Backpropagation
+
+
 
 <img src="https://user-images.githubusercontent.com/12748752/144035005-3e1f7cb9-3cd8-4f2f-9d11-98a4bfc61ce0.png" width=50%/>
 
