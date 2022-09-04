@@ -74,12 +74,28 @@ Variable sized input where sequential information matters
 
 In general- **variably sized**, **sequential data** combine an input vector with a state vector via a fixed function to produce a new state.
 * **variably sized**: Number of features are fixed the size of the data is not.
-
-
 * It looks very much like a feedforward neural network, except it also has connections pointing backward. 
 
+#### Incorporate with RNN the idea of equally spread, repetative, temporal relationship
+
+<img src="https://user-images.githubusercontent.com/12748752/188303495-8e5a52d2-be62-4bd0-9dd5-1e391ca82fab.png" width=20% />
+
+$$\large{\color{Purple}
+\begin{align*}
+h_t &= f_w (h_{t-1}, x_t) \\
+\end{align*}
+}
+$$
 
 
+$$
+\begin{align*}
+& sgg ssfsfsfsf \\
+& gg \\
+& gg gdgs\\
+& gg
+\end{align*}
+$$
 <img src="https://user-images.githubusercontent.com/12748752/144035005-3e1f7cb9-3cd8-4f2f-9d11-98a4bfc61ce0.png" width=50%/>
 
 > ####  <ins>A recurrent neuron (left)    |    unrolled through time (right)</ins>
