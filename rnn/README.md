@@ -143,18 +143,22 @@ Now in some cases, it simply makes sense for this function to be a **linear func
 * Now when you have **multiple predicted values**, let us say having **10 days** before is the weather of **_h<sub>0</sub>_** or temperature of **_x<sub>0</sub>_** in some city, let us say Chennai. 
 * So suppose you have that input, you would have the next day's temperature, let us say that is <img src="https://latex.codecogs.com/svg.image?\large&space;\hat{y}_1" title="https://latex.codecogs.com/svg.image?\large \hat{y}_1" align="center"/>, the next day's temperature <img src="https://latex.codecogs.com/svg.image?\large&space;\hat{y}_2" title="https://latex.codecogs.com/svg.image?\large \hat{y}_2" align="center" />, next day's temperature <img src="https://latex.codecogs.com/svg.image?\large&space;\hat{y}_3" title="https://latex.codecogs.com/svg.image?\large \hat{y}_3" align="center"/>, till let us say today's temperature which is <img src="https://latex.codecogs.com/svg.image?\large&space;\hat{y}_{\textrm{T}}" title="https://latex.codecogs.com/svg.image?\large \hat{y}_{\textrm{T}}" align="center"/> . 
 * Now for each one of them, you also have a corresponding ground truth, which should be <img src="https://latex.codecogs.com/svg.image?\large&space;y_1,\&space;y_2,\&space;y_3,\&space;y_T" title="https://latex.codecogs.com/svg.image?\large y_1,\ y_2,\ y_3,\ y_T" align="center"/> . And whenever you have a ground truth and a prediction and these two differs, you will have a **loss function**. 
-* So the total loss is actually summation of all the intermediate losses through the layers. 
+* So the total loss is -
 
 $$
 \Huge{\color{Purple} 
 \begin{align*}
-& \boxed{ \textbf{L} = \sum_{t=1}^{\textrm{T}} \textbf{L}_{\textrm{T} } } & 
+& \boxed{ \textbf{L} = \sum_{t=1}^{\textrm{T}} \textbf{L}_{t} } & 
 \Big \\{ \normalsize \textit{ Summation of all the intermediate losses through the layers} \\
 \end{align*}
 }
 $$
 
-* Now in terms of Lt itself, or the local loss func- tion, you again have many choices but we having seen only 2, you can either use cross entropy or you can use least-squares, depending on what sort of problem it is. Typically what we have done so far in this course is we have used least-squares, whenever it was a regression or a numerical output. For example let us say temperature today. And we have been using cross entropy in case it was a classication issue.
+* Now in terms of **_L<sub>t</sub>_** itself, or the **local loss function**, you again have many choices but we having seen only 2 so far,
+  1. cross entropy 
+  2. least-squares error
+
+It depends on what sort of problem it is. Typically what we have done so far in this course is we have used least-squares, whenever it was a regression or a numerical output. For example let us say temperature today. And we have been using cross entropy in case it was a classifcation issue.
 
 #### Backpropagation
 
