@@ -155,7 +155,7 @@ $$
 $$
 
 * Now in terms of **_L<sub>t</sub>_** itself, or the **local loss function**, you again have many choices but we having seen only 2 so far,
-  1. cross entropy 
+  1. [cross entropy](https://github.com/iAmKankan/MachineLearning_With_Python/edit/master/Supervised/Logistic%20Regrassion/README.md#binary-cross-entropy-cost-function) 
   2. least-squares error
 
 It depends on what sort of problem it is. Typically what we have done so far in this course is we have used least-squares, whenever it was a regression or a numerical output. For example let us say temperature today. And we have been using cross entropy in case it was a classifcation issue.
