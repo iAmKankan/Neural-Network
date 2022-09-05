@@ -102,7 +102,7 @@ W_{{\color{Cyan}xh}}, W_{{\color{Cyan}xh}} , \textbf{b}_n = \textit{ are constan
 }
 $$
 
-* So in this case, this will be **tanh** and we need a linear combination of **h** and **x**. So there will be some **weight matrix** **_W_** which we will multiply **h** and some other **weight matrix** **_W_** which we will multiply **x**. 
+* So in this case, the non-linear function is **tanh** and we need a linear combination of **h** and **x**. So there will be some **weight matrix** **_W_** which we will multiply **h** and some other **weight matrix** **_W_** which we will multiply **x**. 
 * Those two weight matrices are different in general. Not only that, they also have different sizes.
 * So this is the general formula for the hidden layer of an **RNN**, some people will replace this tanh by **_f<sub>w</sub>_** or by **_g_**.
 
@@ -155,12 +155,21 @@ $$
 $$
 
 * Now in terms of **_L<sub>t</sub>_** itself, or the **local loss function**, you again have many choices but we having seen only 2 so far,
-  1. [cross entropy](https://github.com/iAmKankan/MachineLearning_With_Python/edit/master/Supervised/Logistic%20Regrassion/README.md#binary-cross-entropy-cost-function) 
-  2. least-squares error
+  1. [cross entropy](https://github.com/iAmKankan/MachineLearning_With_Python/edit/master/Supervised/Logistic%20Regrassion/README.md#binary-cross-entropy-cost-function) -classifcation
+  2. least-squares error - regression or a numerical output
 
-It depends on what sort of problem it is. Typically what we have done so far in this course is we have used least-squares, whenever it was a regression or a numerical output. For example let us say temperature today. And we have been using cross entropy in case it was a classifcation issue.
+#### Backpropagation Through Time (BPTT)
+As per we know 
 
-#### Backpropagation
+The following expression for any **h<sub>t</sub>** - 
+
+$$ \large{\color{Purple} h_t = tanh (W_{hh}h_{t-1},W_{xh} x_t) + \textrm{b}} $$
+
+
+ * The **non-linear function** for here is **g** 
+ * The **linear combination** of **h** and **x** and **weight matrix** **_W_** which we will multiply **h** of previous layer and some other **weight matrix** **_W_** which we will multiply **x**. 
+ * **W<sub>hh</sub>** takes an **h** and gives out an **h**.
+ * **W<sub>rh</sub>** takes an **x** and gives out an **h**.
 
 
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
