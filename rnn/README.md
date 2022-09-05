@@ -17,14 +17,19 @@ A Recurrent Neural Network is a type of ANN that contains **loops**, allowing **
 ## Why Recurrent Neural Networks(RNN)?
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 
-Artificial Neural Network(ANN) and Convolutional Neural Network(CNN) are not capable of handling Sequential data or time series, e.g. 1) Text, 2) Audio, 3) Video, because they take the followings- 
+**RNN** works with -
+  * **Variable length Input**
+  * **Sequential Data**: Text data is a example of sequential data, where the context of previous input matters for the present as well as for the future inputs.
+
+
+Artificial Neural Network(ANN) and Convolutional Neural Network(CNN) are not capable of handling Sequential data or time series, e.g. **1) Text, 2) Audio, 3) Video**, because they take the followings- 
 * Fixed sized inputs
 * The whole input available simultaneously
 
 Whereas the RNN takes **variable sized input** inorder to process the sequential information. In the following problems-
-* Speech processing
-* Language Translation
-* Video analysis
+* **Speech processing**
+* **Language Translation**
+* **Video analysis**
 
 Variable sized input where sequential information matters
 
@@ -124,16 +129,38 @@ Now in some cases, it simply makes sense for this function to be a **linear func
 
 
 ### Training RNN
-
+![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 
 #### Calculating Loss in RNN
-<p align="cenetr">
+![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
+
+<p align="center"> 
 <img src="https://user-images.githubusercontent.com/12748752/188473359-24396c3f-04df-487b-90a6-3a5837be0cf2.png" width=40%/>
-<br> <ins><b><i> Many-To-Many  |  The number of Layers = 'L'</i></b></ins>
+<br><ins><b><i> RNN- Many-To-Many  |  The number of Layers = 'T'</i></b></ins>
+</p>
+
+#### Example:
+* Now when you have **multiple predicted values**, let us say having **10 days** before is the weather of **_h<sub>0</sub>_** or temperature of **_x<sub>0</sub>_** in some city, let us say Chennai. 
+* So suppose you have that input, you would have the next day's temperature, let us say that is <img src="https://latex.codecogs.com/svg.image?\large&space;\hat{y}_1" title="https://latex.codecogs.com/svg.image?\large \hat{y}_1" align="center"/>, the next day's temperature <img src="https://latex.codecogs.com/svg.image?\large&space;\hat{y}_2" title="https://latex.codecogs.com/svg.image?\large \hat{y}_2" align="center" />, next day's temperature <img src="https://latex.codecogs.com/svg.image?\large&space;\hat{y}_3" title="https://latex.codecogs.com/svg.image?\large \hat{y}_3" align="center"/>, till let us say today's temperature which is <img src="https://latex.codecogs.com/svg.image?\large&space;\hat{y}_{\textrm{T}}" title="https://latex.codecogs.com/svg.image?\large \hat{y}_{\textrm{T}}" align="center"/> . 
+* Now for each one of them, you also have a corresponding ground truth, which should be <img src="https://latex.codecogs.com/svg.image?\large&space;y_1,\&space;y_2,\&space;y_3,\&space;y_T" title="https://latex.codecogs.com/svg.image?\large y_1,\ y_2,\ y_3,\ y_T" align="center"/> . And whenever you have a ground truth and a prediction and these two differs, you will have a **loss function**. 
+* So the total loss is actually summation of all the intermediate losses through the layers. 
+
+$$
+\Huge{\color{Purple} 
+\begin{align*}
+& \boxed{ \textbf{L} = \sum_{t=1}^{\textrm{T}} \textbf{L}_{\textrm{T} } } & 
+\Big \\{ \normalsize \textit{ Summation of all the intermediate losses through the layers} \\
+\end{align*}
+}
+$$
+
+* Now in terms of Lt itself, or the local loss func- tion, you again have many choices but we having seen only 2, you can either use cross entropy or you can use least-squares, depending on what sort of problem it is. Typically what we have done so far in this course is we have used least-squares, whenever it was a regression or a numerical output. For example let us say temperature today. And we have been using cross entropy in case it was a classication issue.
 
 #### Backpropagation
 
 
+![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
+![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 
 <img src="https://user-images.githubusercontent.com/12748752/144035005-3e1f7cb9-3cd8-4f2f-9d11-98a4bfc61ce0.png" width=50%/>
 
