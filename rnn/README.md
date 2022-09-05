@@ -125,7 +125,12 @@ Now in some cases, it simply makes sense for this function to be a **linear func
 
 ### Training RNN
 
+
 #### Calculating Loss in RNN
+<p align="cenetr">
+<img src="https://user-images.githubusercontent.com/12748752/188473359-24396c3f-04df-487b-90a6-3a5837be0cf2.png" width=40%/>
+<br> <ins><b><i> Many-To-Many  |  The number of Layers = 'L'</i></b></ins>
+
 #### Backpropagation
 
 
