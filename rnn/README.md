@@ -196,6 +196,7 @@ $$
 \Huge {\color{Purple} \frac{\partial \textrm{L}}{\partial \textrm{W}},\ \frac{\partial \textrm{L}}{\partial \textrm{U}},\ \frac{\partial \textrm{L}}{\partial \textrm{V}} }
 $$
 
+<img src="https://user-images.githubusercontent.com/12748752/188530747-2095a7bf-8bb1-4d37-a25b-4f491c90b2bc.png" width=60%/>
 
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
