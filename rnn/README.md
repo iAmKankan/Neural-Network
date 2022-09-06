@@ -308,8 +308,36 @@ $$
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 1. Unstable Gradient
 
-### Rolled RNN and Unrolled version of RNN
+### Vanishing Gradients and TBPTT
+![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
+#### Recap :
+The basic issue because of which we had to do **back propagation through time** (BPTT) was because **W, U, V** -> our matrices were **constants across time**, because of which you had sort of recursive expressions for the loss with respect to **W** and the loss with respect to **U**.
+
+The main issues that come up is 
+* **gradient calculations** either **explode** or **vanish**, both of these are not ideal.
+* The **gradient calculations are expensive**.
+
+### The Solution
+* The solution for **exploding gradients** is **_gradient clipping_**.
+* The solution for **vanishing gradients** is alternate architectures **LSTM, GRU**.
+* The solution for **expensive gradient calculations** is **_Truncated Back Propagation Through Time(TBPTT)_**.
+
+$$\Huge{\color{Purple}
+\begin{align*}
+& \parallel \frac{\partial \textrm{L}}{\partial \textrm{W}} \parallel \to \infty & \textbf{Exploding Gradient} \\
+& \parallel \frac{\partial \textrm{L}}{\partial \textrm{W}} \parallel \to 0 & \textbf{Vanishing Gradient} \\
+\end{align*}
+\left \\} \begin{matrix}
+  \\
+ \large \textrm{Very Difficult to train}\\
+  \\
+\end{matrix}\right.
+}
+$$
+
+
 
 ## Bibliography
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 * **Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow, 2nd Edition by Aurélien Géron**
+* NPTEL
