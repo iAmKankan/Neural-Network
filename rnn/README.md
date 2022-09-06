@@ -159,17 +159,32 @@ $$
   2. least-squares error - regression or a numerical output
 
 #### Backpropagation Through Time (BPTT)
-As per we know 
-
+![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
+#### We know
 The following expression for any **h<sub>t</sub>** - 
 
-$$ \large{\color{Purple} h_t = tanh (W_{hh}h_{t-1},W_{xh} x_t) + \textrm{b}} $$
+$$ \large{\color{Purple} h_t = g (W_{hh}h_{t-1}+W_{xh} x_t) + \textrm{b}} $$
 
 
  * The **non-linear function** for here is **g** 
  * The **linear combination** of **h** and **x** and **weight matrix** **_W_** which we will multiply **h** of previous layer and some other **weight matrix** **_W_** which we will multiply **x**. 
  * **W<sub>hh</sub>** takes an **h** and gives out an **h**.
  * **W<sub>rh</sub>** takes an **x** and gives out an **h**.
+
+The following expression for any <img src="https://latex.codecogs.com/svg.image?\large&space;\hat{y}_t" title="https://latex.codecogs.com/svg.image?\large \hat{y}_t" align="center"/>, **g** needs not to be same as **g<sup>*</sup>** even **g<sup>*</sup>** not always be **non-linear function**- 
+
+$$ \large{\color{Purple} \hat{y_t} = g^* ( W_{yh} h_t) } $$
+
+
+#### Inorder to make the expressions simple we put allias in the above two expressionas like 
+
+<img src="https://user-images.githubusercontent.com/12748752/188525079-36af334d-6d36-4550-8480-8094a409168a.png" width= 55%/>
+
+#### **_h<sub>t</sub>_** and <img src="https://latex.codecogs.com/svg.image?\large&space;\hat{y}_t" title="https://latex.codecogs.com/svg.image?\large \hat{y}_t" align="center"/>  looks like- 
+$$ \Huge{\color{Purple} \begin{align*}
+& h_t = g (W h_{t-1}+ U x_t) + \textrm{b} \\
+&  \hat{y_t} = g^* ( V h_t) \\
+\end{align*}} $$
 
 
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
