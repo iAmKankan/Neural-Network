@@ -225,10 +225,11 @@ $$
 \begin{align*}
 & \frac{\partial \textrm{L}_3}{\partial \textrm{V}} & {\color{Black} \large \textrm{which can be expressed by- }} \\
 & \frac{\partial \textrm{L}_3} {\partial \textrm{V}} = \frac{\partial \textrm{L}_3}{\partial \mathrm{\hat{y_3}}} \frac{\partial \mathrm{\hat{y_3}}}{\partial \textrm{V}} &\\
-& \frac{\partial \textrm{L}_3} {\partial \textrm{V}} = (\mathrm{y_3 - \hat{y_3}}) \mathrm{h_3} &\\
+& \frac{\partial \textrm{L}_3} {\partial \textrm{V}} = - (\mathrm{y_3 - \hat{y_3}}) \mathrm{h_3} &\\
 \end{align*}
 }
 $$
+[**To be continued**]
 
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 
@@ -238,11 +239,11 @@ $$
 \Huge {\color{Purple} 
 \begin{align*}
 & \frac{\partial \textrm{L}_3} {\partial \textrm{W}} = \frac{\partial \textrm{L}_3}{\partial \mathrm{\hat{y_3}}} \frac{\partial \mathrm{\hat{y_3}}}{\partial \textrm{h}_3} \frac{\partial \textrm{h}_3}{\partial \textrm{W}}&\\
-& \frac{\partial \textrm{L}_3} {\partial \textrm{V}} = (\mathrm{y_3 - \hat{y_3}}) \mathrm{h_3} &\\
+& \frac{\partial \textrm{L}_3} {\partial \textrm{V}} = - (\mathrm{y_3 - \hat{y_3}}) \mathrm{h_3} \mathrm{V}&\\
 \end{align*}
 }
 $$
-
+[**To be continued**]
 
 
 
