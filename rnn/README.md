@@ -186,6 +186,16 @@ $$ \Huge{\color{Purple} \begin{align*}
 &  \hat{y_t} = g^* ( V h_t) \\
 \end{align*}} $$
 
+#### How does RNN keep the context?
+
+Answer: <img src="https://latex.codecogs.com/svg.image?{\color{Purple}\textrm{W,&space;U,&space;V&space;}&space;}" title="https://latex.codecogs.com/svg.image?{\color{Purple}\textrm{W, U, V } }" align="center" /> do not change with time (or across the layers).
+
+
+#### For the Backprop we need to findout the followings- 
+$$
+\Huge \boxed{{\color{Purple} \frac{\partial \textrm{L}}{\partial \textrm{W}},\ \frac{\partial \textrm{L}}{\partial \textrm{U}},\ \frac{\partial \textrm{L}}{\partial \textrm{V}} }}
+$$
+
 
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
