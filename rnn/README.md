@@ -185,7 +185,7 @@ $$ \Huge{\color{Purple} \begin{align*}
 
 #### How does RNN keep the context?
 
-Answer: <img src="https://latex.codecogs.com/svg.image?{\color{Purple}\textrm{W,&space;U,&space;V&space;}&space;}" title="https://latex.codecogs.com/svg.image?{\color{Purple}\textrm{W, U, V } }" align="center" /> do not change with time (or across the layers).
+**Answer:** The following vectors <img src="https://latex.codecogs.com/svg.image?{\color{Purple}\textrm{W,&space;U,&space;V&space;}&space;}" title="https://latex.codecogs.com/svg.image?{\color{Purple}\textrm{W, U, V } }" align="center" /> do not change with time (or across the layers).
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/12748752/188549351-d5c3b022-9b5b-4b80-bf0c-ce57d3039940.png" width=50%/>
@@ -193,8 +193,10 @@ Answer: <img src="https://latex.codecogs.com/svg.image?{\color{Purple}\textrm{W,
 
 
 #### For the Backprop we need to findout the followings- 
+
+#### Equation for Back propagation
 $$
-\Huge {\color{Purple} \frac{\partial \textrm{L}}{\partial \textrm{W}},\ \frac{\partial \textrm{L}}{\partial \textrm{U}},\ \frac{\partial \textrm{L}}{\partial \textrm{V}} }
+\Huge {\color{Red}\boxed{ {\color{Purple} \frac{\partial \textrm{L}}{\partial \textrm{W}},\ \frac{\partial \textrm{L}}{\partial \textrm{U}},\ \frac{\partial \textrm{L}}{\partial \textrm{V}}} }} {\color{Purple} \Big \\{ \normalsize \textrm{For the Backprop we need to findout the derivatives} }
 $$
 
 #### Example #1: Lets consider local loss L3 and see how backprop works
@@ -202,11 +204,46 @@ $$
 \Huge {\color{Purple} \frac{\partial \textrm{L}_3}{\partial \textrm{W}},\ \frac{\partial \textrm{L}_3}{\partial \textrm{U}},\ \frac{\partial \textrm{L}_3}{\partial \textrm{V}} }
 $$
 
-* Suppose we need to find out 
-* We assume that _**g**_ is a non-linear function and-
+* We assume that _**g**_ is a **non-linear function** and-
+
 $$
-\Huge {\color{Purple} y_3 = g(V h_3) }
+\Huge {\color{Purple} \hat{y_3} = g(V h_3) }
 $$
+
+* **Loss functions** used **least-squares error**
+
+$$
+\Huge {\color{Purple} \mathrm{L_3} = \frac{1}{2}(y_3 - \hat{y_3})^2 }
+$$
+
+![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
+
+* We need to findout 
+
+$$
+\Huge {\color{Purple} 
+\begin{align*}
+& \frac{\partial \textrm{L}_3}{\partial \textrm{V}} & {\color{Black} \large \textrm{which can be expressed by- }} \\
+& \frac{\partial \textrm{L}_3} {\partial \textrm{V}} = \frac{\partial \textrm{L}_3}{\partial \mathrm{\hat{y_3}}} \frac{\partial \mathrm{\hat{y_3}}}{\partial \textrm{V}} &\\
+& \frac{\partial \textrm{L}_3} {\partial \textrm{V}} = (\mathrm{y_3 - \hat{y_3}}) \mathrm{h_3} &\\
+\end{align*}
+}
+$$
+
+![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
+
+#### What is $\large \frac{\partial \textrm{L}_3}{\partial \textrm{W}}$ ?
+
+$$
+\Huge {\color{Purple} 
+\begin{align*}
+& \frac{\partial \textrm{L}_3} {\partial \textrm{W}} = \frac{\partial \textrm{L}_3}{\partial \mathrm{\hat{y_3}}} \frac{\partial \mathrm{\hat{y_3}}}{\partial \textrm{h}_3} \frac{\partial \textrm{h}_3}{\partial \textrm{W}}&\\
+& \frac{\partial \textrm{L}_3} {\partial \textrm{V}} = (\mathrm{y_3 - \hat{y_3}}) \mathrm{h_3} &\\
+\end{align*}
+}
+$$
+
+
 
 
 
