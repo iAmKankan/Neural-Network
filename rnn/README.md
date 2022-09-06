@@ -193,7 +193,7 @@ Answer: <img src="https://latex.codecogs.com/svg.image?{\color{Purple}\textrm{W,
 
 #### For the Backprop we need to findout the followings- 
 $$
-\Huge \boxed{{\color{Purple} \frac{\partial \textrm{L}}{\partial \textrm{W}},\ \frac{\partial \textrm{L}}{\partial \textrm{U}},\ \frac{\partial \textrm{L}}{\partial \textrm{V}} }}
+\Huge {\color{Purple} \frac{\partial \textrm{L}}{\partial \textrm{W}},\ \frac{\partial \textrm{L}}{\partial \textrm{U}},\ \frac{\partial \textrm{L}}{\partial \textrm{V}} }
 $$
 
 
