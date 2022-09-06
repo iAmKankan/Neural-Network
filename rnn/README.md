@@ -125,9 +125,6 @@ Now in some cases, it simply makes sense for this function to be a **linear func
 ### Constant with time meaning
 **Answer:** The **weights** and **bias** in **_h<sub>3</sub>_** are the same **_W<sub>hh</sub>  ,  W<sub>xh</sub>_** and  **_b<sub>n</sub>_** for **_h<sub>2</sub>_**
 
-![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
-
-
 ### Training RNN
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 
@@ -190,15 +187,27 @@ $$ \Huge{\color{Purple} \begin{align*}
 
 Answer: <img src="https://latex.codecogs.com/svg.image?{\color{Purple}\textrm{W,&space;U,&space;V&space;}&space;}" title="https://latex.codecogs.com/svg.image?{\color{Purple}\textrm{W, U, V } }" align="center" /> do not change with time (or across the layers).
 
+<p align="center">
+<img src="https://user-images.githubusercontent.com/12748752/188549351-d5c3b022-9b5b-4b80-bf0c-ce57d3039940.png" width=50%/>
+</p>
+
 
 #### For the Backprop we need to findout the followings- 
 $$
 \Huge {\color{Purple} \frac{\partial \textrm{L}}{\partial \textrm{W}},\ \frac{\partial \textrm{L}}{\partial \textrm{U}},\ \frac{\partial \textrm{L}}{\partial \textrm{V}} }
 $$
 
-<p align="center">
-<img src="https://user-images.githubusercontent.com/12748752/188530747-2095a7bf-8bb1-4d37-a25b-4f491c90b2bc.png" width=50%/>
-</p>
+#### Example #1: Lets consider local loss L3 and see how backprop works
+$$
+\Huge {\color{Purple} \frac{\partial \textrm{L}_3}{\partial \textrm{W}},\ \frac{\partial \textrm{L}_3}{\partial \textrm{U}},\ \frac{\partial \textrm{L}_3}{\partial \textrm{V}} }
+$$
+
+* Suppose we need to find out 
+* We assume that _**g**_ is a non-linear function and-
+$$
+\Huge {\color{Purple} y_3 = g(V h_3) }
+$$
+
 
 
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
