@@ -336,6 +336,28 @@ $$\Huge{\color{Purple}
 $$
 
 
+### _Gradient clipping_ for exploding gradients
+**Answer:**  It is very simple, we decide on a **maximum allowable gradient size**. What do I mean by value of gradient? **Gradient is a vector**, so you cannot give it a value, **you can however give a value to _norm_ of gradient**.
+* Say-
+
+$$\Huge{\color{Purple}
+\begin{align*}
+&  \frac{\partial \textrm{L}}{\partial \textrm{W}} = \vec{g} & max \parallel \vec{g} \parallel = G_{max} \\
+\end{align*}
+}
+$$
+
+#### Gradient Descent Calculate for $\large{\color{Purple}\vec{g}}$
+$$\Huge{\color{Purple}
+\begin{align*}
+& \textit{If  }  \parallel \vec{g} \parallel < G_{max} \large \textrm{[ Proceed as usual]} \\
+& \textit{If not, }  \parallel \vec{g^\*} \parallel =  \frac{\vec{g}}{\parallel \vec{g} \parallel} G_{max} \\
+\end{align*}
+}
+$$
+
+*  My new gradient $\vec{g^\*}$ is in the same direction as the gradient you calculated but I am cutting down its size
+
 
 ## Bibliography
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
