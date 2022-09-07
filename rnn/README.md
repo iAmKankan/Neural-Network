@@ -394,8 +394,8 @@ If you back propagates through a small amount of data, your gradient will neithe
  
 </p>
  
- * So the **input layer** is x<sub>t</sub> and there is also **another input coming from the previous layer** which is h<sub>t-1</sub> where **_t_** is the level at which we are looking and the output or the input to the next layer is  h<sub>t</sub> and the output here is y<sub>t</sub>. 
- * The formulation is simply a **linear combination** in this case **_W_** and **_U_** are **weight matrices**,  this linear combination followed by **an non-linearity**, the typically in RNN is a **tanh** layer.
+ * So the **input layer** is **x<sub>t</sub>** and there is also **another input coming from the previous layer** which is **h<sub>t-1</sub>** where **_t_** is the level at which we are looking and the output or the input to the next layer is  **h<sub>t</sub>** and the output here is **y<sub>t</sub>**. 
+ * The formulation is simply a **linear combination** in this case **W** and **U** are **weight matrices**,  this linear combination followed by **an non-linearity**, the typically in **RNN** is a **tanh** layer.
  *  Now the output which is optional you can take out the output at any point.
  *  **Vanilla RNNs** have trouble with either **vanishing** or **exploring gradients** during **back propagation** - because repeated operation of this sort can actually make the gradients **either increase continuously** or **decrease continuously** depending on the **eigenvalues** of these **matrices**.
  
