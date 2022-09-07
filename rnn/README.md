@@ -358,6 +358,29 @@ $$
 
 *  My new gradient $\vec{g^\*}$ is in the same direction as the gradient you calculated but I am cutting down its size
 
+### Solution for Vanishing gradients 
+**Answer:** Unfortunately no such simple solution exists. LSTM, GRU is the result
+
+### Solution for **expensive gradient Computation** **_Truncated Back Propagation Through Time(TBPTT)_**
+**Answer:** This solution kind of handles to a certain extent, both the **vanishing gradient** and the **exploding gradient** problems. 
+
+So, if we have data with thousands and thousands of time steps. And you want to calculate back **propagation through time**. Now how would you do it? 
+#### Step #1
+Forward propagate through the whole thing, calculate the whole of <img src="https://latex.codecogs.com/svg.image?{\color{Purple}&space;\mathbf{L_T}}" title="https://latex.codecogs.com/svg.image?{\color{Purple} \mathbf{L_T}}" align="center"/> 
+#### Step #2
+Then you will **back propagate** through the whole thing. 
+
+Now we have **65,000 time sequences**. If you go back for the full thing and come back through the full thing, by that time almost any correction you give will lead to vanishing or exploding gradient problems, plus it would become potentially very **expensive** just to do one gradient update.
+
+So the solution to that is **truncated back propagation through time**.
+
+Since throughout the RNN network you are going to get exactly the same **_W_**. So, instead of training for the whole **sequence**, you split it up into many mini batches( similar like mini batch gradient descent).
+
+I will **forward propagate** through **first 2 steps** and **back propagate** through **2 steps**, this is one possibility. Since **_W_** is the same everywhere. So I will get some new updated **_W_**. 
+
+Next I **forward propagates** through another 2 steps, back propagates through 2 steps, my W is now updated , okay. Now when the W is updated, I will forward propagate through the whole thing, okay. So I keep on doing this.
+
+If you back propagates through a small amount of data, your gradient will neither blow up, nor will it **vanish**. Now what is a good rule of thumb? It is actually hard to say for some problems, hundred steps are good for some problems, 10, 20 steps are good, etc.
 
 ## Bibliography
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
