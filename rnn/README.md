@@ -382,6 +382,18 @@ Next I **forward propagates** through another 2 steps, back propagates through 2
 
 If you back propagates through a small amount of data, your gradient will neither blow up, nor will it **vanish**. Now what is a good rule of thumb? It is actually hard to say for some problems, hundred steps are good for some problems, 10, 20 steps are good, etc.
 
+## The Archetecture
+![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
+
+### Vanilla RNN or Plain RNN
+
+<p align="center">
+ 
+ <img src="https://user-images.githubusercontent.com/12748752/188993131-2226bcb8-568f-4c6e-bf62-b23e602ef9d5.png" width 50%/>
+ <br><ins><b><i>Vanilla RNN</i></b></ins> 
+ 
+</p>
+ 
 ## Bibliography
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 * **Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow, 2nd Edition by Aurélien Géron**
