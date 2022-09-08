@@ -2,6 +2,25 @@
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 
+### Recap: Vanilla RNN or Plain RNN
+
+<p align="center">
+ 
+ <img src="https://user-images.githubusercontent.com/12748752/188993131-2226bcb8-568f-4c6e-bf62-b23e602ef9d5.png" width=50%/>
+ <br><ins><b><i>Vanilla RNN</i></b></ins> 
+ 
+</p>
+ 
+ * So the **input layer** is **x<sub>t</sub>** and there is also **another input coming from the previous layer** which is **h<sub>t-1</sub>** where **_t_** is the level at which we are looking and the output or the input to the next layer is  **h<sub>t</sub>** and the output here is **y<sub>t</sub>**. 
+ * The formulation is simply a **linear combination** in this case **W** and **U** are **weight matrices**,  this linear combination followed by **an non-linearity**, the typically in **RNN** is a **tanh** layer.
+ *  Now the output which is optional you can take out the output at any point.
+ *  **Vanilla RNNs** have trouble with either **vanishing** or **exploring gradients** during **back propagation** - because repeated operation of this sort can actually make the gradients **either increase continuously** or **decrease continuously** depending on the **eigenvalues** of these **matrices**.
+ 
+ > ### The Basic Idea: Need some kind of memory
+
+### Simplified GRU (Andru NG)- (Not a practiced Algo)
+ 
+ 
 ## Gated Recurrent Unit (GRU)
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 There are many other variants of the LSTM cell. One particularly popular variant is the GRU cell. The **Gated Recurrent Unit (GRU)** cell was proposed by Kyunghyun Cho et al. in a 2014 paper that also introduced the **Encoder–Decoder network**.
