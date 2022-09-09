@@ -49,17 +49,41 @@ $$
 
 $$ \Huge{\color{Purple}
 \begin{align*}
-& h_t = (1- f) \odot g  + f \odot h_{t-1} &  
+& h_t = (1- f) \odot g  + f \odot h_{t-1}  &  
 \end{align*}
 \normalsize \begin{cases}
+f \in \[0,1\] \\
 [f \odot h_{t-1}] \Rightarrow f \textrm{ is a Forget Gate} \\
 When,\ f \textrm{ = 1 become a Memory Cell ; } When,\ f \textrm{ = 0 become a Vanilla RNN} \\
 \end{cases}
 } 
 $$ 
 
+### Difference between the followings 
 
+$$\begin{align*}
+& \large {\color{Purple} (1- \lambda)g} & \textrm{ vs } & & \large{\color{Purple} (1- f)\circledcirc g} 
+\end{align*}
+$$
 
+* **&lambda;** is a scaler in Vanilla RNN
+* **f** is a vector in simple GRU
+
+#### Why would we take **f** to be a vector?
+**Answer:** Because it is possible that you might want to **remember** a few thing and **forget** a things within a vector, within the **h** vector.
+
+#### What value of **f** do we choose?
+**Answer:**  Here we use the general principle of whatever we have been doing in neural networks which is we never really specify any component we let the algorithm choose it.
+
+#### The value of _f_ also has to be between 0 and 1 why?
+**Answer:** **_f_ &in; [0,1]** Because that is only then does the **linear combination** work out well there only then does it look like interpolation.
+
+Now **_f_ &in; [0,1]** is same as **&sigmoid;** so- I want f to be between 0 and 1, you remember from logistic re- gression that we have one function that always squeezes, any function into 0 and 1, so the same principle apply here, so we will kee f as a **&sigmoid;** of something, a **&sigmoid;** of what, same we have linear combination of only two vector here at any place you have these two vectors **h<sub>t</sub>**, **h<sub>t-1</sub>** and **x<sub>t</sub>** and you make them a linear combination of this.
+
+$${\color{Purple}
+\large f = \sigma(W_f h_{t-1} + U_f x_t)
+}
+$$
 
 ## Gated Recurrent Unit (GRU)
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
