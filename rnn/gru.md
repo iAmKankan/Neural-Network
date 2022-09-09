@@ -97,6 +97,11 @@ $${\color{Red}\boxed{ \Huge{\color{Purple}
 }
 $$
 
+<p align="center">
+ <img src="https://user-images.githubusercontent.com/12748752/189443768-7a6f4114-b2d5-4508-8648-448fdbdad543.png" width=40%/>
+ <br><ins><i><b>Architecture of "Simple Gated Recurrent Unit" (Simple GRU) </b></i></ins>
+</p>
+
 ## Gated Recurrent Unit (GRU)
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 There are many other variants of the LSTM cell. One particularly popular variant is the GRU cell. The **Gated Recurrent Unit (GRU)** cell was proposed by Kyunghyun Cho et al. in a 2014 paper that also introduced the **Encoder–Decoder network**.
