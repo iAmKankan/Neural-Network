@@ -87,12 +87,13 @@ $$
 
 ### Summary
 
-$$\Huge{\color{Purple}
+$${\color{Red}\boxed{ \Huge{\color{Purple}
 \begin{align*}
 & h_t = f \odot h_{1-t}  + (1 - f) \odot g \\
 & g = tanh (z_g); & \mathrm{z_g = W_g h_{t - 1} U_g x_t} \\
 & f = \sigma (z_f); & \mathrm{z_f = W_f h_{t - 1} U_f x_t} \\
 \end{align*}
+}}
 }
 $$
 
