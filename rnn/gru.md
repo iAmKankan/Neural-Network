@@ -1,6 +1,5 @@
 ## Index
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
-![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 
 ### Recap: Vanilla RNN or Plain RNN
 
@@ -16,11 +15,52 @@
  *  Now the output which is optional you can take out the output at any point.
  *  **Vanilla RNNs** have trouble with either **vanishing** or **exploring gradients** during **back propagation** - because repeated operation of this sort can actually make the gradients **either increase continuously** or **decrease continuously** depending on the **eigenvalues** of these **matrices**.
  
- > ### The Basic Idea: Need some kind of memory
+ > #### The Basic Idea: Need some kind of memory
 
 ### Simplified GRU (Andru NG)- (Not a practiced Algo)
+![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
+Let us come back to our original vanilla RNN architecture we had **x<sub>t</sub>**, we have **h<sub>t-1</sub>**, **h<sub>t</sub>** comes out so we say in general that this is the output of the **vanilla RNN**.
+
+$$ \Huge{\color{Purple} h_t = tanh (W_{hh}h_{t-1}+W_{xh} x_t)} $$
  
+Simplified GRU labels this instead of calling the followings-
+   * **h<sub>t</sub>** as **g**,
+   *  **linear combination** is always called **z**, so we will call it **g= tanh(z<sub>g</sub>)**, where **[z<sub>g</sub>** = **W h<sub>t-1</sub> + Ux<sub>t</sub>]**, 
+   *  **W** and **U** are matrices and for a particular reason we will called them **W<sub>g</sub>** and **U<sub>g</sub>** instead- like this **[W<sub>g</sub> h<sub>t-1</sub> + U<sub>g</sub> x<sub>t</sub>]**
  
+#### So far same Vanilla RNN looks like-
+ $$ \Huge{\color{Purple} g = tanh (z_g)} $$
+
+#### Simplified GRU
+Now if we **combine**(add) **linear combination of "Vanilla RNN"** (**g**) with **previous time stamp output** (previous computation **h<sub>t</sub>**) we get
+
+$$ \Huge{\color{Purple}
+\begin{align*}
+& h_t = (1-\lambda ) g + \lambda h_{t-1} & \begin{cases}\large \mathrm{\lambda \in [0, 1];} \\ 
+\large \mathrm{\lambda \ is\ a\ scaler} \end{cases} \\
+\end{align*}
+} 
+$$
+
+* When  **&lambda;** = 1 &rArr; **h<sub>t</sub>** = **h<sub>t-1</sub>** &rArr; **Pure Momory**
+* When  **&lambda;** = 0 &rArr; **h<sub>t</sub>** = **g** &rarr; **"Vanilla RNN"** 
+
+#### The final equation 
+
+$$ \Huge{\color{Purple}
+\begin{align*}
+& h_t = (1- f) \odot g  + f \odot h_{t-1} &  
+\end{align*}
+\normalsize \begin{cases}
+[f \odot h_{t-1}] \Rightarrow f \textrm{ is a Forget Gate} \\
+When,\ f \textrm{ = 1 become a Memory Cell ; } When,\ f \textrm{ = 0 become a Vanilla RNN} \\
+\end{cases}
+} 
+$$ 
+
+
+
+
 ## Gated Recurrent Unit (GRU)
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 There are many other variants of the LSTM cell. One particularly popular variant is the GRU cell. The **Gated Recurrent Unit (GRU)** cell was proposed by Kyunghyun Cho et al. in a 2014 paper that also introduced the **Encoder–Decoder network**.
