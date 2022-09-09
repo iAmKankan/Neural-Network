@@ -87,6 +87,12 @@ $$
 
 ### Summary
 
+
+<p align="center">
+ <img src="https://user-images.githubusercontent.com/12748752/189443768-7a6f4114-b2d5-4508-8648-448fdbdad543.png" width=40%/>
+ <br><ins><i><b>Architecture of "Simple Gated Recurrent Unit" (Simple GRU) </b></i></ins>
+</p>
+
 $${\color{Red}\boxed{ \Huge{\color{Purple}
 \begin{align*}
 & h_t = f \odot h_{1-t}  + (1 - f) \odot g \\
@@ -97,10 +103,6 @@ $${\color{Red}\boxed{ \Huge{\color{Purple}
 }
 $$
 
-<p align="center">
- <img src="https://user-images.githubusercontent.com/12748752/189443768-7a6f4114-b2d5-4508-8648-448fdbdad543.png" width=40%/>
- <br><ins><i><b>Architecture of "Simple Gated Recurrent Unit" (Simple GRU) </b></i></ins>
-</p>
 
 ## Gated Recurrent Unit (GRU)
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
