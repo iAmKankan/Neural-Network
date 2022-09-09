@@ -103,6 +103,12 @@ $$
  <br><ins><i><b>Architecture of "Simple Gated Recurrent Unit" (Simple GRU) </b></i></ins>
 </p>
 
+* We have  **h<sub>t-1</sub>** coming from the previous cell, we have **x<sub>t</sub>** as the input.
+* Now the two combine to give **g**, so if you take **tanh(z<sub>g</sub>)**, you get **g**
+* Then from **g** you go a little bit further, there is our **valve** (**&bowtie;**) which is multiplied by **(1 - f)**.
+* Similarly **h<sub>t-1</sub>**, there is **valve** (**&bowtie;**) which is **f**, 
+* Then go further add the two together (**+**) and what comes out is **h<sub>t</sub>**.
+
 ## Gated Recurrent Unit (GRU)
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 There are many other variants of the LSTM cell. One particularly popular variant is the GRU cell. The **Gated Recurrent Unit (GRU)** cell was proposed by Kyunghyun Cho et al. in a 2014 paper that also introduced the **Encoder–Decoder network**.
