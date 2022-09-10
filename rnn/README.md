@@ -358,9 +358,26 @@ We saw that you cannot simply calculate, let us say if I have **L<sub>3</sub>**,
 $$\Huge{\color{Purple}
 \begin{align*}
  &\frac{\partial\mathrm{L}_3}{\partial\mathrm{W}} \to \frac{\partial\mathrm{h}_3}{\partial\mathrm{W}}\to \frac{\partial\mathrm{h}_2}{\partial\mathrm{W}}\to \frac{\partial\mathrm{h}_1}{\partial\mathrm{W}}\\
-& \large \textrm{They involve each other} 
+& \large \textrm{They involve each other} \\
 \end{align*}}
 $$
+
+Above is applicable for **U<sub>3</sub>**, as well 
+
+$$\Huge{\color{Purple}
+\begin{align*}
+&\frac{\partial\mathrm{L}_3}{\partial\mathrm{U}} \to \frac{\partial\mathrm{h}_3}{\partial\mathrm{U}}\to \frac{\partial\mathrm{h}_2}{\partial\mathrm{U}}\to \frac{\partial\mathrm{h}_1}{\partial\mathrm{U}}\\
+& \large \textrm{They involve each other} \\
+\end{align*}}
+$$
+
+This is basically what we call **back propagation through time**, because **none of these terms is independent**. Now this kind of dependency creates several problems.
+#### Explanation
+
+
+
+
+
 
 $$\Huge{\color{Purple}
 \begin{align*}
