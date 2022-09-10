@@ -11,7 +11,7 @@
     * [Vector-to-Sequence Network](#vector-to-sequence-network)
     * [Encoder-Decoder Network](#encoder-decoder-network)
   * [Backpropagation or Training RNNs](#backpropagation-or-training-rnns)
-###  _Recurrent Neural Network Varients_
+###  _Varients of Recurrent Neural Network_
 * [Gated Recurrent Unit (GRU)](https://github.com/iAmKankan/Neural-Network/blob/main/rnn/gru.md)
 * [LSTM](https://github.com/iAmKankan/Neural-Network/blob/main/rnn/lstm.md)
 
