@@ -315,10 +315,11 @@ $$
 
 ### Vanishing Gradients and TBPTT
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
-#### Recap :
-The basic issue because of which we had to do **back propagation through time** (BPTT) was because **W, U, V** -> our matrices were **constants across time**, because of which you had sort of recursive expressions for the loss with respect to **W** and the loss with respect to **U**.
 
-The main issues that come up is 
+#### Why we do BPTT or back-propagation-through-time
+The basic issue for which we had to do **BPTT** was because **W, U, V** matrices were **constants across time**. Because of which you had sort of **recursive expressions** for the loss with respect to **W** and the loss with respect to **U**. 
+
+The main issues that come up are 
 * **gradient calculations** either **explode** or **vanish**, both of these are not ideal.
 * The **gradient calculations are expensive**.
 
@@ -327,10 +328,35 @@ The main issues that come up is
 * The solution for **vanishing gradients** is alternate architectures **LSTM, GRU**.
 * The solution for **expensive gradient calculations** is **_Truncated Back Propagation Through Time(TBPTT)_**.
 
+<p align="center">
+ 
+ <img src="https://user-images.githubusercontent.com/12748752/189465414-ed8ad124-93ed-4e56-a4ec-23f7c6d96c78.png" width=40%/>
+ <br><ins><i><b>Typical RNN </b></i></ins>
+ </p>
+
+#### Total Loss- 
+
+$$
+\Huge{\color{Purple}
+\begin{align*}
+\mathrm{L}=\sum_{t=1}^{\mathrm{T}} \mathrm{L}_t
+\end{align*}}
+$$
+
+#### When we are calculating _w_ the simple gradient descent 
+
+$$
+\Huge{\color{Purple}
+\begin{align*}
+\mathrm{W}= \mathrm{W} - \alpha \frac{\partial\mathrm{L}}{\partial\mathrm{W}} \\
+\end{align*}}
+$$
+
+
 $$\Huge{\color{Purple}
 \begin{align*}
-& \parallel \frac{\partial \textrm{L}}{\partial \textrm{W}} \parallel \to \infty & \textbf{Exploding Gradient} \\
-& \parallel \frac{\partial \textrm{L}}{\partial \textrm{W}} \parallel \to 0 & \textbf{Vanishing Gradient} \\
+& \parallel \frac{\partial \textrm{L}}{\partial \textrm{W}} \parallel \to \infty & \large \textbf{Exploding Gradient} \\
+& \parallel \frac{\partial \textrm{L}}{\partial \textrm{W}} \parallel \to 0 & \large \textbf{Vanishing Gradient} \\
 \end{align*}
 \left \\} \begin{matrix}
   \\
