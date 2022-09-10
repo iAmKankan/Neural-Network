@@ -448,6 +448,24 @@ $$\Huge{\color{Purple}
 }
 $$
 
+#### Why the big number is a problem _since &infin; means a big number_? 
+**Answer:** These is a problems because obviously you are never going to get exactly **&infin;** because you are still dealing with finite number. But the problem is the moment it goes about the largest number that your machine can calculate, it will actually show you **NAN**, not a number or it will show you **&infin;**, so on and so forth. So really speaking, **finite preciation machines** cannot handle **exploding gradient**.
+
+#### Why the small number is a problem?
+**Answer:** Similarly you will never actually go to **0**. If you do like **0:99<sup>1000</sup>**, it will be very very very small number. But the problem is it might actually becomes smaller than **10<sup>-16</sup>**, which is the smallest number that you can represent accurately. So at that point you will no longer train, so that will be called **saturation**. So you will get a very small gradient and that is practically gone. 
+
+There is another problem, notice this **tanh**, even the **tanh** is being repeated multiple times. So you have **h<sub>t</sub>** **= tanh(W h<sub>t-1</sub>), h<sub>t+1</sub>** will be **tanh(h<sub>t</sub>)**, so you have **tanh<sup>2</sup>**, similarly you will have **tanh<sup>3</sup>**.
+
+<p align="center">
+ 
+ <img src="https://user-images.githubusercontent.com/12748752/189503599-5e3436e7-f19d-4f0e-957b-bad9d2cd1398.png" width=40%/>
+ <br><ins><i><b>tanh<sup>2</sup> is flat, tanh<sup>3</sup> will look even flatter</b></i></ins>
+ 
+</p>
+
+Look at the  **tanh**, **tanh<sup>2</sup>**, **tanh<sup>2</sup>** will look even flatter. And if you take **tanh<sup>100</sup>**, it will look even smaller and notice in all these cases, gradients become **flatter** and **flatter** and **flatter** and they become very small.
+
+Now, all these problems put together lead to these 2 issues. The **tanh**, repeated **tanh** problem will lead only to the **_vanishing gradient_** issue but large number of players can either lead to **_exploding gradient_** or it can lead to **_vanishing gradient_**, both of these make training very dificult.
 
 ### _Gradient clipping_ for exploding gradients
 **Answer:**  It is very simple, we decide on a **maximum allowable gradient size**. What do I mean by value of gradient? **Gradient is a vector**, so you cannot give it a value, **you can however give a value to _norm_ of gradient**.
