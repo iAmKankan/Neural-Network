@@ -397,27 +397,44 @@ $$
  
 Now, all these are heuristic arguments but it turns out to be a remarkably good approximations, unfortunately I cannot go further.
 * But if I have norm(let us say 2 norm) of &parallel;**_h<sub>t+n</sub>_** &parallel; , notice **_h<sup>&#8407;</sup><sub>t</sub>_** is a vector.
-* If I take its norm, it will be some factor times norm of **_h<sub>t</sub>_** (  &parallel;**_h<sub>t+n</sub>_** &parallel; &sim;  &parallel;**_h<sub>t</sub>_**&parallel; ) (norm is a **scaler**, so this is a number, you are trying to find out the size of **_h<sub>t+n</sub>_**, that will be some number times **_h<sub>t</sub>_**)
-* And it turns out that it scales approximately as the **eigenvalues** of **W<sub>n</sub>**.
+* If I take its norm, it will be some factor times norm of **_h<sub>t</sub>_** (  &parallel;**_h<sub>t+n</sub>_** &parallel; &sim;  &parallel;**_h<sub>t</sub>_**&parallel; ) 
+* Norm is a **scaler**, so this is a number, you are trying to find out the size of **_h<sub>t+n</sub>_**, that will be some number times **_h<sub>t</sub>_**
+* And it turns out that it **scales** approximately as the **eigenvalues (&lambda;)** of **W<sup>n</sup>**. Like the following-
 
 $$\Huge{\color{Purple}
 \begin{align*}
-& \parallel \frac{\partial \textrm{L}}{\partial \textrm{W}} \parallel \to \infty & \large \textbf{Exploding Gradient} \\
-& \parallel \frac{\partial \textrm{L}}{\partial \textrm{W}} \parallel \to 0 & \large \textbf{Vanishing Gradient} \\
-\end{align*}
-\left \\} \begin{matrix}
-  \\
- \large \textrm{Very Difficult to train}\\
-  \\
-\end{matrix}\right.
-}
+& {\color{Cyan}\vec{{\color{Purple}h_{t+n}}}} \sim W^n {\color{Cyan}\vec{{\color{Purple}h_t}}} \\
+& {\parallel \mathrm{h_{t+n}} \parallel }_2  \sim \lambda^n \parallel \mathrm{h_t}\parallel \\
+\end{align*} }
+$$
+
+* Another way to see this is to assume that the **W** is diagonal, If **W** is diagonal, all it will have, **W<sup>n</sup>** will be, all its **eigenvalues** or all its diagonal terms to the power **n**. 
+* Now which eigenvalue, we will see shortly. 
+* The **eigenvalue** will either be the largest or the smallest.
+  *  **The worst-case scenario** is if the **eigenvalue** will be the **_largest_**
+  *  **The best case scenario** or the **smallest case scenario** is if the **eigenvalue** will be the **_smallest_**.
+
+* Beacause of scaling as long as I use the same **W**, which I do for **RNN**, **throughout time**, what happens is these **vectors** constantly get **larger in magnitude** or constantly get **smaller in magnitude**.
+* So, if you have a large number of time steps, this number, even if it is small, you know, for example even if it adds to **1.01**, over time it is going to get to be a huge number.(this is the power of the exponential function or of the power function)
+
+
+$$\large{\color{Purple}
+\begin{align*}
+\textrm{For every 'h' }& & & \\
+& \textrm{If } \huge{\mathrm{\lvert \lambda \rvert > 1}} & \textrm{ As 'n' increases }& \mathrm{\parallel h_{t+n}\parallel \to \infty }& \textrm{ (Become very large)}\\
+& \textrm{If } \huge{\mathrm{\lvert \lambda \rvert < 1}} & \textrm{ As 'n' increases }& \mathrm{\parallel h_{t+n}\parallel \to 0 }\\
+\end{align*} }
+$$
+
+* Now this is simply for **h**, you can show that and I would request you to try this out by looking at the expressions in **BPTT**, the similar arguments hold true for $\frac{\partial \mathrm{L_3}}{\partial \mathrm{W}}$ also.
+
+$$\large{\color{Purple}
+\begin{align*}
+\boxed{\frac{\partial \mathrm{L_3}}{\partial \mathrm{W}} \to \frac{\partial \mathrm{h_3}}{\partial \mathrm{W} } } \to W \frac{\partial \mathrm{L_2}}{\partial \mathrm{W}}\\
+\end{align*} }
 $$
 
 
-
-
-[**To be continued**]
- 
 $$\Huge{\color{Purple}
 \begin{align*}
 & \parallel \frac{\partial \textrm{L}}{\partial \textrm{W}} \parallel \to \infty & \large \textbf{Exploding Gradient} \\
