@@ -1,6 +1,8 @@
 ## Index
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
-* [Recurrent Neural Networks(RNN)](#recurrent-neural-networksrnn)
+### _Recurrent Neural Network (RNN)_
+* [What is RNN](#recurrent-neural-networksrnn)
+* [Why RNN](#why-recurrent-neural-networksrnn)
   * [Output of a recurrent layer for a single instance](#output-of-a-recurrent-layer-for-a-single-instance)
   * [Memory Cells](#memory-cells)
   * [Different types of RNN based on Input and Output Sequences](#different-types-of-rnn-based-on-input-and-output-sequences)
@@ -9,6 +11,9 @@
     * [Vector-to-Sequence Network](#vector-to-sequence-network)
     * [Encoder-Decoder Network](#encoder-decoder-network)
   * [Backpropagation or Training RNNs](#backpropagation-or-training-rnns)
+###  _Recurrent Neural Network Varients_
+* [Gated Recurrent Unit (GRU)](https://github.com/iAmKankan/Neural-Network/blob/main/rnn/gru.md)
+* [LSTM](https://github.com/iAmKankan/Neural-Network/blob/main/rnn/lstm.md)
 
 ## Recurrent Neural Network (RNN)
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
