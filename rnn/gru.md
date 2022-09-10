@@ -89,7 +89,7 @@ $$
 
 $${\color{Red}\boxed{ \Huge{\color{Purple}
 \begin{align*}
-& h_t = f \odot h_{1-t}  + (1 - f) \odot g \\
+& h_t = f \odot h_{t-1}  + (1 - f) \odot g \\
 & g = tanh (z_g), &\large \textrm{Where } \mathrm{z_g = W_g h_{t - 1} U_g x_t} \\
 & f = \sigma (z_f), &\large \textrm{Where } \mathrm{z_f = W_f h_{t - 1} U_f x_t} \\
 \end{align*}
@@ -100,7 +100,7 @@ $$
 
 <p align="center">
  <img src="https://user-images.githubusercontent.com/12748752/189443768-7a6f4114-b2d5-4508-8648-448fdbdad543.png" width=40%/>
- <br><ins><i><b>Architecture of "Simple Gated Recurrent Unit" (Simple GRU) </b></i></ins>
+ <br><ins><i><b>Architecture of "Simplefied Gated Recurrent Unit" (Simplefied GRU) </b></i></ins>
 </p>
 
 * We have  **h<sub>t-1</sub>** coming from the previous cell, we have **x<sub>t</sub>** as the input.
@@ -108,6 +108,33 @@ $$
 * Then from **g** you go a little bit further, there is our **valve** (**&bowtie;**) which is multiplied by **(1 - f)**.
 * Similarly **h<sub>t-1</sub>**, there is **valve** (**&bowtie;**) which is **f**, 
 * Then go further add the two together (**+**) and what comes out is **h<sub>t</sub>**.
+
+## Full Gated Recurrent Unit (GRU - 2014)
+![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
+This **simplified GRU** is not the algorithm actually in practice. What is in practice is the usual gated recurrent unit, it is a small variation of what we had in simplified GRU. 
+
+ **h<sub><i>t</i></sub>** = _**f**_ **&odot;** **h<sub><i>t -</i>1</sub>** **+** (**1-** _**f**_) **&odot;** **_g_**
+
+
+$$\large{\color{Purple}
+\begin{align*}
+&\Huge\boxed{ h_t = f \odot h_{t-1}  + (1 - f) \odot  g^\prime}\\\\
+& g^\prime = tanh (z_g), &\large \textrm{Where }:& \mathrm{z_g = W_g(r \odot h_{t - 1}) + U_g x_t} \\
+& f = \sigma (z_f), &\large \textrm{Where }:& \mathrm{z_f = W_f h_{t - 1}+ U_f x_t} \\
+& r = \sigma (z_r), &\large \textrm{Where }:& \mathrm{z_r = W_r h_{t - 1}+ U_r x_t} \\
+\end{align*}
+}
+$$
+
+* So, the expression for that is very similar to **Simplefied GRU** with some small variations. 
+* This portion is this same **h<sub><i>t</i></sub>** = _**f**_ **&odot;** **h<sub><i>t -</i>1</sub>** **+** (**1-** _**f**_) **&odot;** **_g_**, instead of **(1 - _f_) _g_<sup><b>&prime;</b></sup>**  which was the **vanilla RNN** output.
+* This is a modified **Vanilla RNN** output **_g_<sup><b>&prime;</b></sup>**.
+
+
+
+
+
+
 
 ## Gated Recurrent Unit (GRU)
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
