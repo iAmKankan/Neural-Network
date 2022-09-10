@@ -132,7 +132,10 @@ $$
 * **z<sub>g</sub>** used to be **W<sub>g</sub> h<sub><i>t -</i>1</sub> + U<sub>g</sub>x<sub>t</sub>** and now there is a small change to that. There is another **valve** here, this is called the **remember gate** or the remember wall.
 * So, instead of simply having **h<sub><i>t -</i>1</sub>** you add a yet another parameter there, **r &odot; h<sub><i>t -</i>1</sub> + U<sub>g</sub>x<sub>t</sub>**. Also the **r** &in;[ **0**, **1**].
 
-
+### Difference between _Full GRU_ and _Simplified GRU_ and _Vanilla RNN_
+1) In **Full GRU** we have introduce **three times** more parameters remember in the usual **vanilla RNN** we only had two matrices **W** and **U**, now you have six sets of matrices **W<sub>g</sub>, U<sub>g</sub>, W<sub>f</sub> , U<sub>f</sub>** and **W<sub>r</sub>, U<sub>r</sub>**.
+2) In **simplified GRU**, it was **two times** **W<sub>g</sub>, U<sub>g</sub>, W<sub>f</sub> , U<sub>f</sub>**  more parameters.
+3) **Full GRU** works much better for **deeper networks** than the **Vanilla RNN** does, though it does not mean that **vanishing gradients** are no longer going to occur, it let you to **train deeper network**.
 
 
 
