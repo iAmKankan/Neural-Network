@@ -343,15 +343,24 @@ $$
 \end{align*}}
 $$
 
-#### When we are calculating _w_ the simple gradient descent 
+#### When we are calculating _w_ if we are doing simple gradient descent 
 
 $$
 \Huge{\color{Purple}
 \begin{align*}
-\mathrm{W}= \mathrm{W} - \alpha \frac{\partial\mathrm{L}}{\partial\mathrm{W}} \\
+& \mathrm{W}= \mathrm{W} - \alpha \frac{\partial\mathrm{L}}{\partial\mathrm{W}} \\
+& \large \frac{\partial\mathrm{L}}{\partial\mathrm{W}} \Big \\}  \textrm{This term has to be calculated as: } \sum_{t=1}^{T} \frac{\partial \mathrm{L}_t}{\partial\mathrm{W}} \\
 \end{align*}}
 $$
 
+We saw that you cannot simply calculate, let us say if I have **L<sub>3</sub>**, I cannot simply calculate<img src="https://latex.codecogs.com/svg.image?&space;\frac{\partial\mathrm{L}_3}{\partial\mathrm{W}}" title="https://latex.codecogs.com/svg.image? \frac{\partial\mathrm{L}_3}{\partial\mathrm{W}}" align="center"/> in the usual way besause 
+
+$$\Huge{\color{Purple}
+\begin{align*}
+ &\frac{\partial\mathrm{L}_3}{\partial\mathrm{W}} \to \frac{\partial\mathrm{h}_3}{\partial\mathrm{W}}\to \frac{\partial\mathrm{h}_2}{\partial\mathrm{W}}\to \frac{\partial\mathrm{h}_1}{\partial\mathrm{W}}\\
+& \large \textrm{They involve each other} 
+\end{align*}}
+$$
 
 $$\Huge{\color{Purple}
 \begin{align*}
