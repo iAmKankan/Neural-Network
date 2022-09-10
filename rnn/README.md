@@ -328,6 +328,7 @@ The main issues that come up are
 * The solution for **vanishing gradients** is alternate architectures **LSTM, GRU**.
 * The solution for **expensive gradient calculations** is **_Truncated Back Propagation Through Time(TBPTT)_**.
 
+#### Recap of BPTT 
 <p align="center">
  
  <img src="https://user-images.githubusercontent.com/12748752/189465414-ed8ad124-93ed-4e56-a4ec-23f7c6d96c78.png" width=40%/>
@@ -372,7 +373,8 @@ $$\Huge{\color{Purple}
 $$
 
 This is basically what we call **back propagation through time**, because **none of these terms is independent**. Now this kind of dependency creates several problems.
-#### Explanation
+
+#### Explanation Why is BPTT is a problem:
 
 
 
