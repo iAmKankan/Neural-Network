@@ -395,7 +395,26 @@ $$
 
 > #### So, as you go through time, so the weight matrix keeps on constantly multiplying. So **_h<sub>3</sub>_** would be like **_W<sub>2</sub>h<sub>1</sub>_** and if I have something like **_h<sub>5</sub>_**, that would become **_W<sub>4</sub>h<sub>1</sub>_** so on and so forth.
  
-Now, all these are heuristic arguments but it turns out to be a remarkably good approximations, unfortunately I cannot go further. But if I have norm(let us say 2 norm) of **_h<sub>t+n</sub>_** , notice **_h<sub>t</sub>_** is a vector, remember **h** is simply a vector. But if I take its norm, it will be some factor times norm of **_h<sub>t</sub>_** (  &parallel;**_h<sub>t+n</sub>_** &parallel; &sim;  &parallel;**_h<sub>t</sub>_**&parallel; ) . Remember norm is a **scaler**, so this is a number, you are trying to find out the size of **_h<sub>t+n</sub>_**, that will be some number times **_h<sub>t</sub>_**.
+Now, all these are heuristic arguments but it turns out to be a remarkably good approximations, unfortunately I cannot go further.
+* But if I have norm(let us say 2 norm) of &parallel;**_h<sub>t+n</sub>_** &parallel; , notice **_h<sup>&#8407;</sup><sub>t</sub>_** is a vector.
+* If I take its norm, it will be some factor times norm of **_h<sub>t</sub>_** (  &parallel;**_h<sub>t+n</sub>_** &parallel; &sim;  &parallel;**_h<sub>t</sub>_**&parallel; ) (norm is a **scaler**, so this is a number, you are trying to find out the size of **_h<sub>t+n</sub>_**, that will be some number times **_h<sub>t</sub>_**)
+* And it turns out that it scales approximately as the **eigenvalues** of **W<sub>n</sub>**.
+
+$$\Huge{\color{Purple}
+\begin{align*}
+& \parallel \frac{\partial \textrm{L}}{\partial \textrm{W}} \parallel \to \infty & \large \textbf{Exploding Gradient} \\
+& \parallel \frac{\partial \textrm{L}}{\partial \textrm{W}} \parallel \to 0 & \large \textbf{Vanishing Gradient} \\
+\end{align*}
+\left \\} \begin{matrix}
+  \\
+ \large \textrm{Very Difficult to train}\\
+  \\
+\end{matrix}\right.
+}
+$$
+
+
+
 
 [**To be continued**]
  
