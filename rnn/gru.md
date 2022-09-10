@@ -129,6 +129,8 @@ $$
 * So, the expression for that is very similar to **Simplefied GRU** with some small variations. 
 * This portion is this same **h<sub><i>t</i></sub>** = _**f**_ **&odot;** **h<sub><i>t -</i>1</sub>** **+** (**1-** _**f**_) **&odot;** **_g_**, instead of **(1 - _f_) _g_<sup><b>&prime;</b></sup>**  which was the **vanilla RNN** output.
 * This is a modified **Vanilla RNN** output **_g_<sup><b>&prime;</b></sup>**.
+* **z<sub>g</sub>** used to be **W<sub>g</sub> h<sub><i>t -</i>1</sub> + U<sub>g</sub>x<sub>t</sub>** and now there is a small change to that. There is another **valve** here, this is called the **remember gate** or the remember wall.
+* So, instead of simply having **h<sub><i>t -</i>1</sub>** you add a yet another parameter there, **r &odot; h<sub><i>t -</i>1</sub> + U<sub>g</sub>x<sub>t</sub>**. Also the **r** &in;[ **0**, **1**].
 
 
 
