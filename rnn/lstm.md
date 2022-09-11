@@ -7,10 +7,12 @@ In **GRU**, by **introducing new weights** and a **slightly more complicated str
 
 ### The formulation of LSTM
 $$\Huge{\color{Purple}
+\begin{align*}
 \boxed{\begin{align*}
 & \mathbf{C_{\textit{t}}} = f \odot \mathbf{C_{\textit{t-1}}} + i \odot g  \\
-& \mathbf{h_{\textit{t}}} = \mathbf{O} \odot tanh \mathbf{C_{\textit{t}}}  \\
-\end{align*}}
+& \mathbf{h_{\textit{t}}} = \mathbf{O} \odot tanh (\mathbf{C_{\textit{t}}})  \\
+& \normalsize\mathrm{C_{\textit{t}}:}\textit{ memory cell of LSTM}
+\end{align*}} 
 \large\begin{cases}
 & \textrm{O} = \sigma(z_{\textrm{O}}) & \textrm{ output gate}\\
 & \textrm{f} = \sigma(z_{\textrm{f}}) & \textrm{ forget gate}\\
@@ -23,6 +25,7 @@ $$\Huge{\color{Purple}
 & z_\textrm{i} = W_{\textrm{i}}h_{\textrm{t-1}} + U_{\textrm{i}}x_{\textrm{t-1}}\\
 & z_\textrm{g} = W_{\textrm{g}}h_{\textrm{t-1}} + U_{\textrm{g}}x_{\textrm{t-1}}\\
 \end{cases}
+\end{align*}
 }
 $$
 
