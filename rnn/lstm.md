@@ -66,6 +66,28 @@ The depth of the architecture can be greater with LSTM compared to GRU and that 
 * At the same time the same **C<sub><i>t</i></sub>** comes down and run it through a **_tanh_**. 
 * then again it run through the **output gate** **_O_** and what you get is **h<sub><i>t</i></sub>**.
 
+### Why LSTM Works
+#### In case of _Vanishing Gradient_
+#### GRU-
+
+$$\Huge{\color{Purple}
+\begin{align*}
+& h_t = f \odot h_{t-1}  + (1 - f) \odot g  & \Big \\{ \large g = tanh (z_g), &  f = \sigma (z_f),\\
+\end{align*}
+}
+$$
+
+#### Why was it that the gradient was vanishing in there first place?
+**Answer:** You can think of this **f &odot; h<sub>t-1</sub>**, **_f_** as _weight matrix_ **W** and if this weight matrix is **multiplies itself multiple times through multiple layers** there [**eigenvalue**](https://github.com/iAmKankan/Mathematics/blob/main/LinearAlgebra/matrix.md#eigen-decomposition-or-matrix-factorization) when it raise to the power **n** and if it is **less than one** it can actually go to **zero**, **that was the basic problem**. When this goes to **W<sup>n</sup>** it went like **&lambda <sup>n</sup>**,
+
+#### Why it helps GRU
+**Answer:** 
+* When **_f_** turns as _weight matrix_ **W** then **(1- f)** also turns to **I-W**(Identity matrix minus **W**)
+* So is W goes to small then **I-W** becomes correspondingly large.
+* So the 1st term and the 2nd term balance out
+* **Alternate path for the gradient**- This plus is what makes things work, why it is plus makes thing work because just like ResNet and Alexnet, there is an alternate path way for the gradient that is when you are doing back prop it can either go directly through this or it can go through this.
+
+
 
 ## Long Short Term Memory 
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
