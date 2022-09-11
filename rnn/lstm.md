@@ -48,10 +48,25 @@ The depth of the architecture can be greater with LSTM compared to GRU and that 
 
 <p align="center">
   
-  <img src="https://user-images.githubusercontent.com/12748752/189539087-6aad2553-7d7d-4507-ba98-43336ed849e0.png" width=40% />
+  <img src="https://user-images.githubusercontent.com/12748752/189539087-6aad2553-7d7d-4507-ba98-43336ed849e0.png" width=70% />
   <br><ins><i><b> Schematic Long Short Term Memory (LSTM) </b></i></ins> 
   
 </p>
+
+#### Stage #1
+* Now we have not only **h<sub><i>t-1</i></sub>** and **x<sub><i>t</i></sub>** coming into the box, which is finally going to spit out **h<sub><i>t</i></sub>**, 
+* Next we have memory cell or memory computation, **C<sub><i>t-1</i></sub>** coming in, and **C<sub><i>t</i></sub>** going out.
+* So, **C<sub><i>t</i></sub>** progresses **h<sub><i>t</i></sub>** progresses, and there is some processing that happens inside which was given by our formulation above. 
+#### Stage #2
+* Next, **h<sub><i>t-1</i></sub>** and **x<sub><i>t</i></sub>** combine to give our **vanilla RNN** output **_g_**. 
+* Now, **C<sub><i>t-1</i></sub>**, there is a **valve** (&in; [0, 1]) here. 
+* So, the **input gate** **_i_** gets multiplied by **_g_**, 
+* And the **forget gate** gets multiplied by **C<sub><i>t</i></sub>**.
+* Above two combine and this is what gives us **C<sub><i>t</i></sub>** as **output**.
+* At the same time the same **C<sub><i>t</i></sub>** comes down and run it through a **_tanh_**, 
+* then again it run through the **output gate** **_O_** and what you get is **h<sub><i>t</i></sub>**.
+
+
 ## Long Short Term Memory 
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 _**The challenge to address long-term information preservation and short-term input skipping in latent variable models has existed for a long time. One of the earliest approaches to address this was the long short-term memory (LSTM)**_
