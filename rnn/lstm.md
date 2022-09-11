@@ -87,6 +87,14 @@ $$
 * So the 1st term and the 2nd term balance out
 * **Alternate path for the gradient**- This plus is what makes things work, why it is plus makes thing work because just like ResNet and Alexnet, there is an alternate path way for the gradient that is when you are doing back prop it can either go directly through this or it can go through this.
 
+<p align="center">
+  
+  <img src="https://user-images.githubusercontent.com/12748752/189553007-3e45b556-d0f5-4633-a31b-39d0108a008d.png" width=50%/>
+    <br><ins><i><b> Alternate Ways in AlexNet and LSTM </b></i></ins> 
+  
+</p>
+
+Whenever you have training problems try and provide alternate pathway try and provide some skips connections try and provide some difierent way to actually train, and that is really what as we understand it what happens even within simplified GRU or within LSTM.
 
 
 ## Long Short Term Memory 
