@@ -29,13 +29,11 @@ $$\Huge{\color{Purple}
 }
 $$
 
+Now if you see LSTM, it has how many unknowns you know what ever be the size of the W matrices you have **8** unknown weight matrices, just for comparison plain vanilla RNN just has **two** weight matrices GRU has **4** and **6**.
 
+**LSTM** typically can **train or retain** **non vanishing gradient** for **greater number of layers** compared to **GRU** and GRU typically can retain **greater number of layers** compared to **vanilla RNN**
 
-
-* **LSTM** was the first architecture to use the idea of a separate memory cell.
-* Due to the transformations that the data goes through when traversing an RNN, some information is lost at each time step. 
-* After a while, the RNN’s state contains virtually no trace of the first inputs. 
-* To tackle this problem, various types of cells with long-term memory have been introduced. They have proven so successful that the basic cells are not used much anymore.
+The depth of the architecture can be greater with LSTM compared to GRU and that compared to vanilla RNN and that you have to balance it against typically the number of weights that you have to train, so of course this is also true of non-vanishing layers that you can train plus time taken for computation.
 
 ## Long Short Term Memory 
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
