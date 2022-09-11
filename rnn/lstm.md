@@ -3,10 +3,27 @@
 
 ## Why LSTM needed?
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
+In **GRU** by **introducing new weights** and a **slightly more complicated structure** we could probably handle the **vanishing gradient issue** of **_Vanilla RNN_**. **GRU** or the **simplified GRU** we had something like **h<sub><i>t</i></sub>** = _**f**_ **&odot;** **h<sub><i>t -</i>1</sub>** **+** (**1-** _**f**_) **&odot;** **_g_**, where **g** was the output of the **vanilla RNN** and the idea there was to **retain some portion of your old calculations** into other **new ones**. In the case of **LSTM**, It is using a separate memory cell **C<sub><i>t</i></sub>** all together.
+
+### The formulation is the following
+$$\Huge{\color{Purple}
+\boxed{\begin{align*}
+& \mathbf{C_{\textit{t}}} = f \odot \mathbf{C_{\textit{t-1}}} + i \odot g  \\
+& \mathbf{h_{\textit{t}}} = \mathbf{O} \odot tanh \mathbf{C_{\textit{t}}}  \\
+\end{align*}}
+\large\begin{cases}
+& \textrm{O} = \sigma(z_{\textrm{O}}) & \textrm{ output gate}\\
+& \textrm{f} = \sigma(z_{\textrm{f}}) & \textrm{ forget gate}\\
+& \textrm{i} = \sigma(z_{\textrm{i}}) & \textrm{ input gate}\\
+& \textrm{g} = tanh(z_{\textrm{g}}) & \textrm{ Vanilla RNN output}\\
+\end{cases}
+}
+$$
+
+
+
+
 * **LSTM** was the first architecture to use the idea of a separate memory cell.
-* **GRU** or the **simplified GRU** we had something like **h<sub><i>t</i></sub>** = _**f**_ **&odot;** **h<sub><i>t -</i>1</sub>** **+** (**1-** _**f**_) **&odot;** **_g_**, where **g** was the output of the **vanilla RNN** and the idea there was to **retain some portion of your old calculations** into other **new ones**.
-* In the case of **LSTM**, It is using a separate cell all together.
-* 
 * Due to the transformations that the data goes through when traversing an RNN, some information is lost at each time step. 
 * After a while, the RNN’s state contains virtually no trace of the first inputs. 
 * To tackle this problem, various types of cells with long-term memory have been introduced. They have proven so successful that the basic cells are not used much anymore.
