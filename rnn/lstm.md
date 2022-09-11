@@ -59,11 +59,11 @@ The depth of the architecture can be greater with LSTM compared to GRU and that 
 * So, **C<sub><i>t</i></sub>** progresses **h<sub><i>t</i></sub>** progresses, and there is some processing that happens inside which was given by our formulation above. 
 #### Stage #2
 * Next, **h<sub><i>t-1</i></sub>** and **x<sub><i>t</i></sub>** combine to give our **vanilla RNN** output **_g_**. 
-* Now, **C<sub><i>t-1</i></sub>**, there is a **valve** (&in; [0, 1]) here. 
-* So, the **input gate** **_i_** gets multiplied by **_g_**, 
+* Now, **C<sub><i>t-1</i></sub>**, there is a **valve** (**&in; [0, 1]**) here. 
+* So, the **input gate** **_i_** gets multiplied by **_g_**.
 * And the **forget gate** **_f_** gets multiplied by **C<sub><i>t</i></sub>**.
 * Above two combine and this is what gives us **C<sub><i>t</i></sub>** as **output**.
-* At the same time the same **C<sub><i>t</i></sub>** comes down and run it through a **_tanh_**, 
+* At the same time the same **C<sub><i>t</i></sub>** comes down and run it through a **_tanh_**. 
 * then again it run through the **output gate** **_O_** and what you get is **h<sub><i>t</i></sub>**.
 
 
