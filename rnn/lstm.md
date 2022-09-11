@@ -46,7 +46,12 @@ $$
 
 The depth of the architecture can be greater with LSTM compared to GRU and that compared to vanilla RNN and that you have to balance it against typically the number of weights that you have to train, so of course this is also true of non-vanishing layers that you can train plus time taken for computation.
 
-
+<p align="center">
+  
+  <img src="https://user-images.githubusercontent.com/12748752/189539087-6aad2553-7d7d-4507-ba98-43336ed849e0.png" width=40% />
+  <br><ins><i><b> Schematic Long Short Term Memory (LSTM) </b></i></ins> 
+  
+</p>
 ## Long Short Term Memory 
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 _**The challenge to address long-term information preservation and short-term input skipping in latent variable models has existed for a long time. One of the earliest approaches to address this was the long short-term memory (LSTM)**_
