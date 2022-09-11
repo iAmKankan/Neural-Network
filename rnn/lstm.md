@@ -33,7 +33,19 @@ Now if you see LSTM, it has how many unknowns you know what ever be the size of 
 
 **LSTM** typically can **train or retain** **non vanishing gradient** for **greater number of layers** compared to **GRU** and GRU typically can retain **greater number of layers** compared to **vanilla RNN**
 
+$$\Huge{\color{Purple}
+\begin{align*}
+& \mathbf{LSTM}  \mathbf{\Big\>\Big\>} \mathbf{GRU} \mathbf{\Big\>\Big\>} \mathbf{Vanilla RNN} &\\
+\end{align*}
+\large\begin{cases}
+& \textrm{Better training performence in non-vanishing layers}\\
+& \textrm{Better in complitional time}\\
+\end{cases}
+}
+$$
+
 The depth of the architecture can be greater with LSTM compared to GRU and that compared to vanilla RNN and that you have to balance it against typically the number of weights that you have to train, so of course this is also true of non-vanishing layers that you can train plus time taken for computation.
+
 
 ## Long Short Term Memory 
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
