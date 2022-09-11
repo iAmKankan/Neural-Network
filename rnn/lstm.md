@@ -1,11 +1,11 @@
 ## Index
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 
-## Why LSTM needed?
+## Why Long Short Term Memory (LSTM) needed?
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
-In **GRU** by **introducing new weights** and a **slightly more complicated structure** we could probably handle the **vanishing gradient issue** of **_Vanilla RNN_**. **GRU** or the **simplified GRU** we had something like **h<sub><i>t</i></sub>** = _**f**_ **&odot;** **h<sub><i>t -</i>1</sub>** **+** (**1-** _**f**_) **&odot;** **_g_**, where **g** was the output of the **vanilla RNN** and the idea there was to **retain some portion of your old calculations** into other **new ones**. In the case of **LSTM**, It is using a separate memory cell **C<sub><i>t</i></sub>** all together.
+In **GRU**, by **introducing new weights** and a **slightly more complicated structure** we could probably handle the **vanishing gradient issue** of **_Vanilla RNN_**. **GRU** or the **simplified GRU** we had something like **h<sub><i>t</i></sub>** = _**f**_ **&odot;** **h<sub><i>t -</i>1</sub>** **+** (**1-** _**f**_) **&odot;** **_g_**, where **g** was the output of the **vanilla RNN** and the idea there was to **retain some portion of your old calculations** into other **new ones**. In the case of **LSTM**, It is using a separate memory cell **C<sub><i>t</i></sub>** all together.
 
-### The formulation is the following
+### The formulation of LSTM
 $$\Huge{\color{Purple}
 \boxed{\begin{align*}
 & \mathbf{C_{\textit{t}}} = f \odot \mathbf{C_{\textit{t-1}}} + i \odot g  \\
@@ -16,6 +16,12 @@ $$\Huge{\color{Purple}
 & \textrm{f} = \sigma(z_{\textrm{f}}) & \textrm{ forget gate}\\
 & \textrm{i} = \sigma(z_{\textrm{i}}) & \textrm{ input gate}\\
 & \textrm{g} = tanh(z_{\textrm{g}}) & \textrm{ Vanilla RNN output}\\
+\end{cases}
+\large\begin{cases}
+& z_\textrm{O} = W_{\textrm{O}}h_{\textrm{t-1}} + U_{\textrm{O}}x_{\textrm{t-1}}\\
+& z_\textrm{f} = W_{\textrm{f}}h_{\textrm{t-1}} + U_{\textrm{f}}x_{\textrm{t-1}}\\
+& z_\textrm{i} = W_{\textrm{i}}h_{\textrm{t-1}} + U_{\textrm{i}}x_{\textrm{t-1}}\\
+& z_\textrm{g} = W_{\textrm{g}}h_{\textrm{t-1}} + U_{\textrm{g}}x_{\textrm{t-1}}\\
 \end{cases}
 }
 $$
