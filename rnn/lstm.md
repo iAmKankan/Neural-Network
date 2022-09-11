@@ -85,7 +85,7 @@ $$
 * When **_f_** turns as _weight matrix_ **W** then **(1- f)** also turns to **I-W**(Identity matrix minus **W**)
 * So is W goes to small then **I-W** becomes correspondingly large.
 * So the 1st term and the 2nd term balance out
-* **Alternate path for the gradient**- This plus is what makes things work, why it is plus makes thing work because just like ResNet and Alexnet, there is an alternate path way for the gradient that is when you are doing back prop it can either go directly through this or it can go through this.
+* **Alternate path for the gradient**- This plus **(+)** is what makes things work, why it is plus makes thing work because just like ResNet and Alexnet, there is an alternate path way for the gradient that is when you are doing back prop it can either go directly through this or it can go through this.
 
 <p align="center">
   
