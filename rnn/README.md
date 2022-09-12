@@ -26,10 +26,14 @@ A Recurrent Neural Network is a type of ANN that contains **loops**, allowing **
   * **Variable length Input**
   * **Sequential Data**: Text data is a example of sequential data, where the context of previous input matters for the present as well as for the future inputs.
 
-
-Artificial Neural Network(ANN) and Convolutional Neural Network(CNN) are not capable of handling Sequential data or time series, e.g. **1) Text, 2) Audio, 3) Video**, because they take the followings- 
-* Fixed sized inputs
-* The whole input available simultaneously
+Whereas the RNN takes **variable sized input** inorder to process the sequential information. In the following problems-
+* **Speech processing**
+* **Language Translation**
+* **Video analysis**
+* 
+**Artificial Neural Network(ANN)** and **Convolutional Neural Network(CNN)** are not capable of handling **Sequential data** or **time series data**, e.g. **1) Text, 2) Audio, 3) Video**, because **ANN** and **CNN** deal with the followings- 
+*   _Fixed sized inputs_
+* **The whole input available simultaneously**
 
 Whereas the RNN takes **variable sized input** inorder to process the sequential information. In the following problems-
 * **Speech processing**
