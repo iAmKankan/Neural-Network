@@ -22,31 +22,25 @@ A Recurrent Neural Network is a type of ANN that contains **loops**, allowing **
 ## Why Recurrent Neural Networks(RNN)?
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 
-**RNN** works with -
-  * **Variable length Input**
-  * **Sequential Data**: Text data is a example of sequential data, where the context of previous input matters for the present as well as for the future inputs.
-
-Whereas the RNN takes **variable sized input** inorder to process the sequential information. In the following problems-
-* **Speech processing**
-* **Language Translation**
-* **Video analysis**
-* 
-**Artificial Neural Network(ANN)** and **Convolutional Neural Network(CNN)** are not capable of handling **Sequential data** or **time series data**, e.g. **1) Text, 2) Audio, 3) Video**, because **ANN** and **CNN** deal with the followings- 
-*   _Fixed sized inputs_
-* **The whole input available simultaneously**
-
-Whereas the RNN takes **variable sized input** inorder to process the sequential information. In the following problems-
-* **Speech processing**
-* **Language Translation**
-* **Video analysis**
-
-Variable sized input where sequential information matters
-
+$$
+{\color{Purple} 
+\boxed{
+\large\begin{align*}
+& \textbf{RNN} && \textbf{ANN and CNN}\\
+& \textrm{Variable length Input.}&& \textrm{Fixed sized inputs.}\\
+& \textrm{Sequential Data or time series data.}&& \textrm{The whole input available simultaneously.}\\
+& \textrm{E.g. Text data, where context matters.}&& \\
+& \textrm{Used in- Speech processing,}&& \textrm{Used in- other deep learning work.}\\
+& \textrm{Language Translation, video analysis.}&& \\
+\end{align*}
+}
+}
+$$
 
 
 #### Drawbacks of CNN/ANN
-* No memory element. 
-* The present data doesn't dependent on the pevious data.
+* **No memory element**. 
+* **The present data doesn't dependent on the pevious data**.
 
 
 ### Different types of RNN based on Input and Output Sequences
