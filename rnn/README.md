@@ -513,8 +513,28 @@ Next I **forward propagates** through another 2 steps, back propagates through 2
 
 If you back propagates through a small amount of data, your gradient will neither blow up, nor will it **vanish**. Now what is a good rule of thumb? It is actually hard to say for some problems, hundred steps are good for some problems, 10, 20 steps are good, etc.
 
-## The Archetecture
+### Deep RNNs
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
+
+<p align="center">
+  
+  <img src="https://user-images.githubusercontent.com/12748752/189594861-791518a2-c38d-4583-862d-b4f2939750c7.png" width=70%/>
+  <br><ins><i><b> Deep RNN</b></i></ins>
+  
+</p>
+
+The **deep RNNs** are particularly important in **language processing** especially in **language translation**.
+
+$${\color{Purple}
+\begin{align*}
+& \huge h_t^{(l)} = tanh \Big\( W^{(l)}h_{t-1}^{(l)}+U^{(l)}h_{t}^{(l-1)} \Big \)\\
+\end{align*}
+}
+$$
+
+
+Now, what are deep RNNs let us look at just one of these if I look at one of these within the **RNN** it is just an ANN as we saw with normal RNNs. In a **normal RNN** all you had was **one input layer**, **one hidden layer** and **one output layer**. In a deep RNN all you do is that one single layer of the RNN actually become a deep neural network that is the only difference between a deep RNN and a normal RNN.
+
 
 ## Bibliography
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
