@@ -89,7 +89,7 @@ In general- **variably sized**, **sequential data** combine an input vector with
                                                                                                                                  
 ### Hidden Layers:
 
-### What is the most general function we typically use within neural network? 
+### ⚛️ What is the most general function we typically use within neural network? 
 **Answer:** We take **linear combination** followed by **non-linearity** always. Typically in **RNNs** we usually use **tanh** for the **nonlinearity** in the **hidden layers**. 
 
 $$\Huge{\color{Purple}
@@ -116,15 +116,15 @@ $$
 
 ### Output Layer: 
 The Output size is variable. 
-What about this $\large{\color{Purple} \hat{y}_t}$ ?
 
+#### ⚛️ What about this $\large{\color{Purple} \hat{y}_t}$ ?
 **Answer:**  $\large{\color{Purple} \hat{y}_t}$ is equal to some function of $\large{\color{Purple} h_t}$. 
 
 Now in some cases, it simply makes sense for this function to be a **linear function**( for regression output). In some cases, it makes sense for the function to be a **non-linear function** ( for Classification output).
 * If it is a classifcation task and let us say it is a binary classification task, then **g** will become a **Sigmoid** &sigma; . 
 * If it is a multiclass classification task, you will use a **Softmax**.
 
-### Constant with time meaning
+### ⚛️ Constant with time meaning
 **Answer:** The **weights** and **bias** in **_h<sub>3</sub>_** are the same **_W<sub>hh</sub>  ,  W<sub>xh</sub>_** and  **_b<sub>n</sub>_** for **_h<sub>2</sub>_**
 
 ### Training RNNs Backpropagation and Loss calculation 
@@ -202,7 +202,7 @@ $$ \Huge{\color{Purple} \begin{align*}
 &  \hat{y_t} = g^* ( V h_t) \\
 \end{align*}} $$
 
-#### How does RNN keep the context?
+#### ⚛️ How does RNN keep the context?
 
 **Answer:** The following vectors <img src="https://latex.codecogs.com/svg.image?{\color{Purple}\textrm{W,&space;U,&space;V&space;}&space;}" title="https://latex.codecogs.com/svg.image?{\color{Purple}\textrm{W, U, V } }" align="center" /> do not change with time (or across the layers).
 
@@ -253,7 +253,7 @@ $$
 
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 
-#### What is $\large \frac{\partial \textrm{L}_3}{\partial \textrm{W}}$ ?
+#### ⚛️ What is $\large \frac{\partial \textrm{L}_3}{\partial \textrm{W}}$ ?
 
 $$
 \Huge {\color{Purple} 
@@ -313,7 +313,7 @@ $$
 ### Vanishing Gradients and TBPTT
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 
-#### Why we do BPTT or back-propagation-through-time
+#### ⚛️ Why we do BPTT or back-propagation-through-time
 The basic issue for which we had to do **BPTT** was because **W, U, V** matrices were **constants across time**. Because of which you had sort of **recursive expressions** for the loss with respect to **W** and the loss with respect to **U**. 
 
 The main issues that come up are 
@@ -341,7 +341,7 @@ $$
 \end{align*}}
 $$
 
-#### When we are calculating _w_ if we are doing simple gradient descent 
+#### ⚛️ When we are calculating _w_ if we are doing simple gradient descent 
 
 $$
 \Huge{\color{Purple}
@@ -445,10 +445,10 @@ $$\Huge{\color{Purple}
 }
 $$
 
-#### Why the big number is a problem _since &infin; means a big number_? 
+### ⚛️ Why the big number is a problem _since &infin; means a big number_? 
 **Answer:** These is a problems because obviously you are never going to get exactly **&infin;** because you are still dealing with finite number. But the problem is the moment it goes about the largest number that your machine can calculate, it will actually show you **NAN**, not a number or it will show you **&infin;**, so on and so forth. So really speaking, **finite preciation machines** cannot handle **exploding gradient**.
 
-#### Why the small number is a problem?
+### ⚛️ Why the small number is a problem?
 **Answer:** Similarly you will never actually go to **0**. If you do like **0:99<sup>1000</sup>**, it will be very very very small number. But the problem is it might actually becomes smaller than **10<sup>-16</sup>**, which is the smallest number that you can represent accurately. So at that point you will no longer train, so that will be called **saturation**. So you will get a very small gradient and that is practically gone. 
 
 There is another problem, notice this **tanh**, even the **tanh** is being repeated multiple times. So you have **h<sub>t</sub>** **= tanh(W h<sub>t-1</sub>), h<sub>t+1</sub>** will be **tanh(h<sub>t</sub>)**, so you have **tanh<sup>2</sup>**, similarly you will have **tanh<sup>3</sup>**.
@@ -464,7 +464,7 @@ Look at the  **tanh**, **tanh<sup>2</sup>**, **tanh<sup>2</sup>** will look even
 
 Now, all these problems put together lead to these 2 issues. The **tanh**, repeated **tanh** problem will lead only to the **_vanishing gradient_** issue but large number of players can either lead to **_exploding gradient_** or it can lead to **_vanishing gradient_**, both of these make training very dificult.
 
-### _Gradient clipping_ for exploding gradients
+### ⚛️ _Gradient clipping_ for exploding gradients
 **Answer:**  It is very simple, we decide on a **maximum allowable gradient size**. What do I mean by value of gradient? **Gradient is a vector**, so you cannot give it a value, **you can however give a value to _norm_ of gradient**.
 * Say-
 
@@ -486,10 +486,10 @@ $$
 
 *  My new gradient $\vec{g^\*}$ is in the same direction as the gradient you calculated but I am cutting down its size
 
-### Solution for Vanishing gradients 
+### ⚛️ Solution for Vanishing gradients 
 **Answer:** Unfortunately no such simple solution exists. LSTM, GRU is the result
 
-### Solution for **expensive gradient Computation** **_Truncated Back Propagation Through Time(TBPTT)_**
+### ⚛️ Solution for **expensive gradient Computation** **_Truncated Back Propagation Through Time(TBPTT)_**
 **Answer:** This solution kind of handles to a certain extent, both the **vanishing gradient** and the **exploding gradient** problems. 
 
 So, if we have data with thousands and thousands of time steps. And you want to calculate back **propagation through time**. Now how would you do it? 
