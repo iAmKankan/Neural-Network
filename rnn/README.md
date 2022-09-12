@@ -449,7 +449,7 @@ $$
 **Answer:** These is a problems because obviously you are never going to get exactly **&infin;** because you are still dealing with finite number. But the problem is the moment it goes about the largest number that your machine can calculate, it will actually show you **NAN**, not a number or it will show you **&infin;**, so on and so forth. So really speaking, **finite preciation machines** cannot handle **exploding gradient**.
 
 ### ⚛️ Why the small number is a problem?
-**Answer:** Similarly you will never actually go to **0**. If you do like **0:99<sup>1000</sup>**, it will be very very very small number. But the problem is it might actually becomes smaller than **10<sup>-16</sup>**, which is the smallest number that you can represent accurately. So at that point you will no longer train, so that will be called **saturation**. So you will get a very small gradient and that is practically gone. 
+**Answer:** Similarly you will never actually go to **0**. If you do like **0:99<sup>1000</sup>** (because of **finite preciation machines**), it will be very very very small number. But the problem is it might actually becomes smaller than **10<sup>-16</sup>**, which is the smallest number that you can represent accurately. So at that point you will no longer train, so that will be called **saturation**. So you will get a very small gradient and that is practically gone. 
 
 There is another problem, notice this **tanh**, even the **tanh** is being repeated multiple times. So you have **h<sub>t</sub>** **= tanh(W h<sub>t-1</sub>), h<sub>t+1</sub>** will be **tanh(h<sub>t</sub>)**, so you have **tanh<sup>2</sup>**, similarly you will have **tanh<sup>3</sup>**.
 
