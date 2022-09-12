@@ -1,7 +1,35 @@
-Index
+## Index
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 
-## Deep RNNs & Bi-RNNs
+### Deep RNNs
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
-The **deep RNNs** are particularly important in **language processing** especially language translation. Now, what are deep RNNs let us look at just one of these if I look at one of these within the RNN it is just an ANN as we saw with normal RNNs. In a normal RNN all you had was one input layer, one hidden layer and one output layer. In a deep RNN all you do is that one single layer of the RNN actually become a deep neural network that is the only difference between a deep RNN and a normal RNN.
+
+<p align="center">
+  
+  <img src="https://user-images.githubusercontent.com/12748752/189594861-791518a2-c38d-4583-862d-b4f2939750c7.png" width=70%/>
+  <br><ins><i><b> Deep RNN</b></i></ins>
+  
+</p>
+
+The **deep RNNs** are particularly important in **language processing** especially in **language translation**.
+
+$${\color{Purple}
+\begin{align*}
+& \huge h_t^{(l)} = tanh \Big\( W^{(l)}h_{t-1}^{(l)}+U^{(l)}h_{t}^{(l-1)} \Big \)\\
+\end{align*}
+}
+$$
+
+
+Now, what are deep RNNs let us look at just one of these if I look at one of these within the **RNN** it is just an ANN as we saw with normal RNNs. In a **normal RNN** all you had was **one input layer**, **one hidden layer** and **one output layer**. In a deep RNN all you do is that one single layer of the RNN actually become a deep neural network that is the only difference between a deep RNN and a normal RNN.
+
+### Bi-Directional RNN or Bi-LSTM
+![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
+* Simply this is a **bi- directional RNN** using **LSTM**, _rather than the usual **RNN_**. 
+* These **might be deep** or **not deep** **really does not matter**.
+* Now these are for tasks that actually are **sequential** but the _sequence can go both backward and forward_ that is not only does the future depend on the past, so to speak but the past also depends on the future. 
+
+#### Example #1
+Now, what would be an example of that let me give you a very-very simple example though you can think of several thing even in an engineering problems. I will come back to that, so suppose I write something of this sort and you have a optical character recognition tool which basically means this is handwritten and just like we saw with Mnist you want to recognize a handwritten digit.
+
