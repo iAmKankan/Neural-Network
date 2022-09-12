@@ -78,7 +78,7 @@ $$\Huge{\color{Purple}
 $$
 
 #### Why was it that the gradient was vanishing in there first place?
-**Answer:** You can think of this **f &odot; h<sub>t-1</sub>**, **_f_** as _weight matrix_ **W** and if this weight matrix is **multiplies itself multiple times through multiple layers** there [**eigenvalue**](https://github.com/iAmKankan/Mathematics/blob/main/LinearAlgebra/matrix.md#eigen-decomposition-or-matrix-factorization) when it raise to the power **n** and if it is **less than one** it can actually go to **zero**, **that was the basic problem**. When this goes to **W<sup>n</sup>** it went like **&lambda <sup>n</sup>**,
+**Answer:** You can think of this **f &odot; h<sub>t-1</sub>**, **_f_** as _weight matrix_ **W** and if this weight matrix is **multiplies itself multiple times through multiple layers** there [**eigenvalue**](https://github.com/iAmKankan/Mathematics/blob/main/LinearAlgebra/matrix.md#eigen-decomposition-or-matrix-factorization) when it raise to the power **n** and if it is **less than one** it can actually go to **zero**, **that was the basic problem**. When this goes to **W<sup>n</sup>** it went like **&lambda; <sup>n</sup>**,
 
 #### Why it helps GRU
 **Answer:** 
