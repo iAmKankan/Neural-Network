@@ -72,22 +72,21 @@ $$
   * You would feed the network a sentence in one language, the encoder would convert this sentence into a single vector representation, and then the decoder would decode this vector into a sentence in another language. 
   * This two-step model, called an `Encoder–Decoder`, works much better than trying to translate on the fly with a single `sequence-to-sequence RNN` (like the one represented at the top left): the last words of a sentence can affect the first words of the translation, so you need to wait until you have seen the whole sentence before translating it.
   
-## Recurrent Neural Networks(RNN)
+### RNN Layers
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
-
-<p align="center">
-<img src="https://user-images.githubusercontent.com/12748752/144027506-ea345023-d777-493c-88fd-fae058e70097.png" width=50%/>
-<br><ins><b><i>A recurrent neuron (left)    |    unrolled through time (right)</i></b></ins>
-</p>
-
 In general- **variably sized**, **sequential data** combine an input vector with a state vector via a fixed function to produce a new state.
 * **variably sized**: Number of features are fixed the size of the data is not.
 * It looks very much like a feedforward neural network, except it also has connections pointing backward. 
 
 #### Incorporate with RNN the idea of equally spread, repetative, temporal relationship
 
-<img src="https://user-images.githubusercontent.com/12748752/188321976-67e6563e-d6cf-4387-933d-7bda64a88131.png" width=70% />
-
+<p align="center">
+ 
+ <img src="https://user-images.githubusercontent.com/12748752/188321976-67e6563e-d6cf-4387-933d-7bda64a88131.png" width=70% />
+ <br><ins><i><b>RNN unrolling over time</b></i></ins>
+                                                                                                                                 
+</p>
+                                                                                                                                 
 ### Hidden Layers:
 
 ### What is the most general function we typically use within neural network? 
