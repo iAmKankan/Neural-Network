@@ -36,9 +36,12 @@ More generally, every **value** is paired with a **key**, which can be thought o
 
 As shown in the following picture, we can design attention pooling so that the given **query** (_volitional cue_) can interact with **keys** (_nonvolitional cues_), which guides bias selection over values (sensory inputs).
 
+<p align="center">
+ 
 <img src="https://user-images.githubusercontent.com/12748752/170866116-ea8da04e-a069-447c-b60d-4d2d8823be33.png" width=70%/>
-
-<ins><i><b>Attention mechanisms bias selection over values (sensory inputs) via attention pooling, which incorporates queries (volitional cues) and keys (nonvolitional cues).</b></i></ins>
+<br><ins><i><b>Attention mechanisms bias selection over values (sensory inputs) via attention pooling, which incorporates queries (volitional cues) and keys (nonvolitional cues).</b></i></ins>
+ 
+</p>
 
 ## Summary: 
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
@@ -122,10 +125,12 @@ In the above we used a **Gaussian kernel** to model interactions between **queri
 
 At a high level, we can use the above algorithm to instantiate the framework of attention mechanisms in Fig. 10.1.3. Denoting an attention scoring function by , Fig. 10.3.1 illustrates how the output of attention pooling can be computed as a weighted sum of values. Since attention weights are a probability distribution, the weighted sum is essentially a weighted average.
 
+<p align="center">
+ 
 <img src="https://user-images.githubusercontent.com/12748752/170890210-d8b92410-afa4-493d-8500-a9e00a78b5f4.png" width=90% />
+<br><ins><i><b>Computing the output of attention pooling as a weighted average of values.</b></i></ins>
 
-<ins><i><b>Computing the output of attention pooling as a weighted average of values.</b></i></ins>
-
+ </p>
 
 
 
@@ -167,9 +172,12 @@ However, the attention mechanism can be re-formulated into a general form that c
 
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 
+<p align="center">
+ 
 <img src="https://user-images.githubusercontent.com/12748752/163703981-531eea76-73c2-422d-b19e-6bea87ac6787.png" width=60%/>
-<i><b><ins>Neural machine translation using an Encoder–Decoder network with an attention model</i></b></ins>
+<br><i><b><ins>Neural machine translation using an Encoder–Decoder network with an attention model</i></b></ins>
 
+</p>
 
 On the left, you have the encoder and the decoder. Instead of just sending the encoder’s final hidden state to the decoder (which is still done, although it is not shown in the figure), we now send all of its outputs to the decoder. At each time step, the decoder’s memory cell computes a weighted sum of all these encoder outputs: this determines which words it will focus on at this step. The weight ***&alpha; <sub>(t,i)</sub>*** is the weight of the ***i<sup>th</sup>*** encoder output at the ***t<sup>th</sup>*** decoder time step. For example, if the weight ***&alpha; <sub>(3,2)</sub>*** is much larger than the weights ***&alpha; <sub>(3,0)</sub>*** and ***&alpha; <sub>(3,1)</sub>*** , then the decoder will pay much more attention to word number 2 (“milk”) than to the other two words, at least at this time step. The rest of the decoder works just like earlier: at each time step the memory cell receives the inputs we just discussed, plus the hidden state from the previous time step, and finally (although it is not represented in the diagram) it receives the target word from the previous time step (or at inference time, the output from the previous time step). 
 ### _Attention Layer or Alignment Model_
