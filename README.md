@@ -15,10 +15,9 @@
  #### ◾ [_Learning Rate decay and Weight initialization_](https://github.com/iAmKankan/Neural-Network/tree/main/learning-rate)
 ### ◼️ _RNN, LSTM, GRU_
 * [Recurrent Neural Networks](https://github.com/iAmKankan/Neural-Network/blob/main/rnn/README.md)
-* Types of Recurrent Neural Networks
-  * Simple RNN or 'Vanilla' RNN
-  * [LSTM](https://github.com/iAmKankan/Neural-Network/blob/main/rnn/lstm.md)
-  * [GRU](https://github.com/iAmKankan/Neural-Network/blob/main/rnn/gru.md)
+* [Deep RNN](https://github.com/iAmKankan/Neural-Network/tree/main/rnn#deep-rnns)
+* [LSTM](https://github.com/iAmKankan/Neural-Network/blob/main/rnn/lstm.md)
+* [GRU](https://github.com/iAmKankan/Neural-Network/blob/main/rnn/gru.md)
 * Oparetions on RNN
    * [Sentiment Analysis](https://github.com/iAmKankan/Neural-Network/blob/main/sentiment.md)
  * [Bidirectional Recurrent Neural Networks](https://github.com/iAmKankan/Neural-Network/tree/main/rnn/bidirectional_rnn)
