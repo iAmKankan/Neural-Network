@@ -1,6 +1,6 @@
 ## Index
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
-### ◼️ [_Mathematical Perspective on AI-ML_](https://github.com/iAmKankan/Mathematics/blob/main/ai-ml/README.md)
+### ◼️ [_Mathematical Perspective on AI-ML_](https://github.com/iAmKankan/Neural-Network/blob/main/ai-ml-math.md)
 ### ◼️ [_Perceptron_](https://github.com/iAmKankan/Neural-Network/blob/main/perceptron/README.md)
 * [The Perceptron](https://github.com/iAmKankan/Neural-Network/blob/main/perceptron/README.md)
 * [Multi-Layer Perceptron](https://github.com/iAmKankan/Neural-Network/blob/main/perceptron/README.md)
