@@ -177,17 +177,14 @@ $$
 #### Description
 > The **linear combination** of $\Huge{\color{Purple} h}$ and $\Huge{\color{Purple} x}$ and **weight matrix** $\Huge{\color{Purple} W}$ which we will multiply $\Huge{\color{Purple} h_{t-1}}$ of previous layer and some other **weight matrix** $\Huge{\color{Purple} W}$ which we will multiply $\Huge{\color{Purple} x_{t}}$ of same layer. 
 
+### For output layer $\large{\color{Purple} \hat{y}_t}$ , $\large{\color{Purple} g }$ needs not to be same as $\large{\color{Purple} g^* }$, even $\large{\color{Purple} g^* }$ not always be a _Non-linear function_ - 
 
-The following expression for any <img src="https://latex.codecogs.com/svg.image?\large&space;\hat{y}_t" title="https://latex.codecogs.com/svg.image?\large \hat{y}_t" align="center"/>, **g** needs not to be same as **g<sup>*</sup>** even **g<sup>*</sup>** not always be **non-linear function**- 
+$$ \Huge{\color{Purple} \hat{y_t} = g^* ( W_{yh} h_t) } $$
 
-$$ \large{\color{Purple} \hat{y_t} = g^* ( W_{yh} h_t) } $$
+> #### Inorder to make the expressions simple we put allias in the above two expressionas like 
+> <img src="https://user-images.githubusercontent.com/12748752/188525079-36af334d-6d36-4550-8480-8094a409168a.png" width= 55%/>
 
-
-#### Inorder to make the expressions simple we put allias in the above two expressionas like 
-
-<img src="https://user-images.githubusercontent.com/12748752/188525079-36af334d-6d36-4550-8480-8094a409168a.png" width= 55%/>
-
-#### **_h<sub>t</sub>_** and <img src="https://latex.codecogs.com/svg.image?\large&space;\hat{y}_t" title="https://latex.codecogs.com/svg.image?\large \hat{y}_t" align="center"/>  looks like- 
+### $\large{\color{Purple} h_t}$ and $\large{\color{Purple} \hat{y}_t}$  looks like- 
 $$ \Huge{\color{Purple} \begin{align*}
 & h_t = g (W h_{t-1}+ U x_t) + \textrm{b} \\
 &  \hat{y_t} = g^* ( V h_t) \\
@@ -318,7 +315,6 @@ The main issues that come up are
 
 #### Recap of BPTT 
 <p align="center">
- 
  <img src="https://user-images.githubusercontent.com/12748752/189465414-ed8ad124-93ed-4e56-a4ec-23f7c6d96c78.png" width=40%/>
  <br><ins><i><b>Typical RNN </b></i></ins>
  </p>
