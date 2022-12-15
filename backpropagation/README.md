@@ -41,12 +41,18 @@ This is the **forward pass**: it is exactly like making _predictions_, except **
 **Step #3:** The algorithm then measures how much of _these error contributions_ came from each connection in the **layer below**, again using the [**chain rule**](https://github.com/iAmKankan/Mathematics/blob/main/calculus/D_calculus.md#chain-rule) — and so on until the algorithm reaches the **input layer**.
 * As we explained earlier, this reverse pass efficiently measures the **error gradient** across all the connection weights in the network by propagating the error gradient backward through the network (hence the name of the algorithm).
 
-### Optimization
+### Finally Optimization
 **Finally**, the algorithm performs a **Gradient Descent** step to tweak all the connection weights in the network, using the error gradients it just computed.
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/12748752/167529284-53374f33-750f-4b94-a858-f470c82755b5.png" width=80%/>
 </p>
+
+## Why weights initialize randomly?
+> ### It is important to initialize all the hidden layers’ connection weights randomly. 
+> * For example, if you initialize all weights and biases to zero, then all neurons in a given layer will be perfectly identical, and thus backpropagation will affect them in exactly the same way, so they will remain identical. 
+> * In other words, despite having hundreds of neurons per layer, your model will act as if it had only one neuron per layer: it won’t be too smart. 
+> * If instead you randomly initialize the weights, you break the symmetry and allow backpropagation to train a diverse team of neurons.
 
 ### _Forwardpropagation with Weight update:_
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
