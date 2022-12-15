@@ -158,18 +158,25 @@ $$
   1. [cross entropy](https://github.com/iAmKankan/MachineLearning_With_Python/edit/master/Supervised/Logistic%20Regrassion/README.md#binary-cross-entropy-cost-function) -classifcation
   2. least-squares error - regression or a numerical output
 
-#### Backpropagation Through Time (BPTT)
+## Backpropagation Through Time (BPTT)
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
-#### We know
-The following expression for any **h<sub>t</sub>** - 
+### We know for _Hiddden layers_ for any $\large{\color{Purple} h_t}$ - 
 
-$$ \large{\color{Purple} h_t = g (W_{hh}h_{t-1}+W_{xh} x_t) + \textrm{b}} $$
+$$ \Huge{\color{Purple} 
+\begin{align*}
+h_t = g (W_{hh}h_{t-1}+W_{xh} x_t) + \textrm{b} & & \normalsize \begin{cases}
+g = \textit{non-linear function} \\
+W_{{\color{Cyan}hh}} = \textit{ takes an \textbf{h} and gives out an \textbf{h}} \\
+W_{{\color{Cyan}xh}} = \textit{ takes an \textbf{x} and gives out an \textbf{h}}\\ 
+W_{{\color{Cyan}xh}}, W_{{\color{Cyan}xh}} , \textbf{b}_n = \textit{ are constant with time}
+\end{cases}
+\end{align*}
+}
+$$
 
+#### Description
+> The **linear combination** of $\Huge{\color{Purple} h}$ and $\Huge{\color{Purple} x}$ and **weight matrix** $\Huge{\color{Purple} W}$ which we will multiply $\Huge{\color{Purple} h_{t-1}}$ of previous layer and some other **weight matrix** $\Huge{\color{Purple} W}$ which we will multiply $\Huge{\color{Purple} x_{t}}$ of same layer. 
 
- * The **non-linear function** for here is **g** 
- * The **linear combination** of **h** and **x** and **weight matrix** **_W_** which we will multiply **h** of previous layer and some other **weight matrix** **_W_** which we will multiply **x**. 
- * **W<sub>hh</sub>** takes an **h** and gives out an **h**.
- * **W<sub>rh</sub>** takes an **x** and gives out an **h**.
 
 The following expression for any <img src="https://latex.codecogs.com/svg.image?\large&space;\hat{y}_t" title="https://latex.codecogs.com/svg.image?\large \hat{y}_t" align="center"/>, **g** needs not to be same as **g<sup>*</sup>** even **g<sup>*</sup>** not always be **non-linear function**- 
 
