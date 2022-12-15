@@ -14,7 +14,7 @@
 
 ### [Problems of RNN](#problems-in-training-simple-rnns)
 * [Vanishing Gradients and TBPTT](#vanishing-gradients-and-tbptt)
-  * [Why the big number is a problem since $\large{\color{Purple}\infty}$ means a big number?](#%EF%B8%8F-why-the-big-number-is-a-problem-since--means-a-big-number)
+  * [Why the big number is a problem since <b>&infin;</b> means a big number?](#%EF%B8%8F-why-the-big-number-is-a-problem-since--means-a-big-number) $\large{\color{Purple}( \infty )}$
   * [Why the small number is a problem?](#%EF%B8%8F-why-the-small-number-is-a-problem)
   * [Gradient clipping for exploding gradients](#%EF%B8%8F-gradient-clipping-for-exploding-gradients)
 * [Solution for Vanishing gradients](#%EF%B8%8F-solution-for-vanishing-gradients)
