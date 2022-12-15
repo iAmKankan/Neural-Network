@@ -113,10 +113,11 @@ Now in some cases, it simply makes sense for this function to be a **linear func
 
 ### Training RNNs Backpropagation and Loss calculation 
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
-* [Backpropagation in common ANN or Multi-Layer Perceptron](https://github.com/iAmKankan/Neural-Network/blob/main/multilayer-perceptrons.md#backpropagationhttps://github.com/iAmKankan/Neural-Network/blob/main/multilayer-perceptrons.md#backpropagation)
-* To train an RNN, the trick is to unroll it through time (like we just did) and then simply use regular backpropagation. 
-* This strategy is called ***`backpropagation through time (BPTT)`***.
-<img src="https://user-images.githubusercontent.com/12748752/144243558-a7cae1ca-96d7-4d80-9be8-bb4e7e960dc4.png" width=50%/>
+ [Backpropagation is common in ANN or in Multi-Layer Perceptron](https://github.com/iAmKankan/Neural-Network/blob/main/backpropagation/README.md). To train an RNN, the trick is to unroll it through time (like we just did) and then simply use _regular backpropagation_. This strategy is called ***backpropagation through time (BPTT)***.
+
+<p align="center">
+ <img src="https://user-images.githubusercontent.com/12748752/144243558-a7cae1ca-96d7-4d80-9be8-bb4e7e960dc4.png" width=50%/>
+</p>
 
 #### First
 * Like regular backpropagation, there is a `first forward pass through the unrolled network` (represented by the dashed arrows). 
@@ -160,7 +161,14 @@ $$
 
 ## Backpropagation Through Time (BPTT)
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
-### We know for _Hiddden layers_ for any $\large{\color{Purple} h_t}$ - 
+
+<p align="center"> 
+<img src="https://user-images.githubusercontent.com/12748752/188473359-24396c3f-04df-487b-90a6-3a5837be0cf2.png" width=40%/>
+<br><ins><b><i> RNN- Many-To-Many  |  Total number of Layers = 'T'</i></b></ins>
+</p>
+
+
+### For _Hiddden layers_ for any $\large{\color{Purple} h_t}$ - 
 
 $$ \Huge{\color{Purple} 
 \begin{align*}
@@ -177,29 +185,42 @@ $$
 #### Description
 > The **linear combination** of $\Huge{\color{Purple} h}$ and $\Huge{\color{Purple} x}$ and **weight matrix** $\Huge{\color{Purple} W}$ which we will multiply $\Huge{\color{Purple} h_{t-1}}$ of previous layer and some other **weight matrix** $\Huge{\color{Purple} W}$ which we will multiply $\Huge{\color{Purple} x_{t}}$ of same layer. 
 
-### For output layer $\large{\color{Purple} \hat{y}_t}$ , $\large{\color{Purple} g }$ needs not to be same as $\large{\color{Purple} g^* }$, even $\large{\color{Purple} g^* }$ not always be a _Non-linear function_ - 
+### For _Output layer_ for any instance $\large{\color{Purple} \hat{y}_t}$  - 
 
 $$ \Huge{\color{Purple} \hat{y_t} = g^* ( W_{yh} h_t) } $$
 
-#### Inorder to make the expressions simple we put allias in the above two expressionas like 
+#### Description
+> $\large{\color{Purple} g }$ needs not to be same as $\large{\color{Purple} g^* }$, even $\large{\color{Purple} g^* }$ not always be a **_Non-linear function_**. 
+
+## Step #1: 
+Inorder to make the expressions simple we put _allias_ in the above two expressionas like 
 > <img src="https://user-images.githubusercontent.com/12748752/188525079-36af334d-6d36-4550-8480-8094a409168a.png" width= 55%/>
 
-### $\large{\color{Purple} h_t}$ and $\large{\color{Purple} \hat{y}_t}$  looks like- 
-$$ \Huge{\color{Purple} \begin{align*}
+### Now $\large{\color{Purple} h_t}$ and $\large{\color{Purple} \hat{y}_t}$  looks like- 
+$$ {\color{Red} \boxed{\Huge{\color{Purple} \begin{align*}
 & h_t = g (W h_{t-1}+ U x_t) + \textrm{b} \\
 &  \hat{y_t} = g^* ( V h_t) \\
-\end{align*}} $$
+\end{align*}} 
+}}
+$$
 
+#### Description
+> The vectors $\large{\color{Purple} \vec{W} }$, $\large{\color{Purple} \vec{U} }$, $\large{\color{Purple} \vec{V} }$ do not change with time (or across the layers)
+
+---
 ### ⚛️ How does RNN keep the context?
 
 **Answer:** The following vectors <img src="https://latex.codecogs.com/svg.image?{\color{Purple}\textrm{W,&space;U,&space;V&space;}&space;}" title="https://latex.codecogs.com/svg.image?{\color{Purple}\textrm{W, U, V } }" align="center" /> do not change with time (or across the layers).
+---
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/12748752/188549351-d5c3b022-9b5b-4b80-bf0c-ce57d3039940.png" width=50%/>
 </p>
 
-
-#### For the Backprop we need to findout the followings- 
+## Step #2:
+For the Backpropagation we need to findout the derivative of the loss function let say $\large{\color{Purple} L }$ with each of the matrices $\large{\color{Purple} W }$, $\large{\color{Purple} U }$, $\large{\color{Purple} V}$ - 
+#### Why?
+We need to update them. See for [Weight update in Backpropagation](https://github.com/iAmKankan/Neural-Network/blob/main/backpropagation/README.md#backpropagation-weight-update).
 
 #### Equation for Back propagation
 $$
