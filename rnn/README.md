@@ -11,6 +11,17 @@
     * [Vector-to-Sequence Network](#vector-to-sequence-network)
     * [Encoder-Decoder Network](#encoder-decoder-network)
   * [Backpropagation or Training RNNs](#backpropagation-or-training-rnns)
+
+### [Problems of RNN](#problems-in-training-simple-rnns)
+* [Vanishing Gradients and TBPTT](#vanishing-gradients-and-tbptt)
+  * [Why the big number is a problem since $\large{\color{Purple}\infty}$ means a big number?](#%EF%B8%8F-why-the-big-number-is-a-problem-since--means-a-big-number)
+  * [Why the small number is a problem?](#%EF%B8%8F-why-the-small-number-is-a-problem)
+  * [Gradient clipping for exploding gradients](#%EF%B8%8F-gradient-clipping-for-exploding-gradients)
+* [Solution for Vanishing gradients](#%EF%B8%8F-solution-for-vanishing-gradients)
+* [Solution for expensive gradient Computation Truncated Back Propagation Through Time(TBPTT)](#%EF%B8%8F-solution-for-expensive-gradient-computation-truncated-back-propagation-through-timetbptt)
+
+### [Deep Recurrent Neural Network (RNN)](#deep-rnns)  
+
 ###  _Varients of Recurrent Neural Network_
 * [Gated Recurrent Unit (GRU)](https://github.com/iAmKankan/Neural-Network/blob/main/rnn/gru.md)
 * [LSTM](https://github.com/iAmKankan/Neural-Network/blob/main/rnn/lstm.md)
