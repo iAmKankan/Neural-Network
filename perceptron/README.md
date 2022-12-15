@@ -119,9 +119,9 @@ This is the **forward pass**: it is exactly like making _predictions_, except **
 **Step #1:** Next, the algorithm measures the **network’s output error** (i.e., it uses a loss function that compares the desired output and the actual output of the network, and returns some measure of the error). 
 
 **Step #2:** Then it computes how much **each output connection contributed to the error**. 
-* This is done analytically by simply applying the [**chain rule**](https://github.com/iAmKankan/Mathematics/blob/main/D_calculus.md#chain-rule) (perhaps the most fundamental rule in calculus), which makes this step _fast and precise_. 
+* This is done analytically by simply applying the [**chain rule**](https://github.com/iAmKankan/Mathematics/blob/main/calculus/D_calculus.md#chain-rule) (perhaps the most fundamental rule in calculus), which makes this step _fast and precise_. 
 
-**Step #3:** The algorithm then measures how much of _these error contributions_ came from each connection in the **layer below**, again using the [**chain rule**](https://github.com/iAmKankan/Mathematics/blob/main/D_calculus.md#chain-rule) — and so on until the algorithm reaches the **input layer**.
+**Step #3:** The algorithm then measures how much of _these error contributions_ came from each connection in the **layer below**, again using the [**chain rule**](https://github.com/iAmKankan/Mathematics/blob/main/calculus/D_calculus.md#chain-rule) — and so on until the algorithm reaches the **input layer**.
 * As we explained earlier, this reverse pass efficiently measures the **error gradient** across all the connection weights in the network by propagating the error gradient backward through the network (hence the name of the algorithm).
 
 ### Optimization
