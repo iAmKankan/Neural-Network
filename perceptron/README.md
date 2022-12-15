@@ -90,7 +90,7 @@ y_pred = per_clf.predict([[2, 0.5]])
 
 > #### When an ANN contains a deep stack of hidden layers, it is called a Deep Neural Network (DNN).
 
-## Backpropagation 
+## Backpropagation - [_General Backpropagation_](https://github.com/iAmKankan/Neural-Network/blob/main/backpropagation/README.md)
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 *  **Backpropagation is simply Gradient Descent using an efficient technique for computing the gradients automatically**: 
 
