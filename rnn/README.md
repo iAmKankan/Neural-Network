@@ -54,34 +54,7 @@ $$
 * **The present data doesn't dependent on the pevious data**.
 
 
-### Different types of RNN based on Input and Output Sequences
-![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 
-<p align="center">
-<img src="https://user-images.githubusercontent.com/12748752/144064476-e96cb279-6ea7-4a07-aad8-d883b0549bc2.png" width=50% />
-<br> <ins><b><i>Many-to-Many (top left), Many-to-One (top right), One-to-Many (bottom left), and Encoder–Decoder (bottom right) networks </i></b></ins>
-</p>
-
-### Many-to-Many(Sequence-to-Sequence) Network
-* An RNN can simultaneously take a sequence of inputs and produce a sequence of outputs.
-* **Example #1:** **Language Translation**, **Speech Recognition**
-  * The output does not comes simultaniously with the input and **the size of the output need not to be same as input**
-* **Example #2:** Video frame by frame analysis
-  * The output size fixed by the input size
-   
-### Many-to-One (Sequence-to-Vector) Network
-* You could feed the network a sequence of inputs and ignore all outputs except for the last one. 
-* For example: **Sentiment Analysis**- you could feed the network a sequence of words corresponding to a **movie review** and the network would output a **sentiment score**.
-
-###  One-to-Many(Vector-to-Sequence) Network
-* Conversely, you could feed the network the same input vector over and over again at each time step and let it output a sequence.
-* For example: **Image Captioning**- the input could be an image (or the output of a CNN), and the output could be a caption(text) for that image.
-
-### Encoder-Decoder Network
-* Lastly, you could have a **sequence-to-vector network**, called an **`encoder`**, followed by a **vector-to-sequence network**, called a **`decoder`**. 
-* For example, this could be used for translating a sentence from one language to another. 
-  * You would feed the network a sentence in one language, the encoder would convert this sentence into a single vector representation, and then the decoder would decode this vector into a sentence in another language. 
-  * This two-step model, called an `Encoder–Decoder`, works much better than trying to translate on the fly with a single `sequence-to-sequence RNN` (like the one represented at the top left): the last words of a sentence can affect the first words of the translation, so you need to wait until you have seen the whole sentence before translating it.
   
 ### RNN Layers
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
@@ -128,7 +101,7 @@ $$
 ### Output Layer: 
 The Output size is variable. 
 
-#### ⚛️ What about this $\large{\color{Purple} \hat{y}_t}$ ?
+### ⚛️ What about this $\large{\color{Purple} \hat{y}_t}$ ?
 **Answer:**  $\large{\color{Purple} \hat{y}_t}$ is equal to some function of $\large{\color{Purple} h_t}$. 
 
 Now in some cases, it simply makes sense for this function to be a **linear function**( for regression output). In some cases, it makes sense for the function to be a **non-linear function** ( for Classification output).
@@ -543,6 +516,49 @@ $$
 
 Now, what are deep RNNs let us look at just one of these if I look at one of these within the **RNN** it is just an ANN as we saw with normal RNNs. In a **normal RNN** all you had was **one input layer**, **one hidden layer** and **one output layer**. In a deep RNN all you do is that one single layer of the RNN actually become a deep neural network that is the only difference between a deep RNN and a normal RNN.
 
+![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
+![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
+### Different types of RNN based on Input and Output Sequences
+![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/12748752/144064476-e96cb279-6ea7-4a07-aad8-d883b0549bc2.png" width=50% />
+<br> <ins><b><i>Many-to-Many (top left), Many-to-One (top right), One-to-Many (bottom left), and Encoder–Decoder (bottom right) networks </i></b></ins>
+</p>
+
+### Many-to-Many(Sequence-to-Sequence) Network
+* An RNN can simultaneously take a sequence of inputs and produce a sequence of outputs.
+* **Example #1:** **Language Translation**, **Speech Recognition**
+  * The output does not comes simultaniously with the input and **the size of the output need not to be same as input**
+* **Example #2:** Video frame by frame analysis
+  * The output size fixed by the input size
+   
+### Many-to-One (Sequence-to-Vector) Network
+* You could feed the network a sequence of inputs and ignore all outputs except for the last one. 
+* For example: **Sentiment Analysis**- you could feed the network a sequence of words corresponding to a **movie review** and the network would output a **sentiment score**.
+
+###  One-to-Many(Vector-to-Sequence) Network
+* Conversely, you could feed the network the same input vector over and over again at each time step and let it output a sequence.
+* For example: **Image Captioning**- the input could be an image (or the output of a CNN), and the output could be a caption(text) for that image.
+
+### Encoder-Decoder Network
+* Lastly, you could have a **sequence-to-vector network**, called an **`encoder`**, followed by a **vector-to-sequence network**, called a **`decoder`**. 
+* For example, this could be used for translating a sentence from one language to another. 
+  * You would feed the network a sentence in one language, the encoder would convert this sentence into a single vector representation, and then the decoder would decode this vector into a sentence in another language. 
+  * This two-step model, called an `Encoder–Decoder`, works much better than trying to translate on the fly with a single `sequence-to-sequence RNN` (like the one represented at the top left): the last words of a sentence can affect the first words of the translation, so you need to wait until you have seen the whole sentence before translating it.
+
+![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
+![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
+
+
+
+
+
+
+
+
+![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
+![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 
 ## Bibliography
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
