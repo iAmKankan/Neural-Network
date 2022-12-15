@@ -34,7 +34,7 @@ Backpropagation handles **_one mini-batch at a time_** (for example containing _
 This is the **forward pass**: it is exactly like making _predictions_, except **_all intermediate results are preserved_** since they are needed for the **backward pass**. 
 
 ### Backward Pass:
-**Step #1: Loss Function** Next, the algorithm measures the **network’s output error** (i.e., it uses **a loss function** that _compares the desired output and the actual output of the network_, and returns some measure of the error). 
+**Step #1- Loss Function:** Next, the algorithm measures the **network’s output error** (i.e., it uses **a loss function** that _compares the desired output and the actual output of the network_, and returns some measure of the error). 
 
 **Step #2- Chain Rule:** After getting output of the output layer it computes how much each _output connection_ contributed to the error. This is done analytically by applying the **chain rule**, which makes this step fast and precise.
 
