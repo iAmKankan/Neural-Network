@@ -11,31 +11,42 @@ In 1986, **David Rumelhart**, **Geoffrey Hinton** and **Ronald Williams** publis
 
 > Backpropagation refers to the method of calculating the gradient of neural network parameters. In short, the method traverses the network in _reverse order_, from the **output** to the **input layer**, according to the _**chain rule**_ from _calculus_. The algorithm stores any intermediate variables (partial derivatives) required while calculating the gradient with respect to some parameters.
 
-<img src="https://user-images.githubusercontent.com/12748752/167529284-53374f33-750f-4b94-a858-f470c82755b5.png" width=50%/>
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/12748752/167529284-53374f33-750f-4b94-a858-f470c82755b5.png" width=70%/>
+</p>
 
 > Automatically computing gradients is called ***automatic differentiation***, or ***autodiff***. The autodiff technique used by backpropagation is called ***reverse-mode autodiff***. It is fast and precise, and is well suited when the function to differentiate has many variables (e.g., connection weights) and few outputs (e.g., one loss). 
 
 ### _The Algorithm_
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
-* It contains two parts - **forward** and **backward**
-* It handles one **mini-batch** at a time (for example, containing 32 instances each), and it goes through the full training set multiple times. ( 1 pass = one epoch)
-#### _Forward pass_:
-##### Step 1:
-* Each mini-batch is passed to the network’s **input layer**, which sends it to the **first hidden layer**. The algorithm then computes the output of all the neurons in this layer (for every instance in the mini-batch). 
-##### Step 2:
-* The result is passed on to the next layer, its output is computed and passed to the next layer, and so on until we get the output of the last layer, the output layer. 
+**Backpropagation** contains two parts - **forward** and **backward**
 
-**This is the forward pass:** it is exactly like making predictions, except all intermediate results are preserved since they are needed for the _backward pass_
+### Epochs
+Backpropagation handles **_one mini-batch at a time_** (for example containing _32 instances_ each), and it goes through the full training set multiple times. Each pass is called an **epoch**. 
 
-#### _Backward pass_:
-##### Step 1: Chain Rule
-* After getting output of the output layer it computes how much each _output connection_ contributed to the error. This is done analytically by applying the **chain rule**, which makes this step fast and precise.
-##### Step 2:
-The algorithm then measures how much of these _error contributions came from each connection_ in the layer below, again using the **chain rule**, working _backward_ until the algorithm reaches the input layer. 
+### Forward Pass:
+**Step #1:**  Each _mini-batch_ is passed to the network’s **input layer**, which just sends it to the **first hidden layer**. 
 
-This reverse pass efficiently measures the error gradient across all the connection weights in the network by propagating the error gradient backward through the network (hence the name of the algorithm). Finally, the algorithm performs a Gradient Descent step to tweak all the connection weights in the network, using the error gradients it just computed.
+**Step #2:** The algorithm then computes the _output of all the neurons in this layer_ (for every instance in the mini-batch). The result is passed on to the **next layer**.
 
-<img src="https://user-images.githubusercontent.com/12748752/167529284-53374f33-750f-4b94-a858-f470c82755b5.png" width=80%/>
+**Step #3:** Again its output is computed and passed to the **next layer** and so on until we get the **_output of the last layer_** the **output layer**. 
+
+This is the **forward pass**: it is exactly like making _predictions_, except **_all intermediate results are preserved_** since they are needed for the **backward pass**. 
+
+### Backward Pass:
+**Step #1: Loss Function** Next, the algorithm measures the **network’s output error** (i.e., it uses **a loss function** that _compares the desired output and the actual output of the network_, and returns some measure of the error). 
+
+**Step #2- Chain Rule:** After getting output of the output layer it computes how much each _output connection_ contributed to the error. This is done analytically by applying the **chain rule**, which makes this step fast and precise.
+
+**Step #3:** The algorithm then measures how much of _these error contributions_ came from each connection in the **layer below**, again using the [**chain rule**](https://github.com/iAmKankan/Mathematics/blob/main/calculus/D_calculus.md#chain-rule) — and so on until the algorithm reaches the **input layer**.
+* As we explained earlier, this reverse pass efficiently measures the **error gradient** across all the connection weights in the network by propagating the error gradient backward through the network (hence the name of the algorithm).
+
+### Optimization
+**Finally**, the algorithm performs a **Gradient Descent** step to tweak all the connection weights in the network, using the error gradients it just computed.
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/12748752/167529284-53374f33-750f-4b94-a858-f470c82755b5.png" width=80%/>
+</p>
 
 ### _Forwardpropagation with Weight update:_
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
