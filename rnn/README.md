@@ -218,14 +218,28 @@ $$
 </p>
 
 ## Step #2:
-For the Backpropagation we need to findout the derivative of the loss function let say $\large{\color{Purple} L }$ with each of the matrices $\large{\color{Purple} W }$, $\large{\color{Purple} U }$, $\large{\color{Purple} V}$ - 
+For the Backpropagation we need to findout the derivative of the **_loss function_** let say $\large{\color{Purple} L }$ with each of the matrices $\large{\color{Purple} W }$, $\large{\color{Purple} U }$, $\large{\color{Purple} V}$ - 
 #### Why?
 We need to update them. See for [Weight update in Backpropagation](https://github.com/iAmKankan/Neural-Network/blob/main/backpropagation/README.md#backpropagation-weight-update).
 
-#### Equation for Back propagation
 $$
-\Huge {\color{Red}\boxed{ {\color{Purple} \frac{\partial \textrm{L}}{\partial \textrm{W}},\ \frac{\partial \textrm{L}}{\partial \textrm{U}},\ \frac{\partial \textrm{L}}{\partial \textrm{V}}} }} {\color{Purple} \Big \\{ \normalsize \textrm{For the Backprop we need to findout the derivatives} }
+\Huge {\color{Red}\boxed{ {\color{Purple} \frac{\partial \textrm{L}}{\partial \textrm{W}},\ \frac{\partial \textrm{L}}{\partial \textrm{U}},\ \frac{\partial \textrm{L}}{\partial \textrm{V}}} }} {\color{Purple} \Big \\{ \normalsize \textrm{For the Backprop we need to findout the derivative of Loss function with each of the matrix} }
 $$
+
+#### What is $\large{\color{Purple}\partial L }$
+$$
+\Huge{\color{Purple} 
+\begin{align*}
+& \boxed{ \textbf{L} = \sum_{t=1}^{\textrm{T}} \textbf{L}_{t} } & 
+\Big \\{ \normalsize \textit{ Summation of all the intermediate losses through the layers} \\
+\end{align*}
+}
+$$
+
+
+
+
+
 
 #### Example #1: Lets consider local loss L3 and see how backprop works
 $$
