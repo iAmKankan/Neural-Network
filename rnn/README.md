@@ -181,7 +181,7 @@ $$
 
 $$ \Huge{\color{Purple} \hat{y_t} = g^* ( W_{yh} h_t) } $$
 
-> #### Inorder to make the expressions simple we put allias in the above two expressionas like 
+#### Inorder to make the expressions simple we put allias in the above two expressionas like 
 > <img src="https://user-images.githubusercontent.com/12748752/188525079-36af334d-6d36-4550-8480-8094a409168a.png" width= 55%/>
 
 ### $\large{\color{Purple} h_t}$ and $\large{\color{Purple} \hat{y}_t}$  looks like- 
@@ -190,7 +190,7 @@ $$ \Huge{\color{Purple} \begin{align*}
 &  \hat{y_t} = g^* ( V h_t) \\
 \end{align*}} $$
 
-#### ⚛️ How does RNN keep the context?
+### ⚛️ How does RNN keep the context?
 
 **Answer:** The following vectors <img src="https://latex.codecogs.com/svg.image?{\color{Purple}\textrm{W,&space;U,&space;V&space;}&space;}" title="https://latex.codecogs.com/svg.image?{\color{Purple}\textrm{W, U, V } }" align="center" /> do not change with time (or across the layers).
 
