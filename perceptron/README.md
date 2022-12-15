@@ -101,11 +101,20 @@ y_pred = per_clf.predict([[2, 0.5]])
 
 > #### Automatically computing gradients is called *automatic differentiation*, or *autodiff*. The autodiff technique used by backpropagation is called *reverse-mode autodiff*. It is fast and precise, and is well suited when the function to differentiate has many variables (e.g., connection weights) and few outputs (e.g., one loss). 
 
-### How Backpropagation works
+## How Backpropagation works
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
+### Epochs
+Backpropagation handles **_one mini-batch at a time_** (for example containing _32 instances_ each), and it goes through the full training set multiple times. Each pass is called an **epoch**. 
 
-* It handles one mini-batch at a time (for example containing 32 instances each), and it goes through the full training set multiple times. Each pass is called an **epoch**. 
-* Each mini-batch is passed to the network’s input layer, which just sends it to the first hidden layer. The algorithm then computes the output of all the neurons in this layer (for every instance in the mini-batch). The result is passed on to the next layer, its output is computed and passed to the next layer, and so on until we get the output of the last layer, the output layer. This is the forward pass: it is exactly like making predictions, except all intermediate results are preserved since they are needed for the backward pass. 
+### Forward Pass:
+**Step #1:**  Each _mini-batch_ is passed to the network’s **input layer**, which just sends it to the **first hidden layer**. 
+
+**Step #2:** The algorithm then computes the _output of all the neurons in this layer_ (for every instance in the mini-batch). The result is passed on to the **next layer**.
+
+**Step #3:** Again its output is computed and passed to the **next layer** and so on until we get the **_output of the last layer_** the **output layer**. 
+
+This is the forward pass: it is exactly like making predictions, except all intermediate results are preserved since they are needed for the backward pass. 
+
 * Next, the algorithm measures the network’s output error (i.e., it uses a loss function that compares the desired output and the actual output of the network, and returns some measure of the error). 
 * Then it computes how much each output connection contributed to the error. This is done analytically by simply applying the [chain rule](https://github.com/iAmKankan/Mathematics/blob/main/D_calculus.md#chain-rule) (perhaps the most fundamental rule in calculus), which makes this step fast and precise. 
 * The algorithm then measures how much of these error contributions came from each connection in the layer below, again using the [chain rule](https://github.com/iAmKankan/Mathematics/blob/main/D_calculus.md#chain-rule) —and so on until the algorithm reaches the input layer. As we explained earlier, this reverse pass efficiently measures the error gradient across all the connection weights in the network by propagating the error gradient backward through the network (hence the name of the algorithm).
