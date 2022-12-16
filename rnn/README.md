@@ -205,7 +205,8 @@ $$ {\color{Red} \boxed{\Huge{\color{Purple} \begin{align*}
 $$
 
 #### Description
-> The vectors $\large{\color{Purple} \vec{W} }$, $\large{\color{Purple} \vec{U} }$, $\large{\color{Purple} \vec{V} }$ do not change with time (or across the layers)
+> The Matrixes $\large{\color{Purple} \textbf{W} }$, $\large{\color{Purple} \textbf{U} }$, $\large{\color{Purple} \textbf{V} }$ do not change with time (or across the layers); Meaning same values in each epoch.
+> Where as in ANN those matrix changes its values. We need to update them. See for [Weight update in Backpropagation](https://github.com/iAmKankan/Neural-Network/blob/main/backpropagation/README.md#backpropagation-weight-update).
 
 ---
 ### ⚛️ How does RNN keep the context?
@@ -219,8 +220,7 @@ $$
 
 ## Step #2:
 For the Backpropagation we need to findout the derivative of the **_loss function_** let say $\large{\color{Purple} L }$ with each of the matrices $\large{\color{Purple} W }$, $\large{\color{Purple} U }$, $\large{\color{Purple} V}$ - 
-#### Why?
-We need to update them. See for [Weight update in Backpropagation](https://github.com/iAmKankan/Neural-Network/blob/main/backpropagation/README.md#backpropagation-weight-update).
+
 
 $$
 \Huge {\color{Red}\boxed{ {\color{Purple} \frac{\partial \textrm{L}}{\partial \textrm{W}},\ \frac{\partial \textrm{L}}{\partial \textrm{U}},\ \frac{\partial \textrm{L}}{\partial \textrm{V}}} }} {\color{Purple} \Big \\{ \normalsize \textrm{For the Backprop we need to findout the derivative of Loss function with each of the matrix} }
