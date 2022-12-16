@@ -223,21 +223,25 @@ For the Backpropagation we need to findout the derivative of the **_loss functio
 
 
 $$
-\Huge {\color{Red}\boxed{ {\color{Purple} \frac{\partial \textrm{L}}{\partial \textrm{W}},\ \frac{\partial \textrm{L}}{\partial \textrm{U}},\ \frac{\partial \textrm{L}}{\partial \textrm{V}}} }} {\color{Purple} \Big \\{ \normalsize \textrm{For the Backprop we need to findout the derivative of Loss function with each of the matrix} }
+\Huge  {\color{Purple} \frac{\partial \textrm{L}}{\partial \textrm{W}},\ \frac{\partial \textrm{L}}{\partial \textrm{U}},\ \frac{\partial \textrm{L}}{\partial \textrm{V}}}  {\color{Purple} \Big \\{ \normalsize \textrm{For the Backprop we need to findout the gradient of 'L' with respect to each of the matrices} }
 $$
 
-#### What is $\large{\color{Purple}\partial L }$
+### Recap of Loss function and $\large{\color{Purple}\partial L }$
+
 $$
 \Huge{\color{Purple} 
 \begin{align*}
-& \boxed{ \textbf{L} = \sum_{t=1}^{\textrm{T}} \textbf{L}_{t} } & 
-\Big \\{ \normalsize \textit{ Summation of all the intermediate losses through the layers} \\
+& \boxed{ \textbf{L} = \sum_{t=1}^{\textrm{T}} \textbf{L}_{t} } \\
 \end{align*}
 }
 $$
 
+#### Description
+> Summation of all the intermediate losses through the layers.
 
-
+<p align="center">
+<img src="https://user-images.githubusercontent.com/12748752/188549351-d5c3b022-9b5b-4b80-bf0c-ce57d3039940.png" width=70%/>
+</p>
 
 
 
