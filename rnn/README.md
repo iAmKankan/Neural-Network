@@ -113,7 +113,9 @@ Now in some cases, it simply makes sense for this function to be a **linear func
 
 ### Training RNNs Backpropagation and Loss calculation 
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
- [Backpropagation is common in ANN or in Multi-Layer Perceptron](https://github.com/iAmKankan/Neural-Network/blob/main/backpropagation/README.md). To train an RNN, the trick is to unroll it through time (like we just did) and then simply use _regular backpropagation_. This strategy is called ***backpropagation through time (BPTT)***.
+ [Backpropagation is common in ANN or in Multi-Layer Perceptron](https://github.com/iAmKankan/Neural-Network/blob/main/backpropagation/README.md). 
+ 
+ To train an **RNN**, the trick is to **unroll it through time** and then simply use [_regular backpropagation_](https://github.com/iAmKankan/Neural-Network/blob/main/backpropagation/README.md). This strategy is called ***backpropagation through time (BPTT)***.
 
 <p align="center">
  <img src="https://user-images.githubusercontent.com/12748752/144243558-a7cae1ca-96d7-4d80-9be8-bb4e7e960dc4.png" width=50%/>
