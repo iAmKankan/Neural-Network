@@ -118,14 +118,14 @@ Now in some cases, it simply makes sense for this function to be a **linear func
  <img src="https://user-images.githubusercontent.com/12748752/144243558-a7cae1ca-96d7-4d80-9be8-bb4e7e960dc4.png" width=50%/>
 </p>
 
-### First: Backpropagation -
+### <ins>First: Backpropagation -</ins>
 To train an **RNN**, the trick is to **unroll it through time** and then simply use [_regular backpropagation_](https://github.com/iAmKankan/Neural-Network/blob/main/backpropagation/README.md). This strategy is called ***backpropagation through time (BPTT)***.
 
 Like regular backpropagation, there is a **_first forward pass through the unrolled network_** (represented by the dashed arrows). 
 
 **Note:** [Backpropagation is common in ANN or in Multi-Layer Perceptron](https://github.com/iAmKankan/Neural-Network/blob/main/backpropagation/README.md). 
 
-### Next: Loss Calculation-
+### <ins>Next: Loss Calculation-</ins>
 * [The output sequence is evaluated using a cost function](https://github.com/iAmKankan/Neural-Network/tree/main/rnn#calculating-loss-in-rnn)
 
 $$
@@ -139,10 +139,10 @@ $$
 
  **Note**: this cost function may **_ignore some outputs_** (for example, in a **sequence-to-vector** RNN, all outputs are ignored except for the very last one). 
  
-### Next
+### <ins>Next -</ins>
 The gradients of that cost function are then **_propagated backward through the unrolled network_** (represented by the solid arrows). 
 
-### Finally 
+### <ins>Finally </ins>
 * The **_model parameters are updated_** using the gradients computed during **BPTT**. 
 
 **Note** that the gradients flow backward through all the outputs used by the cost function, not just through the final output (for example, in Figure the cost function is computed using the last three outputs of the network, <img src="https://latex.codecogs.com/svg.image?\textbf{Y}_{(2)},&space;\textbf{Y}_{(3)}\&space;and&space;\&space;\textbf{Y}_{(4)}" title="\textbf{Y}_{(2)}, \textbf{Y}_{(3)}\ and \ \textbf{Y}_{(4)}" />, so gradients flow through these three outputs, but not through **Y<sub>(0)</sub>** and **Y<sub>(1)</sub>** ). 
