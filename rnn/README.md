@@ -135,8 +135,7 @@ $$
 \end{align*}}
 $$
 
- 
-* **Note**: this cost function may `ignore some outputs`(for example, in a sequence-to-vector RNN, all outputs are ignored except for the very last one). 
+ **Note**: this cost function may `ignore some outputs`(for example, in a sequence-to-vector RNN, all outputs are ignored except for the very last one). 
 #### Then
 * The gradients of that cost function are then `propagated backward through the unrolled network` (represented by the solid arrows). 
 #### Finally 
