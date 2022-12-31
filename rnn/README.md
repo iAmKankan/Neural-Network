@@ -111,19 +111,21 @@ Now in some cases, it simply makes sense for this function to be a **linear func
 ### ⚛️ Constant with time meaning
 **Answer:** The **weights** and **bias** in **_h<sub>3</sub>_** are the same **_W<sub>hh</sub>  ,  W<sub>xh</sub>_** and  **_b<sub>n</sub>_** for **_h<sub>2</sub>_**
 
-### Training RNNs Backpropagation and Loss calculation 
+## Training RNNs Backpropagation and Loss calculation 
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
- [Backpropagation is common in ANN or in Multi-Layer Perceptron](https://github.com/iAmKankan/Neural-Network/blob/main/backpropagation/README.md). 
- 
- To train an **RNN**, the trick is to **unroll it through time** and then simply use [_regular backpropagation_](https://github.com/iAmKankan/Neural-Network/blob/main/backpropagation/README.md). This strategy is called ***backpropagation through time (BPTT)***.
 
 <p align="center">
  <img src="https://user-images.githubusercontent.com/12748752/144243558-a7cae1ca-96d7-4d80-9be8-bb4e7e960dc4.png" width=50%/>
 </p>
 
-#### First
-* Like regular backpropagation, there is a **_first forward pass through the unrolled network_** (represented by the dashed arrows). 
-#### Then 
+### First: Backpropagation -
+To train an **RNN**, the trick is to **unroll it through time** and then simply use [_regular backpropagation_](https://github.com/iAmKankan/Neural-Network/blob/main/backpropagation/README.md). This strategy is called ***backpropagation through time (BPTT)***.
+
+Like regular backpropagation, there is a **_first forward pass through the unrolled network_** (represented by the dashed arrows). 
+
+**Note:** [Backpropagation is common in ANN or in Multi-Layer Perceptron](https://github.com/iAmKankan/Neural-Network/blob/main/backpropagation/README.md). 
+
+### Next: Loss Calculation-
 * [The output sequence is evaluated using a cost function](https://github.com/iAmKankan/Neural-Network/tree/main/rnn#calculating-loss-in-rnn)
 
 $$
@@ -135,12 +137,15 @@ $$
 \end{align*}}
 $$
 
- **Note**: this cost function may `ignore some outputs`(for example, in a sequence-to-vector RNN, all outputs are ignored except for the very last one). 
-#### Then
-* The gradients of that cost function are then `propagated backward through the unrolled network` (represented by the solid arrows). 
-#### Finally 
-* The `model parameters are updated` using the gradients computed during **BPTT**. 
-* **Note** that the gradients flow backward through all the outputs used by the cost function, not just through the final output (for example, in Figure the cost function is computed using the last three outputs of the network, <img src="https://latex.codecogs.com/svg.image?\textbf{Y}_{(2)},&space;\textbf{Y}_{(3)}\&space;and&space;\&space;\textbf{Y}_{(4)}" title="\textbf{Y}_{(2)}, \textbf{Y}_{(3)}\ and \ \textbf{Y}_{(4)}" />, so gradients flow through these three outputs, but not through **Y<sub>(0)</sub>** and **Y<sub>(1)</sub>** ). 
+ **Note**: this cost function may **_ignore some outputs_** (for example, in a **sequence-to-vector** RNN, all outputs are ignored except for the very last one). 
+ 
+### Next
+The gradients of that cost function are then **_propagated backward through the unrolled network_** (represented by the solid arrows). 
+
+### Finally 
+* The **_model parameters are updated_** using the gradients computed during **BPTT**. 
+
+**Note** that the gradients flow backward through all the outputs used by the cost function, not just through the final output (for example, in Figure the cost function is computed using the last three outputs of the network, <img src="https://latex.codecogs.com/svg.image?\textbf{Y}_{(2)},&space;\textbf{Y}_{(3)}\&space;and&space;\&space;\textbf{Y}_{(4)}" title="\textbf{Y}_{(2)}, \textbf{Y}_{(3)}\ and \ \textbf{Y}_{(4)}" />, so gradients flow through these three outputs, but not through **Y<sub>(0)</sub>** and **Y<sub>(1)</sub>** ). 
 * Moreover, since the same parameters **W** and **b** are used at each time step, backpropagation will do the right thing and sum over all time steps.
 * Fortunately, tf.keras takes care of all of this complexity for you
 
