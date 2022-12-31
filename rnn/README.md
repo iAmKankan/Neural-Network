@@ -122,9 +122,10 @@ Now in some cases, it simply makes sense for this function to be a **linear func
 </p>
 
 #### First
-* Like regular backpropagation, there is a `first forward pass through the unrolled network` (represented by the dashed arrows). 
+* Like regular backpropagation, there is a **_first forward pass through the unrolled network_** (represented by the dashed arrows). 
 #### Then 
-* The output sequence is evaluated using a cost function <img src="https://latex.codecogs.com/svg.image?C(\textbf{Y}_{(0)},&space;\textbf{Y}_{(1)},...&space;,&space;\textbf{Y}_{(T)})" title="C(\textbf{Y}_{(0)}, \textbf{Y}_{(1)},... , \textbf{Y}_{(T)})" /> (where _T_ is the max time step). 
+* [The output sequence is evaluated using a cost function](https://github.com/iAmKankan/Neural-Network/tree/main/rnn#calculating-loss-in-rnn)
+ $\Huge{\color{Purple} \textbf{L} = \sum_{t=1}^{\textrm{T}} \textbf{L}_{t} }$  (where _T_ is the max time step). 
 * **Note**: this cost function may `ignore some outputs`(for example, in a sequence-to-vector RNN, all outputs are ignored except for the very last one). 
 #### Then
 * The gradients of that cost function are then `propagated backward through the unrolled network` (represented by the solid arrows). 
@@ -134,7 +135,7 @@ Now in some cases, it simply makes sense for this function to be a **linear func
 * Moreover, since the same parameters **W** and **b** are used at each time step, backpropagation will do the right thing and sum over all time steps.
 * Fortunately, tf.keras takes care of all of this complexity for you
 
-#### Calculating Loss in RNN
+### Calculating Loss in RNN
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 
 <p align="center"> 
