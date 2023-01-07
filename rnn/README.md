@@ -180,8 +180,8 @@ $$
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 
 <p align="center"> 
-<img src="https://user-images.githubusercontent.com/12748752/188473359-24396c3f-04df-487b-90a6-3a5837be0cf2.png" width=40%/>
-<br><ins><b><i> RNN- Many-To-Many  |  Total number of Layers = 'T'</i></b></ins>
+ <img src="https://user-images.githubusercontent.com/12748752/211137192-353752b1-36e1-4cbd-b303-637ba8e88dd3.png" width=60% />
+ <br><ins><b><i> Weight matrix for a single hidden layer RNN | RNN- Many-To-Many  |  Total number of Layers = 'T'</i></b></ins>
 </p>
 
 
@@ -204,12 +204,18 @@ $$
 
 ### For _Output layer_ for any instance $\large{\color{Purple} \hat{y}_t}$  - 
 
-$$ \Huge{\color{Purple} \hat{y_t} = g^* ( W_{yh} h_t) } $$
+$$ \Huge{\color{Purple} \hat{y_t} = g^* ( W_{yh} h_t + b)} $$
 
 #### Description
 > $\large{\color{Purple} g }$ needs not to be same as $\large{\color{Purple} g^* }$, even $\large{\color{Purple} g^* }$ not always be a **_Non-linear function_**. 
 
-## Step #1: 
+## Step #1: Weight calculation for hidden layers and output layers
+To train an **RNN**, the trick is to **unroll it through time** and then simply use [_regular backpropagation_](https://github.com/iAmKankan/Neural-Network/blob/main/backpropagation/README.md). This strategy is called ***backpropagation through time (BPTT)***.
+
+Like regular backpropagation, there is a **_first forward pass through the unrolled network_** (represented by the dashed arrows). 
+
+**Note:** [Backpropagation is common in ANN or in Multi-Layer Perceptron](https://github.com/iAmKankan/Neural-Network/blob/main/backpropagation/README.md). 
+
 Inorder to make the expressions simple we put _allias_ in the above two expressionas like 
 > <img src="https://user-images.githubusercontent.com/12748752/188525079-36af334d-6d36-4550-8480-8094a409168a.png" width= 55%/>
 
@@ -229,13 +235,14 @@ $$
 ### ⚛️ How does RNN keep the context?
 
 **Answer:** The following vectors <img src="https://latex.codecogs.com/svg.image?{\color{Purple}\textrm{W,&space;U,&space;V&space;}&space;}" title="https://latex.codecogs.com/svg.image?{\color{Purple}\textrm{W, U, V } }" align="center" /> do not change with time (or across the layers).
----
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/12748752/188549351-d5c3b022-9b5b-4b80-bf0c-ce57d3039940.png" width=50%/>
 </p>
 
-## Step #2:
+---
+
+## Step #2: Loss calculation
 For the Backpropagation we need to findout the derivative of the **_loss function_** let say $\large{\color{Purple} L }$ with each of the matrices $\large{\color{Purple} W }$, $\large{\color{Purple} U }$, $\large{\color{Purple} V}$ - 
 
 
@@ -310,6 +317,20 @@ $$
 
 [**To be continued**]
 
+## Step #3: 
+
+<p align="center">
+ <img src="https://user-images.githubusercontent.com/12748752/211140183-2999c9f2-c9a9-45fb-8313-da66c755e59f.png" width=50%/>
+</p>
+
+The gradients of that cost function are then **_propagated backward through the unrolled network_** (represented by the solid arrows). 
+
+## <ins>Finally </ins>
+* The **_model parameters are updated_** using the gradients computed during **BPTT**. 
+
+**Note** that the gradients flow backward through all the outputs used by the cost function, not just through the final output (for example, in Figure the cost function is computed using the last three outputs of the network, <img src="https://latex.codecogs.com/svg.image?\textbf{Y}_{(2)},&space;\textbf{Y}_{(3)}\&space;and&space;\&space;\textbf{Y}_{(4)}" title="\textbf{Y}_{(2)}, \textbf{Y}_{(3)}\ and \ \textbf{Y}_{(4)}" />, so gradients flow through these three outputs, but not through **Y<sub>(0)</sub>** and **Y<sub>(1)</sub>** ). 
+* Moreover, since the same parameters **W** and **b** are used at each time step, backpropagation will do the right thing and sum over all time steps.
+* Fortunately, tf.keras takes care of all of this complexity for you
 
 
 
