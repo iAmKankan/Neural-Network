@@ -111,46 +111,8 @@ Now in some cases, it simply makes sense for this function to be a **linear func
 ### ⚛️ Constant with time meaning
 **Answer:** The **weights** and **bias** in **_h<sub>3</sub>_** are the same **_W<sub>hh</sub>  ,  W<sub>xh</sub>_** and  **_b<sub>n</sub>_** for **_h<sub>2</sub>_**
 
-## Training RNNs Backpropagation and Loss calculation 
-![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 
-<p align="center">
- <img src="https://user-images.githubusercontent.com/12748752/144243558-a7cae1ca-96d7-4d80-9be8-bb4e7e960dc4.png" width=50%/>
-</p>
-
-### <ins>First: Backpropagation -</ins>
-To train an **RNN**, the trick is to **unroll it through time** and then simply use [_regular backpropagation_](https://github.com/iAmKankan/Neural-Network/blob/main/backpropagation/README.md). This strategy is called ***backpropagation through time (BPTT)***.
-
-Like regular backpropagation, there is a **_first forward pass through the unrolled network_** (represented by the dashed arrows). 
-
-**Note:** [Backpropagation is common in ANN or in Multi-Layer Perceptron](https://github.com/iAmKankan/Neural-Network/blob/main/backpropagation/README.md). 
-
-### <ins>Next: Loss Calculation-</ins>
-* [The output sequence is evaluated using a cost function](https://github.com/iAmKankan/Neural-Network/tree/main/rnn#calculating-loss-in-rnn)
-
-$$
-\Huge{\color{Purple} \begin{align*}
-\textbf{L} = \sum_{t=1}^{\textrm{T}} \textbf{L}_{t} & & \normalsize
-\begin{cases} \textrm{where } T \textrm{ is the max time step} \\ 
-\textrm{Summation of all the intermediate losses through the layers}\\
-\end{cases}
-\end{align*}}
-$$
-
- **Note**: this cost function may **_ignore some outputs_** (for example, in a **sequence-to-vector** RNN, all outputs are ignored except for the very last one). 
- 
-### <ins>Next -</ins>
-The gradients of that cost function are then **_propagated backward through the unrolled network_** (represented by the solid arrows). 
-
-### <ins>Finally </ins>
-* The **_model parameters are updated_** using the gradients computed during **BPTT**. 
-
-**Note** that the gradients flow backward through all the outputs used by the cost function, not just through the final output (for example, in Figure the cost function is computed using the last three outputs of the network, <img src="https://latex.codecogs.com/svg.image?\textbf{Y}_{(2)},&space;\textbf{Y}_{(3)}\&space;and&space;\&space;\textbf{Y}_{(4)}" title="\textbf{Y}_{(2)}, \textbf{Y}_{(3)}\ and \ \textbf{Y}_{(4)}" />, so gradients flow through these three outputs, but not through **Y<sub>(0)</sub>** and **Y<sub>(1)</sub>** ). 
-* Moreover, since the same parameters **W** and **b** are used at each time step, backpropagation will do the right thing and sum over all time steps.
-* Fortunately, tf.keras takes care of all of this complexity for you
-
-### Calculating Loss in RNN
-![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
+### ⚛️ Calculating Loss in RNN
 
 <p align="center"> 
 <img src="https://user-images.githubusercontent.com/12748752/188473359-24396c3f-04df-487b-90a6-3a5837be0cf2.png" width=40%/>
@@ -158,8 +120,9 @@ The gradients of that cost function are then **_propagated backward through the 
 </p>
 
 #### Example:
-* Now when you have **multiple predicted values**, let us say having **10 days** before is the weather of **_h<sub>0</sub>_** or temperature of **_x<sub>0</sub>_** in some city, let us say Chennai. 
-* So suppose you have that input, you would have the next day's temperature, let us say that is <img src="https://latex.codecogs.com/svg.image?\large&space;\hat{y}_1" title="https://latex.codecogs.com/svg.image?\large \hat{y}_1" align="center"/>, the next day's temperature <img src="https://latex.codecogs.com/svg.image?\large&space;\hat{y}_2" title="https://latex.codecogs.com/svg.image?\large \hat{y}_2" align="center" />, next day's temperature <img src="https://latex.codecogs.com/svg.image?\large&space;\hat{y}_3" title="https://latex.codecogs.com/svg.image?\large \hat{y}_3" align="center"/>, till let us say today's temperature which is <img src="https://latex.codecogs.com/svg.image?\large&space;\hat{y}_{\textrm{T}}" title="https://latex.codecogs.com/svg.image?\large \hat{y}_{\textrm{T}}" align="center"/> . 
+* Now when you have **multiple predicted values**, let us say having **10 days** before is the weather of $\large{\color{Purple} h_0}$ or temperature of $\large{\color{Purple} {x}_0}$ in some city, let us say Chennai. 
+* So suppose you have that input, you would have the next day's temperature, let us say that is $\large{\color{Purple} \hat{y}_{1}}$ , the next day's temperature  $\large{\color{Purple} \hat{y}_{1}}$
+*   next day's temperature $\large{\color{Purple} \hat{y}_3}$ , till let us say today's temperature which is $\large{\color{Purple} \hat{y}_{\textrm{T}}}$ . 
 * Now for each one of them, you also have a corresponding ground truth, which should be <img src="https://latex.codecogs.com/svg.image?\large&space;y_1,\&space;y_2,\&space;y_3,\&space;y_T" title="https://latex.codecogs.com/svg.image?\large y_1,\ y_2,\ y_3,\ y_T" align="center"/> . And whenever you have a ground truth and a prediction and these two differs, you will have a **loss function**. 
 * So the total loss is -
 
