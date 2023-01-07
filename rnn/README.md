@@ -267,11 +267,13 @@ $$
 <img src="https://user-images.githubusercontent.com/12748752/211140984-819b6f1a-1f3f-40b9-92d0-a05de7873fda.png" width=70%/>
 </p>
 
-
+---
 #### Example #1: Lets consider local loss L3 and see how backprop works
 $$
 \Huge {\color{Purple} \frac{\partial \textrm{L}_3}{\partial \textrm{W}},\ \frac{\partial \textrm{L}_3}{\partial \textrm{U}},\ \frac{\partial \textrm{L}_3}{\partial \textrm{V}} }
 $$
+
+---
 
 * We assume that _**g**_ is a **non-linear function** and-
 
