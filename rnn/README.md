@@ -320,7 +320,7 @@ $$
 ## Step #3: 
 
 <p align="center">
- <img src="https://user-images.githubusercontent.com/12748752/211140183-2999c9f2-c9a9-45fb-8313-da66c755e59f.png" width=50%/>
+ <img src="https://user-images.githubusercontent.com/12748752/211140459-68704d15-7578-4136-9ede-77d418150d7c.png" width=50%/>
 </p>
 
 The gradients of that cost function are then **_propagated backward through the unrolled network_** (represented by the solid arrows). 
