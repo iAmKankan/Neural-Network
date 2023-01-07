@@ -264,9 +264,8 @@ $$
 > Summation of all the intermediate losses through the layers.
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/12748752/188549351-d5c3b022-9b5b-4b80-bf0c-ce57d3039940.png" width=70%/>
+<img src="https://user-images.githubusercontent.com/12748752/211140984-819b6f1a-1f3f-40b9-92d0-a05de7873fda.png" width=70%/>
 </p>
-
 
 
 #### Example #1: Lets consider local loss L3 and see how backprop works
