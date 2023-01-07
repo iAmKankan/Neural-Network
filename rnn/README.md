@@ -121,9 +121,8 @@ Now in some cases, it simply makes sense for this function to be a **linear func
 
 #### Example:
 * Now when you have **multiple predicted values**, let us say having **10 days** before is the weather of $\large{\color{Purple} h_0}$ or temperature of $\large{\color{Purple} {x}_0}$ in some city, let us say Chennai. 
-* So suppose you have that input, you would have the next day's temperature, let us say that is $\large{\color{Purple} \hat{y}_{1}}$ , the next day's temperature  $\large{\color{Purple} \hat{y}_{1}}$
-*   next day's temperature $\large{\color{Purple} \hat{y}_3}$ , till let us say today's temperature which is $\large{\color{Purple} \hat{y}_{\textrm{T}}}$ . 
-* Now for each one of them, you also have a corresponding ground truth, which should be <img src="https://latex.codecogs.com/svg.image?\large&space;y_1,\&space;y_2,\&space;y_3,\&space;y_T" title="https://latex.codecogs.com/svg.image?\large y_1,\ y_2,\ y_3,\ y_T" align="center"/> . And whenever you have a ground truth and a prediction and these two differs, you will have a **loss function**. 
+* Suppose you have that input, you would have the next day's temperature, let us say that is $\large{\color{Purple} \hat{y_1}}$ , the next day's temperature $\large{\color{Purple} \hat{y_2}}$ and next day's temperature $\large{\color{Purple} \hat{y_3}}$ , till let us say today's temperature which is $\large{\color{Purple} \hat{y_T}}$ .
+* Now for each one of them, you also have a corresponding ground truth, which should be $\large{\color{Purple} y_1,\ y_2,\ y_3, \ y_T }$ . And whenever you have a ground truth and a prediction and these two differs, you will have a **loss function**. 
 * So the total loss is -
 
 $$
