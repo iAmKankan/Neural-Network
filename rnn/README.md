@@ -644,3 +644,4 @@ Now, what are deep RNNs let us look at just one of these if I look at one of the
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 * **Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow, 2nd Edition by Aurélien Géron**
 * NPTEL(Dr. Balaji Srinivasan)
+* [YouTube 1](https://www.youtube.com/watch?v=0XdPIqi0qpg)
