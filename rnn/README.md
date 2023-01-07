@@ -251,13 +251,15 @@ $$
 $$
 
 ### Recap of Loss function and $\large{\color{Purple}\partial L }$
+* [The output sequence is evaluated using a cost function](https://github.com/iAmKankan/Neural-Network/tree/main/rnn#calculating-loss-in-rnn)
 
 $$
-\Huge{\color{Purple} 
-\begin{align*}
-& \boxed{ \textbf{L} = \sum_{t=1}^{\textrm{T}} \textbf{L}_{t} } \\
-\end{align*}
-}
+\Huge{\color{Purple} \begin{align*}
+\textbf{L} = \sum_{t=1}^{\textrm{T}} \textbf{L}_{t} & & \normalsize
+\begin{cases} \textrm{where } T \textrm{ is the max time step} \\ 
+\textrm{Summation of all the intermediate losses through the layers}\\
+\end{cases}
+\end{align*}}
 $$
 
 #### Description
