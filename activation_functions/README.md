@@ -61,13 +61,14 @@ The question should be asked that why we need so namy types of Activation functi
 
 #### [⚛️ Why the big number is a problem _since &infin; means a big number_? ↗️](https://github.com/iAmKankan/Neural-Network/tree/main/rnn/README.md#%EF%B8%8F-why-the-big-number-is-a-problem-since--means-a-big-number)
 
-![light](https://user-images.githubusercontent.com/12748752/136802581-e8e0607f-3472-44f7-a8b2-8ba82a0f8070.png)
+![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
+![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 
-
-<img src="https://user-images.githubusercontent.com/12748752/167583923-c90411f4-8b57-4663-93fa-be18ca47a7cb.png" width=45% /> <img src="https://user-images.githubusercontent.com/12748752/167583928-bfe56750-9917-4209-9eb5-04fc81743647.png" width=45% /> 
-
-<img src="https://user-images.githubusercontent.com/12748752/167583932-9d195974-375c-48a6-84db-04fdbcb5fb6b.png" width=45% />
-
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/12748752/167583923-c90411f4-8b57-4663-93fa-be18ca47a7cb.png" width=45% /> <img src="https://user-images.githubusercontent.com/12748752/167583928-bfe56750-9917-4209-9eb5-04fc81743647.png" width=45% /> 
+  <br>
+  <img src="https://user-images.githubusercontent.com/12748752/167583932-9d195974-375c-48a6-84db-04fdbcb5fb6b.png" width=45% />
+</p>
 
 
 
