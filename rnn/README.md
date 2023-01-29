@@ -343,7 +343,7 @@ The gradients of that cost function are then **_propagated backward through the 
 
 ### Vanishing Gradients and TBPTT
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
-#### [Vanishing Gradient and Exploding Gradient in Sigmoid Function](https://github.com/iAmKankan/Neural-Network/tree/main/activation_functions#vanishing-gradients-the-rnn-version-%EF%B8%8F)
+#### [Vanishing Gradient and Exploding Gradient in Sigmoid Function ↗️](https://github.com/iAmKankan/Neural-Network/tree/main/activation_functions#vanishing-gradients-the-rnn-version-%EF%B8%8F)
 #### ⚛️ Why we do BPTT or back-propagation-through-time
 The basic issue for which we had to do **BPTT** was because **W, U, V** matrices were **constants across time**. Because of which you had sort of **recursive expressions** for the loss with respect to **W** and the loss with respect to **U**. 
 
