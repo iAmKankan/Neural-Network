@@ -52,14 +52,14 @@ The question should be asked that why we need so namy types of Activation functi
 #### This scenario is called _Vanishing Gradients Problem_
 > #### To overcome this problem we use advanced activation functions like Relu etc.
 
-### _Exploding Gradients_ ([the RNN version](https://github.com/iAmKankan/Neural-Network/edit/main/rnn/README.md#vanishing-gradients-and-tbptt))
+### _Exploding Gradients_ ([the RNN version ↗️](https://github.com/iAmKankan/Neural-Network/tree/main/rnn/README.md#vanishing-gradients-and-tbptt))
 ![light](https://user-images.githubusercontent.com/12748752/136802581-e8e0607f-3472-44f7-a8b2-8ba82a0f8070.png)
 * In some cases, the opposite of vanishing gradients can happen: the gradients can grow bigger and bigger until layers get insanely large weight updates and the algorithm diverges.
 * More generally, deep neural networks suffer from unstable gradients; different layers may learn at widely different speeds.
 > #### This problem associates with _weights_, sometimes the weights get big and when it multiplies with the derivative of the ***Activation Function*** it get bigger.. Not necessary the presents of _Sigmoid_ function.
 
 
-#### [⚛️ Why the big number is a problem _since &infin; means a big number_? ↗️](https://github.com/iAmKankan/Neural-Network/edit/main/rnn/README.md#%EF%B8%8F-why-the-big-number-is-a-problem-since--means-a-big-number)
+#### [⚛️ Why the big number is a problem _since &infin; means a big number_? ↗️](https://github.com/iAmKankan/Neural-Network/tree/main/rnn/README.md#%EF%B8%8F-why-the-big-number-is-a-problem-since--means-a-big-number)
 
 ![light](https://user-images.githubusercontent.com/12748752/136802581-e8e0607f-3472-44f7-a8b2-8ba82a0f8070.png)
 
