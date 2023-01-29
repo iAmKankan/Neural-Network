@@ -65,10 +65,18 @@ $$\Large{\color{Purple}\parallel \frac{\partial L }{\partial W}\parallel \to \in
 * More generally, deep neural networks suffer from unstable gradients; different layers may learn at widely different speeds.
 > #### This problem associates with _weights_, sometimes the weights get big and when it multiplies with the derivative of the ***Activation Function*** it get bigger.. Not necessary the presents of _Sigmoid_ function.
 
-#### Gredient clipping:
+#### Gredient clipping: [↗️](https://cnvrg.io/gradient-clipping/)
+![light](https://user-images.githubusercontent.com/12748752/136802581-e8e0607f-3472-44f7-a8b2-8ba82a0f8070.png)
 $\underline{\textbf{Gredient clipping:}}$  This is sort of a **numerical hack**. It is very simple, we decide on a **maximum allowable gradient size**.
 
-##### Keras Code: [↗️](https://cnvrg.io/gradient-clipping/)
+* Deside on a maximum allowable Gradient [value/size](https://github.com/iAmKankan/Neural-Network/edit/main/activation_functions/README.md#gradient-is-a-vector)
+   * Say $\Large{\color{Purple} \frac{\partial L}{\partial W} = \vec{g}}$. Then we do $\Large{\color{Purple} max \parallel \vec{g} \parallel = G_{max}}$
+
+* Geadient Descent 
+   * Calculate $\Large{\color{Purple} \vec{g}}$
+   * If **norm** of **g** $\Large{\color{Purple} \parallel \vec{g} \parallel < G_{max}}$ then proceed as usual.
+   * If not then we have to redefine a **new gradient** which is equal to the **old gredient** $\Large{\color{Purple} \vec{g}  = \vec{\dot{g}} }$
+##### Keras Code: 
 Applying **gradient clipping** in **TensorFlow** models is quite straightforward. 
 * The only thing you need to do is pass the **parameter** to the **optimizer function**. 
 * All optimizers have a **_`clipnorm`_** and a **_`clipvalue`_** parameters that can be used to **clip** the **gradients**.
@@ -114,7 +122,7 @@ model.compile(
 #### Gradient is a Vector:
 What do I mean by value of **gradient**? Again remember, **gradient is a vector**, so **you cannot give it a value**, 
 
-* you can however give a value to **norm** of **gradient**. So let us say we are dealing with @L @W , let me call it g vector. So I will say that maximum value allowable of g vector is some Gmax. You will decide it, okay, you will decide on what you are comfortable with. Just like our cut-o criterion, this is an arbitrary criterion set by you, it is sort of an engineering solution to the problem, okay.
+* you can however give a value to **norm** of **gradient**. So let us say we are dealing with $\frac{\partial L}{\partial W}$ , let me call it **g** vector. So I will say that maximum value allowable of g vector is some G_max. You will decide it, okay, you will decide on what you are comfortable with. Just like our **cut-off** **criterion**, this is an **arbitrary criterion set by you**, it is sort of an engineering solution to the problem, okay.
 
 #### [⚛️ Why the big number is a problem _since &infin; means a big number_? ↗️](https://github.com/iAmKankan/Neural-Network/tree/main/rnn/README.md#%EF%B8%8F-why-the-big-number-is-a-problem-since--means-a-big-number)
 
