@@ -42,7 +42,7 @@ def relu_prime(z):
 2. **A neuron dies** when its <ins><b>weights get tweaked</b></ins> in such a way that **_the weighted sum of its inputs are negative for all instances in the training set_**. 
 	* When this happens, it just keep giving the output zeros, and **Gradient Descent** does not affect it anymore because the gradient of the **ReLU** function is **zero** when its **input is negative**.
 
-## _Leaky ReLU_
+## _Leaky ReLU_ and _Parametric leaky ReLU (PReLU)_
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 
 To solve the **_dying ReLUs_** problem, we use **leaky ReLU**. 
@@ -57,10 +57,13 @@ In other version of this is the Parametric Rectified Linear unit, wherein instea
 ###  Function $\Large{\color{Purple} ParametricReLU (z) = max(\alpha z, z)}$
 
 <p align="center">
-	<img src="https://user-images.githubusercontent.com/12748752/215331150-91106642-3834-48d4-b092-d206dfdf6be0.png" width=70% /> 
+	<img src="https://user-images.githubusercontent.com/12748752/215337334-83f5d035-9929-4267-8b3f-515004e5060e.png" width=70% /> 
+	<br>
+	<ins>ParametricReLU function and its Derivative</ins>
 </p>
 
-> #### ReLu code
+
+> #### ParametricReLu code
 ```Python
 def leakyrelu(z, alpha):
 	return max(alpha * z, z)
