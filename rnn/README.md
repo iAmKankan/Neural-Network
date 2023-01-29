@@ -341,6 +341,21 @@ The gradients of that cost function are then **_propagated backward through the 
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 1. Unstable Gradient
 
+### ⚫ How to identify exploding gradients?
+![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
+There are a few ways by which you can get an idea of whether your model is suffering from exploding gradients or not. They are:
+1. If the **model weights** become **unexpectedly large** in the **end**.
+2. Your model has a **poor loss**.
+3. Or the model displays **NaN** **loss** whilst training.
+4. The gradient value for error persists over **1.0** for every subsequent iteration during training.
+
+
+### ⚫ How to identify vanishing gradients?
+Link [Detect Vanishing Gradients ↗️](https://www.mathworks.com/help/deeplearning/ug/detect-vanishing-gradients-in-deep-neural-networks.html)
+
+
+
+
 ### Vanishing Gradients and TBPTT
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 #### [Vanishing Gradient and Exploding Gradient in Sigmoid Function ↗️](https://github.com/iAmKankan/Neural-Network/tree/main/activation_functions#vanishing-gradients-the-rnn-version-%EF%B8%8F)
@@ -621,9 +636,6 @@ Now, what are deep RNNs let us look at just one of these if I look at one of the
 
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
-
-
-
 
 
 
