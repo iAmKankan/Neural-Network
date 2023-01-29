@@ -24,10 +24,10 @@ We use **x** and **z** interchangeably with this function $\Large{\color{Purple}
 Here **z** is the input to the **sigmoid function** is the **linear combination** of your **input features** with the **weights**. 
   * It says that if $\Large{\color{Purple}z}$ is very large means $\Large{\color{Purple}\Sigma W_i x_i }$ is very large then **either magnitude** of that get **very large positive** as well as **very large negative** numbers leads the sigmoid function being **saturated**.
   * Which means that the **gradient**,  in this case $\Large{\color{Purple}\frac{\partial z(\sigma)}{\partial z} \sim 0}$   or very close to 0 or very small number.
-  * That scenario leads to negligible or 0 updates to your weights in [Backpropagation ↗️](https://github.com/iAmKankan/Neural-Network/blob/main/backpropagation/README.md) ([Vanishing Gradient problem ↗️](https://github.com/iAmKankan/Neural-Network/tree/main/activation_functions#vanishing-gradients-the-rnn-version-%EF%B8%8F))
+  * That scenario leads to **negligible** or **0 updates** to your weights during [Backpropagation ↗️](https://github.com/iAmKankan/Neural-Network/blob/main/backpropagation/README.md) (see [Vanishing Gradient problem ↗️](https://github.com/iAmKankan/Neural-Network/tree/main/activation_functions#vanishing-gradients-the-rnn-version-%EF%B8%8F)) , the learning will stop 
 
-
-
+### Advantages:
+Of course this has many other advantages, one of them is that suppose your output layer you want interpreted as a probability score then this would be the optimal thing to use because the outputs are between the values 0 and 1, so this also known as squashing function because it squashes the output in the range 0 to 1.
 
 
 
