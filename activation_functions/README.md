@@ -5,7 +5,7 @@
 * [Different types of Activation functions and their derivatives](#different-types-of-activation-functions-and-their-derivatives)
 * [How to use Activation functions in Keras](#how-to-use-activation-functions-in-keras)
    * [Usage of activations](#usage-of-activations)
-* [The Vanishing or Exploding Gradients Problems](#the-vanishing-or-exploding-gradients-problems)
+* [The Vanishing or Exploding Gradients Problems](#the-vanishing-and-exploding-gradients-problems)
    * [Backpropagation](#backpropagation-link-for-backpropagation-in-general)
    * [Vanishing Gradients](#vanishing-gradients)
    * [Exploding Gradients](#exploding-gradients)
