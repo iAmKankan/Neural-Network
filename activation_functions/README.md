@@ -24,11 +24,15 @@
 * [Bibliography](#bibliography)
 * [Todo 01](https://d2l.ai/chapter_multilayer-perceptrons/numerical-stability-and-init.html#vanishing-and-exploding-gradients)
 
+
 ## The Vanishing and Exploding Gradients Problems
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 The question should be asked that why we need so namy types of Activation function! where as at the beggining people used the **step function** and later **sigmoid** function as the  Activation function. 
 ### _Vanishing Gradients_ ([the RNN version ↗️](https://github.com/iAmKankan/Neural-Network/tree/main/rnn/README.md#vanishing-gradients-and-tbptt))
 ![light](https://user-images.githubusercontent.com/12748752/136802581-e8e0607f-3472-44f7-a8b2-8ba82a0f8070.png)
+
+$$\Large{\color{Purple}\parallel \frac{\partial L }{\partial W}\parallel \to 0} $$
+
 * During [Backpropagation](https://github.com/iAmKankan/Neural-Network/blob/main/backpropagation/README.md#backpropagation) gradients often get smaller and smaller as the algorithm progresses down to the lower layers.
 * As a result, the Gradient Descent update leaves the lower layers’ connection weights virtually unchanged, and training never converges to a good solution. We call this the vanishing gradients problem.
 
@@ -54,10 +58,63 @@ The question should be asked that why we need so namy types of Activation functi
 
 ### _Exploding Gradients_ ([the RNN version ↗️](https://github.com/iAmKankan/Neural-Network/tree/main/rnn/README.md#vanishing-gradients-and-tbptt))
 ![light](https://user-images.githubusercontent.com/12748752/136802581-e8e0607f-3472-44f7-a8b2-8ba82a0f8070.png)
+
+$$\Large{\color{Purple}\parallel \frac{\partial L }{\partial W}\parallel \to \infty} $$
+
 * In some cases, the opposite of vanishing gradients can happen: the gradients can grow bigger and bigger until layers get insanely large weight updates and the algorithm diverges.
 * More generally, deep neural networks suffer from unstable gradients; different layers may learn at widely different speeds.
 > #### This problem associates with _weights_, sometimes the weights get big and when it multiplies with the derivative of the ***Activation Function*** it get bigger.. Not necessary the presents of _Sigmoid_ function.
 
+#### Gredient clipping:
+$\underline{\textbf{Gredient clipping:}}$  This is sort of a **numerical hack**. It is very simple, we decide on a **maximum allowable gradient size**.
+
+##### Keras Code: [↗️](https://cnvrg.io/gradient-clipping/)
+Applying **gradient clipping** in **TensorFlow** models is quite straightforward. 
+* The only thing you need to do is pass the **parameter** to the **optimizer function**. 
+* All optimizers have a **_`clipnorm`_** and a **_`clipvalue`_** parameters that can be used to **clip** the **gradients**.
+
+Let’s look at **clipping the gradients** using the **`clipnorm`** parameter using the common **MNIST** example.
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/12748752/215345534-c245bc58-a715-406d-b9dc-c58e414eb66b.jpeg" width=40%/>
+  <br>
+  <ins>Gradients less than <b>-0.5</b> will be capped to <b>-0.5</b>, and gradients above <b>0.5</b> will be capped to <b>0.5</b>. </ins>
+</p>
+
+```Python
+import tensorflow as tf
+from tensorflow.keras.datasets import mnist
+
+(x_train, y_train), (x_test, y_test) = mnist.load_data()
+
+x_train, x_test = x_train / 255., x_test / 255.
+
+model = tf.keras.models.Sequential([
+  tf.keras.layers.Flatten(input_shape=(28, 28)),
+  tf.keras.layers.Dense(128,activation='relu'),
+  tf.keras.layers.Dense(10)
+])
+model.compile(
+    optimizer=tf.keras.optimizers.Adam(clipvalue=0.5),
+    loss=tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True),
+    metrics=[tf.keras.metrics.SparseCategoricalAccuracy()],
+)
+```
+
+The **`clipnorm`** gradient clipping can be applied similarly. In this case, 1 is specified.
+
+```Python
+model.compile(
+    optimizer=tf.keras.optimizers.Adam(clipnorm=1.0),
+    loss=tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True),
+    metrics=[tf.keras.metrics.SparseCategoricalAccuracy()],
+)
+```
+
+#### Gradient is a Vector:
+What do I mean by value of **gradient**? Again remember, **gradient is a vector**, so **you cannot give it a value**, 
+
+* you can however give a value to **norm** of **gradient**. So let us say we are dealing with @L @W , let me call it g vector. So I will say that maximum value allowable of g vector is some Gmax. You will decide it, okay, you will decide on what you are comfortable with. Just like our cut-o criterion, this is an arbitrary criterion set by you, it is sort of an engineering solution to the problem, okay.
 
 #### [⚛️ Why the big number is a problem _since &infin; means a big number_? ↗️](https://github.com/iAmKankan/Neural-Network/tree/main/rnn/README.md#%EF%B8%8F-why-the-big-number-is-a-problem-since--means-a-big-number)
 
