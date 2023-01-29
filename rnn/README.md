@@ -356,6 +356,32 @@ The main issues that come up are
 * The solution for **vanishing gradients** is alternate architectures **LSTM, GRU**.
 * The solution for **expensive gradient calculations** is **_Truncated Back Propagation Through Time(TBPTT)_**.
 
+### _Truncated Back Propagation Through Time(TBPTT)_
+![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
+
+**TBPTT** Works with both the** vanishing gradient** and the **exploding gradient** problems, so it is sort of a compound solution.
+
+Now remember the example that we had before this, that example had 65,000 time sequences. 
+  * Now, would you go back for the full thing and come back through the full thing, by that time almost any correction you give will lead to **vanishing** or **exploding gradient** problems.
+  * Plus it would become potentially **very expensive** just to do **one gradient up-date**.
+
+<p align="center">
+ <img src="https://user-images.githubusercontent.com/12748752/215350346-1ffdf98e-1e40-4901-b0d3-5adbff06e9fd.png" width=60%/>
+ <br><ins><i><b>TBPTT-  forward propagate through 'k1' steps and back propagate through 'k2' steps </b></i></ins>
+ </p>
+ 
+Lets consider the boxes here, each box represents an **input**, **hidden layer** and **output** with its corresponding **loss**. Now, Remember that we are assuming that the relationship is the same and in fact you can cut it anywhere in the middle and you are going to get exactly the same **W**. 
+
+The basic idea that is instead of training for the **whole sequence** , you **split it up** into **many mini batches**. 
+  * I will **forward propagate** through **2 steps**, then **back propagate** through **2 steps**. Then the **W** is remains the same **everywhere**. So I will get some new updated **W**. 
+  * Then I step forward little bit, **forward propagates** through another **2 steps**, **back propagates** through **2 steps**, my **W** is now **updated**.
+  * Now when the **W** is **updated**, I will **forward propagate** through the **whole thing** and I keep on doing this.
+
+> #### All you are doing is forward propagating through one part of the data, back propagating through a different part of the data. How does this help? If you back propagates through a small amount of data, your gradient will neither blow up, nor will it vanish.
+
+
+
+
 #### Recap of BPTT 
 <p align="center">
  <img src="https://user-images.githubusercontent.com/12748752/189465414-ed8ad124-93ed-4e56-a4ec-23f7c6d96c78.png" width=40%/>
