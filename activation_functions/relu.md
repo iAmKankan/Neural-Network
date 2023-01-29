@@ -2,27 +2,26 @@
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 
 ## ReLU (_Rectified Linear Unit_) function
-![light](https://user-images.githubusercontent.com/12748752/136802581-e8e0607f-3472-44f7-a8b2-8ba82a0f8070.png)
+![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 * The most popular choice, due to both simplicity of implementation and its good performance on a variety of predictive tasks, is the _`rectified linear unit (ReLU)`_.
 * ReLU provides a very simple _**nonlinear transformation**_.
-> #### Function
-*  **_g(x) = max(x,0)_**
+### Function: $\Large{\color{Purple} g(x) = max(x,0)}$
 
 > #### Given an element  x , the function is defined as the maximum of that element and  0 : _`ReLU(x) = max(x,0)`_ .
 * Informally, the ReLU function retains only positive elements and discards all negative elements by setting the corresponding activations to 0. 
 * As you can see, the activation function is piecewise linear.
 
-<img src="https://latex.codecogs.com/svg.image?R(z)=\begin{Bmatrix}z&space;&&space;z&space;>&space;0&space;\\0&space;&&space;z<=0&space;\\\end{Bmatrix}" title="R(z)=\begin{Bmatrix}z & z > 0 \\0 & z<=0 \\\end{Bmatrix}" />
-<img src="https://user-images.githubusercontent.com/12748752/146598670-fcbad072-91b1-4a5e-b6c3-33ccc2db8bc0.png" width=40% />
+<p align="center">
+	<img src="https://user-images.githubusercontent.com/12748752/215332857-893ba6cd-0051-4d35-9813-2acd7318c171.png" />
+</p>
 
+> #### Relu function
 ```Python
 def relu(z):
   return max(0, z)
 ```
 
 > #### Derivative
-<img src="https://latex.codecogs.com/svg.image?R'(z)=\begin{Bmatrix}1&space;&&space;z&space;>&space;0&space;\\0&space;&&space;z<0&space;\\\end{Bmatrix}" title="R'(z)=\begin{Bmatrix}1 & z > 0 \\0 & z<0 \\\end{Bmatrix}" />
-<img src="https://user-images.githubusercontent.com/12748752/146598664-52c52230-8f50-49a4-8e27-e4f35f735726.png" width=40% />
 
 ```Python
 def relu_prime(z):
@@ -34,29 +33,40 @@ def relu_prime(z):
 * In these cases, we default to the left-hand-side derivative and say that the derivative is 0 when the input is 0.
 * We can get away with this because the input may never actually be zero. 
 * _ReLU_ behave much better in deep neural networks, mostly because it does not saturate for positive values (and because it is fast to compute).
-#### _dying ReLUs_ Problem
-* During training, some neurons effectively “die,” meaning they stop outputting anything other than 0. 
-* In some cases, you may find that half of your network’s neurons are dead, especially if you used a large learning rate. 
-* A neuron dies when its weights get tweaked in such a way that the weighted sum of its inputs are negative for all instances in the training set. 
-* When this happens, it just keeps outputting zeros, and Gradient Descent does not affect it anymore because the gradient of the ReLU function is zero when its input is negative.
+
+### _dying ReLUs_ Problem
+![light](https://user-images.githubusercontent.com/12748752/136802581-e8e0607f-3472-44f7-a8b2-8ba82a0f8070.png)
+1. During training, some **neurons** only gives **0** as **output**. This neuron “**die**” scenario is called   **Dying Relu**.
+	* In some cases especially if you are using a **large learning rate**, you may find **half of your network’s neurons** are **dead**.
+
+2. **A neuron dies** when its <ins><b>weights get tweaked</b></ins> in such a way that **_the weighted sum of its inputs are negative for all instances in the training set_**. 
+	* When this happens, it just keep giving the output zeros, and **Gradient Descent** does not affect it anymore because the gradient of the **ReLU** function is **zero** when its **input is negative**.
 
 ## _Leaky ReLU_
-![light](https://user-images.githubusercontent.com/12748752/136802581-e8e0607f-3472-44f7-a8b2-8ba82a0f8070.png)
-* To solve the  _dying ReLUs_ problem, we use leaky ReLU. 
-> #### Function 
-* _**LeakyReLU (z) = max(αz, z)**_
+![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 
-<img src="https://latex.codecogs.com/svg.image?R(z)=\begin{Bmatrix}z&space;&&space;z&space;>&space;0&space;\\\alpha&space;z&space;&&space;z<=0&space;\\\end{Bmatrix}" title="R(z)=\begin{Bmatrix}z & z > 0 \\\alpha z & z<=0 \\\end{Bmatrix}" />
-<img src="https://user-images.githubusercontent.com/12748752/146623578-642cb1b9-d04e-4ede-9b4a-86355049dc23.png" width=40% />
+To solve the **_dying ReLUs_** problem, we use **leaky ReLU**. 
 
+It give you **a small gradient value** for **negative values** of the **input**. 
+* So in the plain **ReLu**, if the **input** was **negative** than your **gradient** also go **0**, but this case all **negative values** of **x**, it will give you a **scaled value of that input**.
+* Which means that the **gradient** can exist okay. 
+	
+In other version of this is the Parametric Rectified Linear unit, wherein instead of having a fixed scaling factor for x, for negative values of x, we have an alpha which is again a parameter which is learned during the back propagation process, okay.
+
+###  Function $\Large{\color{Purple} LickeyReLU (z) = max(0.01z, z)}$
+###  Function $\Large{\color{Purple} ParametricReLU (z) = max(\alpha z, z)}$
+
+<p align="center">
+	<img src="https://user-images.githubusercontent.com/12748752/215331150-91106642-3834-48d4-b092-d206dfdf6be0.png" width=70% /> 
+</p>
+
+> #### ReLu code
 ```Python
 def leakyrelu(z, alpha):
 	return max(alpha * z, z)
 ```
 
 > #### Derivative
-<img src="https://latex.codecogs.com/svg.image?R'(z)=\begin{Bmatrix}1&space;&&space;z&space;>&space;0&space;\\\alpha&space;&&space;z<0&space;\\\end{Bmatrix}" title="R'(z)=\begin{Bmatrix}1 & z > 0 \\\alpha & z<0 \\\end{Bmatrix}" />
-<img src="https://user-images.githubusercontent.com/12748752/146623581-05a0697b-f8fb-4189-bfd7-59fce72cf7dc.png" width=40% />
 
 ```Python
 def leakyrelu_prime(z, alpha):
