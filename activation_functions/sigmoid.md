@@ -2,15 +2,20 @@
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 
 
-
 ## Sigmoid
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
+Let see **Sigmoid non-linear function** -
 * A sigmoid function is a mathematical function having a characteristic "**_S_**"-shaped curve or **sigmoid curve**.
 * A common example of a sigmoid function is the **logistic function**.
-* The term "**_Sigmoid function_**" is used as an alias for the **_logistic function_**.
-### The formula: <img src="https://latex.codecogs.com/svg.image?\large&space;\mathbf{\sigma(x)\&space;=\&space;&space;\frac{1}{1&plus;e^{-x}}}" title="https://latex.codecogs.com/svg.image?\large \mathbf{\sigma(x)\ =\ \frac{1}{1+e^{-x}}}" width=20% align="center"/>
+* The term "**_Sigmoid function_**" is used as an _alias_ for the **_logistic function_**.
 
-### Properties: <img src="https://latex.codecogs.com/svg.image?\large&space;\begin{matrix}{\color{Blue}&space;\textbf{Domain(input&space;range)}\&space;\&space;\sigma(x)}&space;&&space;{\color{Blue}&space;\textbf{Range(output&space;range)}&space;\&space;\&space;\sigma(x)}&&space;{\color{Blue}&space;\textbf{Thresold&space;value}&space;\&space;\&space;\sigma(x)}&space;&&space;{\color{Blue}&space;\textbf{Derivative}&space;\&space;\&space;\frac{\partial&space;}{\partial&space;x}&space;\sigma(x)}&space;\\&space;{\color{DarkRed}&space;(-\infty,\infty)}&space;&&space;{\color{DarkRed}\textbf{(0,1)}&space;}&{\color{DarkRed}&space;\textbf{0.5}}&{\color{DarkRed}&space;\textbf{0.25}}&space;\\&space;\end{matrix}" title="https://latex.codecogs.com/svg.image?\large \begin{matrix}{\color{Blue} \textbf{Domain(input range)}\ \ \sigma(x)} & {\color{Blue} \textbf{Range(output range)} \ \ \sigma(x)}& {\color{Blue} \textbf{Thresold value} \ \ \sigma(x)} & {\color{Blue} \textbf{Derivative} \ \ \frac{\partial }{\partial x} \sigma(x)} \\ {\color{DarkRed} (-\infty,\infty)} & {\color{DarkRed}\textbf{(0,1)} }&{\color{DarkRed} \textbf{0.5}}&{\color{DarkRed} \textbf{0.25}} \\ \end{matrix}" />
+### The formula: 
+
+$$\Huge{\color{Purple} \mathbf{\sigma(x)} = \mathbf{\frac{1}{1+e^{-x}}}}$$
+
+
+### Properties: 
+<img src="https://latex.codecogs.com/svg.image?\large&space;\begin{matrix}{\color{Blue}&space;\textbf{Domain(input&space;range)}\&space;\&space;\sigma(x)}&space;&&space;{\color{Blue}&space;\textbf{Range(output&space;range)}&space;\&space;\&space;\sigma(x)}&&space;{\color{Blue}&space;\textbf{Thresold&space;value}&space;\&space;\&space;\sigma(x)}&space;&&space;{\color{Blue}&space;\textbf{Derivative}&space;\&space;\&space;\frac{\partial&space;}{\partial&space;x}&space;\sigma(x)}&space;\\&space;{\color{DarkRed}&space;(-\infty,\infty)}&space;&&space;{\color{DarkRed}\textbf{(0,1)}&space;}&{\color{DarkRed}&space;\textbf{0.5}}&{\color{DarkRed}&space;\textbf{0.25}}&space;\\&space;\end{matrix}" title="https://latex.codecogs.com/svg.image?\large \begin{matrix}{\color{Blue} \textbf{Domain(input range)}\ \ \sigma(x)} & {\color{Blue} \textbf{Range(output range)} \ \ \sigma(x)}& {\color{Blue} \textbf{Thresold value} \ \ \sigma(x)} & {\color{Blue} \textbf{Derivative} \ \ \frac{\partial }{\partial x} \sigma(x)} \\ {\color{DarkRed} (-\infty,\infty)} & {\color{DarkRed}\textbf{(0,1)} }&{\color{DarkRed} \textbf{0.5}}&{\color{DarkRed} \textbf{0.25}} \\ \end{matrix}" />
 
 ### The graph: 
 <img src="https://user-images.githubusercontent.com/12748752/167588897-79a754f8-e4db-48c8-babf-3203d5d3e9bc.png" width=60% align="center"/>
