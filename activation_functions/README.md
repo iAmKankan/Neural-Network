@@ -75,7 +75,7 @@ $\underline{\textbf{Gredient clipping:}}$  This is sort of a **numerical hack**.
 * Geadient Descent 
    * Calculate $\Large{\color{Purple} \vec{g}}$
    * If **norm** of **g** $\Large{\color{Purple} \parallel \vec{g} \parallel < G_{max}}$ then proceed as usual.
-   * If not then we have to redefine a **new gradient** which is equal to the **old gredient** $\Large{\color{Purple} \vec{g}  = \vec{\dot{g}} }$
+   * If not then we have to redefine a **new gradient** which is equal to the **old gredient** $\Large{\color{Purple} \vec{\dot{g}}= \frac{\vec{g}}{\parallel\vec{g} \parallel} G_{max} }$
 ##### Keras Code: 
 Applying **gradient clipping** in **TensorFlow** models is quite straightforward. 
 * The only thing you need to do is pass the **parameter** to the **optimizer function**. 
