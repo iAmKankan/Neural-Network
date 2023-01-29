@@ -5,10 +5,38 @@
 ## Sigmoid
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 Let see **Sigmoid non-linear function** -
+
+
+<p align="center">
+ <img src="https://user-images.githubusercontent.com/12748752/215315005-24d27488-ece0-4512-8046-fc0e8aa9427b.png"/>
+ <br>
+ <ins> <i>Horizontal axis is - $\Large{\color{Purple}x}$ axis ;  virtical axis is - $\Large{\color{Purple}\sigma(x)}$ axis </i></ins>
+</p>
+
+So, we will look at the sigmoid non-linear activation now, here is the ana- lytical expression for this sigmoid non-linear activation, okay and this is the plot of the function, you can see that, so this horizontal axis is - $\Large{\color{Purple}x}$ axis and  virtical axis is - $\Large{\color{Purple}\sigma(x)}$ axis.
+
+So, we can see that for **large positive value of x** the sigmoid function tends to **1**, and for **large negative values of x** it tends to **0**. 
+
+Thing to notice here, it becomes **flat** **for large positive values of x** as well as for **large negative values of x**. 
+
+We use **x** and **z** interchangeably with this function $\Large{\color{Purple} \mathbf{\sigma(z)} = \mathbf{\frac{1}{1+e^{-z}}}}$ . 
+
+Here **z** is the input to the **sigmoid function** is the **linear combination** of your **input features** with the **weights**. 
+  * It says that if $\Large{\color{Purple}z}$ is very large means $\Large{\color{Purple}\Sigma W_i x_i }$ is very large then **either magnitude** of that get **very large positive** as well as **very large negative** numbers leads the sigmoid function being **saturated**.
+  * Which means that the **gradient**,  in this case $\Large{\color{Purple}\frac{\partial z(\sigma)}{\partial z} \sim 0}$   or very close to 0 or very small number.
+  * That scenario leads to negligible or 0 updates to your weights in [Backpropagation ↗️](https://github.com/iAmKankan/Neural-Network/blob/main/backpropagation/README.md) ([Vanishing Gradient problem ↗️](https://github.com/iAmKankan/Neural-Network/tree/main/activation_functions#vanishing-gradients-the-rnn-version-%EF%B8%8F))
+
+
+
+
+
+
+$$\Large{\color{Purple} \mathbf{z = \Sigma W_i x_i} }\ \ \ \normalsize  \[{\textit{ Here we are not considering the bias term  }} W_0 \]$$ 
+
 * A sigmoid function is a mathematical function having a characteristic "**_S_**"-shaped curve or **sigmoid curve**.
 * A common example of a sigmoid function is the **logistic function**.
 * The term "**_Sigmoid function_**" is used as an _alias_ for the **_logistic function_**.
-
+ 
 ### The formula: 
 
 $$\Huge{\color{Purple} \mathbf{\sigma(x)} = \mathbf{\frac{1}{1+e^{-x}}}}$$
