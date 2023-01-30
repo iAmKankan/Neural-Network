@@ -428,7 +428,7 @@ $$
 
 This is basically what we call **back propagation through time**, because **none of these terms is independent**. Now this kind of dependency creates several problems.
 
-#### Explanation Why is BPTT is a problem:
+### ⚛️ Explanation Why is BPTT is a problem:
 
 <p align="center">
 </a>
