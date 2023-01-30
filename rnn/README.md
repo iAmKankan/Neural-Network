@@ -13,7 +13,7 @@
   * [Backpropagation or Training RNNs](#backpropagation-or-training-rnns)
 
 ### [Problems of RNN](#problems-in-training-simple-rnns)
-* [Vanishing Gradients and TBPTT](#vanishing-gradients-and-tbptt)
+* [Vanishing-Explodinf Gradients and TBPTT](#vanishing-exploding-gradients-and-tbptt)
   * [Why the big number is a problem since <b>&infin;</b> means a big number?](#%EF%B8%8F-why-the-big-number-is-a-problem-since--means-a-big-number) $\large{\color{Purple}( \infty )}$
   * [Why the small number is a problem?](#%EF%B8%8F-why-the-small-number-is-a-problem)
   * [Gradient clipping for exploding gradients](#%EF%B8%8F-gradient-clipping-for-exploding-gradients)
@@ -320,7 +320,21 @@ $$
 
 ## Problems in Training Simple RNNs
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
-1. Unstable Gradient
+The main problem with RNN is **Unstable Gradient**
+
+The basic issue for which we had to do **BPTT** was because **W, U, V** matrices were **constants across time**. Because of which you had sort of **recursive expressions** for the **loss with respect** to **W** and the **loss with respect** to **U**. 
+
+The main issues that come up are 
+* **gradient calculations** either **explode** or **vanish**, both of these are not ideal.
+* The **gradient calculations are expensive**.
+
+### The Solution
+* The solution for **exploding gradients** is **_gradient clipping_**.
+* The solution for **vanishing gradients** is alternate architectures **LSTM, GRU**.
+* The solution for **expensive gradient calculations** is **_Truncated Back Propagation Through Time(TBPTT)_**.
+
+### Vanishing-Exploding Gradients and TBPTT
+![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 
 ### ⚫ How to identify exploding gradients?
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
@@ -336,21 +350,8 @@ Link [Detect Vanishing Gradients ↗️](https://www.mathworks.com/help/deeplear
 
 
 
-
-### Vanishing Gradients and TBPTT
-![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 #### [Vanishing Gradient and Exploding Gradient in Sigmoid Function ↗️](https://github.com/iAmKankan/Neural-Network/tree/main/activation_functions#vanishing-gradients-the-rnn-version-%EF%B8%8F)
-#### ⚛️ Why we do BPTT or back-propagation-through-time
-The basic issue for which we had to do **BPTT** was because **W, U, V** matrices were **constants across time**. Because of which you had sort of **recursive expressions** for the loss with respect to **W** and the loss with respect to **U**. 
 
-The main issues that come up are 
-* **gradient calculations** either **explode** or **vanish**, both of these are not ideal.
-* The **gradient calculations are expensive**.
-
-### The Solution
-* The solution for **exploding gradients** is **_gradient clipping_**.
-* The solution for **vanishing gradients** is alternate architectures **LSTM, GRU**.
-* The solution for **expensive gradient calculations** is **_Truncated Back Propagation Through Time(TBPTT)_**.
 
 ### _Truncated Back Propagation Through Time(TBPTT)_
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
