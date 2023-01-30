@@ -31,7 +31,7 @@
 A Recurrent Neural Network is a type of ANN that contains **loops**, allowing **information to be stored within the network**. It is absolutely essential for **sequential like information** (**variable input size**)
 
 ## Why Recurrent Neural Networks(RNN)?
-![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
+![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 
 $$
 {\color{Purple} 
@@ -53,11 +53,9 @@ $$
 * **No memory element**. 
 * **The present data doesn't dependent on the pevious data**.
 
-
-
   
 ### RNN Layers
-![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
+![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 In general- **variably sized**, **sequential data** combine an input vector with a state vector via a fixed function to produce a new state.
 * **variably sized**: Number of features are fixed the size of the data is not.
 * It looks very much like a feedforward neural network, except it also has connections pointing backward. 
@@ -73,7 +71,7 @@ In general- **variably sized**, **sequential data** combine an input vector with
           
           
 ## Backpropagation Through Time (BPTT)
-![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
+![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 
 <p align="center"> 
  <img src="https://user-images.githubusercontent.com/12748752/211137192-353752b1-36e1-4cbd-b303-637ba8e88dd3.png" width=60% />
