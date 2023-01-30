@@ -394,6 +394,8 @@ The basic idea that is instead of training for the **whole sequence** , you **sp
 
 > #### All you are doing is forward propagating through one part of the data, back propagating through a different part of the data. How does this help? If you back propagates through a small amount of data, your gradient will neither blow up, nor will it vanish.
 
+![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
+![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 
 
 
