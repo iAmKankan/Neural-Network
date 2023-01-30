@@ -13,7 +13,7 @@
   * [Backpropagation or Training RNNs](#backpropagation-or-training-rnns)
 
 ### [Problems of RNN](#problems-in-training-simple-rnns)
-* [Vanishing-Explodinf Gradients and TBPTT](#vanishing-exploding-gradients-and-tbptt)
+* [Vanishing-Exploding Gradients and TBPTT](#vanishing-exploding-gradients-and-tbptt)
   * [Why the big number is a problem since <b>&infin;</b> means a big number?](#%EF%B8%8F-why-the-big-number-is-a-problem-since--means-a-big-number) $\large{\color{Purple}( \infty )}$
   * [Why the small number is a problem?](#%EF%B8%8F-why-the-small-number-is-a-problem)
   * [Gradient clipping for exploding gradients](#%EF%B8%8F-gradient-clipping-for-exploding-gradients)
