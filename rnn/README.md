@@ -237,11 +237,13 @@ The gradients of that cost function are then **_propagated backward through the 
           
           
           
+![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
+![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
           
           
           
 ### Hidden Layers:
-
+![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 ### ⚛️ What is the most general function we typically use within neural network? 
 **Answer:** We take **linear combination** followed by **non-linearity** always. Typically in **RNNs** we usually use **tanh** for the **nonlinearity** in the **hidden layers**. 
 
@@ -268,6 +270,7 @@ $$
 $$
 
 ### Output Layer: 
+![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 The Output size is variable. 
 
 ### ⚛️ What about this $\large{\color{Purple} \hat{y}_t}$ ?
@@ -282,6 +285,7 @@ Now in some cases, it simply makes sense for this function to be a **linear func
 
 
 ### ⚛️ Calculating Loss in RNN
+![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 
 <p align="center"> 
 <img src="https://user-images.githubusercontent.com/12748752/188473359-24396c3f-04df-487b-90a6-3a5837be0cf2.png" width=40%/>
@@ -306,6 +310,8 @@ $$
 * Now in terms of **_L<sub>t</sub>_** itself, or the **local loss function**, you again have many choices but we having seen only 2 so far,
   1. [cross entropy](https://github.com/iAmKankan/MachineLearning_With_Python/edit/master/Supervised/Logistic%20Regrassion/README.md#binary-cross-entropy-cost-function) -classifcation
   2. least-squares error - regression or a numerical output
+
+
 
 
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
