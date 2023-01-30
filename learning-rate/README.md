@@ -35,3 +35,18 @@ $$ \Large{\color{Purple} \mathrm{\eta} = \mathrm{\frac{\eta_0}{1 + decay * epoch
 * Divided by **1** plus there is some **decay rate** times the **epoch number**. 
 
 So, as the number of **epoch increase** depending on the **magnitude** of the **decay**, your initial learning rate will also decrease.  so this a very smooth way of decreasing your learning rate.
+
+
+
+## Weight Initialization
+![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
+It is very important because if you do not **initialize the weights properly**, then you will not get good model convergence.
+
+
+
+
+
+
+
+
+
