@@ -350,7 +350,9 @@ Link [Detect Vanishing Gradients ↗️](https://www.mathworks.com/help/deeplear
 
 
 
-#### [Vanishing Gradient and Exploding Gradient in Sigmoid Function ↗️](https://github.com/iAmKankan/Neural-Network/tree/main/activation_functions#vanishing-gradients-the-rnn-version-%EF%B8%8F)
+### [Vanishing Gradient and Exploding Gradient in Sigmoid Function ↗️](https://github.com/iAmKankan/Neural-Network/tree/main/activation_functions#vanishing-gradients-the-rnn-version-%EF%B8%8F)
+![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
+
 
 
 ### _Truncated Back Propagation Through Time(TBPTT)_
