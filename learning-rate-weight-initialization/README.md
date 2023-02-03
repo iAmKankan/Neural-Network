@@ -40,13 +40,34 @@ So, as the number of **epoch increase** depending on the **magnitude** of the **
 
 ## Weight Initialization
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
+
+* There are a large number of weights in a neural network leading to a large search space for minima of the loss function
+
+• Weights must be effectively randomly initialized to prevent convergence to false minima.
+
 It is very important because if you do not **initialize the weights properly**, then you will not get good model convergence.
 
+in a typical neural network there are large number of weights, which leads to a large search spaces, you have to minimise your loss function and the loss function is a function of your weights, so it is a **multidimensional problem** that you are solving and so **if you want to optimize that loss function than its a very large search space of weights**.
+
+So, you are looking for a combination of one hundred million weights or more which will actually work and  you want to weights must be initialized randomly, to effectively randomly to because to prevent convergence of false minima and also to explore your entire space, just as we saw as to how we have to pick your range of hyper parameters for, you know for hyper parameter optimization,
+
+we also have to pick up, we also have to gure out the range of weights that we, for initialization and so that the entire space of **loss function** is covered okay, to some extent at least and that is required for the effective performance for neural network.
+
+
+* Naïve initialization would invnolve sampling weights from a gaussian distribution with zero mean and unit variance
+
+• Assume that input data x has also been appropriately normalized to zero mean and unit standard deviation
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/12748752/216631035-fd45aed4-faf8-415a-9be4-ba4b81fa9bc1.png"/>
+</p>
 
 
 
 
-
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/12748752/216630636-2e9b9397-cc30-4fd9-8842-7762e84a95fa.png"/>
+</p>
 
 
 
