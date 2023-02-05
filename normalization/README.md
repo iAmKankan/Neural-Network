@@ -79,7 +79,7 @@ $$
 
 you give input as appear say $\Large{\color{Purple}\mathrm{(X_i, Y_i)}}$ which indicates that this data  $\Large{\color{Purple}\mathrm{X_i}}$ belongs to class $\Large{\color{Purple}\mathrm{Y_i}}$ So these are the labelled data which are fed for training of the classifier or training of the deep neural network.
 
-#### Batch Processing and Covariate Shift
+### Batch Processing and Covariate Shift
 Training data are fed to the neural network or fed to the classifier during **learning operation** not all in a one short rather in the form of **batches**. And it is quite possible that the distribution of the data in **one batch may be different** from the **distribution of data in another batch** even though the data comes from the **same class**.
 
 <p align="center">
@@ -93,8 +93,3 @@ So, as a result you find that depending upon the characteristics of the input da
 So, this is the problem this is what is known as **covariate shift** and because of this covariate shift now because the **classifier has to hop** from one classifier to another classifier **during learning**, your learning process eventually becomes **very, very slow**.
 
             
-        
-
-
-
-
