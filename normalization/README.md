@@ -48,7 +48,9 @@ I compute what is the **standard deviation** of _all these attribute values that
 
 
 
-$\Large{\color{Purple}\mathrm{\hat{x}}}$ will have a a mean value or $\Large{\color{Purple}\mathrm{\mu}}$ which is equal to **0** and it will have an standard deviation say $\Large{\color{Purple}\mathrm{\sigma_{\hat{x}}}}$ which will be equal to **1** because you are normalizing with respect to **standard deviation**. So, this is one form of **normalization** where you are making the **mean** of the attributes which will be equal to **0** and the **variance** is **1** **_because variance is nothing but square of the standard deviation_**. So, **variance** or **standard deviation** will be equal to **1** and this will be done for all the attributes. So, even the attribute of **age** will have a **mean 0** and **standard deviation 1** and the attributes which are **income** the different instances of income that will also have **mean 0** and **standard deviation 1**. So, this is one form of **normalization** that can be done.
+$\Large{\color{Purple}\mathrm{\hat{x}}}$ will have a a mean value or $\Large{\color{Purple}\mathrm{\mu}}$ which is equal to **0** ( $\Large{\color{Purple}\mathrm{\mu = 0}}$ )and it will have an standard deviation say $\Large{\color{Purple}\mathrm{\sigma_{\hat{x}}}}$ which will be equal to **1** ( $\Large{\color{Purple}\mathrm{\sigma_{\hat{x}} = 1}}$ )because you are normalizing with respect to **standard deviation**. 
+
+So, this is one form of **normalization** where you are making the **mean** of the attributes which will be equal to **0** and the **variance** is **1** **_because variance is nothing but square of the standard deviation_**. So, **variance** or **standard deviation** will be equal to **1** and this will be done for all the attributes. So, even the attribute of **age** will have a **mean 0** and **standard deviation 1** and the attributes which are **income** the different instances of income that will also have **mean 0** and **standard deviation 1**. So, this is one form of **normalization** that can be done.
 
 
 ### Min-Max
