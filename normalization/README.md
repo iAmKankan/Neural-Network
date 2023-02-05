@@ -1,6 +1,5 @@
 ## Index
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
-![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 
 ### Example #1
 Suppose we have a dataset of **Bank a/c holders** and we have taken two features from it **Age** and other is **Income**. Now lets see those features- 
@@ -100,5 +99,5 @@ So, this is the problem this is what is known as **covariate shift** and because
 
             
 ## References:
-
+![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 * [NPTEL Deep Learning, Prof. Prabir Kumar Biswas IITKGP](https://onlinecourses.nptel.ac.in/noc21_cs05/course)
