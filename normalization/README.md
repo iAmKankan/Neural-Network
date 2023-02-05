@@ -66,3 +66,35 @@ $$
 
 
 ### What does a classifier learn?
+For binary classification
+
+
+$$\Huge{\color{Purple} 
+\mathrm{P(Y/X)} 
+\ \ \ \ \ \normalsize \left \\{ \begin{matrix}\textrm{ X = input data} \\
+\textrm{Y = class index} 
+\end{matrix} \right.
+}
+$$
+
+you give input as appear say $\Large{\color{Purple}\mathrm{(X_i, Y_i)}}$ which indicates that this data  $\Large{\color{Purple}\mathrm{X_i}}$ belongs to class $\Large{\color{Purple}\mathrm{Y_i}}$ So these are the labelled data which are fed for training of the classifier or training of the deep neural network.
+
+#### Batch Processing and Covariate Shift
+Training data are fed to the neural network or fed to the classifier during **learning operation** not all in a one short rather in the form of **batches**. And it is quite possible that the distribution of the data in **one batch may be different** from the **distribution of data in another batch** even though the data comes from the **same class**.
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/12748752/216840751-68dcd43a-3743-487a-b9ba-8d6b4e18d6a1.png" width=40%/>
+  <img src="https://user-images.githubusercontent.com/12748752/216840735-7ec5cf2b-516e-4c3b-a6a1-7b035ac88f2f.png" width=40%/>
+  <br><ins><b><i>Covariate Shift</i></b></ins>
+</p>
+
+So, as a result you find that depending upon the characteristics of the input data or in this case just the colour of the input data the distribution of the features of the images taken from flower category and the distribution of the features taken from images of the nonflower category they are different and as a result the **classifier which is learnt with the first batch** is **different** from the **classifier that is learnt from the second batch**. 
+
+So, this is the problem this is what is known as **covariate shift** and because of this covariate shift now because the **classifier has to hop** from one classifier to another classifier **during learning**, your learning process eventually becomes **very, very slow**.
+
+            
+        
+
+
+
+
