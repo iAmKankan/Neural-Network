@@ -28,7 +28,7 @@ So, in order to make your decision **unbiased** you need some sort of **normaliz
 ### Z-Score
 In this **normalization technique**, all the **attribute values can vary** from **0** to **1**. So, that the contribution of all those attributes in the **final decision making process** is more or less same or all the **attributes** are **equally weighted**.
 
-* $\Large{\color{Purple}\mathrm{x}}$ is the population of different instances of attributes. Suppose, different customers having **ages** ranging from say **18** to **100** and I may have say **100 such customers**. 
+> #### $\Large{\color{Purple}\mathrm{x}}$ is the population of different instances of attributes. Suppose, different customers having **ages** ranging from say **18** to **100** and I may have say **100 such customers**. 
 
 #### What is the average age?
 * So, the average age is nothing but $\Large{\color{Purple} \mathrm{\mu_x} = \mathrm{\frac{1}{N} \Sigma_{i=1}^{100} x_i} }$, where $\Large{\color{Purple}\mathrm{i}}$ will vary from **1** to **100**, if I have **100** such customers.
@@ -49,4 +49,8 @@ This normalization the attribute values will be **eather 0 or 1**. So, the minim
 
 So, this is one form of normalization where you are making the mean of the attributes which will be equal to 0 and the variance is 1 because variance is nothing but square of the standard deviation. So, variance or standard deviation will be equal to 1 and this will be done for all the attributes. So, even the attribute of age will have a mean 0 and standard deviation 1 and the attributes which are income the different instances of income that will also have mean 0 and standard deviation 1. So, this is one form of normalization that can be done.
 
+$$\Huge{\color{Purple} 
+\Huge\mathrm{\hat{x}} = \frac{\mathrm{x - x_{mean}} }{x_{max}-x_{mean}}
+}
+$$
 
