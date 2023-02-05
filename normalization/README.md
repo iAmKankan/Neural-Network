@@ -45,7 +45,7 @@ Where as is
 I compute what is the **standard deviation** of _all these attribute values that I have_ or _all these instances that I have_. So, I can **normalize** it with respect to the **standard deviation** of the all the attributes. So, that is what becomes $\Large{\color{Purple}\mathrm{x}}$ **normalized** or $\Large{\color{Purple}\mathrm{\hat{x}}}$ .
 
    *  $\Large{\color{Purple}\mathrm{\mu} = 0}$
-   *  $\Large{\color{Purple}\mathrm{\sigma_{\hat{x}}} = 0}$
+   *  $\Large{\color{Purple}\mathrm{\sigma_{\hat{x}}} = 1}$
 
 
 ### Min-Max
