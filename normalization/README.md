@@ -26,6 +26,8 @@ The **decission will be biased** by the attribute which is monthly **Income** be
 So, in order to make your decision **unbiased** you need some sort of **normalization** techniques.
 
 ### Z-Score
+![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
+
 In this **normalization technique**, all the **attribute values can vary** from **0** to **1**. So, that the contribution of all those attributes in the **final decision making process** is more or less same or all the **attributes** are **equally weighted**.
 
 > Suppose, different customers having **ages** ranging from say **18** to **100** and I may have say **100 such customers**. 
@@ -54,6 +56,8 @@ So, this is one form of **normalization** where you are making the **mean** of t
 
 
 ### Min-Max
+![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
+
 This normalization the attribute values will be **eather 0 or 1**. So, the minimum attribute value will be **0** and the maximum attribute value will be **1**.
 
 So, this is one form of normalization where you are making the mean of the attributes which will be equal to 0 and the variance is 1 because variance is nothing but square of the standard deviation. So, variance or standard deviation will be equal to 1 and this will be done for all the attributes. So, even the attribute of age will have a mean 0 and standard deviation 1 and the attributes which are income the different instances of income that will also have mean 0 and standard deviation 1. So, this is one form of normalization that can be done.
@@ -80,6 +84,8 @@ $$
 you give input as appear say $\Large{\color{Purple}\mathrm{(X_i, Y_i)}}$ which indicates that this data  $\Large{\color{Purple}\mathrm{X_i}}$ belongs to class $\Large{\color{Purple}\mathrm{Y_i}}$ So these are the labelled data which are fed for training of the classifier or training of the deep neural network.
 
 ### Batch Processing and Covariate Shift
+![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
+
 Training data are fed to the neural network or fed to the classifier during **learning operation** not all in a one short rather in the form of **batches**. And it is quite possible that the distribution of the data in **one batch may be different** from the **distribution of data in another batch** even though the data comes from the **same class**.
 
 <p align="center">
