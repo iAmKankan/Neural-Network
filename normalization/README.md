@@ -50,7 +50,10 @@ This normalization the attribute values will be **eather 0 or 1**. So, the minim
 So, this is one form of normalization where you are making the mean of the attributes which will be equal to 0 and the variance is 1 because variance is nothing but square of the standard deviation. So, variance or standard deviation will be equal to 1 and this will be done for all the attributes. So, even the attribute of age will have a mean 0 and standard deviation 1 and the attributes which are income the different instances of income that will also have mean 0 and standard deviation 1. So, this is one form of normalization that can be done.
 
 $$\Huge{\color{Purple} 
-\Huge\mathrm{\hat{x}} = \frac{\mathrm{x - x_{mean}} }{x_{max}-x_{mean}}
+\Huge\mathrm{\hat{x}} = \frac{\mathrm{x - x_{mean}} }{\mathrm{x_{max}-x_{mean}}}
 }
 $$
 
+
+
+### What does a classifier learn?
