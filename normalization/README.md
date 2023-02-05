@@ -99,3 +99,6 @@ So, as a result you find that depending upon the characteristics of the input da
 So, this is the problem this is what is known as **covariate shift** and because of this covariate shift now because the **classifier has to hop** from one classifier to another classifier **during learning**, your learning process eventually becomes **very, very slow**.
 
             
+## References:
+
+* [NPTEL Deep Learning, Prof. Prabir Kumar Biswas IITKGP](https://onlinecourses.nptel.ac.in/noc21_cs05/course)
