@@ -1,6 +1,5 @@
 ## Index
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
-![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 
 ### Recap
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
@@ -16,6 +15,7 @@ So, now we find that though the images belonging to the same category of flowers
 
 
 ## Solution
+![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 So, this can be avoided if we can somehow normalize the feature vectors, so that the distribution of **all the feature vectors will belonging to the same class** will be more or less same. And the kind of normalization that we can apply in this case is a [**z-score**](https://github.com/iAmKankan/Neural-Network/edit/main/normalization/README.md#z-score) type of normalization that we have already discussed.
 
 $$\Huge{\color{Purple} 
@@ -33,7 +33,16 @@ $${\color{Purple}\begin{matrix}
 } 
 $$
 
+## Normalization application layer in Neural Network
 
+This is applicable not only in the **input layer** this is also applicable in the **hidden layers** as well.
+#### Why should it be applicable to hidden layers? 
+So, now, let us try to see that why do we need normalization even in hidden layers. So, for to discuss about that to see why you need normalization in the hidden layers, let us look at a typical architecture of a deep neural network.
+
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/12748752/216846018-86d4e1ef-9525-4b93-abf0-81dabf981a2d.png" width=40%/>
+</p>
 
 
 ## References:
