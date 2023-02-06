@@ -82,7 +82,7 @@ $$
 
 you give input as appear say $\Large{\color{Purple}\mathrm{(X_i, Y_i)}}$ which indicates that this data  $\Large{\color{Purple}\mathrm{X_i}}$ belongs to class $\Large{\color{Purple}\mathrm{Y_i}}$ So these are the labelled data which are fed for training of the classifier or training of the deep neural network.
 
-### <ins><i>Covariate Shift</i></ins> on Batch Processing
+## <ins><i>Covariate Shift</i></ins> on Batch Processing
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 
 Training data are fed to the neural network or fed to the classifier during **learning operation** not all in a one short rather in the form of **batches**. And it is quite possible that the distribution of the data in **one batch may be different** from the **distribution of data in another batch** even though the data comes from the **same class**.
