@@ -4,13 +4,14 @@
 
 ## ⬛ Self-Attention at a High Level
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
-> #### The goal of **_self-attention_** is to <i><ins>capture contextual relationships between words</ins></i> in the sentence <i><ins>by creating an attention-based vector of every input word</ins></i>. 
+#### ⚛️ The goal of **_self-attention_** is to <i><ins>capture contextual relationships between words</ins></i> in the sentence <i><ins>by creating an attention-based vector of every input word</ins></i>. 
 #### "_Attention is All You Need_" this paper first showed us the concept of “**_self-attention_**”.
 
-### <ins>How does it work</ins>
-#### Input sentence : "<img src="https://latex.codecogs.com/svg.image?{\color{Purple}&space;\textbf{\textrm&space;{The&space;animal&space;didn't&space;cross&space;the&space;street&space;because&space;it&space;was&space;too&space;tired}}}" title="https://latex.codecogs.com/svg.image?{\color{Purple} \textbf{\textrm {The animal didn't cross the street because it was too tired}}}" align="center" /> "
+### <ins>Example #1</ins>
+#### Input sentence : " $\large{\color{Purple} \textbf{The animal didn't cross the street because}} {\color{Cyan}\textbf{ it }} {\color{Purple}\textbf{was too tired}}$ "
 
-> #### What does “**it**” in this sentence refer to?  Is it referring to the street or to the animal? It’s a simple question to a human, but not as simple to an algorithm. 
+#### ⚛️  $\large\textrm{What does}\textbf{ it } \textrm{in this sentence refering to? Is it referring to the street or to the animal?}$  
+$\large\textrm{Ans: }$ It’s a simple question to a human, but not as simple to an algorithm. 
 
 * When the model is processing the word “**it**”, **self-attention** allows it to associate “**it**” with “**animal**”.
 * As the model processes each _word_ (each position in the input sequence), **self attention** allows it to look at _other positions_ in the input sequence for clues that can help lead to a better encoding for this word.
