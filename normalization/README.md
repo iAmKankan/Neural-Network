@@ -133,7 +133,8 @@ $$
 ## Normalization application layer in Neural Network
 
 This is applicable not only in the **input layer** this is also applicable in the **hidden layers** as well.
-#### Why should it be applicable to hidden layers? 
+
+## Why should it be applicable to hidden layers? 
 So, now, let us try to see that why do we need normalization even in hidden layers. So, for to discuss about that to see why you need normalization in the hidden layers, let us look at a typical architecture of a deep neural network.
 
 
