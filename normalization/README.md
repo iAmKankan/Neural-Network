@@ -147,7 +147,16 @@ And during back propagation what you do is you compute your error at the output 
 
 So, even here, even in the hidden layers or the internal layers I have to take some action so that this covariate shift can be minimized. So, for minimization of this covariate shift as we have seen before that I have to go for normalization of these weight vectors and in most of the cases what is tried is that you remap this vectors in such a way that the mean of all these feature vectors become 0 with a variance or standard deviation equal to 1. So, with this introduction that I need normalization not only at the input layer on the raw data, I also need normalization even at the hidden layer because the features which are computed from different layers even for the same input over different epoch or different training instances, the distribution of those feature vectors may be different which I had to take some measure to erased that shape of the distribution.
 
-            
+## Normalization types
+![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
+ So, this is how the problem of **covariate shift** has to be addressed. So, there are different ways in which this normalization can be done, one of the technique is 
+ 1. batch normalization. 
+ 2. layer normalization, 
+ 3. instance normalization 
+ 4. group normalization techniques. 
+ 
+ So, these are the different variants of the normalization techniques the main difference is the way you compute the **mean** $\Huge{\color{Purple}\mathrm{\mu_x} = }\normalsize{\color{Cyan}\textbf{ Mean}}$ and **standard deviation** $\Huge{\color{Purple}\mathrm{\sigma}= }\normalsize{\color{Cyan}\textbf{ Standard Deviation}}$.      
+ 
 ## References:
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 * [NPTEL Deep Learning, Prof. Prabir Kumar Biswas IITKGP](https://onlinecourses.nptel.ac.in/noc21_cs05/course)
