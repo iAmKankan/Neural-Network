@@ -97,6 +97,55 @@ So, as a result you find that depending upon the characteristics of the input da
 
 So, this is the problem this is what is known as **covariate shift** and because of this covariate shift now because the **classifier has to hop** from one classifier to another classifier **during learning**, your learning process eventually becomes **very, very slow**.
 
+
+### Recap
+![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
+As we saw in **Covariate Shift**
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/12748752/216840751-68dcd43a-3743-487a-b9ba-8d6b4e18d6a1.png" width=40%/>
+  <img src="https://user-images.githubusercontent.com/12748752/216840735-7ec5cf2b-516e-4c3b-a6a1-7b035ac88f2f.png" width=40%/>
+  <br><ins><b><i>Covariate Shift</i></b></ins>
+</p>
+
+So, now we find that though the images belonging to the same category of flowers, but because of their appearance the computed features may have **different distribution**. And as a result **while training the classifier** simply **hops from one boundary to another boundary**. In some cases it will decide this left boundary, in some cases it will decide this right boundary. So, as a result the time taken to train the **classifier** or the **time taken to train** your deep neural network becomes **very large**.
+
+
+## Solution
+![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
+So, this can be avoided if we can somehow normalize the feature vectors, so that the distribution of **all the feature vectors will belonging to the same class** will be more or less same. And the kind of normalization that we can apply in this case is a [**z-score**](https://github.com/iAmKankan/Neural-Network/edit/main/normalization/README.md#z-score) type of normalization that we have already discussed.
+
+$$\Huge{\color{Purple} 
+\mathrm{\hat{x}} = \frac{\mathrm{x - \mu_x} }{\sqrt{\epsilon + \sigma_x ^2}}
+}
+$$
+
+$${\color{Purple}\begin{matrix}
+& X &=& {\color{Cyan}\textrm{ Set of feature vectors} }\\
+& \hat{X} &=& {\color{Cyan}\textrm{ Normalised X} }\\
+& \mu_x &=& {\color{Cyan}\textrm{ the mean of the feature vectors}} \\
+& \sigma_x &=& {\color{Cyan}\textrm{ standard deviation of the feature vectors}} \\
+& \epsilon &=& {\color{Cyan}\textrm{ very small value, ensures divide by zero never occurs}} \\
+\end{matrix}
+} 
+$$
+
+## Normalization application layer in Neural Network
+
+This is applicable not only in the **input layer** this is also applicable in the **hidden layers** as well.
+#### Why should it be applicable to hidden layers? 
+So, now, let us try to see that why do we need normalization even in hidden layers. So, for to discuss about that to see why you need normalization in the hidden layers, let us look at a typical architecture of a deep neural network.
+
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/12748752/216846018-86d4e1ef-9525-4b93-abf0-81dabf981a2d.png" width=40%/>
+</p>
+
+
+
+And during back propagation what you do is you compute your error at the output and then following the gradient descent procedure in the backward pass you pass that gradient to the layers from the output side to the input side and while doing so, in every layer you go on updating the weight vectors or updating the parameter vectors. That is what you do. Now, when you come to the updation of or say come to this layer l only, you find that l the layer l gets activations from layer l 1, which are say activations al1 . And based on the distribution of al1 you adjust these weight vectors of layer l . Now, we find that if al1 is steady; that means, in every epoch the distribution of al1 remains the same, then learning of the layer al , will not be a problem because the distribution of al1 which is coming from l 1 layer that remains the same. But what happens? That during this training process this layer al1 is also updating its weights; that means, the weight vectors from layer l  2 to layer l 1 that is also being updated. The weight vectors from layer l 1 to layer l they are also being updated. So, as a result this al1 , the distribution of this may not remain same over the epochs. So, even if you are feeding the same input in the same batch the distribution of al1 the features which are computed at al1 may be different in different epochs. So, leading to the same problem of **covariate shift**.
+
+
             
 ## References:
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
