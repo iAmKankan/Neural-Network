@@ -70,19 +70,23 @@ In a _machine translation_ application, it would take a sentence in one language
 </p>
 
 ### <ins>Inside each Encoder-Decoder Stack</ins>
-<img src="https://user-images.githubusercontent.com/12748752/167968727-488848ff-40d1-49a9-99ad-61287bebba3e.png" width=80% align="center"/>
-
+<p align="center">
+ <img src="https://user-images.githubusercontent.com/12748752/167968727-488848ff-40d1-49a9-99ad-61287bebba3e.png" width=80%/>
+</p>
 
 ### <ins>Inside each Encoder-Decoder Block</ins>
-<img src="https://user-images.githubusercontent.com/12748752/168034980-004fd235-28cb-4831-9523-76480b411e11.png" width=80% align="center"/> 
+<p align="center">
+ <img src="https://user-images.githubusercontent.com/12748752/168034980-004fd235-28cb-4831-9523-76480b411e11.png" width=80% align="center"/> 
+</p>
 
 ### <ins>Embedding</ins>
  
 Let’s start to look at the various **vectors**/**tensors** and how they flow between the _above components_ to turn the _input of a trained model into an output_.
-
-<img src="https://user-images.githubusercontent.com/12748752/168201541-73b96f67-a6b5-4b72-9201-4a26dfd7670a.png" width=80%/>
-
-<p align="center"><i><ins><b> Each word is embedded into a vector of size 512. We'll represent those vectors with these simple boxes</b></ins></i></p>
+<p align="center">
+ <img src="https://user-images.githubusercontent.com/12748752/168201541-73b96f67-a6b5-4b72-9201-4a26dfd7670a.png" width=80%/>
+<br>
+ <i><ins><b> Each word is embedded into a vector of size 512. We'll represent those vectors with these simple boxes</b></ins></i>
+</p>
 
 * As is the case in NLP applications in general, we begin by turning each input word into a **vector** using an **_embedding algorithm_**.
 * The _embedding only happens_ in the **bottom-most encoder**. 
@@ -90,8 +94,9 @@ Let’s start to look at the various **vectors**/**tensors** and how they flow b
 * The size of this list is **hyperparameter** we can set – **_basically it would be the length of the longest sentence in our training dataset_**.
 * After embedding the words in our **input sequence**, each of them flows through each of the two layers of the encoder.
 
-<img src="https://user-images.githubusercontent.com/12748752/168204497-97f950e0-ad92-4037-a076-3eaf07196dcb.png" width=80% />
-
+<p align="center">
+ <img src="https://user-images.githubusercontent.com/12748752/168204497-97f950e0-ad92-4037-a076-3eaf07196dcb.png" width=80% />
+</p>
 ### <ins>_Important Notes_</ins>:
 * One key property of the **Transformer**, _the word in each position flows through its own path in the encoder_. There are dependencies between these paths in the **self-attention layer**. 
 * The **feed-forward layer** does not have those dependencies, how ever and thus the various paths can be executed in parallel while flowing through the feed-forward layer.
@@ -99,16 +104,18 @@ Let’s start to look at the various **vectors**/**tensors** and how they flow b
 
 ## 🔲 The Encoder
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
-
-<img src="https://user-images.githubusercontent.com/12748752/171049973-6959aa04-a62b-4a5c-abbe-f2481462ea74.png" width=30%/>
-<p align="center"><ins><i><b>A single Encoder Block</b></i></ins></p>
+<p align="center">
+ <img src="https://user-images.githubusercontent.com/12748752/171049973-6959aa04-a62b-4a5c-abbe-f2481462ea74.png" width=30%/>
+<br><ins><i><b>A single Encoder Block</b></i></ins>
+</p>
 
 * As we’ve mentioned already, an **encoder** receives a _list of vectors as input_. 
 * It processes this list by passing these vectors into a ‘**self-attention**’ layer, then into a **feed-forward neural network**, then sends out the output upwards to the next encoder.
 
-<img src="https://user-images.githubusercontent.com/12748752/171093005-300c9b35-ee50-44f0-9d73-1cefc56067ca.png" width=80%/>
-
-<p align="center"><i><ins><b>The word at each position passes through a self-attention process. Then, they each pass through a feed-forward neural network -- the exact same network with each vector flowing through it separately.</b></ins></i></p>
+<p align="center">
+ <img src="https://user-images.githubusercontent.com/12748752/171093005-300c9b35-ee50-44f0-9d73-1cefc56067ca.png" width=80%/>
+ <br><i><ins><b>The word at each position passes through a self-attention process. Then, they each pass through a feed-forward neural network -- the exact same network with each vector flowing through it separately.</b></ins></i>
+</p>
 
 * The **_transformer encoder_** is a stack of _multiple identical layers_ with **_residual connections_** and **_layer normalizations_**, where each layer has **two sublayers** (_either is denoted as sublayer_).
     * The first is a **multi-head self-attention pooling** and 
@@ -152,23 +159,26 @@ As in other models, the transformer uses learned embeddings to transform the **i
 
 ### 🔲 The Decoder
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
-<img src="https://user-images.githubusercontent.com/12748752/171049969-c7791fe9-5c19-4459-9bca-ca48944c7597.png" width=25%/>
-<p align="center"> <ins><i>A single Decoder Block</i></ins></p>
+<p align="center">
+ <img src="https://user-images.githubusercontent.com/12748752/171049969-c7791fe9-5c19-4459-9bca-ca48944c7597.png" width=25%/>
+<br> <ins><i>A single Decoder Block</i></ins>
+</p>
 
 Most of the concepts has been covered on the **encoder** side, we basically know how the components of **decoders** work as well. But let’s take a look at how they work together.
 
 * The **encoder** start by processing the **input sequence**. 
 * The **output** of the **top encoder** is then transformed into a set of attention vectors **K** and **V**. 
 * These are to be used by each **decoder** in its “**_encoder-decoder attention_**” layer which helps the **decoder** focus on appropriate places in the input sequence:
-
+<p align="center">
 <img src="https://user-images.githubusercontent.com/12748752/171801079-2b6bd472-c68c-4a76-b212-a0c97c9313b5.gif" width=50%/>
-
-<p align="center"> <ins><i>After finishing the encoding phase, we begin the decoding phase. Each step in the decoding phase outputs an element from the output sequence (the English translation sentence in this case).</i></ins></p>
+<br> <ins><i>After finishing the encoding phase, we begin the decoding phase. Each step in the decoding phase outputs an element from the output sequence (the English translation sentence in this case).</i></ins>
+</p>
 
 The following steps repeat the process until a special symbol is reached indicating the transformer decoder has completed its output. The output of each step is fed to the bottom decoder in the next time step, and the decoders bubble up their decoding results just like the encoders did. And just like we did with the encoder inputs, we embed and add positional encoding to those decoder inputs to indicate the position of each word.
 
+<p align="center">
 <img src="https://user-images.githubusercontent.com/12748752/171801041-4259d732-a49b-4e89-9506-1fa1d2d4cf4b.gif" width=50%/>
-
+</p>
 
 The self attention layers in the decoder operate in a slightly different way than the one in the encoder:
 
@@ -188,9 +198,9 @@ Let’s assume that our model knows 10,000 unique English words (our model’s �
 
 The softmax layer then turns those scores into probabilities (all positive, all add up to 1.0). The cell with the highest probability is chosen, and the word associated with it is produced as the output for this time step.
 
-
+<p align="center">
 <img src="https://user-images.githubusercontent.com/12748752/171743551-8454433a-4885-4a79-afc3-c1b23d5322d9.png" width=50%/>
-<p align="center"> <ins><i><b>This figure starts from the bottom with the vector produced as the output of the decoder stack. It is then turned into an output word.</b></i></ins></p>
+<br> <ins><i><b>This figure starts from the bottom with the vector produced as the output of the decoder stack. It is then turned into an output word.</b></i></ins></p>
 
 
 
@@ -214,11 +224,12 @@ The decoder takes in two inputs:
 
 1. **The output of the encoder** — these are the **keys (K)** and the **values (V)** that the decoder performs **multi-head attention on** . In this **multi-head attention layer**, the **query (Q)** is the output of the masked multi-head attention.
 2. **The output text shifted to the right** — This is to ensure that predictions at a specific position **"i"** can only depend at positions less than **i** (see figure below). Therefore, the decoder will take in all words already predicted (position **0 to i-1**) before the actual word to be predicted at position **i**. Note that the first generated word passed to the decoder is the token `<start>` and the prediction process continues until the decoder generates a special end token `<eos>`.
-
- <img src="https://user-images.githubusercontent.com/12748752/169290757-0d143632-7fd4-45af-857e-c25ee5db6ed9.gif" />
-
- <ins><i><b>Outputs Shifted by Right as Inputs to the Decoder In the Inference Stage   </b></i></ins>(Image by ['Kheirie Elhariri](https://towardsdatascience.com/attention-is-all-you-need-e498378552f9))
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/12748752/169290757-0d143632-7fd4-45af-857e-c25ee5db6ed9.gif" />
+ <br><ins><i><b>Outputs Shifted by Right as Inputs to the Decoder In the Inference Stage   </b></i></ins>
+</p> 
  
+* Image by['Kheirie Elhariri](https://towardsdatascience.com/attention-is-all-you-need-e498378552f9)
  
  ### _◼️ Masked Multi-Head Attention_
 The process of the masked multi-head attention is similar to that of the regular multi-head attention. The only difference is that after multiplying the matrices Q and K, and scaling them, a special mask is applied on the resulting matrix before applying the softmax (see left diagram of figure 6-Mask opt.). The objective is to have every word at a specific position "i" in the text to only attend to every other position in the text up until its current position included (position 0 until position i). This is important in the training phase, as when predicting the word at position i+1, the model will only pay attention to all the words before that position. Therefore, all positions after i, are masked and set to negative infinity before passing them to the softmax operation, which results in 0s in the attention filter (see figure 11).
