@@ -35,15 +35,19 @@ Though originally proposed for **sequence to sequence learning** on **text data*
 
 ### 🔲 Classification of Transformers:
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
-<img src="https://user-images.githubusercontent.com/12748752/167986704-ca5cb1fe-7730-4b61-a9f5-1aee7dbaa9e9.png" width=70%/>
 
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/12748752/167986704-ca5cb1fe-7730-4b61-a9f5-1aee7dbaa9e9.png" width=70%/>
+</p>
 
 ### 🔲 The Model
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 As we can see, the **transformer** is composed of an **_encoder_** and a **_decoder_**. Different from [Bahdanau attention](https://github.com/iAmKankan/Neural-Network/blob/main/Attention-Mechanisms/bahdanau_attention.md) for _sequence to sequence learning_, the **input** (_source_) and **output** (_target_) **sequence embeddings** are added with [**positional encoding**](https://github.com/iAmKankan/Neural-Network/blob/main/Attention-Mechanisms/self-attention.md#-positional-encoding) before being fed into the **encoder** and the **decoder** that stack modules based on **self-attention**.
 
-<img src="https://user-images.githubusercontent.com/12748752/164050988-292430e3-b184-4942-a92e-f2297b1541d1.png" width=30%/>
-<p align="center"><ins><i><b>The transformer architecture</b></i></ins>.</p>
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/12748752/164050988-292430e3-b184-4942-a92e-f2297b1541d1.png" width=30%/>
+<br><ins><i><b>The transformer architecture</b></i></ins>.
+</p>
 
 ## 🔲 The architecture in brief:
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
@@ -52,13 +56,18 @@ Here, the classical example of translating from _English to French_ using the tr
 In a _machine translation_ application, it would take a sentence in one language( here is English), and output its translation in another(here is French).
 
 ### <ins>Transformers as a _Blackbox_</ins>
-<img src="https://user-images.githubusercontent.com/12748752/164888116-dfdb9a7f-60c1-4038-9bf6-3f47a133a244.png" width=80%/>
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/12748752/164888116-dfdb9a7f-60c1-4038-9bf6-3f47a133a244.png" width=80%/>
+</p>
 
 ### <ins>The Encoder-Decoder Blocks</ins>
 * Inside the Transformer box, exist _Encoder-Decoder_ Blocks and a connection between them.
 * The **Encoding components** are in the stack of encoders (the paper stacks **six** of them on top of each other – there’s nothing magical about the number **6**, one can definitely experiment with other arrangements). The decoding components are in the stack of decoders of the _same number_(**6**).
 
-<img src="https://user-images.githubusercontent.com/12748752/164888115-281a74f2-971d-4eb3-8bcb-0bb58b35727b.png" width=80% align="center"/> 
+<p align="center">
+   <img src="https://user-images.githubusercontent.com/12748752/164888115-281a74f2-971d-4eb3-8bcb-0bb58b35727b.png" width=80% align="center"/> 
+</p>
 
 ### <ins>Inside each Encoder-Decoder Stack</ins>
 <img src="https://user-images.githubusercontent.com/12748752/167968727-488848ff-40d1-49a9-99ad-61287bebba3e.png" width=80% align="center"/>
