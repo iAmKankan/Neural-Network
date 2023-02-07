@@ -17,7 +17,29 @@ $\large\textrm{Ans: }$ It’s a simple question to a human, but not as simple to
 * As the model processes each _word_ (each position in the input sequence), **self attention** allows it to look at _other positions_ in the input sequence for clues that can help lead to a better encoding for this word.
 * In **RNNs**, think of how maintaining a hidden state allows an **RNN** to incorporate its representation of previous words/vectors it has processed with the current one it’s processing. 
 * Self-attention is the method the Transformer uses to bake the “**understanding**” of other relevant words into the one we’re currently processing.
-<img src="https://user-images.githubusercontent.com/12748752/171284998-28585e5b-fd1b-4303-8be1-61938921aa75.png" width= 50%/>
+
+<p align="center"/>
+ <img src="https://user-images.githubusercontent.com/12748752/171284998-28585e5b-fd1b-4303-8be1-61938921aa75.png" width= 30%/>
+ <br>
+ <img src="https://user-images.githubusercontent.com/12748752/217312015-3e3523ea-9a40-4e8c-8dfb-c4b7a7ccf78c.png" width=80%/>
+ <br>
+</p> 
+
+Inorder to capture contextual relationships between words in the sentence by creating an attention-based vector of every input word. Each word( $\large{\color{Purple}\mathrm{X_{(each word)}}}$ ) in the vector having 3 roles namely **Query** $\large{\color{Purple}\mathrm{X_{(each word)}^Q}}$ , **Key** $\large{\color{Purple}\mathrm{X_{(each word)}^K}}$ and **Value** $\large{\color{Purple}\mathrm{X_{(each word)}^V}}$.
+#### Step #1: _The Query_
+ * We work each word as a **Query**. Let say the word is $\large {\color{Red}\boxed{{\color{Purple}\mathrm{it}}}}$ and it represent as $\large{\color{Purple}\mathrm{X_{it}^{Q}}}$
+#### Step #2: _The Key_
+* Each word other than Query word called Key word $\large{\color{Purple}\mathrm{Key_{(each word)}} \Rightarrow \mathrm{Key(X_{(each word)})} \Rightarrow \mathrm{X_{The}^{K}}}$
+
+* Now the **Query** word asking to every other word about the relationships between them ${\color{Red}\boxed{{\color{Cyan}\mathrm{it}}}} \to {\color{Red}\boxed{{\color{Purple}\mathrm{The}}}} \textrm{ is any relationship?},$  ${\color{Red}\boxed{{\color{Cyan}\mathrm{it}}}} \to {\color{Red}\boxed{{\color{Purple}\mathrm{animal}}}} \textrm{ is any relationship?} \cdots$ so on and so forth.
+* Here  $\large{\color{Purple}\mathrm{X_{it}^{Q}}}$ computing its ralivence/dependency with each of the words with their respective **Key**.
+* Then,  $\large{\color{Purple}\mathrm{X_{it}^{Q}}}$ will take the **actual value** of  $\large{\color{Purple}\mathrm{X_{animal}^{K}}}$ from the [embedding matrix](https://github.com/iAmKankan/Neural-Network/blob/main/Attention-Mechanisms/transformer/README.md#%EF%B8%8F-embedding-each-word-is-into-a-vector-of-size-512)
+* After that we compair of those two vectors( $\large{\color{Purple}\mathrm{X_{it}^{Q}}}$ respective vector with $\large{\color{Purple}\mathrm{X_{animal}^{K}}}$
+ 
+
+
+
+
 
 ## ⬛ Self-Attention
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
