@@ -55,35 +55,43 @@ Here, the classical example of translating from _English to French_ using the tr
 
 In a _machine translation_ application, it would take a sentence in one language( here is English), and output its translation in another(here is French).
 
-### <ins>Transformers as a _Blackbox_</ins>
-
 <p align="center">
   <img src="https://user-images.githubusercontent.com/12748752/164888116-dfdb9a7f-60c1-4038-9bf6-3f47a133a244.png" width=80%/>
+ <br>
+ <ins><b>Transformers as a <i>Blackbox</i></b></ins>
 </p>
 
-### <ins>The Encoder-Decoder Blocks</ins>
+### ⚛️ <ins>The Encoder-Decoder Blocks</ins>
 * Inside the Transformer box, exist _Encoder-Decoder_ Blocks and a connection between them.
 * The **Encoding components** are in the stack of encoders (the paper stacks **six** of them on top of each other – there’s nothing magical about the number **6**, one can definitely experiment with other arrangements). The decoding components are in the stack of decoders of the _same number_(**6**).
 
 <p align="center">
    <img src="https://user-images.githubusercontent.com/12748752/164888115-281a74f2-971d-4eb3-8bcb-0bb58b35727b.png" width=80% align="center"/> 
+  <br>
+ <ins><b>Inside each <i>Blackbox</i></b></ins>
 </p>
 
-### <ins>Inside each Encoder-Decoder Stack</ins>
 <p align="center">
  <img src="https://user-images.githubusercontent.com/12748752/167968727-488848ff-40d1-49a9-99ad-61287bebba3e.png" width=80%/>
+ <br>
+ <ins><b><i>Inside each Encoder-Decoder Stack</i></b></ins>
 </p>
 
-### <ins>Inside each Encoder-Decoder Block</ins>
 <p align="center">
  <img src="https://user-images.githubusercontent.com/12748752/168034980-004fd235-28cb-4831-9523-76480b411e11.png" width=80% align="center"/> 
+  <br>
+ <ins><b><i>Inside each Encoder-Decoder Block</i></b></ins>
 </p>
 
-### <ins>Embedding</ins>
+
+### ⚛️ <ins>Embedding each word is into a Vector of size <i>512</i></ins>
  
 Let’s start to look at the various **vectors**/**tensors** and how they flow between the _above components_ to turn the _input of a trained model into an output_.
+
 <p align="center">
  <img src="https://user-images.githubusercontent.com/12748752/168201541-73b96f67-a6b5-4b72-9201-4a26dfd7670a.png" width=80%/>
+<br>
+ <img src="https://user-images.githubusercontent.com/12748752/217257817-8afb61ab-6bf6-42ee-924f-f03dc6d5d47b.png" width=80%/>
 <br>
  <i><ins><b> Each word is embedded into a vector of size 512. We'll represent those vectors with these simple boxes</b></ins></i>
 </p>
