@@ -34,7 +34,7 @@ Inorder to capture contextual relationships between words in the sentence by cre
 * Now the **Query** word asking to every other word about the relationships between them ${\color{Red}\boxed{{\color{Cyan}\mathrm{it}}}} \to {\color{Red}\boxed{{\color{Purple}\mathrm{The}}}} \textrm{ is any relationship?},$  ${\color{Red}\boxed{{\color{Cyan}\mathrm{it}}}} \to {\color{Red}\boxed{{\color{Purple}\mathrm{animal}}}} \textrm{ is any relationship?} \cdots$ so on and so forth.
 * Here  $\large{\color{Purple}\mathrm{X_{it}^{Q}}}$ computing its ralivence/dependency with each of the words with their respective **Key**.
 * Then,  $\large{\color{Purple}\mathrm{X_{it}^{Q}}}$ will take the **actual value** of  $\large{\color{Purple}\mathrm{X_{animal}^{K}}}$ from the [embedding matrix](https://github.com/iAmKankan/Neural-Network/blob/main/Attention-Mechanisms/transformer/README.md#%EF%B8%8F-embedding-each-word-is-into-a-vector-of-size-512)
-* After that we compair of those two vectors( $\large{\color{Purple}\mathrm{X_{it}^{Q}}}$ respective vector with $\large{\color{Purple}\mathrm{X_{animal}^{K}}}$
+* After that we compair of those two vectors( $\large{\color{Purple}\mathrm{X_{it}^{Q}}}$ respective vector with $\large{\color{Purple}\mathrm{X_{animal}^{K}}}$ and that will tell how much dependent those two words are. 
  
 
 
