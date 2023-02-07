@@ -91,9 +91,13 @@ Let’s start to look at the various **vectors**/**tensors** and how they flow b
 <p align="center">
  <img src="https://user-images.githubusercontent.com/12748752/168201541-73b96f67-a6b5-4b72-9201-4a26dfd7670a.png" width=80%/>
 <br>
- <img src="https://user-images.githubusercontent.com/12748752/217257817-8afb61ab-6bf6-42ee-924f-f03dc6d5d47b.png" width=80%/>
+<br>
+ <img src="https://user-images.githubusercontent.com/12748752/217257817-8afb61ab-6bf6-42ee-924f-f03dc6d5d47b.png" width=60%/>
 <br>
  <i><ins><b> Each word is embedded into a vector of size 512. We'll represent those vectors with these simple boxes</b></ins></i>
+ <br>
+  <i><ins><b> Word2vec</b> or <b>Glove</b> etc. are responsible for word embedding</ins></i>
+
 </p>
 
 * As is the case in NLP applications in general, we begin by turning each input word into a **vector** using an **_embedding algorithm_**.
