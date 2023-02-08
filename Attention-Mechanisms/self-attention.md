@@ -1,6 +1,39 @@
 ## Index:
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 
+## 🔄 Attention Function
+![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
+
+ An **attention function** can be described as **_mapping a query and a set of key-value pairs to an output_**, where the **query**, **keys**, **values** and **output** are **_all vectors_**( $\Large{\color{Purple}\vec{\mathrm{v}}}$ ). The output is computed as a **weighted sum** of the values, where the **weight assigned** to each value is computed by a compatibility function of the **query** with the corresponding **key**.
+ 
+ ## 🔄 Scaled Dot-Product Attention
+ ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/12748752/171082932-d39bfe4b-8ae6-4f93-b6ee-3b8d53e1a4bb.png" width=50%/>
+<br>
+<ins><i><b>(left) Scaled Dot-Product Attention. (right) Multi-Head Attention consists of several attention layers running in parallel.</b></i></ins>.
+</p>
+ 
+ 
+ We call our particular attention **"Scaled Dot-Product Attention"**. 
+ The **input** consists of **queries and keys of dimension** $\Large{\color{Purple}\mathrm{d_k}}$ , and **values of dimension** $\Large{\color{Purple}\mathrm{d_v}}$. We compute the **dot products** of the **query with all keys**, divide each by $\Large{\color{Purple}\mathrm{\sqrt{d_k}}}$, and apply a **softmax function** to obtain the **weights** on the **values**. 
+ 
+ **In practice**, **we compute the attention function on a set of queries simultaneously**, _packed together into_ **a matrix** $\Large{\color{Purple}\mathrm{Q}}$. The **keys** and **values** are _also packed together into_ **matrices** $\Large{\color{Purple}\mathrm{K}}$ and $\Large{\color{Purple}\mathrm{V}}$ . We compute the matrix of outputs as:
+
+$$\Large{\color{Purple} \textrm{Attention(Q, K, V )} = \textrm{softmax} \mathrm{(\frac{QK^{\top}}{\sqrt{d_k}})V}}$$
+ 
+ The two most commonly used attention functions are 
+ 1. **additive attention** and 
+ 2. **dot-product (multiplicative) attention**. 
+ 
+ **Dot-product attention** is identical to our **algorithm**, **except** for the scaling factor of $\Large{\color{Purple} \mathrm{\frac{1}{\sqrt{d_k}}}}$ .
+ 
+ **Additive attention** computes the **compatibility function** using **a feed-forward network** with <ins><b>a single hidden layer</b></ins>. 
+ 
+ While the two are similar in theoretical complexity, **dot-product attention** is much **faster** and **more space-efficient in practice**, since it can be implemented using **highly optimized matrix multiplication code**. 
+ 
+ While for small values of $\Large{\color{Purple}\mathrm{d_k}}$ the two mechanisms perform similarly, **additive attention** _outperforms_ **dot product attention** **without scaling** _for larger values of_ $\Large{\color{Purple}\mathrm{d_k}}$ . We suspect that for large values of $\Large{\color{Purple}\mathrm{d_k}}$ , the **dot products** grow large in **magnitude**, pushing the **softmax function** into regions where it has **extremely small gradients**. To counteract this effect, we scale the dot products by $\Large{\color{Purple} \mathrm{\frac{1}{\sqrt{d_k}}}}$ .
 
 ## ⬛ Self-Attention at a High Level
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
@@ -135,9 +168,11 @@ Finally, since we’re dealing with **matrices**, we can condense steps two thro
 
 An attention function can be described as mapping a query and a set of key-value pairs to an output, where the query, keys, values, and output are all vectors. The output is computed as a weighted sum of the values, where the weight assigned to each value is computed by a compatibility function of the query with the corresponding key.
 
+<p align="center">
 <img src="https://user-images.githubusercontent.com/12748752/171082932-d39bfe4b-8ae6-4f93-b6ee-3b8d53e1a4bb.png" width=50%/>
-
-<p align="center"><ins><i><b>(left) Scaled Dot-Product Attention. (right) Multi-Head Attention consists of several attention layers running in parallel.</b></i></ins>.</p>
+<br>
+<ins><i><b>(left) Scaled Dot-Product Attention. (right) Multi-Head Attention consists of several attention layers running in parallel.</b></i></ins>.
+</p>
 
 
 The paper further refined the **self-attention** layer by adding a mechanism called “**multi-headed**” attention. This improves the performance of the attention layer in **two ways**:
@@ -184,8 +219,11 @@ In the end, **_h_** attention pooling outputs are concatenated and transformed w
 
 This design is called **_multi-head attention_**, where each **_h_** of the  attention pooling outputs is a head. Using **fully-connected layers** to perform **learnable linear transformations**.
 
-<img src="https://user-images.githubusercontent.com/12748752/170055315-b69b2b13-f3a5-44c6-8a6a-6a4655359f80.png" width=60%/>
-<p align="center"><ins><i><b>Multi-head attention, where multiple heads are concatenated then linearly transformed.</b></i></ins></p>
+<p align="center">
+ <img src="https://user-images.githubusercontent.com/12748752/170055315-b69b2b13-f3a5-44c6-8a6a-6a4655359f80.png" width=60%/>
+ <br>
+<ins><i><b>Multi-head attention, where multiple heads are concatenated then linearly transformed.</b></i></ins>
+</p>
 
 ### Model
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
