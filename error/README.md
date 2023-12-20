@@ -76,11 +76,11 @@ As these names imply, you train your model using the _training set_, and you tes
 
 ### 🔲 <ins> L1-Loss function</ins> or <ins>Least-Absolute-Deviations(LAD)</ins> and <ins>Mean-Absolute-Error(MAE)</ins>
 It is used to minimize the error which is the sum of all the absolute differences in between the true value and the predicted value.
-### Math equation for _L1 loss_:
+### ♠️ Math equation for _L1 loss_:
 
 $$\Large \mathrm{\ L1-loss}\mathbf{\ ={\color{Purple} \sum_{i=1}^{n}|y_{true}-y_{pridicted}|} }$$
 
-### Math equation for  _Mean Absolute Error (MAE)_:
+### ♠️ Math equation for  _Mean Absolute Error (MAE)_:
 
 $$\Large \mathrm{\ MAE}\mathbf{\ ={\color{Purple}\frac{1}{n} \sum_{i=1}^{n}|y_{i}-\hat{y_{i}}|}}$$
 
@@ -99,16 +99,21 @@ $$\Large \mathrm{MSE}\mathbf{\ ={\color{Purple}\frac{1}{n} \sum_{i=1}^{n}(y_{i}-
 
 
 
-## Huber loss
+### Huber loss
 ![light](https://user-images.githubusercontent.com/12748752/136802581-e8e0607f-3472-44f7-a8b2-8ba82a0f8070.png)
 **Huber Loss** is often used in _regression_ problems. Compared with _L2 loss_, Huber Loss is _**less sensitive to outliers**_(because if the residual is too large, it is a piecewise function, loss is a linear function of the residual).
 
-<img src="https://latex.codecogs.com/svg.image?\large&space;\mathbf{L\delta&space;(y,f(x))=}&space;\begin{cases}\mathbf{{\color{Purple}\frac{1}{2}(y-f(x))^2}}&&space;\mathbf{for&space;|y-f(x)|\leq&space;\delta&space;,&space;}\\\mathbf{{\color{Purple}\delta|y-f(x)|-\frac{1}{2}\delta&space;^2}}&&space;\mathbf{otherwise.}\end{cases}" title="https://latex.codecogs.com/svg.image?\large \mathbf{L\delta (y,f(x))=} \begin{cases}\mathbf{{\color{Purple}\frac{1}{2}(y-f(x))^2}}& \mathbf{for |y-f(x)|\leq \delta , }\\\mathbf{{\color{Purple}\delta|y-f(x)|-\frac{1}{2}\delta ^2}}& \mathbf{otherwise.}\end{cases}" />
+$$\Large \mathbf{L\delta (y,f(x))=} 
+\begin{cases}
+\mathbf{{\color{Purple}\frac{1}{2}(y-f(x))^2}}& \mathrm{for |y-f(x)|\leq \delta , }\\ 
+\mathbf{{\color{Purple}\delta |y-f(x)|-\frac{1}{2}\delta ^2}}& \mathrm{otherwise.}
+\end{cases}$$
+
 Among them, **&delta;** is a set parameter, **y** represents the real value, and _**f(x)**_ represents the predicted value.
 
 The advantage of this is that when the residual is small, the loss function is L2 norm, and when the residual is large, it is a linear function of L1 norm
 
-## Hinge Loss
+### Hinge Loss
 
 Hinge loss is often used for binary classification problems, such as ground true: t = 1 or -1, predicted value y = wx + b
 
