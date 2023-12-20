@@ -42,12 +42,12 @@ The cost function is calculated as an average of loss functions. The loss functi
 ### ⬛ Loss-Cost/Error:
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 When performing **supervised training**, a neural network’s _actual output_ must be compared against the _ideal output_ specified in the training data.<ins> _The difference between actual and ideal output is the error of the neural network_</ins>. Error calculation occurs at two levels. 
-### 🔲 Local Error
+### 🔲 <ins>Local Error</ins>
 First , there is the **_local error_**. This is the difference between the _**actual output**_ of _one individual neuron_ and the **_ideal output_** that was expected. The local error is calculated using an **error function**.
-### 🔲 Global Error
+### 🔲 <ins>Global Error</ins>
 The local errors are aggregated together to form a **_global error_**. The global error is the measurement of how well a neural network performs to the entire training set. There are several different means by which a global error can be calculated. The global error calculation methods discussed in this chapter are listed below.
 
-### 🔲 _Generalization Error_ (or _out-of-sample error_) 
+### 🔲 <ins>Generalization Error</ins> or <ins>out-of-sample Error</ins> 
 ![light](https://user-images.githubusercontent.com/12748752/136802581-e8e0607f-3472-44f7-a8b2-8ba82a0f8070.png)
 The only way to know how well a model will generalize to new cases is to actually try it out on new cases by split your data into two sets: 
 1) **Training set** 
