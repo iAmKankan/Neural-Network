@@ -55,7 +55,7 @@ The only way to know how well a model will generalize to new cases is to actuall
 
 As these names imply, you train your model using the _training set_, and you test it using the _test set_. The error rate on new cases is called the **_generalization error_** (or **out-of-sample error**), and by evaluating your model on the test set, you get an estimate of this error. _This value tells you how well your model will perform on instances it has never seen before_. 
 
-> #### If the training error is low (i.e., your model makes few mistakes on the training set) but the generalization error is high, it means that your model is _overfitting_ the training data.
+> ### If the training error is low (i.e., your model makes few mistakes on the training set) but the generalization error is high, it means that your model is _overfitting_ the training data.
 
    
 <p align="center">
