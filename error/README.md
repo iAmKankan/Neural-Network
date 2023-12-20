@@ -49,7 +49,9 @@ The local errors are aggregated together to form a **_global error_**. The globa
 
 ### 🔲 _Generalization Error_ (or _out-of-sample error_) 
 ![light](https://user-images.githubusercontent.com/12748752/136802581-e8e0607f-3472-44f7-a8b2-8ba82a0f8070.png)
-The only way to know how well a model will generalize to new cases is to actually try it out on new cases by split your data into two sets: **_1) the training set_** and **_2) the test set_**. 
+The only way to know how well a model will generalize to new cases is to actually try it out on new cases by split your data into two sets: 
+1) **Training set** and
+2) **Test set**. 
 
 As these names imply, you train your model using the _training set_, and you test it using the _test set_. The error rate on new cases is called the **_generalization error_** (or **out-of-sample error**), and by evaluating your model on the test set, you get an estimate of this error. _This value tells you how well your model will perform on instances it has never seen before_. 
 
@@ -66,7 +68,22 @@ As these names imply, you train your model using the _training set_, and you tes
 ### ⬛ Regression Losses:
 ![light](https://user-images.githubusercontent.com/12748752/136802581-e8e0607f-3472-44f7-a8b2-8ba82a0f8070.png)
 
-### 🔲 1. <ins> L2-Loss</ins> or <ins>Least Square Errors(LS)</ins> and <ins>Mean Square Error(MSE) </ins>
+### L1 and L2 loss or Mean Absolute Error and Mean Square Error
+**L1** and **L2** are two common loss functions in **Machine Learning** which are mainly used to **Minimize the Error**.
+   1) $\large{\color{Purple}\textrm{L1-Loss function and Mean-Absolute-Error(MAE)}}$
+   2) $\large{\color{Purple}\textrm{L2 loss function or Mean Square Error (MSE)}}$
+
+### L1- _Loss function_ or _Least Absolute Deviations_(LAD) and _Mean Absolute Error (MAE)_
+It is used to minimize the error which is the sum of all the absolute differences in between the true value and the predicted value.
+### Math equation for _L1 loss_:
+
+$$\Large \mathrm{\ L1-loss}\mathbf{\ ={\color{Purple} \sum_{i=1}^{n}|y_{true}-y_{pridicted}|} }$$
+
+### Math equation for  _Mean Absolute Error (MAE)_:
+
+$$\Large \mathrm{\ MAE}\mathbf{\ ={\color{Purple}\frac{1}{n} \sum_{i=1}^{n}|y_{i}-\hat{y_{i}}|}}$$
+
+### 🔲 2. <ins> L2-Loss</ins> or <ins>Least Square Errors(LS)</ins> and <ins>Mean Square Error(MSE) </ins>
 It is also used to minimize the error which is the sum of all the squared differences in between the true value and the pedicted value.
 ### ♠️ <ins>Math equation for L2-Loss:</ins>
 
@@ -79,21 +96,6 @@ $$\Large \mathrm{MSE}\mathbf{\ ={\color{Purple}\frac{1}{n} \sum_{i=1}^{n}(y_{i}-
 ### ♠️ <ins>Disadvantages:</ins>
 **The disadvantage** of the **L2 norm** is that when there are outliers, these points will account for the main component of the loss. For example, the true value is 1, the prediction is 10 times, the prediction value is 1000 once, and the prediction value of the other times is about 1, obviously the loss value is mainly dominated by 1000.
 
-
-### L1 and L2 loss or Mean Absolute Error and Mean Square Error
-*L1* and *L2* are two common loss functions in machine learning which are mainly used to minimize the error.
-   1) **L1 loss function and Mean Absolute Error (MAE)**.
-   2) **L2 loss function or Mean Square Error (MSE)**.
-
-## L1- _Loss function_ or _Least Absolute Deviations_(LAD) and _Mean Absolute Error (MAE)_
-It is used to minimize the error which is the sum of all the absolute differences in between the true value and the predicted value.
-### Math equation for _L1 loss_:
-
-$$\Large \mathrm{\ L1-loss}\mathbf{\ ={\color{Purple} \sum_{i=1}^{n}|y_{true}-y_{pridicted}|} }$$
-
-### Math equation for  _Mean Absolute Error (MAE)_:
-
-$$\Large \mathrm{\ MAE}\mathbf{\ ={\color{Purple}\frac{1}{n} \sum_{i=1}^{n}|y_{i}-\hat{y_{i}}|}}$$
 
 
 ## Huber loss
