@@ -48,7 +48,6 @@ First , there is the **_local error_**. This is the difference between the _**ac
 The local errors are aggregated together to form a **_global error_**. The global error is the measurement of how well a neural network performs to the entire training set. There are several different means by which a global error can be calculated. The global error calculation methods discussed in this chapter are listed below.
 
 ### 🔲 <ins>Generalization Error</ins> or <ins>out-of-sample Error</ins> 
-![light](https://user-images.githubusercontent.com/12748752/136802581-e8e0607f-3472-44f7-a8b2-8ba82a0f8070.png)
 The only way to know how well a model will generalize to new cases is to actually try it out on new cases by split your data into two sets: 
 1) **Training set** 
 2) **Test set**
@@ -58,6 +57,7 @@ As these names imply, you train your model using the _training set_, and you tes
 > ### If the training error is low (i.e., your model makes few mistakes on the training set) but the generalization error is high, it means that your model is _overfitting_ the training data.
 
 ### 🔲 Regression and Classification Errors
+![light](https://user-images.githubusercontent.com/12748752/136802581-e8e0607f-3472-44f7-a8b2-8ba82a0f8070.png)
 
 <p align="center">
  <img src="https://github.com/iAmKankan/Neural-Network/assets/12748752/ccb39acf-ed8d-4523-9075-488bd163fc61" width=60%/>
@@ -66,7 +66,7 @@ As these names imply, you train your model using the _training set_, and you tes
 </p>
 
 
-### ⬛ Regression Losses:
+### ⬛ Regression Errors:
 ![light](https://user-images.githubusercontent.com/12748752/136802581-e8e0607f-3472-44f7-a8b2-8ba82a0f8070.png)
 
 ### 🔲 <ins>L1 and L2 loss</ins> or <ins>Mean-Absolute-Error and Mean-Squared-Error</ins>
