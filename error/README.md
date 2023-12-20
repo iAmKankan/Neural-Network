@@ -14,7 +14,7 @@
 
 #### ◼️ [References](#references)
 
-## Loss Functions 
+### ⬛ Loss Functions 
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 **Loss function** is a method of evaluating **_how well your algorithm models your data set_**. Better the prediction is lesser the loss you will get.
 
@@ -39,15 +39,15 @@ The cost function is calculated as an average of loss functions. The loss functi
 * One of the loss function used in SVM, the **hinge loss**
 * **SVM cost function**
 
-## Loss-Cost/Error:
+### ⬛ Loss-Cost/Error:
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 When performing **supervised training**, a neural network’s _actual output_ must be compared against the _ideal output_ specified in the training data.<ins> _The difference between actual and ideal output is the error of the neural network_</ins>. Error calculation occurs at two levels. 
-#### Local Error
+### 🔲 Local Error
 First , there is the **_local error_**. This is the difference between the _**actual output**_ of _one individual neuron_ and the **_ideal output_** that was expected. The local error is calculated using an **error function**.
-#### Global Error
+### 🔲 Global Error
 The local errors are aggregated together to form a **_global error_**. The global error is the measurement of how well a neural network performs to the entire training set. There are several different means by which a global error can be calculated. The global error calculation methods discussed in this chapter are listed below.
 
-###  _Generalization Error_ (or _out-of-sample error_) 
+### 🔲 _Generalization Error_ (or _out-of-sample error_) 
 ![light](https://user-images.githubusercontent.com/12748752/136802581-e8e0607f-3472-44f7-a8b2-8ba82a0f8070.png)
 The only way to know how well a model will generalize to new cases is to actually try it out on new cases by split your data into two sets: **_1) the training set_** and **_2) the test set_**. 
 
@@ -55,11 +55,14 @@ As these names imply, you train your model using the _training set_, and you tes
 
 > #### If the training error is low (i.e., your model makes few mistakes on the training set) but the generalization error is high, it means that your model is _overfitting_ the training data.
 
+<div align="center">
+   
 |                     **Classification**                    |                                          **Regression**                                         |
 |:-----------------------------------------------------:|:-------------------------------------------------------------------------------------------:|
 | **_Multiclass Classification:_**<br>Catagorical Crossentrophy            | **_Continuous Values:_**<br>Mean Squired Error<br>Mean absolute Error<br>Mean Squred Logggd Error |
 | **_Binary Classification:_**<br>Binary Cross Entrophy<br>Squred Hinge | **_Discreate Values:_**<br>Poisson                                                 |
 
+</div>
 
 ## L1 and L2 loss or Mean Absolute Error and Mean Square Error
 ![light](https://user-images.githubusercontent.com/12748752/136802581-e8e0607f-3472-44f7-a8b2-8ba82a0f8070.png)
