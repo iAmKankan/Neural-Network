@@ -32,7 +32,7 @@ In other words, the terms cost and loss functions almost refer to the same meani
 The cost function is calculated as an average of loss functions. The loss function is a value that is calculated at every instance. So, for a single training cycle loss is calculated numerous times, but the cost function is only calculated once.
 
 #### Example 1:
-* One of the loss function used in Linear Regression, the **square loss**
+* One of the loss function used in Linear Regression, the **Square loss**
 * One of the cost function used in Linear Regression, the **Mean Squared Error**
 
 #### Example 2:
@@ -68,11 +68,11 @@ As these names imply, you train your model using the _training set_, and you tes
 ### ⬛ Regression Losses:
 ![light](https://user-images.githubusercontent.com/12748752/136802581-e8e0607f-3472-44f7-a8b2-8ba82a0f8070.png)
 
-### 🔲 <ins>L1 and L2 loss</ins> or <ins>Mean-Absolute-Error and Mean-Square-Error</ins>
+### 🔲 <ins>L1 and L2 loss</ins> or <ins>Mean-Absolute-Error and Mean-Squared-Error</ins>
 **L1** and **L2** are two common loss functions in **Machine Learning** which are mainly used to **Minimize the Error**. Are following-
 
   1) $\large{\color{Purple}\textrm{L1-Loss function and Mean-Absolute-Error(MAE)}}$
-  2) $\large{\color{Purple}\textrm{L2-loss function or Mean-Square-Error(MSE)}}$
+  2) $\large{\color{Purple}\textrm{L2-loss function or Mean-Squared-Error(MSE)}}$
 
 ### 🔲 1. <ins> L1-Loss function</ins> or <ins>Least-Absolute-Deviations(LAD)</ins> and <ins>Mean-Absolute-Error(MAE)</ins>
 It is used to minimize the error which is the sum of all the absolute differences in between the true value and the predicted value.
@@ -84,13 +84,13 @@ $$\Large \mathrm{\ L1-loss}\mathbf{\ ={\color{Purple} \sum_{i=1}^{n}|y_{true}-y_
 
 $$\Large \mathrm{\ MAE}\mathbf{\ ={\color{Purple}\frac{1}{n} \sum_{i=1}^{n}|y_{i}-\hat{y_{i}}|}}$$
 
-### 🔲 2. <ins> L2-Loss</ins> or <ins>Least Square Errors(LS)</ins> and <ins>Mean Square Error(MSE) </ins>
+### 🔲 2. <ins> L2-Loss</ins> or <ins>Least Squared Errors(LS)</ins> and <ins>Mean Squared Error(MSE) </ins>
 It is also used to minimize the error which is the sum of all the squared differences in between the true value and the pedicted value.
 ### ♠️ <ins>Math equation for L2-Loss:</ins>
 
 $$\Large \mathrm{L2-loss}\mathbf{\ ={\color{Purple} \sum_{i=1}^{n}(y_{true}-y_{pridicted})^2}}$$
 
-### ♠️ <ins>Math equation for  Mean-Square-Error(MSE):</ins>
+### ♠️ <ins>Math equation for  Mean-Squared-Error(MSE):</ins>
 
 $$\Large \mathrm{MSE}\mathbf{\ ={\color{Purple}\frac{1}{n} \sum_{i=1}^{n}(y_{i}-\hat{y_i})^2}}$$
 
