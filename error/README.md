@@ -66,7 +66,7 @@ As these names imply, you train your model using the _training set_, and you tes
 ### ⬛ Regression Losses:
 ![light](https://user-images.githubusercontent.com/12748752/136802581-e8e0607f-3472-44f7-a8b2-8ba82a0f8070.png)
 
-### 🔲 1. <ins>L2- _Loss Function_ or _Least square errors_(LS) and _Mean Square Error (MSE)_ </ins>
+### 🔲 1. <ins> L2-Loss</ins> or <ins>Least Square Errors(LS)</ins> and <ins>Mean Square Error(MSE) </ins>
 It is also used to minimize the error which is the sum of all the squared differences in between the true value and the pedicted value.
 ### ♠️ Math equation for _L2 loss_:
 <img src="https://latex.codecogs.com/svg.image?\large&space;&space;\mathrm{L2-loss}\mathbf{\&space;={\color{Purple}&space;\sum_{i=1}^{n}(y_{true}-y_{pridicted})^2}" title="https://latex.codecogs.com/svg.image?\large \mathrm{L2-loss}\mathbf{\ ={\color{Purple} \sum_{i=1}^{n}(y_{true}-y_{pridicted})^2}" />
