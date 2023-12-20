@@ -56,10 +56,10 @@ As these names imply, you train your model using the _training set_, and you tes
 > #### If the training error is low (i.e., your model makes few mistakes on the training set) but the generalization error is high, it means that your model is _overfitting_ the training data.
 
    
-|                     **Classification**                    |                                          **Regression**                                         |
-|:-----------------------------------------------------:|:-------------------------------------------------------------------------------------------:|
-| **_Multiclass Classification:_**<br>Catagorical Crossentrophy            | **_Continuous Values:_**<br>Mean Squired Error<br>Mean absolute Error<br>Mean Squred Logggd Error |
-| **_Binary Classification:_**<br>Binary Cross Entrophy<br>Squred Hinge | **_Discreate Values:_**<br>Poisson                                                 |
+<p align="center">
+ <img src="https://github.com/iAmKankan/Neural-Network/assets/12748752/ccb39acf-ed8d-4523-9075-488bd163fc61" width=60%/>
+<ins><b> Different loss</b></ins>
+</p>
 
 
 
