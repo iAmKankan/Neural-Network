@@ -76,11 +76,11 @@ As these names imply, you train your model using the _training set_, and you tes
 
 ### 🔲 <ins> L1-Loss function</ins> or <ins>Least-Absolute-Deviations(LAD)</ins> and <ins>Mean-Absolute-Error(MAE)</ins>
 It is used to minimize the error which is the sum of all the absolute differences in between the true value and the predicted value.
-### ♠️ Math equation for _L1 loss_:
+### ♠️ <ins>Math equation for L1-Loss:</ins>
 
 $$\Large \mathrm{\ L1-loss}\mathbf{\ ={\color{Purple} \sum_{i=1}^{n}|y_{true}-y_{pridicted}|} }$$
 
-### ♠️ Math equation for  _Mean Absolute Error (MAE)_:
+### ♠️ <ins>Math equation for Mean-Absolute-Error(MAE):</ins>
 
 $$\Large \mathrm{\ MAE}\mathbf{\ ={\color{Purple}\frac{1}{n} \sum_{i=1}^{n}|y_{i}-\hat{y_{i}}|}}$$
 
