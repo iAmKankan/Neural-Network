@@ -50,8 +50,8 @@ The local errors are aggregated together to form a **_global error_**. The globa
 ### 🔲 _Generalization Error_ (or _out-of-sample error_) 
 ![light](https://user-images.githubusercontent.com/12748752/136802581-e8e0607f-3472-44f7-a8b2-8ba82a0f8070.png)
 The only way to know how well a model will generalize to new cases is to actually try it out on new cases by split your data into two sets: 
-1) **Training set** and
-2) **Test set**. 
+1) **Training set** 
+2) **Test set**
 
 As these names imply, you train your model using the _training set_, and you test it using the _test set_. The error rate on new cases is called the **_generalization error_** (or **out-of-sample error**), and by evaluating your model on the test set, you get an estimate of this error. _This value tells you how well your model will perform on instances it has never seen before_. 
 
