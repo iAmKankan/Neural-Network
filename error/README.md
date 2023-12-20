@@ -68,11 +68,13 @@ As these names imply, you train your model using the _training set_, and you tes
 
 ### 🔲 1. <ins> L2-Loss</ins> or <ins>Least Square Errors(LS)</ins> and <ins>Mean Square Error(MSE) </ins>
 It is also used to minimize the error which is the sum of all the squared differences in between the true value and the pedicted value.
-### ♠️ Math equation for _L2 loss_:
-<img src="https://latex.codecogs.com/svg.image?\large&space;&space;\mathrm{L2-loss}\mathbf{\&space;={\color{Purple}&space;\sum_{i=1}^{n}(y_{true}-y_{pridicted})^2}" title="https://latex.codecogs.com/svg.image?\large \mathrm{L2-loss}\mathbf{\ ={\color{Purple} \sum_{i=1}^{n}(y_{true}-y_{pridicted})^2}" />
+### ♠️ <ins>Math equation for L2-Loss:</ins>
 
-### ♠️ Math equation for  _Mean Square Error (MSE)_:
-<img src="https://latex.codecogs.com/svg.image?\large&space;&space;\mathrm{MSE}\mathbf{\&space;={\color{Purple}\frac{1}{n}&space;\sum_{i=1}^{n}(y_{i}-\hat{y_i})^2}" title="https://latex.codecogs.com/svg.image?\large \mathrm{MSE}\mathbf{\ ={\color{Purple}\frac{1}{n} \sum_{i=1}^{n}(y_{i}-\hat{y_i})^2}" />
+$$\Large \mathrm{L2-loss}\mathbf{\ ={\color{Purple} \sum_{i=1}^{n}(y_{true}-y_{pridicted})^2}$$
+
+### ♠️ <ins>Math equation for  Mean-Square-Error(MSE):</ins>
+
+$$\Large \mathrm{MSE}\mathbf{\ ={\color{Purple}\frac{1}{n} \sum_{i=1}^{n}(y_{i}-\hat{y_i})^2}$$
 
 ### ♠️ <ins>Disadvantages:</ins>
 **The disadvantage** of the **L2 norm** is that when there are outliers, these points will account for the main component of the loss. For example, the true value is 1, the prediction is 10 times, the prediction value is 1000 once, and the prediction value of the other times is about 1, obviously the loss value is mainly dominated by 1000.
