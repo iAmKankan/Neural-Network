@@ -75,7 +75,7 @@ $$\Large \mathrm{\ L1-loss}\mathbf{\ ={\color{Purple} \sum_{i=1}^{n}|y_{true}-y_
 
 ### Math equation for  _Mean Absolute Error (MAE)_:
 
-$$\large \mathrm{\ MAE}\mathbf{\ ={\color{Purple}\frac{1}{n} \sum_{i=1}^{n}|y_{i}-\hat{y_{i}}|}}$$
+$$\Large \mathrm{\ MAE}\mathbf{\ ={\color{Purple}\frac{1}{n} \sum_{i=1}^{n}|y_{i}-\hat{y_{i}}|}}$$
 
 ## L2- _Loss Function_ or _Least square errors_(LS) and _Mean Square Error (MSE)_
 It is also used to minimize the error which is the sum of all the squared differences in between the true value and the pedicted value.
