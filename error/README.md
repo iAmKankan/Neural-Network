@@ -56,7 +56,7 @@ As these names imply, you train your model using the _training set_, and you tes
 
 > ### If the training error is low (i.e., your model makes few mistakes on the training set) but the generalization error is high, it means that your model is _overfitting_ the training data.
 
-### 🔲 Different Regression and Classification Errors
+### ⬛ Different Regression and Classification Errors
 ![light](https://user-images.githubusercontent.com/12748752/136802581-e8e0607f-3472-44f7-a8b2-8ba82a0f8070.png)
 
 <p align="center">
