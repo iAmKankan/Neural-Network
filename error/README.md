@@ -58,6 +58,7 @@ As these names imply, you train your model using the _training set_, and you tes
    
 <p align="center">
  <img src="https://github.com/iAmKankan/Neural-Network/assets/12748752/ccb39acf-ed8d-4523-9075-488bd163fc61" width=60%/>
+   <br>
 <ins><b> Different loss</b></ins>
 </p>
 
