@@ -70,10 +70,12 @@ As these names imply, you train your model using the _training set_, and you tes
 ## L1- _Loss function_ or _Least Absolute Deviations_(LAD) and _Mean Absolute Error (MAE)_
 It is used to minimize the error which is the sum of all the absolute differences in between the true value and the predicted value.
 ### Math equation for _L1 loss_:
-<img src="https://latex.codecogs.com/svg.image?\large&space;\mathrm{\&space;L1-loss}\mathbf{\&space;={\color{Purple}&space;\sum_{i=1}^{n}|y_{true}-y_{pridicted}|}" title="https://latex.codecogs.com/svg.image?\large \mathrm{\ L1-loss}\mathbf{\ ={\color{Purple} \sum_{i=1}^{n}|y_{true}-y_{pridicted}|}" />
+
+$$\Large \mathrm{\ L1-loss}\mathbf{\ ={\color{Purple} \sum_{i=1}^{n}|y_{true}-y_{pridicted}|} }$$
 
 ### Math equation for  _Mean Absolute Error (MAE)_:
-<img src="https://latex.codecogs.com/svg.image?\large&space;\mathrm{\&space;MAE}\mathbf{\&space;={\color{Purple}\frac{1}{n}&space;\sum_{i=1}^{n}|y_{i}-\hat{y_{i}}|}" title="https://latex.codecogs.com/svg.image?\large \mathrm{\ MAE}\mathbf{\ ={\color{Purple}\frac{1}{n} \sum_{i=1}^{n}|y_{i}-\hat{y_{i}}|}" />
+
+$$\large \mathrm{\ MAE}\mathbf{\ ={\color{Purple}\frac{1}{n} \sum_{i=1}^{n}|y_{i}-\hat{y_{i}}|}}$$
 
 ## L2- _Loss Function_ or _Least square errors_(LS) and _Mean Square Error (MSE)_
 It is also used to minimize the error which is the sum of all the squared differences in between the true value and the pedicted value.
