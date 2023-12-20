@@ -68,7 +68,7 @@ As these names imply, you train your model using the _training set_, and you tes
 ### ⬛ Regression Losses:
 ![light](https://user-images.githubusercontent.com/12748752/136802581-e8e0607f-3472-44f7-a8b2-8ba82a0f8070.png)
 
-### 🔲 L1 and L2 loss or Mean Absolute Error and Mean Square Error
+### 🔲 <ins>L1 and L2 loss</ins> or <ins>Mean-Absolute-Error and Mean-Square-Error</ins>
 **L1** and **L2** are two common loss functions in **Machine Learning** which are mainly used to **Minimize the Error**. Are following-
 
   1) $\large{\color{Purple}\textrm{L1-Loss function and Mean-Absolute-Error(MAE)}}$
