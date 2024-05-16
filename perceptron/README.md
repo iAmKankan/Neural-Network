@@ -71,6 +71,93 @@ $$\Large{\color{Purple}\begin{matrix*}[l]
 
 $$\large{\color{Purple}Here \hspace{10pt} (-\eta \frac{\partial e}{\partial w}) \ = \  \Delta W, \ \ \ From \ the\ above \ \ (W_j+\Delta W_j) }$$
 
+### Neural Network error Update Weights
+![light](https://user-images.githubusercontent.com/12748752/136802581-e8e0607f-3472-44f7-a8b2-8ba82a0f8070.png)
+* Suppose we have a **Neural Network** with **3 input** layers and **2 hidden** layers and we are using **sigmoid** as a **activation function** inside the **hidden layer** as well as in **final weight calculation**.
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/12748752/138762029-20fc6d46-e47c-4131-b1d3-9ce33a3595af.png" width=50%/>
+</p>
+
+* **Input buffers**(that's why not having **Bias**, **Input neuron** would have **Bias**), **Hidden layers**, **Output Neuron** are like
+
+$$\Large{\color{Purple}\begin{matrix*}[l]
+ \textrm{Input Buffer}  &=& X_1, X_2, X_3 \hspace{10pt} \textrm{ (No Bias, Input Neuron would have Bias)} \\
+\textrm{W} &=& W_{i j}^{(z)} \hspace{10pt} \textrm{(i= the  destination, j= the source, z = location number)}\\
+\textrm{Bias} &=& b_i \\
+\textrm{Weight Summation} &=& Z_i^{(z)} \hspace{10pt} \textrm{(i= Hidden or output neuron number, z = location)}\\
+\widehat{Y} &=& \textrm{\ Final output}\\
+ \end{matrix*}}$$
+  
+* Hidden Layer weight calculation
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/12748752/138760860-1056cc68-b17d-4c8e-abd8-1d8e35ad72f7.png" width=50%/>
+</p>
+
+* Final layer weight calculation
+ 
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/12748752/138760858-246fe6ec-c1f8-4807-821b-abeb18e08493.png" width=50%/>
+</p>
+* Weight and Bias update rule-
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/12748752/138770072-79bdc601-ef95-4d6e-8bfb-03b6fa95f821.png" width=50%>
+</p>
+
+### Matrix representation of above diagrams
+![light](https://user-images.githubusercontent.com/12748752/136802581-e8e0607f-3472-44f7-a8b2-8ba82a0f8070.png)
+* Calculationin **Hidden layers**
+
+$$\Large{\color{Purple} \begin{bmatrix}
+W_{11}&W_{12} & W_{13} \\
+W_{21}& W_{22} & W_{23}
+\end{bmatrix}\_{(2 \times 3)}*
+\begin{bmatrix}
+X_{1} \\
+X_{2} \\
+X_{3} \\
+\end{bmatrix}\_{(3 \times 1)} + 
+\begin{bmatrix}
+b_{1} \\
+b_{2} \\
+\end{bmatrix} = 
+\begin{bmatrix} 
+Z_{1} \\
+Z_{2} \\
+\end{bmatrix} \to 
+\begin{bmatrix} 
+activation(Z_{1}) \\ 
+activation(Z_{2}) \\
+\end{bmatrix}\to 
+\begin{bmatrix} 
+a_{1} \\ 
+a_{2} \\
+\end{bmatrix} \hspace{10pt} or \hspace{10pt} \hat{Y} }$$
+
+
+* Calculation in **Output layer**
+
+$$\Large{\color{Purple} \begin{bmatrix}
+W_{11}& W_{12} \\
+\end{bmatrix}\_{(1 \times 2)}*
+\begin{bmatrix}
+a_{1} \\
+a_{2} \end{bmatrix}\_{(2 \times 1)} +
+\begin{bmatrix}
+b_{1} \\
+\end{bmatrix} =
+ \begin{bmatrix}
+Z_{1} \\
+\end{bmatrix}\to
+\begin{bmatrix}
+activation(Z_{1}) \\
+\end{bmatrix} \to
+\begin{bmatrix}
+a_{1} \\
+\end{bmatrix} \hspace{10pt} or \hspace{10pt} \hat{Y}}$$
+
+### Practical
 * **Scikit-Learn** provides a **Perceptron** class that implements a single **TLU** network. 
 * It can be used pretty much as you would expect—for example, on the **iris** dataset 
 ```python
