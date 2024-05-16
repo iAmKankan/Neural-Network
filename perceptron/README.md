@@ -125,7 +125,6 @@ $$\Large{\color{Purple} W = W - \eta\dfrac{\partial e}{\partial W}}$$
 
 
 ### Matrix representation of above diagrams
-![light](https://user-images.githubusercontent.com/12748752/136802581-e8e0607f-3472-44f7-a8b2-8ba82a0f8070.png)
 
 * Calculationin **Hidden layers**
 
@@ -178,6 +177,8 @@ a_{1} \\
 \end{bmatrix} \hspace{10pt} or \hspace{10pt} \hat{Y}}$$
 
 ### Practical
+![light](https://user-images.githubusercontent.com/12748752/136802581-e8e0607f-3472-44f7-a8b2-8ba82a0f8070.png)
+
 * **Scikit-Learn** provides a **Perceptron** class that implements a single **TLU** network. 
 * It can be used pretty much as you would expect—for example, on the **iris** dataset 
 ```python
@@ -201,10 +202,11 @@ y_pred = per_clf.predict([[2, 0.5]])
 * The layers close to the input layer are usually called the **lower layers**, and the ones close to the outputs are usually called the **upper layers**. 
 * Every layer except the output layer includes **a bias neuron** and is fully connected to the next layer.
 
-> #### The signal flows only in one direction (from the inputs to the outputs), so this architecture is an example of a **Feedforward Neural Network (FNN)**.
+#### The signal flows only in one direction (from the inputs to the outputs), so this architecture is an example of a **Feedforward Neural Network (FNN)**.
 
-<img src="https://user-images.githubusercontent.com/12748752/143045465-2fe26cb7-48ea-4590-b381-24215f014004.png" width=30% />
-
+<p align="center">
+ <img src="https://user-images.githubusercontent.com/12748752/143045465-2fe26cb7-48ea-4590-b381-24215f014004.png" width=30% />
+</p>
 
 > #### When an ANN contains a deep stack of hidden layers, it is called a Deep Neural Network (DNN).
 
