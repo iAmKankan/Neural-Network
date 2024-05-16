@@ -24,16 +24,15 @@
 ### _References_
 * [Bibliography](https://github.com/iAmKankan/Neural-Network/blob/main/multilayer-perceptrons.md#bibliography)
 
-## The Perceptron
+### ⬛ The Perceptron
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
-* The Perceptron is one of the simplest ANN architectures, invented in 1957 by Frank Rosenblatt. 
+* The Perceptron is one of the simplest **ANN** architectures, invented in 1957 by Frank Rosenblatt. 
 * It is based on a slightly different artificial neuron called a **Threshold Logic Unit (TLU)**, or sometimes a **Linear Threshold Unit (LTU)**: the inputs and output are now numbers (instead of binary on/off values) and each input connection is associated with a weight.
-* A single TLU can be used for simple linear binary classification. 
-
-> #### It computes a linear combination of the inputs and if the result exceeds a threshold, it outputs the positive class or else outputs the negative class (just like a Logistic Regression classifier or a linear SVM).
+* A single **TLU** can be used for simple **linear binary classification**. 
+* It computes a **linear combination** of the **inputs** and if the result exceeds a **threshold**, it **outputs** the **positive class** else it outputs the **negative class** (just like a **Logistic Regression classifier** or a **linear SVM**).
 
 <p align="center">
- <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/ArtificialNeuronModel_english.png/1024px-ArtificialNeuronModel_english.png" width=50%> 
+ <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/ArtificialNeuronModel_english.png/1024px-ArtificialNeuronModel_english.png" width=60%> 
 </p>
 
 ### Training Perceptron
