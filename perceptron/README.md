@@ -79,7 +79,7 @@ $$\large{\color{Purple}Here \hspace{10pt} (-\eta \frac{\partial e}{\partial w}) 
   <img src="https://user-images.githubusercontent.com/12748752/138762029-20fc6d46-e47c-4131-b1d3-9ce33a3595af.png" width=50%/>
 </p>
 
-* **Input buffers**(that's why not having **Bias**, **Input neuron** would have **Bias**), **Hidden layers**, **Output Neuron** are like
+#### Input buffers(that's why not having  Bias,  Input neuron  would have  Bias),  Hidden layers,  Output Neuron are like
 
 $$\Large{\color{Purple}\begin{matrix*}[l]
  \textrm{Input Buffer}  &=& X_1, X_2, X_3 \hspace{10pt} \textrm{ (No Bias, Input Neuron would have Bias)} \\
@@ -89,7 +89,7 @@ $$\Large{\color{Purple}\begin{matrix*}[l]
 \widehat{Y} &=& \textrm{\ Final output}\\
  \end{matrix*}}$$
   
-* **Hidden Layer** weight calculation:
+#### Hidden Layer weight calculation:
 
 $$\Large{\color{Purple} \begin{matrix*}[l]
 \textrm{Hidden Layer (1)} & &\\
@@ -100,16 +100,29 @@ $$\Large{\color{Purple} \begin{matrix*}[l]
 & a_2^{(1)} &= \sigma(Z_2^{(1)})\\
 \end{matrix*}}$$
 
-* **Final layer** weight calculation
- 
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/12748752/138760858-246fe6ec-c1f8-4807-821b-abeb18e08493.png" width=50%/>
-</p>
+#### Final layer weight calculation
+$$\Large{\color{Purple} \begin{matrix*}[l]
+\textrm{Final Output Layer} & &\\
+& Z_1^{(2)} &= W_{11}^{(2)} a_1^{(1)} + W_{12}^{(2)} a_2^{(1)} +  W_{13}^{(2)} X_3 +  b_{1}^{(2)}\\
+& a_1^{(2)} &= \sigma(Z_1^{(2)}) \rightarrow \hat{Y}\\
+\end{matrix*}}$$
 
-* Weight and Bias update rule-
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/12748752/138770072-79bdc601-ef95-4d6e-8bfb-03b6fa95f821.png" width=50%>
-</p>
+#### Weight and Bias update rule-
+$$\Large{\color{Purple} \textrm{Weight Update Rule (general)}}$$
+
+$$\Large{\color{Purple} \begin{Bmatrix*}[l]
+W &=& W + \Delta W &\hspace{35pt}& b &=& b + \Delta b\\ 
+\Delta W &=& - \eta\dfrac{\partial e}{\partial W} &\hspace{35pt}& \Delta b &=& - \eta\dfrac{\partial e}{\partial b}\\ 
+\end{Bmatrix*}
+\large\begin{matrix}
+\Delta W\\
+\Delta b\\
+\downarrow\\
+\textrm{small}\\
+\end{matrix}}$$
+
+$$\Large{\color{Purple} W = W - \eta\dfrac{\partial e}{\partial W}}$$
+
 
 ### Matrix representation of above diagrams
 ![light](https://user-images.githubusercontent.com/12748752/136802581-e8e0607f-3472-44f7-a8b2-8ba82a0f8070.png)
