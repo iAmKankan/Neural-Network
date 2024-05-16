@@ -36,12 +36,12 @@
  <br>  <ins><b><i>Perceptron </i></b></ins>
 </p>
 
-### 🔲 Training for Perceptron
+### 🔲 Training a Perceptron
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 * The **Perceptron** training algorithm proposed by **Frank Rosenblatt** was inspired by **Hebb’s** rule.
 * **Donald Hebb's rule** suggested that- **"When a biological neuron often triggers another neuron, the connection between these two neurons grows stronger"**.
 
-$$\Large{\color{purple} W_{i,j}^{(\textrm{Next Step})} = w_{i,j} + \eta(y_j - \hat{y_j})x_i}$$
+$$\Large{\color{purple} w_{i,j}^{(\textrm{Next Step})} = w_{i,j} + \eta(y_j - \hat{y_j})x_i}$$
 
 #### Where: 
 $$\Large{\color{Purple}\begin{matrix*}[l]
