@@ -89,17 +89,23 @@ $$\Large{\color{Purple}\begin{matrix*}[l]
 \widehat{Y} &=& \textrm{\ Final output}\\
  \end{matrix*}}$$
   
-* Hidden Layer weight calculation
+* **Hidden Layer** weight calculation:
 
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/12748752/138760860-1056cc68-b17d-4c8e-abd8-1d8e35ad72f7.png" width=50%/>
-</p>
+$$\Large{\color{Purple} \begin{matrix*}[l]
+\textrm{Hidden Layer (1)} & &\\
+& Z_1^{(1)} &= W_{11}^{(1)} X_1 + W_{12}^{(1)} X_2 +  W_{13}^{(1)} X_3 +  b_{1}^{(1)}\\
+& a_1^{(1)} &= \sigma(Z_1^{(1)})\\
+\textrm{Hidden Layer (2)} & &\\
+& Z_2^{(1)} &= W_{21}^{(1)} X_1 + W_{22}^{(1)} X_2 +  W_{23}^{(1)} X_3 +  b_{2}^{(1)}\\
+& a_2^{(1)} &= \sigma(Z_2^{(1)})\\
+\end{matrix*}}$$
 
-* Final layer weight calculation
+* **Final layer** weight calculation
  
 <p align="center">
   <img src="https://user-images.githubusercontent.com/12748752/138760858-246fe6ec-c1f8-4807-821b-abeb18e08493.png" width=50%/>
 </p>
+
 * Weight and Bias update rule-
 <p align="center">
   <img src="https://user-images.githubusercontent.com/12748752/138770072-79bdc601-ef95-4d6e-8bfb-03b6fa95f821.png" width=50%>
@@ -107,6 +113,7 @@ $$\Large{\color{Purple}\begin{matrix*}[l]
 
 ### Matrix representation of above diagrams
 ![light](https://user-images.githubusercontent.com/12748752/136802581-e8e0607f-3472-44f7-a8b2-8ba82a0f8070.png)
+
 * Calculationin **Hidden layers**
 
 $$\Large{\color{Purple} \begin{bmatrix}
