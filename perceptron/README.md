@@ -126,7 +126,7 @@ $$\Large{\color{Purple} W = W - \eta\dfrac{\partial e}{\partial W}}$$
 
 ### Matrix representation of above diagrams
 
-* Calculationin **Hidden layers**
+* Calculation in **Hidden layers**
 
 $$\Large{\color{Purple} \begin{bmatrix}
 W_{11}&W_{12} & W_{13} \\
@@ -263,7 +263,7 @@ This is the **forward pass**: it is exactly like making _predictions_, except **
 > * If instead you randomly initialize the weights, you break the symmetry and allow backpropagation to train a diverse team of neurons.
 
 
-## Regression MLPs
+### Regression MLPs
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 
 * First, MLPs can be used for regression tasks. 
@@ -275,22 +275,40 @@ This is the **forward pass**: it is exactly like making _predictions_, except **
 
 > #### In general, when building an MLP for regression, you do not want to use any activation function for the output neurons, so they are free to output any range of values.
 
-> ### Typical Regression MLP Architecture
 
-<img src="https://latex.codecogs.com/svg.image?\begin{matrix}\\\textbf{Hyperparameter}&space;&&space;\textbf{Typical&space;Value}\\\mathrm{input\&space;neurons}&space;&&space;\mathrm{One\&space;per\&space;input\&space;feature\&space;(e.g.,\&space;28\&space;x\&space;28\&space;=\&space;784\&space;for\&space;MNIST)}\\\mathrm{hidden\&space;layers}&space;&&space;\mathrm{Depends\&space;on\&space;the\&space;problem.\&space;Typically\&space;1\&space;to\&space;5.}\\\mathrm{neurons\&space;per\&space;hidden\&space;layer}&space;&&space;\mathrm{Depends\&space;on\&space;the\&space;problem.\&space;Typically\&space;10\&space;to\&space;100.}\\\mathrm{output\&space;neurons}&space;&&space;\mathrm{1\&space;per\&space;prediction\&space;dimension}\\\mathrm{Hidden\&space;activation}&space;&&space;\mathrm{ReLU\&space;(or\&space;SELU,\&space;see\&space;Chapter\&space;11)}\\\mathrm{Output\&space;activation}&space;&&space;\mathrm{None\&space;or\&space;ReLU/Softplus\&space;(if\&space;positive\&space;outputs)\&space;or\&space;Logistic/Tanh\&space;(if\&space;bounded\&space;outputs)}\\\mathrm{Loss\&space;function}&space;&&space;\mathrm{MSE\&space;or\&space;MAE/Huber\&space;(if\&space;outliers)}\\\end{matrix}" title="\begin{matrix}\\\textbf{Hyperparameter} & \textbf{Typical Value}\\\mathrm{input\ neurons} & \mathrm{One\ per\ input\ feature\ (e.g.,\ 28\ x\ 28\ =\ 784\ for\ MNIST)}\\\mathrm{hidden\ layers} & \mathrm{Depends\ on\ the\ problem.\ Typically\ 1\ to\ 5.}\\\mathrm{neurons\ per\ hidden\ layer} & \mathrm{Depends\ on\ the\ problem.\ Typically\ 10\ to\ 100.}\\\mathrm{output\ neurons} & \mathrm{1\ per\ prediction\ dimension}\\\mathrm{Hidden\ activation} & \mathrm{ReLU\ (or\ SELU,\ see\ Chapter\ 11)}\\\mathrm{Output\ activation} & \mathrm{None\ or\ ReLU/Softplus\ (if\ positive\ outputs)\ or\ Logistic/Tanh\ (if\ bounded\ outputs)}\\\mathrm{Loss\ function} & \mathrm{MSE\ or\ MAE/Huber\ (if\ outliers)}\\\end{matrix}" />
+### Regression and Classification models
+<p align="center">
+ <img src="https://user-images.githubusercontent.com/12748752/143228831-e4318e6f-25b0-43b9-950d-a865c4df7d1c.png" width=60% height=30% />
+</p>
 
+### Typical Regression MLP Architecture
 
+<div align="center">
+ 
+|<ins>Hyperparameter</ins>|<ins>Typical Value</ins>|
+|:-----:|:-----:|
+| **Input neurons**   |    One per input feature (e.g., 28 x 28 = 784 for **MNIST**)|
+|**Hidden layers** | Depends on the problem. Typically 1 to 5.|
+|**Neurons  per hidden layer**| Depends on the problem. Typically 10 to 100|
+|**Output neurons**| 1 per prediction dimension|
+|**Hidden activation**|**ReLU** (or **SELU**, see Chapter 11)|
+|**Output activation**|**None** or **ReLU**/**Softplus** (if positive outputs or **Logistic**/**Tanh** (if bounded outputs)|
+|**Loss function**|**MSE** or **MAE/Huber** (if **outliers**)|
 
-## Classification MLPs
-![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
+</div>
 
-> ### Typical Classification MLP Architecture
+### Typical Classification MLP Architecture
 
-<img src="https://latex.codecogs.com/svg.image?\begin{matrix}\\\textbf{Hyperparameter}&space;&&space;\textbf{Binary\&space;classification}&&space;\textbf{Multilabel\&space;binary\&space;classification}&&space;\textbf{Multiclass\&space;classification}\\\mathrm{Input\&space;and\&space;hidden\&space;layers}&space;&&space;\mathrm{Same\&space;as\&space;regression}&space;&&space;\mathrm{Same\&space;as\&space;regression}&space;&&space;\mathrm{Same\&space;as\&space;regression}\\\mathrm{output\&space;neurons}&&space;1&space;&&space;\mathrm{1\&space;per\&space;label}&space;&&space;\mathrm{1\&space;per\&space;class}\\&space;\mathrm{Output\&space;layer\&space;activation}&&space;\mathrm{Logistic}&space;&&space;\mathrm{Logistic}&space;&&space;\mathrm{Softmax}\\\mathrm{Loss\&space;function}&space;&&space;\mathrm{Cross-Entropy}&space;&&space;\mathrm{Cross-Entropy}&space;&&space;\mathrm{Cross-Entropy}\end{matrix}" title="\begin{matrix}\\\textbf{Hyperparameter} & \textbf{Binary\ classification}& \textbf{Multilabel\ binary\ classification}& \textbf{Multiclass\ classification}\\\mathrm{Input\ and\ hidden\ layers} & \mathrm{Same\ as\ regression} & \mathrm{Same\ as\ regression} & \mathrm{Same\ as\ regression}\\\mathrm{output\ neurons}& 1 & \mathrm{1\ per\ label} & \mathrm{1\ per\ class}\\ \mathrm{Output\ layer\ activation}& \mathrm{Logistic} & \mathrm{Logistic} & \mathrm{Softmax}\\\mathrm{Loss\ function} & \mathrm{Cross-Entropy} & \mathrm{Cross-Entropy} & \mathrm{Cross-Entropy}\end{matrix}" />
+<div align="center">
+ 
+|Hyperparameter|Binary classification| Multilabel binary classification| Multiclass classification}|
+|:---:|:---:|:---:|:---:|
+|Input and hidden layers|Same as regression|Same as regression|Same as regression|
+|Output neurons| 1 | 1 per label|1 per class|
+|Output layer activation|Logistic|Logistic|Softmax|
+|Loss function|Cross-Entropy|Cross-Entropy|Cross-Entropy|
 
-![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
-
-<img src="https://user-images.githubusercontent.com/12748752/143228831-e4318e6f-25b0-43b9-950d-a865c4df7d1c.png" width=60% height=30% />
+</div>
 
 
 ## Hyperparameter tuning for Neural Networks
