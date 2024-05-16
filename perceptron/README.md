@@ -76,7 +76,9 @@ $$\large{\color{Purple}Here \hspace{10pt} (-\eta \frac{\partial e}{\partial w}) 
 * Suppose we have a **Neural Network** with **3 input** layers and **2 hidden** layers and we are using **sigmoid** as a **activation function** inside the **hidden layer** as well as in **final weight calculation**.
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/12748752/138762029-20fc6d46-e47c-4131-b1d3-9ce33a3595af.png" width=50%/>
+ <img src="https://github.com/iAmKankan/Neural-Network/assets/12748752/d2c226f0-9c0a-4ace-b5d5-a7461dd3f6d8" width=70%/>
+ <br>
+ <ins><b><i>Total number of Nurons are (3 * 2) =6 </i></b></ins>
 </p>
 
 #### Input buffers(that's why not having  Bias,  Input neuron  would have  Bias),  Hidden layers,  Output Neuron are like
