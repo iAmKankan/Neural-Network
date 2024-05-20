@@ -5,7 +5,7 @@
 * [Training Perceptron](#-training-a-perceptron)
 * [Neural Network Weights and Bias Update](#-neural-network-weights-and-bias-update)
 ### _Multi-Layer Perceptron_
-* [Multi-Layer Perceptron](#multi-layer-perceptron)
+* [Multi-Layer Perceptron](#-multi-layer-perceptron)
 * [Backpropagation](#backpropagation)
   * [How Backpropagation works](#how-backpropagation-works)
 * [Regression MLPs](https://github.com/iAmKankan/Neural-Network/blob/main/multilayer-perceptrons.md#regression-mlps)
