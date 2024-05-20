@@ -226,10 +226,10 @@ $\Large{\color{Purple}\blacksquare}$ **Automatically computing gradients** is ca
 * It is fast and precise and is well suited when **the function to differentiate has many variables (e.g., connection weights) and few outputs (e.g., one loss)**. 
 
 ### 🔲 How Backpropagation works
-### 🔲 Epochs
+### $\Large{\color{Purple}\blacksquare}$ Epochs
 Backpropagation handles **_one mini-batch at a time_** (for example containing _32 instances_ each), and it goes through the full training set multiple times. Each pass is called an **epoch**. 
 
-### 🔲 Forward Pass:
+### $\Large{\color{Purple}\blacksquare}$ Forward Pass:
 $\large{\color{Purple}Step \\#1:}$  Each <ins><b>mini-batch</ins></b> is passed to the network’s **input layer**, which just sends it to the **first hidden layer**. 
 
 $\large{\color{Purple}Step \\#2:}$ The algorithm then computes the <ins><b>output of all the neurons in this layer</ins></b> (for every instance in the mini-batch). The result is passed on to the **next layer**.
@@ -238,7 +238,7 @@ $\large{\color{Purple}Step \\#3:}$ Again its output is computed and passed to th
 
 This is the **forward pass**: it is exactly like making <ins><b>predictions</ins></b>, except <ins><b>all intermediate results are preserved</ins></b> since they are needed for the **backward pass**. 
 
-### 🔲 Backward Pass:
+### $\Large{\color{Purple}\blacksquare}$ Backward Pass:
 $\large{\color{Purple}Step \\#1 \ \  Loss Function:}$ Next, the algorithm measures the **network’s output error** (i.e., it uses a loss function that compares the desired output and the actual output of the network, and returns some measure of the error). 
 
 $\large{\color{Purple}Step \\#2 \ \  Chain Rule:}$ Then it computes how much **each output connection contributed to the error**. 
