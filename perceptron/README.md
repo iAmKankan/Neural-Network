@@ -247,23 +247,21 @@ $\large{\color{Purple}Step \\#2 \ \  Chain Rule:}$ Then it computes how much **e
 $\large{\color{Purple}Step \\#3:}$ The algorithm then measures how much of _these error contributions_ came from each connection in the **layer below**, again using the [**chain rule**](https://github.com/iAmKankan/Mathematics/blob/main/calculus/D_calculus.md#chain-rule) — and so on until the algorithm reaches the **input layer**.
 * As we explained earlier, this reverse pass efficiently measures the **error gradient** across all the connection weights in the network by propagating the error gradient backward through the network (hence the name of the algorithm).
 
-### Finally Optimization
+### $\Large{\color{Purple}\blacksquare}$ Finally Optimization
 **Finally**, the algorithm performs a **Gradient Descent** step to tweak all the connection weights in the network, using the error gradients it just computed.
 
----
 
-> ### Summary:
-> * For each training instance the backpropagation algorithm goes steps like-
->   * **First makes a prediction (forward pass),**
->   * **Measures the error,**
->   * **Then goes through each layer in reverse to measure the error contribution from each connection (reverse pass),** 
->   * **Finally slightly tweaks the connection weights to reduce the error (Gradient Descent step).**
+### $\Large{\color{Purple}\blacksquare}$ Summary:
+* For each training instance the backpropagation algorithm goes steps like-
+* **First makes a prediction (forward pass),**
+* **Measures the error,**
+* **Then goes through each layer in reverse to measure the error contribution from each connection (reverse pass),** 
+* **Finally slightly tweaks the connection weights to reduce the error (Gradient Descent step).**
 
----
-> ### It is important to initialize all the hidden layers’ connection weights randomly. 
-> * For example, if you initialize all weights and biases to zero, then all neurons in a given layer will be perfectly identical, and thus backpropagation will affect them in exactly the same way, so they will remain identical. 
-> * In other words, despite having hundreds of neurons per layer, your model will act as if it had only one neuron per layer: it won’t be too smart. 
-> * If instead you randomly initialize the weights, you break the symmetry and allow backpropagation to train a diverse team of neurons.
+### $\Large{\color{Purple}\blacksquare}$ It is important to initialize all the hidden layers’ connection weights randomly. 
+* For example, if you initialize all weights and biases to zero, then all neurons in a given layer will be perfectly identical, and thus backpropagation will affect them in exactly the same way, so they will remain identical. 
+* In other words, despite having hundreds of neurons per layer, your model will act as if it had only one neuron per layer: it won’t be too smart. 
+* If instead you randomly initialize the weights, you break the symmetry and allow backpropagation to train a diverse team of neurons.
 
 
 ### Regression MLPs
