@@ -225,27 +225,26 @@ $\Large{\color{Purple}\blacksquare}$ **Automatically computing gradients** is ca
 * The <ins><b>autodiff</ins></b> technique used by **backpropagation** is called <ins><b>reverse-mode autodiff</ins></b>.
 * It is fast and precise and is well suited when **the function to differentiate has many variables (e.g., connection weights) and few outputs (e.g., one loss)**. 
 
-### How Backpropagation works
-![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
-### Epochs
+### 🔲 How Backpropagation works
+### 🔲 Epochs
 Backpropagation handles **_one mini-batch at a time_** (for example containing _32 instances_ each), and it goes through the full training set multiple times. Each pass is called an **epoch**. 
 
-### Forward Pass:
-**Step #1:**  Each _mini-batch_ is passed to the network’s **input layer**, which just sends it to the **first hidden layer**. 
+### 🔲 Forward Pass:
+$\large{\color{Purple}Step \\#1:}$  Each <ins><b>mini-batch</ins></b> is passed to the network’s **input layer**, which just sends it to the **first hidden layer**. 
 
-**Step #2:** The algorithm then computes the _output of all the neurons in this layer_ (for every instance in the mini-batch). The result is passed on to the **next layer**.
+$\large{\color{Purple}Step \\#2:}$ The algorithm then computes the <ins><b>output of all the neurons in this layer</ins></b> (for every instance in the mini-batch). The result is passed on to the **next layer**.
 
-**Step #3:** Again its output is computed and passed to the **next layer** and so on until we get the **_output of the last layer_** the **output layer**. 
+$\large{\color{Purple}Step \\#3:}$ Again its output is computed and passed to the **next layer** and so on until we get the <ins><b>output of the last layer</ins></b> the **output layer**. 
 
-This is the **forward pass**: it is exactly like making _predictions_, except **_all intermediate results are preserved_** since they are needed for the **backward pass**. 
+This is the **forward pass**: it is exactly like making <ins><b>predictions</ins></b>, except <ins><b>all intermediate results are preserved</ins></b> since they are needed for the **backward pass**. 
 
-### Backward Pass:
-**Step #1 Loss Function:** Next, the algorithm measures the **network’s output error** (i.e., it uses a loss function that compares the desired output and the actual output of the network, and returns some measure of the error). 
+### 🔲 Backward Pass:
+$\large{\color{Purple}Step \\#1 \ \  Loss Function:}$ Next, the algorithm measures the **network’s output error** (i.e., it uses a loss function that compares the desired output and the actual output of the network, and returns some measure of the error). 
 
-**Step #2 Chain Rule:** Then it computes how much **each output connection contributed to the error**. 
+$\large{\color{Purple}Step \\#2 \ \  Chain Rule:}$ Then it computes how much **each output connection contributed to the error**. 
 * This is done analytically by simply applying the [**chain rule**](https://github.com/iAmKankan/Mathematics/blob/main/calculus/D_calculus.md#chain-rule) (perhaps the most fundamental rule in calculus), which makes this step _fast and precise_. 
 
-**Step #3:** The algorithm then measures how much of _these error contributions_ came from each connection in the **layer below**, again using the [**chain rule**](https://github.com/iAmKankan/Mathematics/blob/main/calculus/D_calculus.md#chain-rule) — and so on until the algorithm reaches the **input layer**.
+$\large{\color{Purple}Step \\#3:}$ The algorithm then measures how much of _these error contributions_ came from each connection in the **layer below**, again using the [**chain rule**](https://github.com/iAmKankan/Mathematics/blob/main/calculus/D_calculus.md#chain-rule) — and so on until the algorithm reaches the **input layer**.
 * As we explained earlier, this reverse pass efficiently measures the **error gradient** across all the connection weights in the network by propagating the error gradient backward through the network (hence the name of the algorithm).
 
 ### Finally Optimization
