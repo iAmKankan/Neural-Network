@@ -6,7 +6,7 @@
 * [Neural Network Weights and Bias Update](#-neural-network-weights-and-bias-update)
 ### _Multi-Layer Perceptron_
 * [Multi-Layer Perceptron](#-multi-layer-perceptron)
-* [Backpropagation](#backpropagation)
+* [Backpropagation](#-backpropagation)
   * [How Backpropagation works](#how-backpropagation-works)
 * [Regression MLPs](https://github.com/iAmKankan/Neural-Network/blob/main/multilayer-perceptrons.md#regression-mlps)
   * <a href="https://nbviewer.org/github/iAmKankan/Hands-On-Machine-Learning-with-Scikit-Learn-Keras-and-TensorFlow-All_Codes/blob/main/Chapter%2010/2)%20Sequential%20API%20for%20Regression.ipynb">Building a Regression MLP Using the Sequential API </a>  <img src="https://img.shields.io/badge/Jupyter Notebook-FFFFFF.svg?&style=for-the-badge&logo=Jupyter&logoColor=black" align='center' width=20%/>
