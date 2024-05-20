@@ -3,6 +3,7 @@
 ### _Perceptron_
 * [The Perceptron](#-the-perceptron)
 * [Training Perceptron](#-training-a-perceptron)
+* Neural Network Weights and Bias Update
 ### _Multi-Layer Perceptron_
 * [Multi-Layer Perceptron](#multi-layer-perceptron)
 * [Backpropagation](#backpropagation)
