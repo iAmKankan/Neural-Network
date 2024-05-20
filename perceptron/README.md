@@ -195,7 +195,7 @@ per_clf = Perceptron()
 per_clf.fit(X, y)
 y_pred = per_clf.predict([[2, 0.5]])
 ```
-## Multi-Layer Perceptron
+### ⬛ Multi-Layer Perceptron
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 * An MLP is composed of -
    * **One (passthrough) input layer,**
