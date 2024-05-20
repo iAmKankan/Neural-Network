@@ -71,7 +71,7 @@ $$\Large{\color{Purple}\begin{matrix*}[l]
 
 $$\large{\color{Purple}Here \hspace{10pt} (-\eta \frac{\partial e}{\partial w}) \ = \  \Delta W, \ \ \ From \ the\ above \ \ (W_j+\Delta W_j) }$$
 
-### Neural Network error Update Weights
+### Neural Network Weights and Bias Update
 ![light](https://user-images.githubusercontent.com/12748752/136802581-e8e0607f-3472-44f7-a8b2-8ba82a0f8070.png)
 * Suppose we have a **Neural Network** with **3 input** layers and **2 hidden** layers and we are using **sigmoid** as a **activation function** inside the **hidden layer** as well as in **final weight calculation**.
 
