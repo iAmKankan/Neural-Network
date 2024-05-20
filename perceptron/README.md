@@ -213,18 +213,19 @@ y_pred = per_clf.predict([[2, 0.5]])
 
 > #### When an ANN contains a deep stack of hidden layers, it is called a Deep Neural Network (DNN).
 
-## Backpropagation - [_General Backpropagation_](https://github.com/iAmKankan/Neural-Network/blob/main/backpropagation/README.md)
+### ⬛ Backpropagation - [_General Backpropagation_](https://github.com/iAmKankan/Neural-Network/blob/main/backpropagation/README.md)
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
-*  **Backpropagation is simply Gradient Descent using an efficient technique for computing the gradients automatically**: 
+**Backpropagation is simply Gradient Descent using an efficient technique for computing the gradients automatically**: 
 
-* In just two passes through the network (one **forward**, one **backward**), the backpropagation algorithm is able to compute **the gradient of the network’s error** with regards to every single model parameter. 
-
-> ### In other words, it can find out how each connection weight and each bias term should be tweaked in order to reduce the error. 
+Backpropagation uses just **two passes** through the network (one <ins><b>forward</ins></b> and one <ins><b>backward</ins></b>), the **backpropagation** algorithm is able to compute <ins><b>the gradient of the network’s error</ins></b> with regards to **every single model parameter**. 
+*  In other words, it can find out how each connection **weight** and each **bias** term should be <ins><b>tweaked in order to reduce the error</ins></b>. 
 * Once it has these gradients, it just performs a regular Gradient Descent step, and the whole process is repeated until the network converges to the solution.
 
-> #### Automatically computing gradients is called *automatic differentiation*, or *autodiff*. The autodiff technique used by backpropagation is called *reverse-mode autodiff*. It is fast and precise, and is well suited when the function to differentiate has many variables (e.g., connection weights) and few outputs (e.g., one loss). 
+$\Large{\color{Purple}\blacksquare}$ **Automatically computing gradients** is called <ins><b>automatic differentiation</ins></b>, or <ins><b>autodiff</ins></b>.
+* The <ins><b>autodiff</ins></b> technique used by **backpropagation** is called <ins><b>reverse-mode autodiff</ins></b>.
+* It is fast and precise and is well suited when **the function to differentiate has many variables (e.g., connection weights) and few outputs (e.g., one loss)**. 
 
-## How Backpropagation works
+### How Backpropagation works
 ![light](https://user-images.githubusercontent.com/12748752/141935760-406edb8f-cb9b-4e30-9b69-9153b52c28b4.png)
 ### Epochs
 Backpropagation handles **_one mini-batch at a time_** (for example containing _32 instances_ each), and it goes through the full training set multiple times. Each pass is called an **epoch**. 
