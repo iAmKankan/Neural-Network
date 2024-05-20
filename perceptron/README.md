@@ -1,8 +1,8 @@
 ## Index
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 ### _Perceptron_
-* [The Perceptron](#the-perceptron)
-* [Training Perceptron](#training-perceptron)
+* [The Perceptron]([#-the-perceptron))
+* [Training Perceptron](#-training-perceptron)
 ### _Multi-Layer Perceptron_
 * [Multi-Layer Perceptron](#multi-layer-perceptron)
 * [Backpropagation](#backpropagation)
