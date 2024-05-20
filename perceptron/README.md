@@ -252,7 +252,7 @@ $\large{\color{Purple}Step \\#3:}$ The algorithm then measures how much of _thes
 
 
 ### $\Large{\color{Purple}\blacksquare}$ Summary:
-* For each training instance the backpropagation algorithm goes steps like-
+For each training instance the backpropagation algorithm goes steps like-
 * **First makes a prediction (forward pass),**
 * **Measures the error,**
 * **Then goes through each layer in reverse to measure the error contribution from each connection (reverse pass),** 
