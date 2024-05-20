@@ -179,7 +179,7 @@ activation(Z_{1}) \\
 a_{1} \\
 \end{bmatrix} \hspace{10pt} or \hspace{10pt} \hat{Y}}$$
 
-### Practical
+### 🔲 Practical
 ![light](https://user-images.githubusercontent.com/12748752/136802581-e8e0607f-3472-44f7-a8b2-8ba82a0f8070.png)
 
 * **Scikit-Learn** provides a **Perceptron** class that implements a single **TLU** network. 
