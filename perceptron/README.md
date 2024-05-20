@@ -215,7 +215,7 @@ y_pred = per_clf.predict([[2, 0.5]])
 
 ### ⬛ Backpropagation - [_General Backpropagation_](https://github.com/iAmKankan/Neural-Network/blob/main/backpropagation/README.md)
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
-**Backpropagation is simply Gradient Descent using an efficient technique for computing the gradients automatically**: 
+**Backpropagation is simply <ins><b>Gradient Descent</ins></b>, using an efficient technique for computing the gradients <ins><b>automatically</ins></b>**: 
 
 Backpropagation uses just **two passes** through the network (one <ins><b>forward</ins></b> and one <ins><b>backward</ins></b>), the **backpropagation** algorithm is able to compute <ins><b>the gradient of the network’s error</ins></b> with regards to **every single model parameter**. 
 *  In other words, it can find out how each connection **weight** and each **bias** term should be <ins><b>tweaked in order to reduce the error</ins></b>. 
