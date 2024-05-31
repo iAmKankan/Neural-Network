@@ -198,9 +198,9 @@ y_pred = per_clf.predict([[2, 0.5]])
 ### ⬛ Multi-Layer Perceptron
 ![dark](https://user-images.githubusercontent.com/12748752/141935752-90492d2e-7904-4f9f-a5a1-c4e59ddc3a33.png)
 * An MLP is composed of -
-   * **One (passthrough) input layer,**
-   * **One or more layers of TLUs (Threshold Logic Unit)- called hidden layers,**
-   * **One final layer of TLU (Threshold Logic Unit) called the output layer.**
+   * **One <ins>input layer</ins>,**
+   * **One or more layers of TLUs (Threshold Logic Unit)- called <ins>hidden layers</ins>,**
+   * **One final layer of TLU (Threshold Logic Unit) called the <ins>output layer</ins>.**
 
 * The layers close to the input layer are usually called the **lower layers**, and the ones close to the outputs are usually called the **upper layers**. 
 * Every layer except the output layer includes **a bias neuron** and is fully connected to the next layer.
